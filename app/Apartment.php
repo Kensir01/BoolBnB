@@ -21,4 +21,8 @@ class Apartment extends Model
         return $this->hasMany('App\View');
     }
 
+    public function ads() {
+        return $this->belongsToMany('App\Ad');
+    }
+    
 }
