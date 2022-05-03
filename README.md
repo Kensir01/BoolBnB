@@ -31,7 +31,16 @@ DatabaseSeeder.php oppure php artisan db:seed --class=NomeDelSeeder)
 3. --- branch -> create branch
 4. Inserisci branch name ( in automatico ti sposta nel branch appena creato, le modifiche che ora farò, le farò sul mio branch e non su quello principale )
 5. Con un click posso passare da un branch all'altro, andando sul branch e cliccando checkout branch
-
 6. Voglio unire / fare merge delle modifiche fatte del mio nuovo branch e quello principale? 
 7. Mi sposto sul branch principale -> main
 8. Tasto dx su il nuovo branch creato -> click su merge
+9. Vai su GitHub e click su Pull Request 
+10. Crea una nuova pull request
+11. Aspetto approvazione e ho mergiato
+
+## SINCRONIZZARE CON ALTRI BRANCH
+1. git remote add upstrem code_github_repo (da fare solo la prima volta)
+2. git fetch upstream
+3. git rebase upstream/master oppure git merge upstream/master
+4. sincronizza modifiche con btn Sync Changes
+5. lancia da terminale php artisan migrate
