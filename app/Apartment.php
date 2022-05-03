@@ -20,5 +20,5 @@ class Apartment extends Model
     public function views() {
         return $this->hasMany('App\View');
     }
-    
+
 }
