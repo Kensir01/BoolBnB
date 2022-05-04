@@ -15,7 +15,7 @@ class ApartmentsTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         //
-        for ($i=0; $i<10; $i++) {
+        for ($i=0; $i<20; $i++) {
             $newApartment = new Apartment();
             $newApartment->title = $faker->sentence(1);
             $newApartment->rooms_number = $faker->numberBetween(1, 9);
@@ -26,7 +26,7 @@ class ApartmentsTableSeeder extends Seeder
             $newApartment->longitude = $faker-> longitude(-90, 90);
             $newApartment->image = $faker->imageUrl(360, 360, 'animals', true, 'cats');
             $newApartment->visibility = true;
-            $newApartment->user_id = 1;
+            $newApartment->user_id = $faker->numberBetween(1, 11);
             $newApartment->city = $faker->city();
             $newApartment->address = $faker->streetAddress();
             $newApartment->zip_code = $faker->postcode();
