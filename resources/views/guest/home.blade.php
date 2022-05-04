@@ -9,6 +9,7 @@
 <body>
     
     <a href="{{ route('login') }}">ACCEDI</a>
+    <a href="{{ route('user.home') }}">home</a>
     <h1>PROVA</h1>
 
 </body>
