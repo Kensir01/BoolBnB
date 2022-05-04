@@ -33,7 +33,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <!-- inserisci link menu -->
+                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link disabled">Disabled</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

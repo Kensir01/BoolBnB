@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <a href="{{ route('login') }}">ACCEDI</a>
     <h1>PROVA</h1>
+
 </body>
 </html>
