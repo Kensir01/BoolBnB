@@ -6,6 +6,7 @@ use App\Apartment;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ApartmentController extends Controller
 {
@@ -28,7 +29,8 @@ class ApartmentController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('user.apartments.create');
     }
 
     /**
@@ -39,7 +41,35 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
+        //validation
+        $request->validate(
+            [
+                //validazione dati
+            ]
+        );
+
+
+        $data = $request->all();
+
+        if (isset($data['cover'])) {
+            $cover_path = Storage::put('public/post_covers', $data['cover']);
+            $data['image'] = $cover_path;
+        }
+
+        $apartment = new Apartment();
+        
+        //temp
+        $apartment->latitude = 90;
+        $apartment->longitude = 90;
+        $apartment->visibility = true;
         //
+        
+        $apartment->user_id = Auth::id();
+
+        $apartment->fill($data);
+
+        $apartment->save();
+
     }
 
     /**

@@ -2,6 +2,8 @@
 
 @section('content')
 
+    <a class="btn btn-primary" href="{{route('user.apartments.create')}}">Aggiungi appartamento</a>
+
     <table class="table">
         <thead>
             <tr>
@@ -30,7 +32,7 @@
                     <td>{{$apartment->square_meters}}</td>
                     <td>{{$apartment->latitude}}</td>
                     <td>{{$apartment->longitude}}</td>
-                    <td><img src="{{$apartment->image}}" alt="{{$apartment->title}}"></td>
+                    <td><img src="{{ asset('storage/' . $apartment->image)}}" alt="{{$apartment->title}}"></td>
                     <td>{{$apartment->visibility}}</td>
                     <td>{{$apartment->city}}</td>
                     <td>{{$apartment->address}}</td>
