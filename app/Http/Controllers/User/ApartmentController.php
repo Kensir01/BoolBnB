@@ -41,35 +41,45 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //validation
+        //validazione dati
         $request->validate(
             [
-                //validazione dati
+                'title' => 'required|max:30|min:2',
+                'rooms_number' => 'required|numeric|min:1',
+                'bathrooms_number' => 'required|numeric|min:1',
+                'beds_number' => 'required|numeric|min:1',
+                'square_meters' => 'required|numeric|min:1',
+                'image' => 'required|image|max:2048',
+                'city' => 'required',
+                'address' => 'required|min:2',
+                'zip_code' => 'required|max:15|min:3'
+                
             ]
         );
 
-
+        //Prendo tutti i dati
         $data = $request->all();
 
-        if (isset($data['cover'])) {
-            $cover_path = Storage::put('public/post_covers', $data['cover']);
-            $data['image'] = $cover_path;
-        }
+        //Salvo l'immagine in public/bnb_images
+        $img_path = Storage::put('bnb_images', $data['image']);
+        $data['image'] = $img_path;
 
+        //Nuovo oggetto Apartment
         $apartment = new Apartment();
         
-        //temp
+        //Dati temporanei
         $apartment->latitude = 90;
         $apartment->longitude = 90;
         $apartment->visibility = true;
         //
         
+        //user_id preso dall'utente che ha effettuato il log in
         $apartment->user_id = Auth::id();
 
         $apartment->fill($data);
-
         $apartment->save();
 
+        return redirect()->route('user.apartments.index');
     }
 
     /**
@@ -78,9 +88,10 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Apartment $apartment)
     {
-        //
+
+        return view('user.apartments.show', compact('apartment'));
     }
 
     /**
@@ -89,9 +100,10 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Apartment $apartment)
     {
-        //
+        
+        return view('user.apartments.edit', compact('apartment'));
     }
 
     /**
@@ -101,9 +113,36 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Apartment $apartment)
     {
-        //
+        //validazione dati
+        $request->validate(
+            [
+                'title' => 'required|max:30|min:2',
+                'rooms_number' => 'required|numeric|min:1',
+                'bathrooms_number' => 'required|numeric|min:1',
+                'beds_number' => 'required|numeric|min:1',
+                'square_meters' => 'required|numeric|min:1',
+                'image' => 'required|image|max:2048',
+                'city' => 'required',
+                'address' => 'required|min:2',
+                'zip_code' => 'required|max:15|min:3'
+                
+            ]
+        );
+
+        $data = $request->all();
+
+        if(isset($data['image'])) {
+            Storage::delete($apartment['image']);
+            $img_path = Storage::put('bnb_images', $data['image']);
+            $data['image'] = $img_path;
+        }
+
+        $apartment->update($data);
+        $apartment->save();
+
+        return redirect()->route('user.apartments.index');
     }
 
     /**
@@ -112,8 +151,13 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Apartment $apartment)
     {
-        //
+        
+        Storage::delete($apartment->image);
+
+        $apartment->delete();
+
+        return redirect()->route('user.apartments.index');
     }
 }
