@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+
+use function Ramsey\Uuid\v1;
 
 class ApartmentController extends Controller
 {
@@ -29,7 +32,6 @@ class ApartmentController extends Controller
      */
     public function create()
     {
-
         return view('user.apartments.create');
     }
 
@@ -45,15 +47,15 @@ class ApartmentController extends Controller
         $request->validate(
             [
                 'title' => 'required|max:30|min:2',
-                'rooms_number' => 'required|numeric|min:1',
-                'bathrooms_number' => 'required|numeric|min:1',
-                'beds_number' => 'required|numeric|min:1',
-                'square_meters' => 'required|numeric|min:1',
+                'rooms_number' => 'required|numeric|max:255|min:1',
+                'bathrooms_number' => 'required|numeric|max:255|min:1',
+                'beds_number' => 'required|numeric|max:255|min:1',
+                'square_meters' => 'required|numeric|max:32766|min:1',
                 'image' => 'required|image|max:2048',
-                'city' => 'required',
-                'address' => 'required|min:2',
-                'zip_code' => 'required|max:15|min:3'
-                
+                'city' => 'required|max:50|min:2',
+                'address' => 'required|max:50|min:2',
+                'zip_code' => 'required|max:15|min:3',
+                'description' => 'required|min:10'
             ]
         );
 
@@ -63,6 +65,18 @@ class ApartmentController extends Controller
         //Salvo l'immagine in public/bnb_images
         $img_path = Storage::put('bnb_images', $data['image']);
         $data['image'] = $img_path;
+
+        //Creazione slug
+        $slug = Str::slug($data['title']);
+
+        $counter = 1;
+
+        while (Apartment::where('slug', '=', $slug)->first()) {
+            $slug = Str::slug($data['title']) . '-' . $counter;
+            $counter++;
+        }
+
+        $data['slug'] = $slug;
 
         //Nuovo oggetto Apartment
         $apartment = new Apartment();
@@ -79,7 +93,7 @@ class ApartmentController extends Controller
         $apartment->fill($data);
         $apartment->save();
 
-        return redirect()->route('user.apartments.index');
+        return redirect()->route('user.apartments.index')->with('status', 'Elemento creato corretamente!');
     }
 
     /**
@@ -90,7 +104,7 @@ class ApartmentController extends Controller
      */
     public function show(Apartment $apartment)
     {
-
+        $this->authorize('view', $apartment);
         return view('user.apartments.show', compact('apartment'));
     }
 
@@ -102,7 +116,7 @@ class ApartmentController extends Controller
      */
     public function edit(Apartment $apartment)
     {
-        
+        $this->authorize('view', $apartment);
         return view('user.apartments.edit', compact('apartment'));
     }
 
@@ -119,16 +133,20 @@ class ApartmentController extends Controller
         $request->validate(
             [
                 'title' => 'required|max:30|min:2',
-                'rooms_number' => 'required|numeric|min:1',
-                'bathrooms_number' => 'required|numeric|min:1',
-                'beds_number' => 'required|numeric|min:1',
-                'square_meters' => 'required|numeric|min:1',
-                'city' => 'required',
-                'address' => 'required|min:2',
-                'zip_code' => 'required|max:15|min:3'
-                
+                'rooms_number' => 'required|numeric|max:255|min:1',
+                'bathrooms_number' => 'required|numeric|max:255|min:1',
+                'beds_number' => 'required|numeric|max:255|min:1',
+                'square_meters' => 'required|numeric|max:32766|min:1',
+                'image' => 'image|max:2048',
+                'city' => 'required|max:50|min:2',
+                'address' => 'required|max:50|min:2',
+                'zip_code' => 'required|max:15|min:3',
+                'description' => 'required|min:10'
             ]
         );
+
+        // per privacy
+        $this->authorize('update', $apartment);
 
         $data = $request->all();
 
@@ -140,6 +158,23 @@ class ApartmentController extends Controller
 
         $apartment->update($data);
         $apartment->save();
+
+
+        //Creazione slug
+        $slug = Str::slug($data['title']);
+
+        if ($apartment->slug != $slug) {
+ 
+            $counter = 1;
+ 
+            while(Apartment::where('slug', '=', $slug)->first()) {
+ 
+                $slug = Str::slug($data['title']) . '-' . $counter;
+                $counter++;
+            }
+ 
+            $data['slug'] = $slug;
+        }
 
         return redirect()->route('user.apartments.index');
     }
@@ -153,10 +188,11 @@ class ApartmentController extends Controller
     public function destroy(Apartment $apartment)
     {
         
-        Storage::delete($apartment->image);
+        Storage::disk('public')->delete($apartment->image);
+       
 
         $apartment->delete();
 
-        return redirect()->route('user.apartments.index');
+        return redirect()->route('user.apartments.index')->with('status', 'Elemento cancellato corretamente!');
     }
 }

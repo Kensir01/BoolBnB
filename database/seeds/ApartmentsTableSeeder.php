@@ -5,6 +5,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\File;
 use Faker\Generator as Faker;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class ApartmentsTableSeeder extends Seeder
 {
@@ -27,10 +28,12 @@ class ApartmentsTableSeeder extends Seeder
             $newApartment->longitude = $faker-> longitude(-90, 90);
             $newApartment->image = $faker->imageUrl(300, 300, 'houses', true, 'BnB');
             $newApartment->visibility = true;
-            $newApartment->user_id = $faker->numberBetween(1, 11);
+            $newApartment->user_id = $faker->numberBetween(1, 10);
             $newApartment->city = $faker->city();
             $newApartment->address = $faker->streetAddress();
             $newApartment->zip_code = $faker->postcode();
+            $newApartment->slug = Str::slug($newApartment->title);
+            $newApartment->description = $faker->paragraph();
             $newApartment->save();
         };
     }

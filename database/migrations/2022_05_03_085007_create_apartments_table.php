@@ -28,6 +28,8 @@ class CreateApartmentsTable extends Migration
             $table->string('city', 50);
             $table->string('address', 50);
             $table->string('zip_code', 15);
+            $table->string('slug')->unique();
+            $table->text('description');
 
             // FK
             $table->unsignedBigInteger('user_id');
