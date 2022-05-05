@@ -62,6 +62,11 @@
                     <input type="text" class="form-control" id="zip_code" name="zip_code" value="{{old('zip_code', $apartment->zip_code)}}">
                 </div>
             
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Inserisci una descrizione" id="description" style="height: 100px" name="description">{{old('description', $apartment->description)}}</textarea>
+                    <label for="description">Descrizione</label>
+                </div>
+
                 <div class="form-group">
                     <label for="image">Inserisci immagini</label>
                     <input type="file" class="form-control" id="image" name="image">
