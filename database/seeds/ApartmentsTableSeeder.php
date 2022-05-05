@@ -2,8 +2,9 @@
 
 use App\Apartment;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\File;
 use Faker\Generator as Faker;
-
+use Illuminate\Support\Facades\Storage;
 
 class ApartmentsTableSeeder extends Seeder
 {
@@ -17,14 +18,14 @@ class ApartmentsTableSeeder extends Seeder
         //
         for ($i=0; $i<20; $i++) {
             $newApartment = new Apartment();
-            $newApartment->title = $faker->sentence(1);
+            $newApartment->title = $faker->sentence(2);
             $newApartment->rooms_number = $faker->numberBetween(1, 9);
             $newApartment->beds_number = $faker->numberBetween(1, 9);
             $newApartment->bathrooms_number = $faker->numberBetween(1, 9);
             $newApartment->square_meters = $faker->numberBetween(50, 200);
             $newApartment->latitude = $faker->latitude(-90, 90);
             $newApartment->longitude = $faker-> longitude(-90, 90);
-            $newApartment->image = $faker->imageUrl(360, 360, 'animals', true, 'cats');
+            $newApartment->image = $faker->imageUrl(300, 300, 'houses', true, 'BnB');
             $newApartment->visibility = true;
             $newApartment->user_id = $faker->numberBetween(1, 11);
             $newApartment->city = $faker->city();
