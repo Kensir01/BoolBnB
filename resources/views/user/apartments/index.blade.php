@@ -22,6 +22,7 @@
                             <th scope="col">Città</th>
                             <th scope="col">Indirizzo</th>
                             <th scope="col">CAP</th>
+                            <th scope="col">Descrizione</th>
                             <th scope="col">Azioni</th>
                         </tr>
                     </thead>
@@ -41,6 +42,7 @@
                                 <td>{{$apartment->city}}</td>
                                 <td>{{$apartment->address}}</td>
                                 <td>{{$apartment->zip_code}}</td>
+                                <td>{{$apartment->description}}</td>
                                 <td class="d-flex">
                                     <a href="{{route('user.apartments.show', $apartment->id)}}" class="btn btn-primary">Mostra</a>
                                     <a href="{{route('user.apartments.edit', $apartment->id)}}" class="btn btn-secondary">Modifica</a>
