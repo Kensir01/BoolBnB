@@ -19,7 +19,7 @@ class ApartmentsTableSeeder extends Seeder
         //
         for ($i=0; $i<20; $i++) {
             $newApartment = new Apartment();
-            $newApartment->title = $faker->sentence(2);
+            $newApartment->title = $faker->sentence(1);
             $newApartment->rooms_number = $faker->numberBetween(1, 9);
             $newApartment->beds_number = $faker->numberBetween(1, 9);
             $newApartment->bathrooms_number = $faker->numberBetween(1, 9);
