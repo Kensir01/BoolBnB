@@ -23,7 +23,13 @@
             <div><strong>CAP: </strong>{{$apartment->zip_code}}</div>
             <div><strong>Descrizione: </strong>{{$apartment->description}}</div>
 
-            <a href="{{url()->previous()}}" class="btn btn-primary">Torna indietro</a>
+            <div>
+                @foreach ($apartment->facilities as $facility)
+                    <span class="badge badge-primary">{{$facility->name}}</span>
+                @endforeach
+            </div>
+
+            <a href="{{url()->previous()}}" class="btn btn-primary mt-4">Torna indietro</a>
 
         </div>
     </div>

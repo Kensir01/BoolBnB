@@ -14,13 +14,14 @@ class CreateApartmentFacilityTable extends Migration
     public function up()
     {
         Schema::create('apartment_facility', function (Blueprint $table) {
-            $table->id();
+
             $table->unsignedBigInteger('apartment_id');
-            $table->foreign('apartment_id')->references('id')->on('apartments');
+            $table->foreign('apartment_id')->references('id')->on('apartments')->onDelete('cascade');
 
             $table->unsignedBigInteger('facility_id');
-            $table->foreign('facility_id')->references('id')->on('facilities');
-            $table->timestamps();
+            $table->foreign('facility_id')->references('id')->on('facilities')->onDelete('cascade');
+
+            $table->index(['apartment_id', 'facility_id']);
         });
     }
 
