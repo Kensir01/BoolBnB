@@ -50,9 +50,9 @@
                                         @csrf
                                         @method('DELETE')
               
-                                        <button type="sumbit" class="btn btn-danger">Elimina</button>
-              
-                                      </form>
+                                            {{-- chiedere conferma della cancellazione, prima di eliminare l’elemento --}}
+                                            <button type="submit" class="btn btn-danger" onclick="return confirm('Sei sicuro?')">Elimina</button>
+                                    </form>
 
                                 </td>
                             </tr>

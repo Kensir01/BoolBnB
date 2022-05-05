@@ -45,13 +45,13 @@ class ApartmentController extends Controller
         $request->validate(
             [
                 'title' => 'required|max:30|min:2',
-                'rooms_number' => 'required|numeric|min:1',
-                'bathrooms_number' => 'required|numeric|min:1',
-                'beds_number' => 'required|numeric|min:1',
-                'square_meters' => 'required|numeric|min:1',
+                'rooms_number' => 'required|numeric|max:255|min:1',
+                'bathrooms_number' => 'required|numeric|max:255|min:1',
+                'beds_number' => 'required|numeric|max:255|min:1',
+                'square_meters' => 'required|numeric|max:32766|min:1',
                 'image' => 'required|image|max:2048',
-                'city' => 'required',
-                'address' => 'required|min:2',
+                'city' => 'required|max:50|min:2',
+                'address' => 'required|max:50|min:2',
                 'zip_code' => 'required|max:15|min:3'
                 
             ]
@@ -79,7 +79,7 @@ class ApartmentController extends Controller
         $apartment->fill($data);
         $apartment->save();
 
-        return redirect()->route('user.apartments.index');
+        return redirect()->route('user.apartments.index')->with('status', 'Elemento creato corretamente!');
     }
 
     /**
@@ -119,14 +119,14 @@ class ApartmentController extends Controller
         $request->validate(
             [
                 'title' => 'required|max:30|min:2',
-                'rooms_number' => 'required|numeric|min:1',
-                'bathrooms_number' => 'required|numeric|min:1',
-                'beds_number' => 'required|numeric|min:1',
-                'square_meters' => 'required|numeric|min:1',
-                'city' => 'required',
-                'address' => 'required|min:2',
+                'rooms_number' => 'required|numeric|max:255|min:1',
+                'bathrooms_number' => 'required|numeric|max:255|min:1',
+                'beds_number' => 'required|numeric|max:255|min:1',
+                'square_meters' => 'required|numeric|max:32766|min:1',
+                'image' => 'image|max:2048',
+                'city' => 'required|max:50|min:2',
+                'address' => 'required|max:50|min:2',
                 'zip_code' => 'required|max:15|min:3'
-                
             ]
         );
 
@@ -153,10 +153,11 @@ class ApartmentController extends Controller
     public function destroy(Apartment $apartment)
     {
         
-        Storage::delete($apartment->image);
+        Storage::disk('public')->delete($apartment->image);
+       
 
         $apartment->delete();
 
-        return redirect()->route('user.apartments.index');
+        return redirect()->route('user.apartments.index')->with('status', 'Elemento cancellato corretamente!');
     }
 }
