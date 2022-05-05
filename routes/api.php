@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// /api/apartments/*
+Route::get('api/apartments/{apartment:slug}', function (App\Apartment $apartment) {
+    return $apartment;
+});
