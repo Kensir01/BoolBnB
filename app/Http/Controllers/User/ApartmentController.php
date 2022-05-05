@@ -123,7 +123,6 @@ class ApartmentController extends Controller
                 'bathrooms_number' => 'required|numeric|min:1',
                 'beds_number' => 'required|numeric|min:1',
                 'square_meters' => 'required|numeric|min:1',
-                'image' => 'required|image|max:2048',
                 'city' => 'required',
                 'address' => 'required|min:2',
                 'zip_code' => 'required|max:15|min:3'

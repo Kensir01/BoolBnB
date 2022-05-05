@@ -6,6 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             
+            {{-- Errori --}}
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
