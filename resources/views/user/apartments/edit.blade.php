@@ -68,6 +68,12 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="image">Immagine attuale</label>
+                    <img src="{{ asset(Storage::url($apartment->image))}}" alt="{{$apartment->title}}" id="image">
+
+                </div>
+        
+                <div class="form-group">
                     <label for="image">Inserisci immagini</label>
                     <input type="file" class="form-control" id="image" name="image">
                 </div>
