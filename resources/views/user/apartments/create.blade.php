@@ -71,7 +71,15 @@
                     <input type="file" class="form-control" id="image" name="image">
                 </div>
             
-            
+                @foreach ($facilities as $facility)
+                    
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" name="facilities[]" class="custom-control-input" id="facility_{{$facility->id}}" value="{{$facility->id}}" {{in_array( $facility->id, old('facilities', []))? 'checked' : ''}}>
+                        <label class="custom-control-label" for="facility_{{$facility->id}}">{{$facility->name}}</label>
+
+                    </div>
+
+                @endforeach
             
                 <button type="submit" class="btn btn-primary">Invia</button>
             

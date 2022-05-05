@@ -78,6 +78,21 @@
                     <input type="file" class="form-control" id="image" name="image">
                 </div>
 
+                @foreach ($facilities as $facility)
+                    
+                    @if ($errors->any())
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="facilities[]" class="custom-control-input" id="facility_{{$facility->id}}" value="{{$facility->id}}" {{in_array($facility->id, old('facilities'))?'checked':''}}>
+                            <label class="custom-control-label" for="facility_{{$facility->id}}">{{$facility->name}}</label>
+                        </div>
+                    @else
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" name="facilities[]" class="custom-control-input" id="facility_{{$facility->id}}" value="{{$facility->id}}" {{$apartment->facilities->contains($facility->id)?'checked':''}}>
+                            <label class="custom-control-label" for="facility_{{$facility->id}}">{{$facility->name}}</label>
+                        </div>
+                    @endif
+
+                @endforeach                
 
                 <button type="submit" class="btn btn-primary">Salva</button>
             
