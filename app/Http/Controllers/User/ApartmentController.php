@@ -130,8 +130,9 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Apartment $apartment)
+    public function show($slug)
     {
+        $apartment = Apartment::where('slug', '=', $slug)->first();
         $this->authorize('view', $apartment);
         return view('user.apartments.show', compact('apartment'));
     }
@@ -142,8 +143,9 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Apartment $apartment)
+    public function edit($slug)
     {
+        $apartment = Apartment::where('slug', '=', $slug)->first();
         $this->authorize('view', $apartment);
 
         $facilities = Facility::all();
