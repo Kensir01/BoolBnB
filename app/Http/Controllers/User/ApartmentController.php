@@ -59,7 +59,8 @@ class ApartmentController extends Controller
                 'address' => 'required|max:50|min:2',
                 'zip_code' => 'required|max:15|min:3',
                 'description' => 'required|min:10',
-                'facilities' => 'nullable|exists:facilities,id'
+                'facilities' => 'nullable|exists:facilities,id',
+                'visibility' => 'nullable|boolean'
             ]
         );
 
@@ -82,15 +83,22 @@ class ApartmentController extends Controller
 
         $data['slug'] = $slug;
 
+        //Visibilità
+        if(isset($data['visibility'])) {
+            $data['visibility'] = true;
+        } else {
+            $data['visibility'] = false;
+        }
+
+
         //Nuovo oggetto Apartment
         $apartment = new Apartment();
         
         //Dati temporanei
         $apartment->latitude = 90;
         $apartment->longitude = 90;
-        $apartment->visibility = true;
         //
-        
+
         //user_id preso dall'utente che ha effettuato il log in
         $apartment->user_id = Auth::id();
 
@@ -181,6 +189,14 @@ class ApartmentController extends Controller
             $data['slug'] = $slug;
         }
         
+        //Visibilità
+        if(isset($data['visibility'])) {
+            $data['visibility'] = true;
+        } else {
+            $data['visibility'] = false;
+        }
+
+
         $apartment->update($data);
         $apartment->save();
 

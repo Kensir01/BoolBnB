@@ -21,6 +21,11 @@
             
                 @csrf
             
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="visibility" name="visibility" value="1" {{old('visibility')? 'checked': ''}}>
+                    <label class="custom-control-label" for="visibility">Visibilità</label>
+                </div>
+
                 <div class="form-group">
                     <label for="title">Titolo</label>
                     <input type="text" class="form-control" id="title" name="title" value="{{old('title')}}">
@@ -70,7 +75,8 @@
                     <label for="image">Inserisci immagini</label>
                     <input type="file" class="form-control" id="image" name="image">
                 </div>
-            
+
+                {{-- Facilities --}}
                 @foreach ($facilities as $facility)
                     
                     <div class="custom-control custom-checkbox">
