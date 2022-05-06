@@ -71,7 +71,7 @@ class ApartmentController extends Controller
 
 
         // TOM TOM
-        $response = Http::get('https://api.tomtom.com/search/2/geocode/' . $data['address'] . ' ' . $data['zip_code'] . ' ' . $data['city'] . ' ' . '.json', [
+        $response = Http::withoutVerifying()->get('https://api.tomtom.com/search/2/geocode/' . $data['address'] . ' ' . $data['zip_code'] . ' ' . $data['city'] . ' ' . '.json', [
             'key' => config('services.tomtom.key'),
             'limit' => '1'
         ]);
