@@ -25,7 +25,7 @@ class ApartmentsTableSeeder extends Seeder
             $newApartment->bathrooms_number = $faker->numberBetween(1, 9);
             $newApartment->square_meters = $faker->numberBetween(50, 200);
             $newApartment->latitude = $faker->latitude(-90, 90);
-            $newApartment->longitude = $faker-> longitude(-90, 90);
+            $newApartment->longitude = $faker-> longitude(-180, 180);
             $newApartment->image = $faker->imageUrl(300, 300, 'houses', true, 'BnB');
             $newApartment->visibility = true;
             $newApartment->user_id = $faker->numberBetween(1, 10);

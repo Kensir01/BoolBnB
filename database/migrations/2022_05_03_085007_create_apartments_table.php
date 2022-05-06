@@ -22,7 +22,7 @@ class CreateApartmentsTable extends Migration
             $table->tinyInteger('bathrooms_number');
             $table->smallInteger('square_meters');
             $table->float('latitude', 10, 8);
-            $table->float('longitude', 10, 8);
+            $table->float('longitude', 11, 8);
             $table->string('image', 255);
             $table->boolean('visibility');
             $table->string('city', 50);
