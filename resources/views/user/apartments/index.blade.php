@@ -44,8 +44,8 @@
                                 <td>{{$apartment->zip_code}}</td>
                                 <td>{{$apartment->description}}</td>
                                 <td class="d-flex">
-                                    <a href="{{route('user.apartments.show', $apartment->id)}}" class="btn btn-primary">Mostra</a>
-                                    <a href="{{route('user.apartments.edit', $apartment->id)}}" class="btn btn-secondary">Modifica</a>
+                                    <a href="{{route('user.apartments.show', $apartment->slug)}}" class="btn btn-primary">Mostra</a>
+                                    <a href="{{route('user.apartments.edit', $apartment->slug)}}" class="btn btn-secondary">Modifica</a>
 
                                     <form method="POST" action="{{route('user.apartments.destroy', $apartment->id)}}">
 
