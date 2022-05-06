@@ -7,6 +7,8 @@ use App\Facility;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -67,6 +69,22 @@ class ApartmentController extends Controller
         //Prendo tutti i dati
         $data = $request->all();
 
+
+        // TOM TOM
+        $response = Http::get('https://api.tomtom.com/search/2/geocode/' . $data['address'] . ' ' . $data['zip_code'] . ' ' . $data['city'] . ' ' . '.json', [
+            'key' => config('services.tomtom.key'),
+            'limit' => '1'
+        ]);
+
+        $coordinates = $response->json();
+        // dd($coordinates);
+        $data['latitude'] = $coordinates['results'][0]['position']['lat'];
+        $data['longitude'] = $coordinates['results'][0]['position']['lon'];
+        // dd($response);
+        // Log::info($response);
+
+
+
         //Salvo l'immagine in public/storage/bnb_images
         $img_path = Storage::put('bnb_images', $data['image']);
         $data['image'] = $img_path;
@@ -93,11 +111,7 @@ class ApartmentController extends Controller
 
         //Nuovo oggetto Apartment
         $apartment = new Apartment();
-        
-        //Dati temporanei
-        $apartment->latitude = 90;
-        $apartment->longitude = 90;
-        //
+
 
         //user_id preso dall'utente che ha effettuato il log in
         $apartment->user_id = Auth::id();
