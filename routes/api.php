@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-// /api/apartments/*
-Route::get('api/apartments/{apartment:slug}', function (App\Apartment $apartment) {
-    return $apartment;
-});
+// /api/apartments -> index
+Route::get('/apartments', 'Api\ApartmentController@index');
+// /api/apartments/* -> show
+Route::get('/apartments/{slug}', 'Api\ApartmentController@show');

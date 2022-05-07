@@ -1,13 +1,9 @@
-<!--<template>
+<template>
   <div class="container mt-5">
       
-
       <div class="row">
         <div class="col-6">
-
-            <Apartment
-                :title='apartment.title'
-            />
+            <ApartmentCard :title='apartment.title'/>
 
         </div>
       </div>
@@ -17,16 +13,16 @@
 
 <script>
 
-import Apartment from '../components/Apartment';
+import ApartmentCard from '../components/ApartmentCard';
 
 export default {
     name: 'Apartment',
     components: {
-        Apartment
+        ApartmentCard
     },
     data() {
         return {
-            apartment : null,
+            apartment : [],
             slug : this.$route.params.slug
         }
     },

@@ -1,4 +1,4 @@
-<!--<template>
+<template>
     <div class="card">
         <div class="card-body">
             <h2 class="card-title">{{ title }}</h2>
@@ -8,8 +8,11 @@
 
 <script>
 export default {
-    name: 'Apartment',
-    props: ['title'],
+    name: 'ApartmentCard',
+    props: {
+
+        'title': String,
+    },
 }
 </script>
 
