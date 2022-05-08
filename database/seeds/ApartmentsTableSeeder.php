@@ -33,7 +33,7 @@ class ApartmentsTableSeeder extends Seeder
             $newApartment->longitude = $faker-> longitude(-180, 180);
 
             //Genera un numero casuale tra 0 e il numero di immagini totali nella cartella /storage/stock_bnb_images
-            $imageIndex = $faker->numberBetween(0, (int)$imagesLength);
+            $imageIndex = $faker->numberBetween(0, $imagesLength-1);
             //Associa all'appartamento generato casualmente un'immagine casuale contenuta in /storage/stock_bnb_images
             $newApartment->image = $stockImages[$imageIndex];
 
