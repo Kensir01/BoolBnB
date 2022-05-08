@@ -3,7 +3,8 @@
       
       <div class="row">
         <div class="col-6">
-            <ApartmentCard :title='apartment.title'/>
+            
+            <ApartmentCard :title='apartment.title' :image='apartment.image'/>
 
         </div>
       </div>

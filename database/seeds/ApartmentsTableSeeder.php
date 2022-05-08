@@ -16,7 +16,12 @@ class ApartmentsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        //
+
+        //Prende tutti i file dalla cartella /storage/stock_bnb_images
+        $stockImages = Storage::files('stock_bnb_images');
+        //Conta quanti file sono
+        $imagesLength = count($stockImages);
+
         for ($i=0; $i<20; $i++) {
             $newApartment = new Apartment();
             $newApartment->title = $faker->unique()->sentence(1);
@@ -26,7 +31,12 @@ class ApartmentsTableSeeder extends Seeder
             $newApartment->square_meters = $faker->numberBetween(50, 200);
             $newApartment->latitude = $faker->latitude(-90, 90);
             $newApartment->longitude = $faker-> longitude(-180, 180);
-            $newApartment->image = $faker->imageUrl(300, 300, 'houses', true, 'BnB');
+
+            //Genera un numero casuale tra 0 e il numero di immagini totali nella cartella /storage/stock_bnb_images
+            $imageIndex = $faker->numberBetween(0, (int)$imagesLength);
+            //Associa all'appartamento generato casualmente un'immagine casuale contenuta in /storage/stock_bnb_images
+            $newApartment->image = $stockImages[$imageIndex];
+
             $newApartment->visibility = true;
             $newApartment->user_id = $faker->numberBetween(1, 10);
             $newApartment->city = $faker->city();

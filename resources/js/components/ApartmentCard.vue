@@ -2,6 +2,7 @@
     <div class="card">
         <div class="card-body">
             <h2 class="card-title">{{ title }}</h2>
+            <img :src="image" :alt="title">
         </div>
     </div>
 </template>
@@ -12,6 +13,7 @@ export default {
     props: {
 
         'title': String,
+        'image' : String,
     },
 }
 </script>
