@@ -19,7 +19,7 @@ class ApartmentController extends Controller
         $apartments = Apartment::with(['facilities'])->get();
 
         $apartments->each(function($apartment) {
-            $apartment->image = url('storage/bnb_images' . $apartment->image);
+            $apartment->image = url('storage/' . $apartment->image);
         });
 
 
@@ -63,7 +63,7 @@ class ApartmentController extends Controller
     {
         $apartment = Apartment::where('slug', '=', $slug)->with(['facilities'])->first();
 
-        $apartment->image = url('storage/bnb_images' . $apartment->image);
+        $apartment->image = url('storage/' . $apartment->image);
 
         if($apartment) {
             return response()->json(
