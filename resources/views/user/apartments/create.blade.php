@@ -1,11 +1,15 @@
 @extends('user.layouts.base')
 
-@push('head')
-<!-- Styles -->
-{{-- <link href="{{ asset('css/apartment.css') }}" rel="stylesheet"> --}}
-<!-- Scripts -->
-<script src="{{assets('js/scripts/autocomplete.js')}}" defer></script>
-@endpush
+<!-- collegamento con file js - figlio -->
+    @section('script')
+    {{-- collegato file css --}}
+    <link href="{{ asset('css/autocomplete.css') }}" rel="stylesheet">
+    <!-- Scripts -->
+    {{-- <script src="{{assets('js/scripts/autocomplete.js')}}" defer></script> --}}
+    <script type="text/javascript" src="{{ URL::asset ('js/autocomplete.js')}}" defer></script>
+    @endsection 
+
+
 
 @section('content')
 
@@ -62,7 +66,14 @@
 
                 <div class="form-group">
                     <label for="city">Città</label>
-                    <input type="text" class="form-control" id="city" name="city" value="{{old('city')}}" required min="2" max="50">
+                    <input type="text" class="form-control autocomplete-input" id="city" name="city" value="{{old('city')}}" required min="2" max="50">
+                    <ul class="autocomplete-list">
+                        {{-- qui ci andranno le città ricercate --}}
+                        {{-- non funziona --}}
+                        <li id="option_number0">Test</li>
+                        <li id="option_number1">Test</li>
+                        <li id="option_number2">Test</li>
+                    </ul>
                 </div>
             
                 <div class="form-group">

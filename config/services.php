@@ -31,7 +31,7 @@ return [
     ],
 
     'tomtom' => [
-        'key' => env('TOM_TOM_KEY'),
+        'key' => env('MIX_TOM_TOM_KEY'),
     ]
 
 ];

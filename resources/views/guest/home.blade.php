@@ -15,6 +15,5 @@
 
     <script src="{{asset('js/front.js')}}"></script>
     
-
 </body>
 </html>
