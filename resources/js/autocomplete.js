@@ -1,22 +1,27 @@
 import axios from 'axios';
 
-// var api_key = "{{ env('MIX_TOM_TOM_KEY') }}";
-// console.log(api_key);
 //const mix = require('laravel-mix');
 var api_key = process.env.MIX_TOM_TOM_KEY;
 // console.log(api_key)
 
-let city = null;
 
-let list = document.querySelector('.autocomplete-list');
+let cityList = document.getElementById('cityList');
+let cityInput = document.getElementById('city');
 
+let addressList = document.getElementById('addressList')
+let addressInput = document.getElementById('address');
 
-let input = document.getElementById('city');
-input.addEventListener('keyup', function() {
+let zipInput = document.getElementById('zip_code');
+
+let city = '';
+
+//Rilascio il tasto fa la chiamata api: dal 4 carattere e ogni 2 dopo
+cityInput.addEventListener('keyup', function() {
+
     if (this.value.length >= 4) {
         if (this.value.length % 2 == 0) {
             //console.log('Funziona');
-            let city = this.value;
+            city = this.value;
 
             axios.get(`https://api.tomtom.com/search/2/search/${city}.json`, {
                 params: {
@@ -26,12 +31,17 @@ input.addEventListener('keyup', function() {
                 }
             })
             .then(function (response) {
+
                 // console.log(response);
-                city = response.data.results;
-                let cityNames = cityList(city);
-                writingList(list, cityNames);
+                let list = response.data.results;
+                // Array con solo i nomi e le province
+                let cityNames = getCityName(list);
+
+
+                writingCityList(cityList, cityNames);
+
                 // console.log('Risultati trovati: ' + city);
-                console.log('Risultati per: ' + cityNames)
+                // console.log('Risultati per: ' + cityNames)
             })
             .catch(function (error) {
                 console.log(error);
@@ -45,38 +55,106 @@ input.addEventListener('keyup', function() {
 });
 
 
-function cityList(array) {
+addressInput.addEventListener('keyup', function() {
+
+    if (this.value.length >= 4) {
+        if (this.value.length % 2 == 0) {
+            //console.log('Funziona');
+
+            let address = this.value;
+
+            axios.get(`https://api.tomtom.com/search/2/search/${city}_${address}.json`, {
+                params: {
+                 key: api_key,
+                 typeahead: true,
+                 limit: 3
+                }
+            })
+            .then(function (response) {
+
+                // console.log(response);
+                let list = response.data.results;
+                // Array con solo i nomi e le province
+                let addressNames = getAddressName(list);
+
+
+                writingAddressList(addressList, addressNames);
+
+                // console.log('Risultati trovati: ' + city);
+                // console.log('Risultati per: ' + cityNames)
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });  
+        }    
+    }
+    
+});
+
+//Ottieni un array con solo la lista dei nomi città + provincia
+function getCityName(array) {
     let length = array.length;
-    let cityList = [];
+    let names = [];
 
     for (let i = 0; i < length; i++) {
-        cityList.push(array[i].address.municipality + ', ' + array[i].address.countrySecondarySubdivision);
+        names.push(array[i].address.municipality + ', ' + array[i].address.countrySecondarySubdivision);
     }
 
-    return cityList;
+    return names;
+};
+
+function getAddressName(array) {
+    let length = array.length;
+    let names = [];
+
+    for (let i = 0; i < length; i++) {
+        names.push(
+            {
+                'street' : array[i].address.streetName,
+                'zip_code' : array[i].address.postalCode
+            }
+        );
+    }
+
+    return names;
 };
 
 
-function writingList(element, array) {
-    element.innerHTML = '';
-    for (let i = 0; i < array.length; i++) {
-        element.innerHTML += `<li id="option_number`+ i +`">` + array[i] + `</li>`
-    }
+function writingCityList(list, array) {
+    list.innerHTML = '';
+    
+    array.forEach(element => {
+
+        let newItem = document.createElement('li');
+        newItem.innerHTML = element;
+        list.appendChild(newItem);
+        newItem.addEventListener('click', function(){
+            cityInput.value = this.textContent;
+            city = this.textContent;
+            list.innerHTML = '';
+        })
+
+    });
 }
 
-// non funziona al click
-let option_0 = document.getElementById(option_number0);
-let option_1 = document.getElementById(option_number1);
-let option_2 = document.getElementById(option_number2);
+function writingAddressList(list, array) {
+    list.innerHTML = '';
+    
+    array.forEach(element => {
 
-option_0.addEventListener('click', function() {
-  input.value = option_0.innerHTML;  
-})
+        let newItem = document.createElement('li');
+        newItem.innerHTML = element.street;
+        list.appendChild(newItem);
+        newItem.addEventListener('click', function(){
+            addressInput.value = this.textContent;
+            zipInput.value = element.zip_code;
+            list.innerHTML = '';
+        })
 
-option_1.addEventListener('click', function() {
-    input.value = option_1.innerHTML;  
-})
+    });
+}
 
-option_2.addEventListener('click', function() {
-    input.value = option_2.innerHTML;  
-})
+
