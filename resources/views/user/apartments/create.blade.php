@@ -1,5 +1,12 @@
 @extends('user.layouts.base')
 
+@push('head')
+<!-- Styles -->
+{{-- <link href="{{ asset('css/apartment.css') }}" rel="stylesheet"> --}}
+<!-- Scripts -->
+<script src="{{assets('js/scripts/autocomplete.js')}}" defer></script>
+@endpush
+
 @section('content')
 
 <div class="container">
@@ -52,20 +59,23 @@
                     <input type="number" class="form-control" id="square_meters" name="square_meters" value="{{old('square_meters')}}" required min="1" max="32766">
                 </div>
             
+
                 <div class="form-group">
                     <label for="city">Città</label>
                     <input type="text" class="form-control" id="city" name="city" value="{{old('city')}}" required min="2" max="50">
                 </div>
             
                 <div class="form-group">
+                    <label for="zip_code">CAP</label>
+                    <input type="text" class="form-control" id="zip_code" name="zip_code" value="{{old('zip_code')}}" required min="3" max="15">
+                </div>
+
+                <div class="form-group">
                     <label for="address">Indirizzo</label>
                     <input type="text" class="form-control" id="address" name="address" value="{{old('address')}}" required min="2" max="50">
                 </div>
             
-                <div class="form-group">
-                    <label for="zip_code">CAP</label>
-                    <input type="text" class="form-control" id="zip_code" name="zip_code" value="{{old('zip_code')}}" required min="3" max="15">
-                </div>
+               
             
                 <div class="form-floating">
                     <label for="description">Descrizione</label>
