@@ -8,6 +8,9 @@
         </ul>
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
+                <a class="nav-link" href="/user">Utente</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/login">Login</a>
             </li>
             <li class="nav-item">
