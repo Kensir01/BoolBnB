@@ -5,7 +5,7 @@
 }
 
 .autocomplete li:hover {
-  background-color: lightgray;
+  background-color: #FCEF03;
   cursor: pointer;
 }
 
