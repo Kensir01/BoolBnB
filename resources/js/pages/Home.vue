@@ -72,6 +72,19 @@ export default {
         },
         searchNearby() {
             
+            axios.get('https://api.tomtom.com/search/2/geometryFilter.json', {
+                params: {
+                    key: this.apiKey,
+                    poiList: JSON.stringify(this.poiList),
+                    geometryList: JSON.stringify(this.geometryList)
+                }
+            })
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
         }
     },
     mounted() {
