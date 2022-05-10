@@ -2103,23 +2103,25 @@ process.umask = function() { return 0; };
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
- // var api_key = "{{ env('MIX_TOM_TOM_KEY') }}";
-// console.log(api_key);
-//const mix = require('laravel-mix');
+ //const mix = require('laravel-mix');
 
-var api_key = "dKIdA4c5OhnbGF5avb5kToCh3jNOptyA"; // console.log(api_key)
+var api_key = process.env.MIX_TOM_TOM_KEY; // console.log(api_key)
 
-var city = null;
-var list = document.querySelector('.autocomplete-list');
-var input = document.getElementById('city');
-input.addEventListener('keyup', function () {
+var cityList = document.getElementById('cityList');
+var cityInput = document.getElementById('city');
+var addressList = document.getElementById('addressList');
+var addressInput = document.getElementById('address');
+var zipInput = document.getElementById('zip_code');
+var city = ''; //Rilascio il tasto fa la chiamata api: dal 4 carattere e ogni 2 dopo
+
+cityInput.addEventListener('keyup', function () {
   if (this.value.length >= 4) {
     if (this.value.length % 2 == 0) {
       //console.log('Funziona');
-      var _city = this.value;
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://api.tomtom.com/search/2/search/".concat(_city, ".json"), {
+      city = this.value;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://api.tomtom.com/search/2/search/".concat(city, ".json"), {
         params: {
           key: api_key,
           typeahead: true,
@@ -2127,11 +2129,11 @@ input.addEventListener('keyup', function () {
         }
       }).then(function (response) {
         // console.log(response);
-        _city = response.data.results;
-        var cityNames = cityList(_city);
-        writingList(list, cityNames); // console.log('Risultati trovati: ' + city);
+        var list = response.data.results; // Array con solo i nomi e le province
 
-        console.log('Risultati per: ' + cityNames);
+        var cityNames = getCityName(list);
+        writingCityList(cityList, cityNames); // console.log('Risultati trovati: ' + city);
+        // console.log('Risultati per: ' + cityNames)
       })["catch"](function (error) {
         console.log(error);
       }).then(function () {// always executed
@@ -2139,41 +2141,89 @@ input.addEventListener('keyup', function () {
     }
   }
 });
+addressInput.addEventListener('keyup', function () {
+  if (this.value.length >= 4) {
+    if (this.value.length % 2 == 0) {
+      //console.log('Funziona');
+      var address = this.value;
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("https://api.tomtom.com/search/2/search/".concat(city, "_").concat(address, ".json"), {
+        params: {
+          key: api_key,
+          typeahead: true,
+          limit: 3
+        }
+      }).then(function (response) {
+        // console.log(response);
+        var list = response.data.results; // Array con solo i nomi e le province
 
-function cityList(array) {
+        var addressNames = getAddressName(list);
+        writingAddressList(addressList, addressNames); // console.log('Risultati trovati: ' + city);
+        // console.log('Risultati per: ' + cityNames)
+      })["catch"](function (error) {
+        console.log(error);
+      }).then(function () {// always executed
+      });
+    }
+  }
+}); //Ottieni un array con solo la lista dei nomi città + provincia
+
+function getCityName(array) {
   var length = array.length;
-  var cityList = [];
+  var names = [];
 
   for (var i = 0; i < length; i++) {
-    cityList.push(array[i].address.municipality + ', ' + array[i].address.countrySecondarySubdivision);
+    names.push(array[i].address.municipality + ', ' + array[i].address.countrySecondarySubdivision);
   }
 
-  return cityList;
+  return names;
 }
 
 ;
 
-function writingList(element, array) {
-  element.innerHTML = '';
+function getAddressName(array) {
+  var length = array.length;
+  var names = [];
 
-  for (var i = 0; i < array.length; i++) {
-    element.innerHTML += "<li id=\"option_number" + i + "\">" + array[i] + "</li>";
+  for (var i = 0; i < length; i++) {
+    names.push({
+      'street': array[i].address.streetName,
+      'zip_code': array[i].address.postalCode
+    });
   }
-} // non funziona al click
 
+  return names;
+}
 
-var option_0 = document.getElementById(option_number0);
-var option_1 = document.getElementById(option_number1);
-var option_2 = document.getElementById(option_number2);
-option_0.addEventListener('click', function () {
-  input.value = option_0.innerHTML;
-});
-option_1.addEventListener('click', function () {
-  input.value = option_1.innerHTML;
-});
-option_2.addEventListener('click', function () {
-  input.value = option_2.innerHTML;
-});
+;
+
+function writingCityList(list, array) {
+  list.innerHTML = '';
+  array.forEach(function (element) {
+    var newItem = document.createElement('li');
+    newItem.innerHTML = element;
+    list.appendChild(newItem);
+    newItem.addEventListener('click', function () {
+      cityInput.value = this.textContent;
+      city = this.textContent;
+      list.innerHTML = '';
+    });
+  });
+}
+
+function writingAddressList(list, array) {
+  list.innerHTML = '';
+  array.forEach(function (element) {
+    var newItem = document.createElement('li');
+    newItem.innerHTML = element.street;
+    list.appendChild(newItem);
+    newItem.addEventListener('click', function () {
+      addressInput.value = this.textContent;
+      zipInput.value = element.zip_code;
+      list.innerHTML = '';
+    });
+  });
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -2184,7 +2234,7 @@ option_2.addEventListener('click', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/resources/js/autocomplete.js */"./resources/js/autocomplete.js");
+module.exports = __webpack_require__(/*! C:\Users\Utente\BoolBnB\resources\js\autocomplete.js */"./resources/js/autocomplete.js");
 
 
 /***/ })

@@ -95,7 +95,6 @@ export default {
 
 <style scoped lang='scss'>
 
-    @import "../../sass/partials/_fonts.scss";
     
     input {
         padding: 4px 12px;
