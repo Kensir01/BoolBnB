@@ -2,8 +2,6 @@
     <div>
         <h1>Benvenuto in BoolBnB!</h1>
         <input type="text" v-model="search" placeholder="Search title.." @keyup.enter="geoCoding"/>
-        <div>{{lat}}</div>
-        <div>{{lon}}</div>
     </div>
 </template>
 
@@ -14,10 +12,9 @@ export default {
         return {
             search: '',
             apiKey: process.env.MIX_TOM_TOM_KEY,
-            lat: null,
-            lon: null,
             apartments : null,
-            poiList: null
+            poiList: [],
+            geometryList: []
         }
     },
     methods: {
@@ -30,39 +27,51 @@ export default {
             })
             .then((response) => {
                 // console.log(response);
-                this.lat = response.data.results[0].position.lat;
-                this.lon = response.data.results[0].position.lon;
+                this.getGeometryList(response.data.results[0].position.lat, response.data.results[0].position.lon);
+                this.searchNearby();
             });
         },
         getAllApartments() {
             axios.get("/api/apartments", {
         })
             .then((response) => {
-                console.log(response.data)
-                this.apartments = response.data;
+                // console.log(response.data)
+                this.apartments = response.data.data;
                 this.apartmentsToPoiList();
             });
         },
         apartmentsToPoiList() {
-            this.poiList = null;
             this.apartments.forEach(apartment => {
                 this.poiList.push(
-                    [
                         {
                             "poi": {
-                                "name": apartment.name
+                                "name": apartment.title
                                 },
+
                                 "address": {
                                     "freeformAddress": apartment.address + ', ' + apartment.city + ', ' + apartment.zip_code
                                 },
+
                                 "position": {
                                     "lat": apartment.latitude,
                                     "lon": apartment.longitude
                             }
                         }
-                    ]
                 )
             });
+            // console.log(this.poiList);
+        },
+        getGeometryList(x, y) {
+            this.geometryList = [
+                {
+                    "type": "CIRCLE",
+                    "position": x + ', ' + y,
+                    "radius": 20000
+                }
+            ];
+        },
+        searchNearby() {
+            
         }
     },
     mounted() {
