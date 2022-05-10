@@ -94,6 +94,9 @@ export default {
 </script>
 
 <style scoped lang='scss'>
+
+    @import "../../sass/partials/_fonts.scss";
+    
     input {
         padding: 4px 12px;
         color: rgba(0,0,0,.70);
