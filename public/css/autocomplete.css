@@ -1,10 +1,10 @@
-.autocomplete-list {
+.autocomplete {
   position: absolute;
   background-color: #fff;
   list-style: none;
 }
 
-.autocomplete-list li:hover {
+.autocomplete li:hover {
   background-color: lightgray;
   cursor: pointer;
 }

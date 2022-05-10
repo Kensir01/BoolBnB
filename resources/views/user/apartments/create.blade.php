@@ -66,24 +66,19 @@
 
                 <div class="form-group">
                     <label for="city">Città</label>
-                    <input type="text" class="form-control autocomplete-input" id="city" name="city" value="{{old('city')}}" required min="2" max="50">
-                    <ul class="autocomplete-list">
-                        {{-- qui ci andranno le città ricercate --}}
-                        {{-- non funziona --}}
-                        <li id="option_number0">Test</li>
-                        <li id="option_number1">Test</li>
-                        <li id="option_number2">Test</li>
-                    </ul>
+                    <input type="text" class="form-control" id="city" name="city" value="{{old('city')}}" required min="2" max="50" autocomplete="noooooooooooooooooooooooo">
+                    <ul id="cityList" class="autocomplete"></ul>
                 </div>
             
                 <div class="form-group">
                     <label for="zip_code">CAP</label>
-                    <input type="text" class="form-control" id="zip_code" name="zip_code" value="{{old('zip_code')}}" required min="3" max="15">
+                    <input type="text" class="form-control" id="zip_code" name="zip_code" value="{{old('zip_code')}}" required min="3" max="15" autocomplete="noooooooooooooooooooooooo">
                 </div>
 
                 <div class="form-group">
                     <label for="address">Indirizzo</label>
-                    <input type="text" class="form-control" id="address" name="address" value="{{old('address')}}" required min="2" max="50">
+                    <input type="text" class="form-control" id="address" name="address" value="{{old('address')}}" required min="2" max="50" autocomplete="noooooooooooooooooooooooo">
+                    <ul id="addressList" class="autocomplete"></ul>
                 </div>
             
                
