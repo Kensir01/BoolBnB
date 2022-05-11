@@ -20,5 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 // /api/apartments -> index
 Route::get('/apartments', 'Api\ApartmentController@index');
+
+Route::get('/apartments/search', 'Api\ApartmentController@search');
 // /api/apartments/* -> show
 Route::get('/apartments/{slug}', 'Api\ApartmentController@show');

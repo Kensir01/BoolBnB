@@ -6,6 +6,8 @@ use App\Apartment;
 use App\Http\Controllers\Controller;
 use Dotenv\Result\Success;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use Symfony\Component\Console\Input\Input;
 
 class ApartmentController extends Controller
 {
@@ -89,9 +91,53 @@ class ApartmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function search(Request $request)
     {
-        //
+        $location = $request->input('location');
+
+        $geocoded = Http::withoutVerifying()->get('https://api.tomtom.com/search/2/geocode/'. $location .'.json', [
+            'key' => config('services.tomtom.key'),
+            'limit' => '1'
+        ]);
+
+       
+        $lat = $geocoded['results'][0]['position']['lat'];
+        $lon = $geocoded['results'][0]['position']['lon'];
+
+        $geometryList = [
+            [
+                'type' => 'CIRCLE',
+                'position' => $lat . ', ' . $lon ,
+                'radius' => 20000
+            ]
+        ];
+
+        $apartments = Apartment::all();
+
+
+        foreach ($apartments as $apartment) {
+            $poiList[] = [
+                'poi' => [
+                    'name' => $apartment->title,
+                ],
+                'address' => [
+                    'freeFormAddress' => $apartment->address . ', ' . $apartment->city . ', ' . $apartment->zip_code
+                ],
+                'position' => [
+                    "lat" => $apartment->latitude,
+                    "lon" => $apartment->longitude
+                ]
+            ];
+        }
+
+        $filtered = Http::withoutVerifying()->accept('application/json')->get("https://api.tomtom.com/search/2/geometryFilter.json", [
+            'key' => config('services.tomtom.key'),
+            'poiList' => $poiList,
+            'geometryList' => json_encode($geometryList)
+        ]);
+
+        return compact('filtered', 'poiList', 'geometryList');
+
     }
 
     /**
@@ -102,17 +148,6 @@ class ApartmentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
     {
         //
     }
