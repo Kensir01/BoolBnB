@@ -102,18 +102,49 @@ class ApartmentController extends Controller
        
         $lat = $geocoded['results'][0]['position']['lat'];
         $lon = $geocoded['results'][0]['position']['lon'];
+
         
+        $geometryList = [
+            [
+                'type' => 'CIRCLE',
+                'position' => $lat . ', ' . $lon ,
+                'radius' => 20000
+            ]
+        ];
+
         $apartments = Apartment::all();
 
-        $filtered = ['array()'];
-        foreach($apartments as $apartment) {
-            $distance = self::getDistance($lat, $lon, $apartment->latitude, $apartment->longitude);
-            if($distance <= 20000) {
-                array_push($filtered, $apartment);
-            };
+
+        foreach ($apartments as $apartment) {
+            $poiList[] = [
+
+                'poi' => [
+                    "name" => $apartment->title,
+                ],
+                'address' => [
+                    "freeFormAddress" => $apartment->address . ', ' . $apartment->city . ', ' . $apartment->zip_code
+                ],
+                'position' => [
+                    "lat" => $apartment->latitude ,
+                    "lon" => $apartment->longitude
+                ]
+
+            ];
         }
 
-        return compact('filtered', 'lat', 'lon');
+        $poiList = json_encode($poiList);
+        $geometryList = json_encode($geometryList);
+
+        $filtered = Http::withoutVerifying()->get("https://api.tomtom.com/search/2/geometryFilter.json", [
+            'key' => config('services.tomtom.key'),
+            'poiList' => $poiList,
+            'geometryList' => $geometryList
+        ]);
+
+        $filtered = $filtered->json();
+
+        return compact('filtered', 'poiList','geometryList');
+
     }
 
     /**
@@ -126,25 +157,5 @@ class ApartmentController extends Controller
     public function update(Request $request, $id)
     {
         //
-    }
-
-    //Calcolo distanza dal punto inserito
-    protected function getDistance($lat1, $lon1, $lat2, $lon2) {
-
-        $R = 6371000;
-
-        $lat1 = round($lat1 * (M_PI / 180), 14);
-        $lat2 = round($lat2 * (M_PI / 180), 14);
-
-        $deltaLat = round(($lat2-$lat1) * (M_PI / 180), 14);
-        $deltaLon = round(($lon2-$lon1) * (M_PI / 180), 14);
-        
-        //$d = asin( sin($lat1)*sin($lat2) + cos($lat1)*cos($lat2) * cos($deltaLon) ) * $R;
-        $a = pow(sin($deltaLat/2), 2) + cos($lat1) * cos($lat2) * pow(sin($deltaLon/2), 2);
-        $c = 2 * atan2(sqrt($a),sqrt(1-$a));
-
-        $d = $R * $c;
-
-        return $d;
     }
 }

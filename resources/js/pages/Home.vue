@@ -2,6 +2,9 @@
     <div>
         <h1>Benvenuto in BoolBnB!</h1>
         <input type="text" v-model="search" placeholder="Search title.." @keyup.enter="getSearch"/>
+        <div><h2>Geometry List</h2>{{geometryList}}</div>
+        <div><h2>Poi List</h2>{{poiList}}</div>
+        <div><h2>Trovati</h2>{{filtered}}</div>
     </div>
 </template>
 
@@ -14,7 +17,8 @@ export default {
             apiKey: process.env.MIX_TOM_TOM_KEY,
             apartments : null,
             poiList: [],
-            geometryList: []
+            geometryList: [],
+            filtered: [],
         }
     },
     methods: {
@@ -25,6 +29,9 @@ export default {
                 }
             }).then((response) => {
                 console.log(response.data)
+                this.poiList = response.data.poiList
+                this.geometryList = response.data.geometryList
+                this.filtered = response.data.filtered
             });
         }
 
