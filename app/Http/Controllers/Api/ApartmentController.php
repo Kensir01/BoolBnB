@@ -105,7 +105,7 @@ class ApartmentController extends Controller
         
         $apartments = Apartment::all();
 
-        $filtered = ['array()'];
+        $filtered = [];
         foreach($apartments as $apartment) {
             $distance = self::getDistance($lat, $lon, $apartment->latitude, $apartment->longitude);
             if($distance <= 20000) {
@@ -117,18 +117,54 @@ class ApartmentController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     *
      * @param  int  $id
+     * @param  \Illuminate\Http\Request 
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function filteredSearch(Request $request)
     {
-        //
+        $location = $request->input('location');
+        $beds = $request->input('beds');
+        $rooms = $request->input('rooms');
+        $range = $request->input('distance');
+        $facilities = $request->input('facilities');
+
+
+        $geocoded = Http::withoutVerifying()->get('https://api.tomtom.com/search/2/geocode/'. $location .'.json', [
+            'key' => config('services.tomtom.key'),
+            'limit' => '1'
+        ]);
+
+        
+
+        $lat = $geocoded['results'][0]['position']['lat'];
+        $lon = $geocoded['results'][0]['position']['lon'];
+        
+        $apartments = Apartment::with('facilities')
+        ->where([['rooms_number', '>=', $rooms],['beds_number', '>=', $beds]])
+        ->whereHas('facilities', function($q) use ($facilities) {
+            $q->whereIn('id', $facilities);
+        })
+        ->get();
+
+
+
+        $filtered = [];
+        foreach($apartments as $apartment) {
+            $distance = self::getDistance($lat, $lon, $apartment->latitude, $apartment->longitude);
+            if($distance <= $range) {
+                array_push($filtered, $apartment);
+            };
+        }
+
+        return compact('filtered');
     }
 
     //Calcolo distanza dal punto inserito
+    //FORMULA DI 
+
     protected function getDistance($lat1, $lon1, $lat2, $lon2) {
 
         $R = 6371000;
