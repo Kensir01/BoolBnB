@@ -4,10 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Apartment;
 use App\Http\Controllers\Controller;
-use Dotenv\Result\Success;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-use Symfony\Component\Console\Input\Input;
 
 class ApartmentController extends Controller
 {
@@ -86,9 +84,10 @@ class ApartmentController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     *
      *
      * @param  int  $id
+     * @param  \Illuminate\Http\Request 
      * @return \Illuminate\Http\Response
      */
     public function search(Request $request)
@@ -117,26 +116,33 @@ class ApartmentController extends Controller
 
         foreach ($apartments as $apartment) {
             $poiList[] = [
+
                 'poi' => [
-                    'name' => $apartment->title,
+                    "name" => $apartment->title,
                 ],
                 'address' => [
-                    'freeFormAddress' => $apartment->address . ', ' . $apartment->city . ', ' . $apartment->zip_code
+                    "freeFormAddress" => $apartment->address . ', ' . $apartment->city . ', ' . $apartment->zip_code
                 ],
                 'position' => [
-                    "lat" => $apartment->latitude,
+                    "lat" => $apartment->latitude ,
                     "lon" => $apartment->longitude
                 ]
+
             ];
         }
 
-        $filtered = Http::withoutVerifying()->accept('application/json')->get("https://api.tomtom.com/search/2/geometryFilter.json", [
+        $poiList = json_encode($poiList);
+        $geometryList = json_encode($geometryList);
+
+        $filtered = Http::withoutVerifying()->get("https://api.tomtom.com/search/2/geometryFilter.json", [
             'key' => config('services.tomtom.key'),
             'poiList' => $poiList,
-            'geometryList' => json_encode($geometryList)
+            'geometryList' => $geometryList
         ]);
 
-        return compact('filtered', 'poiList', 'geometryList');
+        $filtered = $filtered->json();
+
+        return compact('filtered', 'poiList','geometryList');
 
     }
 
