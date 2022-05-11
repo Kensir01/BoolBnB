@@ -22,7 +22,7 @@ class ApartmentsTableSeeder extends Seeder
         //Conta quanti file sono
         $imagesLength = count($stockImages);
 
-        for ($i=0; $i<20; $i++) {
+        for ($i=0; $i<40; $i++) {
             $newApartment = new Apartment();
             $newApartment->title = $faker->unique()->sentence(1);
             $newApartment->rooms_number = $faker->numberBetween(1, 9);
