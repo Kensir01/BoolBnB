@@ -1,7 +1,7 @@
 <template>
 
   <div class="container">
-  <footer class="py-5">
+  <footer>
     <div class="row">
       <div class="col-12 col-md-4">
         <h5>INFORMAZIONI</h5>
@@ -47,13 +47,15 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 
   @import "../../sass/partials/_colors.scss";
-  @import "../../../public/fonts/ruddy_black/stylesheet.css";
+  @import "../../sass/partials/_font.scss";
+  @import "../../sass/partials/_common.scss";
+  
 
   h5 {
-        font-family: 'ruddyblack';
+    font-family: 'ruddyblack';
   }
 
   li a {
