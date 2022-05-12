@@ -44,7 +44,10 @@ export default {
 
 <style>
   footer {
-    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
   }
   .spacer {
     height: 20px;

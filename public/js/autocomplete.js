@@ -2103,11 +2103,11 @@ process.umask = function() { return 0; };
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
  //const mix = require('laravel-mix');
 
-var api_key = process.env.MIX_TOM_TOM_KEY; // console.log(api_key)
+var api_key = "7kWYJDQnwA2ciqPMSwAUBU9nsoFLjVCc"; // console.log(api_key)
 
 var cityList = document.getElementById('cityList');
 var cityInput = document.getElementById('city');
@@ -2223,7 +2223,6 @@ function writingAddressList(list, array) {
     });
   });
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 

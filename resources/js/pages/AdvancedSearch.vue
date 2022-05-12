@@ -18,6 +18,10 @@
           <label :for="facility.name">{{facility.name}}</label>
         </div>
 
+    <div v-for="(item, index) in filtered" :key="index">
+      {{item.title}}
+    </div>
+
 
   </div>
 </template>
