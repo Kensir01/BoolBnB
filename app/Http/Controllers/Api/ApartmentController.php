@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Api;
 
 use App\Apartment;
 use App\Http\Controllers\Controller;
+use Doctrine\DBAL\Query;
+use Dotenv\Result\Success;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use PhpParser\Node\Stmt\ElseIf_;
 
 class ApartmentController extends Controller
 {
@@ -125,12 +128,41 @@ class ApartmentController extends Controller
      */
     public function filteredSearch(Request $request)
     {
-        $location = $request->input('location');
-        $beds = $request->input('beds');
-        $rooms = $request->input('rooms');
-        $range = $request->input('distance');
-        $facilities = $request->input('facilities');
 
+        if($request->input('location') !== null) {
+            $location = $request->input('location');
+        } else {
+            $response = [
+                        'result' => false,
+                        'data' => 'Nessun risultato'
+                    ];
+            return compact('response');
+        }
+        
+
+        if(null !== $request->input('beds') || $request->input('beds') >= 0) {
+            $beds = $request->input('beds');
+        } else{
+            $beds = 1;
+        }
+
+        if(null !== $request->input('rooms') || $request->input('rooms') >= 0) {
+            $rooms = $request->input('rooms');
+        } else{
+            $rooms = 1;
+        }
+
+        if(null !== $request->input('distance') || $request->input('distance') >= 20000) {
+            $range = $request->input('distance');
+        } else{
+            $range = 20000;
+        }
+
+        if(null !== $request->input('facilities')) {
+            $facilities = $request->input('facilities');
+        } else{
+            $facilities = [];
+        }
 
         $geocoded = Http::withoutVerifying()->get('https://api.tomtom.com/search/2/geocode/'. $location .'.json', [
             'key' => config('services.tomtom.key'),
@@ -142,12 +174,18 @@ class ApartmentController extends Controller
         $lat = $geocoded['results'][0]['position']['lat'];
         $lon = $geocoded['results'][0]['position']['lon'];
         
+
+        //query di ricerca
         $apartments = Apartment::with('facilities')
         ->where([['rooms_number', '>=', $rooms],['beds_number', '>=', $beds]])
-        ->whereHas('facilities', function($q) use ($facilities) {
-            $q->whereIn('id', $facilities);
-        })
-        ->get();
+        ->where(function($query) use($facilities){
+            foreach($facilities as $facility) {
+                $query->whereHas('facilities', function($query) use ($facility) {
+                    $query->where('id', $facility);
+                });
+            }
+
+        })->get();
 
 
 
@@ -159,7 +197,11 @@ class ApartmentController extends Controller
             };
         }
 
-        return compact('filtered');
+        $response = [
+            'result' => true,
+            'data' => $filtered
+        ];
+        return compact('response');
     }
 
     //Calcolo distanza dal punto inserito
