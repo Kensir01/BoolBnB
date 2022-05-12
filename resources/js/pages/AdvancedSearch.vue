@@ -2,16 +2,16 @@
   <div>
 
     <h1>Ricerca</h1>
-    <input type="text" v-model="search" placeholder="Search title.." @keyup.enter="getFilteredSearch"/>
+    <input type="text" v-model="search" placeholder="Es. Villa vista mare" @keyup.enter="getFilteredSearch"/>
         
-        <input type="number" id="stanze" v-model="rooms">
         <label for="stanze">Numero di stanze</label>
+        <input type="number" id="stanze" v-model="rooms" placeholder="Es. 3">
 
-        <input type="number" id="letti" v-model="beds">
-        <label for="letti">Numero di letti</label>
+        <label bel for="letti">Numero di letti</label>  
+        <input type="number" id="letti" v-model="beds" placeholder="Es. 2">
 
-        <input type="number" id="raggio" v-model="distance">
-        <label for="raggio">Raggio</label>
+        <label for="raggio">Raggio in Km.</label>
+        <input type="number" id="raggio" v-model="distance" placeholder="Es. 20">
 
         <div v-for="facility in facilities" :key="facility.id">
           <input type="checkbox" :name="facility.name" :id="facility.id" :value="facility.id" v-model="selectedFacilities"> 
