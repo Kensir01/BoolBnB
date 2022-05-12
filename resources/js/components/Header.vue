@@ -1,7 +1,7 @@
 <template>
 <div class="container">
     <header>
-        <nav class="navbar navbar-expand navbar-light bg-light  justify-content-between">
+        <nav class="navbar navbar-expand navbar-light justify-content-between">
         <router-link class="navbar-brand" :to="{name: 'home'}"><img src="../../../storage/app/public/logo/Risorsa34.svg" alt="BoolBnB logo"></router-link>
         <!-- <ul class="navbar-nav mr-auto">
             <li class="nav-item" v-for="menuItem in menuItems" :key="menuItem.routeName">
@@ -47,11 +47,12 @@ export default {
 <style scoped lang="scss">
     @import "../../sass/partials/_font.scss";
     @import "../../sass/partials/_common.scss";
-     @import "../../sass/partials/_colors.scss";
+    @import "../../sass/partials/_colors.scss";
 
     header {
     height: 90px;
     align-items: center;
+    background-color: $background !important;
     }
 
     a.nav-link {
