@@ -2375,7 +2375,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "input[data-v-b3c5cf30] {\n  padding: 4px 12px;\n  color: rgba(0, 0, 0, 0.7);\n  border: 1px solid rgba(0, 0, 0, 0.12);\n  transition: 0.15s all ease-in-out;\n  background: white;\n}\ninput[data-v-b3c5cf30]:focus {\n  outline: none;\n  transform: scale(1.05);\n}\ninput:focus + label[data-v-b3c5cf30] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-b3c5cf30]::-webkit-input-placeholder {\n  font-size: 12px;\n  color: rgba(0, 0, 0, 0.5);\n  font-weight: 100;\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"Ruddy\";\n  src: url(\"/public/fonts/Ruddy-Bold.ttf\") format(\"truetype\"), url(\"/public/fonts/Ruddy-Bold.ttf\") format(\"ttf\");\n}\nh1[data-v-b3c5cf30] {\n  font-family: \"Ruddy\";\n}\ninput[data-v-b3c5cf30] {\n  padding: 4px 12px;\n  color: rgba(0, 0, 0, 0.7);\n  border: 1px solid rgba(0, 0, 0, 0.12);\n  transition: 0.15s all ease-in-out;\n  background: white;\n}\ninput[data-v-b3c5cf30]:focus {\n  outline: none;\n  transform: scale(1.05);\n}\ninput:focus + label[data-v-b3c5cf30] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-b3c5cf30]::-webkit-input-placeholder {\n  font-size: 12px;\n  color: rgba(0, 0, 0, 0.5);\n  font-weight: 100;\n}", ""]);
 
 // exports
 
@@ -2394,7 +2394,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nfooter {\n  width: 100%;\n  position: absolute;\n  left: 0;\n  bottom: 0;\n}\n.spacer {\n  height: 20px;\n}\n.social {\n  padding: 10px;\n  text-align: center;\n}\n.img_size {\n  height: 20px;\n  filter: invert(100%);\n}\n.text {\n  padding: 10px 0px 10px 0px;\n}\n.center {\n  padding: 10px;\n  border-top: 1px solid #C9C9C9;\n  width: 90%;\n  margin: auto;\n}\n.bg {\n  background-color: #343a40;\n}\n", ""]);
+exports.push([module.i, "\nfooter {\n  width: 100%;\n  left: 0;\n  bottom: 0;\n}\n.spacer {\n  height: 20px;\n}\n.social {\n  padding: 10px;\n  text-align: center;\n}\n.img_size {\n  height: 20px;\n  filter: invert(100%);\n}\n.text {\n  padding: 10px 0px 10px 0px;\n}\n.center {\n  padding: 10px;\n  border-top: 1px solid #C9C9C9;\n  width: 90%;\n  margin: auto;\n}\n.bg {\n  background-color: #343a40;\n}\n", ""]);
 
 // exports
 
@@ -20427,7 +20427,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Utente\BoolBnB\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })

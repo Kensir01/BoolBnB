@@ -10962,3 +10962,8 @@ a.text-dark:focus {
   }
 }
 
+@font-face {
+  font-family: "Ruddy";
+  src: url("/public/fonts/Ruddy-Bold.ttf") format("truetype"), url("/public/fonts/Ruddy-Bold.ttf") format("ttf");
+}
+
