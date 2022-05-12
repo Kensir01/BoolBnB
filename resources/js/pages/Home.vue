@@ -110,6 +110,11 @@ export default {
 
 <style scoped lang='scss'>
 
+    @import "../../../public/fonts/ruddy_black/stylesheet.css";
+
+    h1 {
+        font-family: 'ruddyblack';
+    }
     
     input {
         padding: 4px 12px;
