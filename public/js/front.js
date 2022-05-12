@@ -1974,6 +1974,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Footer'
 });
@@ -2395,7 +2400,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"Ruddy\";\n  src: url(\"/public/fonts/Ruddy-Bold.ttf\") format(\"truetype\"), url(\"/public/fonts/Ruddy-Bold.ttf\") format(\"ttf\");\n}\nh1[data-v-b3c5cf30] {\n  font-family: \"Ruddy\";\n}\ninput[data-v-b3c5cf30] {\n  padding: 4px 12px;\n  color: rgba(0, 0, 0, 0.7);\n  border: 1px solid rgba(0, 0, 0, 0.12);\n  transition: 0.15s all ease-in-out;\n  background: white;\n}\ninput[data-v-b3c5cf30]:focus {\n  outline: none;\n  transform: scale(1.05);\n}\ninput:focus + label[data-v-b3c5cf30] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-b3c5cf30]::-webkit-input-placeholder {\n  font-size: 12px;\n  color: rgba(0, 0, 0, 0.5);\n  font-weight: 100;\n}", ""]);
+exports.push([module.i, "\n@font-face {\n    font-family: 'ruddyblack';\n    src: url(" + escape(__webpack_require__(/*! ./ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format('woff2'),\n         url(" + escape(__webpack_require__(/*! ./ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format('woff');\n    font-weight: normal;\n    font-style: normal;\n\n}", ""]);
 
 // exports
 
@@ -2411,10 +2416,10 @@ exports.push([module.i, "@font-face {\n  font-family: \"Ruddy\";\n  src: url(\"/
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-
+exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader??ref--7-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../public/fonts/ruddy_black/stylesheet.css */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./public/fonts/ruddy_black/stylesheet.css"), "");
 
 // module
-exports.push([module.i, "\nfooter {\n  width: 100%;\n  left: 0;\n  bottom: 0;\n}\n.spacer {\n  height: 20px;\n}\n.social {\n  padding: 10px;\n  text-align: center;\n}\n.img_size {\n  height: 20px;\n  filter: invert(100%);\n}\n.text {\n  padding: 10px 0px 10px 0px;\n}\n.center {\n  padding: 10px;\n  border-top: 1px solid #C9C9C9;\n  width: 90%;\n  margin: auto;\n}\n.bg {\n  background-color: #343a40;\n}\n", ""]);
+exports.push([module.i, "\nh5 {\n      font-family: 'ruddyblack';\n}\n.border-top {\n  border-top: 5px solid black !important;\n}\n\n", ""]);
 
 // exports
 
@@ -2440,19 +2445,20 @@ exports.push([module.i, "\n.contenitore_debug{\n  height: 500px;\n  width: 100%;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Main.vue?vue&type=style&index=0&lang=css&":
-/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Main.vue?vue&type=style&index=0&lang=css& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./public/fonts/ruddy_black/stylesheet.css":
+/*!**********************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./public/fonts/ruddy_black/stylesheet.css ***!
+  \**********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, "\n.contenitore_debug{\n  height: 500px;\n  width: 100%;\n}\n\n", ""]);
+exports.push([module.i, "\n@font-face {\n    font-family: 'ruddyblack';\n    src: url(" + escape(__webpack_require__(/*! ./ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format('woff2'),\n         url(" + escape(__webpack_require__(/*! ./ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format('woff');\n    font-weight: normal;\n    font-style: normal;\n}", ""]);
 
 // exports
 
@@ -3692,243 +3698,129 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "mt-5 bg" }, [
-      _c("div", [
-        _c("div", { staticClass: "spacer" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "social" }, [
-          _c(
-            "span",
-            { staticClass: "icon", staticStyle: { padding: "0 10px 0 10px" } },
-            [
-              _c("a", { attrs: { href: "https://www.facebook.com/" } }, [
-                _c("img", {
-                  staticClass: "img_size",
-                  attrs: {
-                    alt: "Facebook",
-                    src: "https://cdn-icons-png.flaticon.com/512/59/59439.png",
-                    title: "Facebook",
+    return _c("div", { staticClass: "container" }, [
+      _c("footer", { staticClass: "py-5" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-12 col-md-4" }, [
+            _c("h5", [_vm._v("INFORMAZIONI")]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "nav flex-column" }, [
+              _c("li", { staticClass: "nav-item mb-2" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link p-0 text-muted",
+                    attrs: { href: "#" },
                   },
-                }),
+                  [_vm._v("Newsroom")]
+                ),
               ]),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "span",
-            { staticClass: "icon", staticStyle: { padding: "0 10px 0 10px" } },
-            [
-              _c("a", { attrs: { href: "https://twitter.com/" } }, [
-                _c("img", {
-                  staticClass: "img_size",
-                  attrs: {
-                    alt: "Twitter",
-                    src: "https://cdn-icons-png.flaticon.com/512/1384/1384033.png",
-                    title: "Twitter",
+              _vm._v(" "),
+              _c("li", { staticClass: "nav-item mb-2" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link p-0 text-muted",
+                    attrs: { href: "#" },
                   },
-                }),
+                  [_vm._v("Opportunità di lavoro")]
+                ),
               ]),
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "span",
-            { staticClass: "icon", staticStyle: { padding: "0 10px 0 10px" } },
-            [
-              _c("a", { attrs: { href: "https://instagram.com/" } }, [
-                _c("img", {
-                  staticClass: "img_size",
-                  attrs: {
-                    alt: "Instagram",
-                    src: "https://cdn1.iconfinder.com/data/icons/ios-11-glyphs/30/instagram-512.png",
-                    title: "Instagram",
+              _vm._v(" "),
+              _c("li", { staticClass: "nav-item mb-2" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link p-0 text-muted",
+                    attrs: { href: "#" },
                   },
-                }),
+                  [_vm._v("Scopri le nuove funzionalità")]
+                ),
               ]),
-            ]
-          ),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "text" }, [
-          _c(
-            "div",
-            {
-              staticClass: "text-content",
-              staticStyle: {
-                "line-height": "150%",
-                "font-size": "12px",
-                color: "#fff",
-                "font-family": "inherit",
-              },
-            },
-            [
-              _c(
-                "p",
-                {
-                  staticStyle: {
-                    "font-size": "14px",
-                    "line-height": "21px",
-                    "text-align": "center",
-                    "letter-spacing": "2px",
-                  },
-                },
-                [
-                  _c(
-                    "span",
-                    {
-                      staticStyle: {
-                        "font-size": "14px",
-                        "line-height": "21px",
-                      },
-                    },
-                    [_vm._v("www.boolbnb.com")]
-                  ),
-                ]
-              ),
-            ]
-          ),
+            ]),
+          ]),
           _vm._v(" "),
-          _c("div", {
-            staticClass: "center",
-            staticStyle: { "border-top": "1px solid #C9C9C9", width: "90%" },
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-12" }, [
-            _c("div", { staticClass: "text" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "text-content",
-                  staticStyle: {
-                    "line-height": "150%",
-                    "font-size": "12px",
-                    "font-family": "inherit",
-                    color: "#afafaf",
+          _c("div", { staticClass: "col-12 col-md-4" }, [
+            _c("h5", [_vm._v("COMMUNITY")]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "nav flex-column" }, [
+              _c("li", { staticClass: "nav-item mb-2" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link p-0 text-muted",
+                    attrs: { href: "#" },
                   },
-                },
-                [
-                  _c(
-                    "p",
-                    {
-                      staticStyle: {
-                        "font-size": "10px",
-                        "line-height": "15px",
-                        "text-align": "center",
-                      },
-                    },
-                    [
-                      _c(
-                        "span",
-                        {
-                          staticStyle: {
-                            "font-size": "10px",
-                            "line-height": "15px",
-                          },
-                        },
-                        [
-                          _vm._v(
-                            "If you have questions regarding your data, please visit our "
-                          ),
-                          _c(
-                            "a",
-                            {
-                              staticStyle: {
-                                "text-decoration": "underline",
-                                color: "#0073aa",
-                              },
-                              attrs: {
-                                href: "http://www.example.com",
-                                rel: "noopener",
-                                target: "_blank",
-                              },
-                            },
-                            [_vm._v("Privacy Policy")]
-                          ),
-                        ]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "p",
-                    {
-                      staticStyle: {
-                        "font-size": "10px",
-                        "line-height": "15px",
-                        "text-align": "center",
-                      },
-                    },
-                    [
-                      _c(
-                        "span",
-                        {
-                          staticStyle: {
-                            "font-size": "10px",
-                            "line-height": "15px",
-                          },
-                        },
-                        [
-                          _c(
-                            "span",
-                            { staticStyle: { "line-height": "18px" } },
-                            [
-                              _c(
-                                "span",
-                                { staticStyle: { "line-height": "18px" } },
-                                [
-                                  _vm._v(
-                                    "Want to change how you receive these emails? You can "
-                                  ),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticStyle: {
-                                        "text-decoration": "underline",
-                                        color: "#0073aa",
-                                      },
-                                      attrs: {
-                                        href: "http://www.example.com",
-                                        rel: "noopener",
-                                        target: "_blank",
-                                      },
-                                    },
-                                    [_vm._v("update your preferences")]
-                                  ),
-                                  _vm._v(" or "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticStyle: {
-                                        "text-decoration": "underline",
-                                        color: "#0073aa",
-                                      },
-                                      attrs: {
-                                        href: "http://www.example.com",
-                                        rel: "noopener",
-                                        target: "_blank",
-                                      },
-                                    },
-                                    [_vm._v("unsubscribe")]
-                                  ),
-                                  _vm._v(" from this list. "),
-                                ]
-                              ),
-                            ]
-                          ),
-                          _c(
-                            "span",
-                            { staticStyle: { "line-height": "18px" } },
-                            [_vm._v("© 2022 Company. All Rights Reserved.")]
-                          ),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]
-              ),
+                  [_vm._v("Argomenti di discussione")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "nav-item mb-2" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link p-0 text-muted",
+                    attrs: { href: "#" },
+                  },
+                  [_vm._v("Tagging e messaggistica diretta")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "nav-item mb-2" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link p-0 text-muted",
+                    attrs: { href: "#" },
+                  },
+                  [_vm._v("Esperienza locale")]
+                ),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 col-md-4" }, [
+            _c("h5", [_vm._v("OSPITA")]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "nav flex-column" }, [
+              _c("li", { staticClass: "nav-item mb-2" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link p-0 text-muted",
+                    attrs: { href: "#" },
+                  },
+                  [_vm._v("Prova a opsitare")]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "nav-item mb-2" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link p-0 text-muted",
+                    attrs: { href: "#" },
+                  },
+                  [_vm._v("Vai al forum della community")]
+                ),
+              ]),
             ]),
           ]),
         ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "d-flex justify-content-between py-4 my-4 border-top",
+          },
+          [
+            _c("p", [
+              _vm._v(
+                "© 2022 BoolBnB, Inc. Privacy - Terms - Site Maps - Company details"
+              ),
+            ]),
+          ]
+        ),
       ]),
     ])
   },
