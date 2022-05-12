@@ -1,15 +1,5 @@
 @extends('user.layouts.base')
 
-<!-- collegamento con file js - figlio -->
-    @section('script')
-    {{-- collegato file css --}}
-    <link href="{{ asset('css/autocomplete.css') }}" rel="stylesheet">
-    <!-- Scripts -->
-    {{-- <script src="{{assets('js/scripts/autocomplete.js')}}" defer></script> --}}
-    <script type="text/javascript" src="{{ URL::asset ('js/autocomplete.js')}}" defer></script>
-    @endsection 
-
-
 
 @section('content')
 
@@ -116,5 +106,15 @@
         </div>
     </div>
 </div>
+@endsection
+
+<!-- collegamento con file js - figlio -->
+@section('script')
+{{-- collegato file css --}}
+<link href="{{ asset('css/autocomplete.css') }}" rel="stylesheet">
+<!-- Scripts -->
+{{-- <script src="{{assets('js/scripts/autocomplete.js')}}" defer></script> --}}
+<script type="text/javascript" src="{{ URL::asset ('js/autocomplete.js')}}" defer></script>
+@endsection 
 
 

@@ -12,7 +12,7 @@ class FacilitiesTableSeeder extends Seeder
      */
     public function run()
     {
-        $facilities = ['WiFi', 'Posto macchina', 'Piscina', 'Portineria', 'Sauna', 'Vista mare', 'Cucina', 'Animali domestici consentiti', 'Self check-in', 'Lavatrice', 'Asciugatrice', 'Riscaldamento', 'Carta igienica'];
+        $facilities = ['WiFi', 'Posto macchina', 'Piscina', 'Sauna', 'Vista mare', 'Cucina', 'Animali domestici consentiti', 'Lavatrice', 'Riscaldamento', 'Carta igienica'];
         foreach($facilities as $facility) {
             $newFacility = new Facility();
             $newFacility->name = $facility;
