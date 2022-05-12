@@ -20,5 +20,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
+
+ @import "../../sass/partials/_colors.scss";
+ 
+
+  div {
+    background-color: $background;
+  }
+
+  
+
 </style>

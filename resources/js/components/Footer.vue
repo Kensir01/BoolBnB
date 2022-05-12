@@ -31,7 +31,7 @@
 
     </div>
 
-    <div class="d-flex justify-content-between py-4 my-4 border-top">
+    <div class="d-flex justify-content-between py-4 mt-4 border-top">
       <p>© 2022 BoolBnB, Inc. Privacy - Terms - Site Maps - Company details</p>
     </div>
   </footer>
@@ -52,7 +52,7 @@ export default {
   @import "../../sass/partials/_colors.scss";
   @import "../../sass/partials/_font.scss";
   @import "../../sass/partials/_common.scss";
-  
+
 
   h5 {
     font-family: 'ruddyblack';
