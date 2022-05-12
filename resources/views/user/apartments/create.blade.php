@@ -40,52 +40,53 @@
 
                 <div class="form-group">
                     <label for="title">Titolo</label>
-                    <input type="text" class="form-control" id="title" name="title" value="{{old('title')}}" required min="2" max="30">
+                    <input type="text" class="form-control" id="title" name="title" value="{{old('title')}}" required min="2" max="30" placeholder="Es. Villa vista mare">
                 </div>
             
                 <div class="form-group">
                     <label for="rooms_number">Numero delle stanze</label>
-                    <input type="number" class="form-control" id="rooms_number" name="rooms_number" value="{{old('rooms_number')}}" required min="1" max="255">
+                    <input type="number" class="form-control" id="rooms_number" name="rooms_number" value="{{old('rooms_number')}}" required min="1" max="255" placeholder="Es. 5">
                 </div>
             
                 <div class="form-group">
                     <label for="bathrooms_number">Numero dei bagni</label>
-                    <input type="number" class="form-control" id="bathrooms_number" name="bathrooms_number" value="{{old('bathrooms_number')}}" required min="1" max="255">
+                    <input type="number" class="form-control" id="bathrooms_number" name="bathrooms_number" value="{{old('bathrooms_number')}}" required min="1" max="255" placeholder="Es. 2">
                 </div>
             
                 <div class="form-group">
                     <label for="beds_number">Numero dei letti</label>
-                    <input type="number" class="form-control" id="beds_number" name="beds_number" value="{{old('beds_number')}}" required min="1" max="255">
+                    <input type="number" class="form-control" id="beds_number" name="beds_number" value="{{old('beds_number')}}" required min="1" max="255" placeholder="Es. 4">
                 </div>
             
                 <div class="form-group">
                     <label for="square_meters">Superficie (in metri quadrati)</label>
-                    <input type="number" class="form-control" id="square_meters" name="square_meters" value="{{old('square_meters')}}" required min="1" max="32766">
+                    <input type="number" class="form-control" id="square_meters" name="square_meters" value="{{old('square_meters')}}" required min="1" max="32766" placeholder="Es. 500">
                 </div>
             
 
                 <div class="form-group">
                     <label for="city">Città</label>
-                    <input type="text" class="form-control" id="city" name="city" value="{{old('city')}}" required min="2" max="50" autocomplete="noooooooooooooooooooooooo">
+                    <input type="text" class="form-control" id="city" name="city" value="{{old('city')}}" required min="2" max="50" autocomplete="noooooooooooooooooooooooo" placeholder="Es. Bologna">
                     <ul id="cityList" class="autocomplete"></ul>
                 </div>
             
-                <div class="form-group">
-                    <label for="zip_code">CAP</label>
-                    <input type="text" class="form-control" id="zip_code" name="zip_code" value="{{old('zip_code')}}" required min="3" max="15" autocomplete="noooooooooooooooooooooooo">
-                </div>
 
                 <div class="form-group">
                     <label for="address">Indirizzo</label>
-                    <input type="text" class="form-control" id="address" name="address" value="{{old('address')}}" required min="2" max="50" autocomplete="noooooooooooooooooooooooo">
+                    <input type="text" class="form-control" id="address" name="address" value="{{old('address')}}" required min="2" max="50" autocomplete="noooooooooooooooooooooooo" placeholder="Es. Via Enrico Mattei"> 
                     <ul id="addressList" class="autocomplete"></ul>
                 </div>
-            
-               
-            
+
+
+                <div class="form-group">
+                    <label for="zip_code">CAP</label>
+                    <input type="text" class="form-control" id="zip_code" name="zip_code" value="{{old('zip_code')}}" required min="3" max="15" autocomplete="noooooooooooooooooooooooo" placeholder="Es. 04023">
+                </div>
+
+
                 <div class="form-floating">
                     <label for="description">Descrizione</label>
-                    <textarea class="form-control" placeholder="Inserisci una descrizione" id="description" style="height: 100px" name="description" required min="10">{{old('description')}}</textarea>
+                    <textarea class="form-control" placeholder="Inserisci una descrizione per il tuo Appartamento" id="description" style="height: 100px" name="description" required min="10">{{old('description')}}</textarea>
                 </div>
 
                 <div class="custom-control custom-switch">
@@ -117,5 +118,3 @@
 </div>
 
 
-
-@endsection

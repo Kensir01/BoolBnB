@@ -11,7 +11,7 @@
                 <a class="nav-link" href="/user">Utente</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/login">Accedi</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/register">Registrati</a>
@@ -29,7 +29,7 @@ export default {
             menuItems: [
                 {
                     routeName: 'advancedsearch',
-                    label: 'AdvancedSearch'
+                    label: 'Ricerca Avanzata'
                 }
             ]
         }

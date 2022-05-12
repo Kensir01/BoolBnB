@@ -1,6 +1,6 @@
 <template>
 
-  <footer class="mt-5 fixed-bottom bg">
+  <footer class="mt-5 bg">
 
     <div>
       <div class="spacer"></div>
