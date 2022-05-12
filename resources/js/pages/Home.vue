@@ -110,17 +110,10 @@ export default {
 
 <style scoped lang='scss'>
 
-<<<<<<< HEAD
-     @import "../../sass/partials/_font.scss";
-
-    h1 {
-        font-family: 'Ruddy';
-=======
     @import "../../../public/fonts/ruddy_black/stylesheet.css";
 
     h1 {
         font-family: 'ruddyblack';
->>>>>>> Placeholders
     }
     
     input {
