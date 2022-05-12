@@ -2233,7 +2233,11 @@ function writingAddressList(list, array) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! /Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/resources/js/autocomplete.js */"./resources/js/autocomplete.js");
+=======
+module.exports = __webpack_require__(/*! C:\Users\kensi\Vsc\progetto finale\BoolBnB\BoolBnB\resources\js\autocomplete.js */"./resources/js/autocomplete.js");
+>>>>>>> Placeholders
 
 
 /***/ })

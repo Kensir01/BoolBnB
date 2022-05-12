@@ -2372,6 +2372,26 @@ __webpack_require__.r(__webpack_exports__);
 
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
+exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader!../../../public/fonts/ruddy_black/stylesheet.css */ "./node_modules/css-loader/index.js!./public/fonts/ruddy_black/stylesheet.css"), "");
+
+// module
+exports.push([module.i, "h1[data-v-b3c5cf30] {\n  font-family: \"ruddyblack\";\n}\ninput[data-v-b3c5cf30] {\n  padding: 4px 12px;\n  color: rgba(0, 0, 0, 0.7);\n  border: 1px solid rgba(0, 0, 0, 0.12);\n  transition: 0.15s all ease-in-out;\n  background: white;\n}\ninput[data-v-b3c5cf30]:focus {\n  outline: none;\n  transform: scale(1.05);\n}\ninput:focus + label[data-v-b3c5cf30] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-b3c5cf30]::-webkit-input-placeholder {\n  font-size: 12px;\n  color: rgba(0, 0, 0, 0.5);\n  font-weight: 100;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./public/fonts/ruddy_black/stylesheet.css":
+/*!***************************************************************************!*\
+  !*** ./node_modules/css-loader!./public/fonts/ruddy_black/stylesheet.css ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
 
 
 // module
@@ -2395,6 +2415,25 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 // module
 exports.push([module.i, "\nfooter {\n  width: 100%;\n  left: 0;\n  bottom: 0;\n}\n.spacer {\n  height: 20px;\n}\n.social {\n  padding: 10px;\n  text-align: center;\n}\n.img_size {\n  height: 20px;\n  filter: invert(100%);\n}\n.text {\n  padding: 10px 0px 10px 0px;\n}\n.center {\n  padding: 10px;\n  border-top: 1px solid #C9C9C9;\n  width: 90%;\n  margin: auto;\n}\n.bg {\n  background-color: #343a40;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Main.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Main.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.contenitore_debug{\n  height: 500px;\n  width: 100%;\n}\n\n", ""]);
 
 // exports
 
@@ -2502,6 +2541,33 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/url/escape.js":
+/*!***************************************************!*\
+  !*** ./node_modules/css-loader/lib/url/escape.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function escape(url) {
+    if (typeof url !== 'string') {
+        return url
+    }
+    // If url is already wrapped in quotes, remove them
+    if (/^['"].*['"]$/.test(url)) {
+        url = url.slice(1, -1);
+    }
+    // Should url be wrapped?
+    // See https://drafts.csswg.org/css-values-3/#urls
+    if (/["'() \t\n]/.test(url)) {
+        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
+    }
+
+    return url
 }
 
 
@@ -19664,6 +19730,28 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+
+/***/ "./public/fonts/ruddy_black/ruddy-black-webfont.woff":
+/*!***********************************************************!*\
+  !*** ./public/fonts/ruddy_black/ruddy-black-webfont.woff ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/fonts/ruddy-black-webfont.woff?f430b561524214089b2c7b877da72df4";
+
+/***/ }),
+
+/***/ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2":
+/*!************************************************************!*\
+  !*** ./public/fonts/ruddy_black/ruddy-black-webfont.woff2 ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/fonts/ruddy-black-webfont.woff2?80208a906aa0988c5ba939b3d8dbb9c8";
 
 /***/ }),
 
