@@ -9,7 +9,6 @@
               <li v-for="(hint,index) in autocompleteList" :key="index" @click="completer(index)">{{hint}}</li>
             </ul>
 
-
             <input type="number" id="stanze" v-model="rooms" required min="1" max="255">
             <label for="stanze">Numero di stanze</label>
 
