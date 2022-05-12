@@ -1,7 +1,11 @@
 <template>
     <div>
         <h1>Benvenuto in BoolBnB!</h1>
-        <input type="text" v-model="search" placeholder="Search title.." @keyup.enter="getSearch"/>
+        <input type="text" v-model="search" placeholder="Search title.." @keyup="autocomplete"/>
+        <button class="btn btn-primary" @click="getSearch" >cerca!</button>
+        <ul>
+          <li v-for="(hint,index) in autocompleteList" :key="index" @click="completer(index)">{{hint}}</li>
+        </ul>
         <div><h2>Trovati</h2>{{filtered}}</div>
     </div>
 </template>
@@ -13,6 +17,7 @@ export default {
         return {
             search: '',
             filtered: [],
+            autocompleteList: []
             //apiKey: process.env.MIX_TOM_TOM_KEY,
             //apartments : null,
             //poiList: [],
@@ -21,16 +26,61 @@ export default {
     },
     methods: {
         getSearch() {
-            axios.get('/api/apartments/search',{
+            this.$router.push({
+                name: "advancedsearch",
                 params: {
-                    location: this.search
+                    query: this.search
                 }
-            }).then((response) => {
-                console.log(response.data)
-                this.poiList = response.data.poiList
-                this.geometryList = response.data.geometryList
-                this.filtered = response.data.filtered
-            });
+                });
+            // axios.get('/api/apartments/search',{
+            //     params: {
+            //         location: this.search
+            //     }
+            // }).then((response) => {
+            //     console.log(response.data)
+            //     this.poiList = response.data.poiList
+            //     this.geometryList = response.data.geometryList
+            //     this.filtered = response.data.filtered
+            // });
+        },
+        //Completamento automatico
+        autocomplete() {
+          if(this.search.length>=4) {
+            if(this.search.length % 2 == 0) {
+
+              axios.get(`https://api.tomtom.com/search/2/search/${this.search}.json`, {
+                params: {
+                 key: process.env.MIX_TOM_TOM_KEY,
+                 typeahead: true,
+                 limit: 3
+                }
+              })
+                .then((response) => {
+
+                    console.log(response.data.results);
+                    
+                    // Array con solo i nomi e le province
+                    this.getCityNames(response.data.results);
+
+                    // console.log('Risultati trovati: ' + city);
+                    // console.log('Risultati per: ' + cityNames)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });  
+            }
+          }
+        },
+        getCityNames(array) {
+          let length = array.length;
+          this.autocompleteList = []
+
+          for (let i = 0; i < length; i++) {
+              this.autocompleteList.push(array[i].address.municipality + ', ' + array[i].address.countrySecondarySubdivision);
+          }
+        },
+        completer(index) {
+          this.search = this.autocompleteList[index]
         }
 
         // geoCoding() {
