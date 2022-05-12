@@ -110,6 +110,11 @@ export default {
 
 <style scoped lang='scss'>
 
+     @import "../../sass/partials/_font.scss";
+
+    h1 {
+        font-family: 'Ruddy';
+    }
     
     input {
         padding: 4px 12px;

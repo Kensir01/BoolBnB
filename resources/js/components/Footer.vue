@@ -45,7 +45,6 @@ export default {
 <style>
   footer {
     width: 100%;
-    position: absolute;
     left: 0;
     bottom: 0;
   }
