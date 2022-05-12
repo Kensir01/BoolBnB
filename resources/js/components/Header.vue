@@ -52,6 +52,7 @@ export default {
     header {
     height: 90px;
     align-items: center;
+    margin-top: 20px;
     background-color: $background !important;
     }
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bordo">
     <Header></Header>
     <Main/>
     <Footer></Footer>
@@ -25,10 +25,7 @@ export default {
  @import "../../sass/partials/_colors.scss";
  
 
-  div {
+  .bordo {
     background-color: $background;
+    border: 10px solid Black;
   }
-
-  
-
-</style>
