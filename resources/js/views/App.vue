@@ -29,3 +29,5 @@ export default {
     background-color: $background;
     border: 10px solid Black;
   }
+
+</style>
