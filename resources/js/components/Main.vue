@@ -13,7 +13,7 @@ export default {
 <style>
 
   .contenitore_debug{
-    height: 500px;
+    min-height: 100vh;
     width: 100%;
   }
 

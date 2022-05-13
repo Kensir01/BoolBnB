@@ -1,7 +1,7 @@
 <template>
 
   <div class="container">
-  <footer>
+  <footer class="">
     <div class="row">
       <div class="col-12 col-md-4">
         <h5>INFORMAZIONI</h5>
@@ -24,7 +24,7 @@
       <div class="col-12 col-md-4">
         <h5>OSPITA</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Prova a opsitare</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Prova a ospitare</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Vai al forum della community</a></li>
         </ul>
       </div>
@@ -53,6 +53,10 @@ export default {
   @import "../../sass/partials/_font.scss";
   @import "../../sass/partials/_common.scss";
 
+  footer {
+    height: 200px;
+    margin: 50px 0px;
+  }
 
   h5 {
     font-family: 'ruddyblack';
