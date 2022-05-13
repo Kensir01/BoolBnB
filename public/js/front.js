@@ -2023,6 +2023,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Header',
   data: function data() {
@@ -2068,7 +2070,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
 //
 //
 //
@@ -2161,7 +2162,7 @@ __webpack_require__.r(__webpack_exports__);
         if (this.search.length % 2 == 0) {
           axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
             params: {
-              key: "xdILL9buPelMDApZRbT8UuWPiflkPnAG",
+              key: "7kWYJDQnwA2ciqPMSwAUBU9nsoFLjVCc",
               typeahead: true,
               limit: 3
             }
@@ -2279,6 +2280,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home',
   data: function data() {
@@ -2318,7 +2347,7 @@ __webpack_require__.r(__webpack_exports__);
         if (this.search.length % 2 == 0) {
           axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
             params: {
-              key: "xdILL9buPelMDApZRbT8UuWPiflkPnAG",
+              key: "7kWYJDQnwA2ciqPMSwAUBU9nsoFLjVCc",
               typeahead: true,
               limit: 3
             }
@@ -2486,7 +2515,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-61a7c374] {\n  font-family: \"Rubik\", sans-serif;\n}\nh5[data-v-61a7c374] {\n  font-family: \"ruddyblack\";\n}\nli a[data-v-61a7c374] {\n  color: #000;\n}\nli a[data-v-61a7c374]:hover {\n  color: #FCEF03;\n}\n.border-top[data-v-61a7c374] {\n  border-top: 5px solid #000 !important;\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-61a7c374] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-61a7c374] {\n  font-family: \"ruddyblack\";\n}\nfooter[data-v-61a7c374] {\n  height: 200px;\n  margin: 50px 0px;\n}\nh5[data-v-61a7c374] {\n  font-family: \"ruddyblack\";\n}\nli a[data-v-61a7c374] {\n  color: #000;\n}\nli a[data-v-61a7c374]:hover {\n  color: #FCEF03;\n}\n.border-top[data-v-61a7c374] {\n  border-top: 5px solid #000 !important;\n}", ""]);
 
 // exports
 
@@ -2506,7 +2535,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-1f42fb90] {\n  font-family: \"Rubik\", sans-serif;\n}\nheader[data-v-1f42fb90] {\n  height: 90px;\n  align-items: center;\n  margin-top: 20px;\n  background-color: #fff !important;\n}\na.nav-link[data-v-1f42fb90] {\n  color: #000 !important;\n}\na.nav-link[data-v-1f42fb90]:hover {\n  color: #FCEF03 !important;\n}\nimg[data-v-1f42fb90] {\n  width: 150px;\n}\nimg[data-v-1f42fb90]:hover {\n  filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-1f42fb90] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-1f42fb90] {\n  font-family: \"ruddyblack\";\n}\nheader[data-v-1f42fb90] {\n  height: 90px;\n  align-items: center;\n  margin-top: 20px;\n  margin-bottom: 50px;\n  background-color: #fff !important;\n}\na.nav-link[data-v-1f42fb90] {\n  color: #000 !important;\n}\na.nav-link[data-v-1f42fb90]:hover {\n  color: #FCEF03 !important;\n}\n.img-logo[data-v-1f42fb90] {\n  width: 150px;\n}\n.img-logo[data-v-1f42fb90]:hover {\n  filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);\n}\n.img-user[data-v-1f42fb90] {\n  width: 15px;\n}\n.img-user[data-v-1f42fb90]:hover {\n  filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);\n}\nul[data-v-1f42fb90] {\n  padding: 0 !important;\n}", ""]);
 
 // exports
 
@@ -2520,12 +2549,13 @@ exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: ur
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
-exports.i(__webpack_require__(/*! -!../../../node_modules/css-loader!../../../public/fonts/ruddy_black/stylesheet.css */ "./node_modules/css-loader/index.js!./public/fonts/ruddy_black/stylesheet.css"), "");
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "h1[data-v-b3c5cf30] {\n  font-family: \"ruddyblack\";\n}\ninput[data-v-b3c5cf30] {\n  padding: 4px 12px;\n  color: rgba(0, 0, 0, 0.7);\n  border: 1px solid rgba(0, 0, 0, 0.12);\n  transition: 0.15s all ease-in-out;\n  background: white;\n}\ninput[data-v-b3c5cf30]:focus {\n  outline: none;\n  transform: scale(1.05);\n}\ninput:focus + label[data-v-b3c5cf30] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-b3c5cf30]::-webkit-input-placeholder {\n  font-size: 12px;\n  color: rgba(0, 0, 0, 0.5);\n  font-weight: 100;\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-b3c5cf30] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-b3c5cf30] {\n  font-family: \"ruddyblack\";\n}\nh1[data-v-b3c5cf30] {\n  font-family: \"ruddyblack\";\n}\n.search-bar[data-v-b3c5cf30] {\n  width: 40%;\n  border: 4px solid #000;\n  margin: 0 auto;\n  position: absolute;\n  z-index: 1000;\n  top: -10%;\n  transform: translateX(-50%);\n  left: 50%;\n  background: #fff;\n}\ninput[data-v-b3c5cf30] {\n  width: 100%;\n  padding: 10px 20px 10px 12px;\n  border: none;\n  color: rgba(0, 0, 0, 0.7);\n  transition: 0.15s all ease-in-out;\n  background: #fff;\n}\ninput[data-v-b3c5cf30]:focus {\n  outline: none;\n}\ninput:focus + label[data-v-b3c5cf30] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-b3c5cf30]::-webkit-input-placeholder {\n  font-family: \"ruddyblack\";\n  font-size: 15px;\n  color: #000;\n  font-weight: 100;\n}\n.search-bar a[data-v-b3c5cf30] {\n  cursor: pointer;\n}\n.img-search[data-v-b3c5cf30] {\n  width: 30px;\n  right: 20px;\n  top: 5px;\n  position: absolute;\n}\n.prova[data-v-b3c5cf30] {\n  position: relative;\n}\n.autocomplete-bar ul[data-v-b3c5cf30] {\n  list-style-type: none;\n  padding: 0 20px 0 12px;\n}\n.autocomplete-bar ul li[data-v-b3c5cf30]:hover {\n  background-color: #FCEF03;\n}\n.autocomplete-bar ul[data-v-b3c5cf30]:first-child {\n  margin-top: 20px;\n}\n.autocomplete-bar[data-v-b3c5cf30] {\n  font-family: \"rubik\";\n  background-color: #fff;\n  border: 4px solid #000;\n  position: absolute;\n  top: 20px;\n  right: -4px;\n  left: -4px;\n  z-index: -2;\n}\n.yellow-jumbo[data-v-b3c5cf30] {\n  border: 4px solid #000;\n  width: 80%;\n  height: 350px;\n  margin: auto;\n  background-color: #FCEF03;\n  position: relative;\n}\n.jumbo-text[data-v-b3c5cf30] {\n  font-size: 50px;\n  margin-top: 30%;\n}\n.img-jumbo[data-v-b3c5cf30] {\n  width: 500px;\n  margin-top: 30%;\n}", ""]);
 
 // exports
 
@@ -2551,26 +2581,6 @@ exports.push([module.i, ".bordo[data-v-91ac6b5c] {\n  background-color: #fff;\n 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./public/fonts/ruddy_black/stylesheet.css":
-/*!***************************************************************************!*\
-  !*** ./node_modules/css-loader!./public/fonts/ruddy_black/stylesheet.css ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "@font-face {\r\n    font-family: 'ruddyblack';\r\n    src: url(" + escape(__webpack_require__(/*! ./ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format('woff2'),\r\n         url(" + escape(__webpack_require__(/*! ./ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format('woff');\r\n    font-weight: normal;\r\n    font-style: normal;\r\n\r\n}", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Main.vue?vue&type=style&index=0&lang=css&":
 /*!**********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Main.vue?vue&type=style&index=0&lang=css& ***!
@@ -2583,7 +2593,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.contenitore_debug{\n  height: 500px;\n  width: 100%;\n}\n\n", ""]);
+exports.push([module.i, "\n.contenitore_debug{\n  min-height: 100vh;\n  width: 100%;\n}\n\n", ""]);
 
 // exports
 
@@ -3884,7 +3894,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
-      _c("footer", [
+      _c("footer", {}, [
         _c("div", { staticClass: "row" }, [
           _c("div", { staticClass: "col-12 col-md-4" }, [
             _c("h5", [_vm._v("INFORMAZIONI")]),
@@ -3940,7 +3950,7 @@ var staticRenderFns = [
             _c("ul", { staticClass: "nav flex-column" }, [
               _c("li", { staticClass: "nav-item mb-2" }, [
                 _c("a", { staticClass: "nav-link p-0", attrs: { href: "#" } }, [
-                  _vm._v("Prova a opsitare"),
+                  _vm._v("Prova a ospitare"),
                 ]),
               ]),
               _vm._v(" "),
@@ -4005,6 +4015,7 @@ var render = function () {
             { staticClass: "navbar-brand", attrs: { to: { name: "home" } } },
             [
               _c("img", {
+                staticClass: "img-logo",
                 attrs: {
                   src: __webpack_require__(/*! ../../../storage/app/public/logo/Risorsa34.svg */ "./storage/app/public/logo/Risorsa34.svg"),
                   alt: "BoolBnB logo",
@@ -4025,13 +4036,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "navbar-nav ms-auto" }, [
-      _c("li", { staticClass: "nav-item" }, [
-        _c("a", { staticClass: "nav-link", attrs: { href: "/user" } }, [
-          _vm._v("Utente"),
-        ]),
-      ]),
-      _vm._v(" "),
+    return _c("ul", { staticClass: "navbar navbar-nav ms-auto" }, [
       _c("li", { staticClass: "nav-item" }, [
         _c("a", { staticClass: "nav-link", attrs: { href: "/login" } }, [
           _vm._v("Accedi"),
@@ -4041,6 +4046,18 @@ var staticRenderFns = [
       _c("li", { staticClass: "nav-item" }, [
         _c("a", { staticClass: "nav-link", attrs: { href: "/register" } }, [
           _vm._v("Registrati"),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("li", { staticClass: "nav-item" }, [
+        _c("a", { staticClass: "nav-link", attrs: { href: "/user" } }, [
+          _c("img", {
+            staticClass: "img-user",
+            attrs: {
+              src: "http://127.0.0.1:8000/storage/icons/normal/user.svg",
+              alt: "User logo",
+            },
+          }),
         ]),
       ]),
     ])
@@ -4371,60 +4388,98 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", [_vm._v("Benvenuto in BoolBnB!")]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "model",
-          rawName: "v-model",
-          value: _vm.search,
-          expression: "search",
-        },
-      ],
-      attrs: { type: "text", placeholder: "Search title.." },
-      domProps: { value: _vm.search },
-      on: {
-        keyup: _vm.autocomplete,
-        input: function ($event) {
-          if ($event.target.composing) {
-            return
-          }
-          _vm.search = $event.target.value
-        },
-      },
-    }),
-    _vm._v(" "),
-    _c(
-      "button",
-      { staticClass: "btn btn-primary", on: { click: _vm.getSearch } },
-      [_vm._v("cerca!")]
-    ),
-    _vm._v(" "),
-    _c(
-      "ul",
-      _vm._l(_vm.autocompleteList, function (hint, index) {
-        return _c(
-          "li",
-          {
-            key: index,
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "yellow-jumbo" }, [
+      _c("div", { staticClass: "search-bar" }, [
+        _c("div", { staticClass: "prova" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.search,
+                expression: "search",
+              },
+            ],
+            staticClass: "search-input",
+            attrs: { type: "text", placeholder: "Dove vuoi andare?" },
+            domProps: { value: _vm.search },
             on: {
-              click: function ($event) {
-                return _vm.completer(index)
+              keyup: _vm.autocomplete,
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.search = $event.target.value
               },
             },
-          },
-          [_vm._v(_vm._s(hint))]
-        )
-      }),
-      0
-    ),
-    _vm._v(" "),
-    _c("div", [_c("h2", [_vm._v("Trovati")]), _vm._v(_vm._s(_vm.filtered))]),
+          }),
+          _vm._v(" "),
+          _vm.autocompleteList
+            ? _c("div", { staticClass: "autocomplete-bar" }, [
+                _c(
+                  "ul",
+                  _vm._l(_vm.autocompleteList, function (hint, index) {
+                    return _c(
+                      "li",
+                      {
+                        key: index,
+                        on: {
+                          click: function ($event) {
+                            return _vm.completer(index)
+                          },
+                        },
+                      },
+                      [_vm._v(_vm._s(hint))]
+                    )
+                  }),
+                  0
+                ),
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _c("a", { on: { click: _vm.getSearch } }, [
+            _c("img", {
+              staticClass: "img-search",
+              attrs: {
+                src: "http://127.0.0.1:8000/storage/icons/normal/search.svg",
+                alt: "Search icon",
+              },
+            }),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+    ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "jumbo container" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-12 col-md-6 jb-text-container" }, [
+          _c("h1", { staticClass: "jumbo-text" }, [
+            _vm._v("Un'avventura ti aspetta con BoolBnB!"),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-12 col-md-6 jb-img-container" }, [
+          _c("img", {
+            staticClass: "img-jumbo",
+            attrs: {
+              src: __webpack_require__(/*! ../../../storage/app/public/elements/baffi.svg */ "./storage/app/public/elements/baffi.svg"),
+              alt: "Image Jumbo",
+            },
+          }),
+        ]),
+      ]),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -20650,6 +20705,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./storage/app/public/elements/baffi.svg":
+/*!***********************************************!*\
+  !*** ./storage/app/public/elements/baffi.svg ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/baffi.svg?5b775cd377ec924cb76618f1c36bba4f";
+
+/***/ }),
+
 /***/ "./storage/app/public/logo/Risorsa34.svg":
 /*!***********************************************!*\
   !*** ./storage/app/public/logo/Risorsa34.svg ***!
@@ -20668,7 +20734,7 @@ module.exports = "/images/Risorsa34.svg?5d69c4273579ecd47bbf36efa930668c";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\kensi\Vsc\progetto finale\BoolBnB\BoolBnB\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Utente\BoolBnB\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
