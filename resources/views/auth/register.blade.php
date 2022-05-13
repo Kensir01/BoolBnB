@@ -1,22 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header align-self-center">{{ __('Registrati') }}</div>
+<div class="container pt-5">
+    <div class= "row justify-content-center">
+        <div class="col-md-6">
+            <div class="card card_register mt-2">
+                <div class="card-header_register align-self-center">{{ __('Registrati') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         {{-- nome --}}
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('nome') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" autocomplete="name" autofocus>
+                        <div class="form-group">
+                            <label for="name" class=" col-form-label text-md-center container_register">{{ __('nome') }}</label>
+                            
+                            <div class="form_register_esterno">
+                                <input id="name" type="text" class="form-control_register form_rubik" name="name" value="{{ old('name') }}" autocomplete="name" autofocus placeholder="Marco">
 
                                 {{-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -27,11 +27,11 @@
                         </div>
 
                         {{-- cognome --}}
-                        <div class="form-group row">
-                            <label for="surname" class="col-md-4 col-form-label text-md-right">{{ __('cognome') }}</label>
+                        <div class="form-group">
+                            <label for="surname" class="col-form-label text-md-center container_register">{{ __('cognome') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="surname" type="text" class="form-control " name="surname" value="{{ old('surname') }}" autocomplete="surname" autofocus>
+                            <div class="form_register_esterno">
+                                <input id="surname" type="text" class="form-control_register form_rubik " name="surname" value="{{ old('surname') }}" autocomplete="surname" autofocus placeholder="Rossi">
 
                                 {{-- @error('surname')
                                     <span class="invalid-feedback" role="alert">
@@ -42,11 +42,11 @@
                         </div>
 
                         {{-- data nascita --}}
-                        <div class="form-group row">
-                            <label for="date_of_birth" class="col-md-4 col-form-label text-md-right">{{ __('data di nascita') }}</label>
+                        <div class="form-group">
+                            <label for="date_of_birth" class="col-form-label text-md-center container_register">{{ __('data di nascita') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="date_of_birth" type="date" class="form-control" name="date_of_birth" value="{{ old('date_of_birth') }}" autocomplete="date_of_birth" autofocus>
+                            <div class="form_register_esterno">
+                                <input id="date_of_birth" type="date" class="form-control_register form_rubik" name="date_of_birth" value="{{ old('date_of_birth') }}" autocomplete="date_of_birth" autofocus>
 
                                 {{-- @error('date_of_birth')
                                     <span class="invalid-feedback" role="alert">
@@ -57,11 +57,11 @@
                         </div>
 
                         {{-- email --}}
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('indirizzo Email *') }}</label>
+                        <div class="form-group">
+                            <label for="email" class="col-form-label text-md-center container_register">{{ __('indirizzo Email *') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                            <div class="form_register_esterno">
+                                <input id="email" type="email" class="form-control_register form_rubik @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="marcorossi@something.com">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -72,11 +72,11 @@
                         </div>
 
                         {{-- password --}}
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('password *') }}</label>
+                        <div class="form-group">
+                            <label for="password" class="col-form-label text-md-center container_register">{{ __('password *') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                            <div class="form_register_esterno">
+                                <input id="password" type="password" class="form-control_register form_rubik @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="*********">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -87,11 +87,11 @@
                         </div>
 
                         {{-- password confirm --}}
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('conferma password *') }}</label>
+                        <div class="form-group">
+                            <label for="password-confirm" class="col-form-label text-md-center container_register">{{ __('conferma password *') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            <div class="form_register_esterno">
+                                <input id="password-confirm" type="password" class="form-control_register form_rubik" name="password_confirmation" required autocomplete="new-password" placeholder="*********">
                             </div>
                         </div>
 
@@ -103,13 +103,26 @@
                         </div>
                        
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                        <div class="form-group mb-0 row">
+                            <div class="col-sm"></div>
+                            <div class="col-sm-auto align-items-center">
+                                <button type="submit" class="button">
                                     {{ __('Registrati') }}
                                 </button>
                             </div>
+                            <div class="col-sm"></div>
                         </div>
+                        
+
+                        <div class="rettangolo_piccolo_2"></div>
+                        <div class="rettangolo_piccolo_1"></div>
+                        <div class="rettangolo_piccolo_3"></div>    
+                        <div class="bordo_piccolo_1"></div>
+                        <div class="bordo_piccolo_2"></div>
+                        <div class="bordo_piccolo_3"></div>
+
+                        <div class="rettangolo_grande_1"></div>
+
                     </form>
                 </div>
             </div>

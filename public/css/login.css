@@ -1,9 +1,10 @@
 @import "../fonts/ruddy_black/stylesheet.css";
+@import "../fonts/ruddy_bold/stylesheet.css";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
 
 div {
-    font-family: 'ruddyblack';
+    font-family: 'ruddybold';
 }
 
 .login-form {
