@@ -1,30 +1,63 @@
 <template>
-  <div>
+  <div class="container">
+    <div class="yellow-jumbo">
+      <form>
+        <div class="search-bar">
+          <div class="prova">
 
-    <h1>Ricerca</h1>
-
-    <form>
-            <input type="text" v-model="search" placeholder="Search title.."  @keyup="autocomplete" required/>
-            <ul>
-              <li v-for="(hint,index) in autocompleteList" :key="index" @click="completer(index)">{{hint}}</li>
-            </ul>
-
-            <input type="number" id="stanze" v-model="rooms" required min="1" max="255">
-            <label for="stanze">Numero di stanze</label>
-
-            <input type="number" id="letti" v-model="beds" required min="1" max="255">
-            <label for="letti">Numero di letti</label>
-
-            <input type="number" id="raggio" v-model="distance"  required min="20">
-            <label for="raggio">Raggio</label>
-
-            <div v-for="facility in facilities" :key="facility.id">
-              <input type="checkbox" :name="facility.name" :id="facility.id" :value="facility.id" v-model="selectedFacilities"> 
-              <label :for="facility.name" >{{facility.name}}</label>
-              <!-- <img :src="'http://127.0.0.1:8000/storage/' + facility.icon_normal" alt=""> -->
+            <input class="search-input" type="text" v-model="search" placeholder="Dove vuoi andare?" @keyup="autocomplete" required/>
+            <div class="autocomplete-bar" v-if="autocompleteList">
+              <ul>
+                <li v-for="(hint,index) in autocompleteList" :key="index" @click="completer(index)">{{hint}}</li>
+              </ul>
             </div>
-    </form>
-            <button class="btn btn-primary" @click="getFilteredSearch">Cerca</button>
+                
+                
+            <a @click="getFilteredSearch" >
+              <img class="img-search" src="http://127.0.0.1:8000/storage/icons/normal/search.svg" alt="Search icon">
+            </a>
+          </div>
+                    
+        </div>
+            
+        <div class="jumbo container">
+
+          <div class="inputs">
+            <div class="single-input">
+              <input type="number" id="distance" v-model="distance">
+              <div class="label">Raggio</div>
+            </div>
+            <div class="single-input">
+              <input type="number" id="rooms"  v-model="rooms">
+              <div class="label">Stanze</div>
+            </div>
+
+            <div class="single-input">
+              <input type="number" id="beds"  v-model="beds">
+              <div class="label">Letti</div>
+            </div>
+          </div>
+
+          <div class="facility-box">
+            <div v-for="facility in facilities" :key="facility.id" class="single-facility">
+
+              <input type="checkbox" :name="facility.name" :id="facility.id" :value="facility.id" v-model="selectedFacilities">
+
+              <div class="info">
+                <div class="label">{{facility.name}}</div>
+                <img :src="'http://127.0.0.1:8000/storage/' + facility.icon_normal" :alt="facility.name" class="img-icon">
+              </div>
+
+            </div>
+          </div>
+
+          
+        </div>
+      </form>
+    </div>
+
+
+    
 
         <div v-for="apartment in filtered" :key="apartment.id">
           <router-link :to="'/apartments/' + apartment.slug"><h1>{{apartment.title}}</h1></router-link>
@@ -124,6 +157,7 @@ export default {
         },
         completer(index) {
           this.search = this.autocompleteList[index]
+          this.autocompleteList = [];
         }
     },
     mounted() {
@@ -135,6 +169,168 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="scss">
 
+  @import "../../sass/partials/_colors.scss";
+  @import "../../sass/partials/_font.scss";
+  @import "../../sass/partials/_common.scss";
+
+  h1 {
+        font-family: 'ruddyblack';
+    }
+
+  .search-bar {
+      width: 40%;
+      border: 4px solid $lines;
+      margin: 0 auto;
+      position: absolute;
+      z-index: 1000;
+      top: -10%;
+      transform: translateX(-50%);
+      left: 50%;
+      background: $background;
+  }
+  
+  input {
+      width: 100%;
+      padding: 10px 20px 10px 12px;
+      border: none;
+      color: rgba(0,0,0,.70);
+      transition: .15s all ease-in-out;
+      background: $background;
+      &:focus {
+          outline: none;
+          & + label  {
+          font-size: 10px;
+          transform: translateY(-24px) translateX(-12px);
+          }
+      }
+      &::-webkit-input-placeholder {
+          font-family: 'ruddyblack';
+          font-size: 15px;
+          color: $lines;
+          font-weight: 100;
+      }
+  }
+
+  .search-bar a {
+      cursor: pointer;
+  }
+
+  .img-search{
+      width: 30px;
+      right: 20px;
+      top: 5px;
+      position: absolute;
+  }
+
+  .prova {
+      position: relative;
+      
+  }
+
+  .autocomplete-bar ul {
+      list-style-type: none;
+      padding: 0 20px 0 12px;
+  }
+
+  .autocomplete-bar ul li:hover {
+      background-color: $details;
+      cursor: pointer;
+  }
+
+  .autocomplete-bar ul:first-child {
+      margin-top: 20px;
+  }
+  
+  .autocomplete-bar {
+      font-family: 'rubik';
+      background-color: $background;
+      border: 4px solid $lines;
+      position: absolute;
+      top: 20px;
+      right: -4px;
+      left: -4px;
+      z-index: -2;
+  }
+
+  .yellow-jumbo {
+    padding: 2rem 1rem;
+    border: 4px solid $lines;
+    width: 80%;
+    min-height: 350px;
+    margin: auto;
+    background-color: $details;
+    position: relative;
+  }
+
+
+  .jumbo {
+
+    .inputs {
+      padding-top: 3rem;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+      
+      .single-input {
+        width: 30%;
+        input {
+          border: 4px solid $lines;
+        }
+        .label {
+          font-size: 1.25rem;
+          font-family: 'ruddybold';
+        }
+      }
+    }
+
+    .facility-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .single-facility {
+        padding: 5px;
+        display: flex;
+        position: relative;
+
+        input[type="checkbox"] {
+          appearance: none;
+          -webkit-appearance: none;
+          height: 40px;
+          width: 40px;
+          background-color: $background;
+          border: 4px solid $lines;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        input[type='checkbox']:hover{
+          background-color: $lines;
+        }
+        input[type='checkbox']:checked{
+          background-color: $lines;
+        }
+
+        .info {
+          height: 40px;
+          margin-left: 5px;
+          border: 4px solid $lines;
+          background-color: $background;
+          font-size: 1.25rem;
+          
+          .img-icon {
+            width: 30px;
+            max-height: 40px;
+          }
+
+          .label {
+            font-family: 'ruddybold';
+          }
+        }
+      }
+    }
+  }
 </style>

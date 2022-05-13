@@ -253,6 +253,7 @@ export default {
 
     .autocomplete-bar ul li:hover {
         background-color: $details;
+        cursor: pointer;
     }
 
     .autocomplete-bar ul:first-child {
