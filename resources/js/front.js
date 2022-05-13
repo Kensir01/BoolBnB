@@ -2,6 +2,8 @@ window.Vue = require('vue');
 window.axios = require('axios');
 
 import Vue from 'vue';
+import VueCarousel from 'vue-carousel';
+Vue.use(VueCarousel);
 import App from './views/App';
 
 //aggiungo per usare vue-router
