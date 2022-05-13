@@ -31,7 +31,34 @@
             </div>
         </div>
 
-        
+        <div class="carousel">
+            <div class="car-text">
+                <h3>Appartamenti in primo piano</h3>
+
+                
+            </div>
+
+            <div class="car-content">
+                <carousel paginationColor="#FCEF03">
+                    <slide>
+                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/Risorsa1.svg">
+                    </slide>
+                    <slide>
+                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/Risorsa2.svg">
+                    </slide>
+                    <slide>
+                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/Risorsa3.svg">
+                    </slide>
+                    <slide>
+                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/Risorsa4.svg">
+                    </slide>
+                    <slide>
+                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/Risorsa5.svg">
+                    </slide>
+                </carousel>
+            </div>
+            
+        </div>
         
         
          <!--<div><h2>Trovati</h2>{{filtered}}</div> -->
@@ -39,13 +66,19 @@
 </template>
 
 <script>
+import { Carousel, Slide } from 'vue-carousel';
 export default {
     name: 'Home',
+    components: {
+        Carousel,
+        Slide
+    },
     data() {
         return {
             search: '',
             filtered: [],
             autocompleteList: []
+            
             //apiKey: process.env.MIX_TOM_TOM_KEY,
             //apartments : null,
             //poiList: [],
@@ -192,12 +225,12 @@ export default {
     @import "../../sass/partials/_font.scss";
     @import "../../sass/partials/_common.scss";
 
-    h1 {
+    h1, h3 {
         font-family: 'ruddyblack';
     }
 
     .search-bar {
-        width: 40%;
+        min-width: 50%;
         border: 4px solid $lines;
         margin: 0 auto;
         position: absolute;
@@ -209,7 +242,7 @@ export default {
     }
     
     input {
-        width: 100%;
+        min-width: 100%;
         padding: 10px 20px 10px 12px;
         border: none;
         color: rgba(0,0,0,.70);
@@ -288,4 +321,24 @@ export default {
         width: 500px;
         margin-top: 30%;
     }
+
+    //Carosello Appartamenti
+    
+    .mySlides {
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    .carousel {
+        margin: 300px auto;
+    }
+
+    .car-text {
+        margin-bottom: 20px;
+    }
+
+    .paginationColor {
+        color: $details !important;
+    }
+
 </style>
