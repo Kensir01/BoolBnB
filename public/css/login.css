@@ -1,0 +1,102 @@
+@import "../fonts/ruddy_black/stylesheet.css";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+
+div {
+    font-family: 'ruddyblack';
+}
+
+.login-form {
+    border: 10px solid black;
+    color: black;
+    border-radius: 0;
+    background-color: white;
+    padding: 2rem 4rem;
+    position: relative;
+}
+
+.login-form input {
+    font-family: 'Rubik';
+    color: black;
+}
+
+.login-form .yellow-box {
+    position: absolute;
+    background-color: #F7E828;
+    border: 10px solid black;
+    
+}
+
+.yellow-box.left-box {
+    left: -110px;
+    height: 150px;
+    width: 150px;
+    transform: skew(10deg, 0deg) rotate(5deg) ;
+}
+
+.yellow-box.right-box {
+    right: -110px;
+    bottom: -70px;
+    height: 150px;
+    width: 150px;
+    transform: scaleX(-1) skew(10deg, 0deg) rotate(5deg);
+}
+
+.login-form h1 {
+    font-size: 3rem;
+}
+
+.login-form .info {
+    font-size: 0.75rem;
+}
+
+.login-form .label {
+    font-size: 1rem;
+}
+
+.login-form input {
+    border-radius: 0;
+    border: 5px solid black;
+}
+
+.login-form input:focus,
+.login-form input:active{
+    border: 5px solid #F7E828;
+}
+
+.login-form .forgot {
+    color: black;
+}
+
+.login-form .forgot:hover {
+    color: #F7E828;
+}
+
+.login-form .checkbox {
+    background-color: #F7E828;
+    border-radius: 0;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 3px solid black;
+    resize: none;
+    outline: none;
+}
+
+.button {
+    background-color: white;
+    transition: 0.1s;
+
+}
+
+.button:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px;
+}
+
+.button:active {
+    box-shadow: none;
+    background-color: #F7E828;
+    transform: translate(0, 0);
+}
