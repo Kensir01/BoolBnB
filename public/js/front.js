@@ -2096,19 +2096,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'AdvancedSearch',
   data: function data() {
     return {
       search: '',
       filtered: [],
-      rooms: '',
-      beds: '',
-      distance: '',
+      rooms: 1,
+      beds: 1,
+      distance: 20,
       facilities: [],
-      selectedFacilities: []
+      selectedFacilities: [],
+      autocompleteList: [],
+      goneWrong: null
     };
   },
+  props: ['query'],
   methods: {
     getFilteredSearch: function getFilteredSearch() {
       var _this = this;
@@ -2122,23 +2133,66 @@ __webpack_require__.r(__webpack_exports__);
           facilities: this.selectedFacilities
         }
       }).then(function (response) {
-        console.log(response.data);
-        _this.poiList = response.data.poiList;
-        _this.geometryList = response.data.geometryList;
-        _this.filtered = response.data.filtered;
+        console.log(response.data.response);
+        console.log(response.data.response.result);
+
+        if (response.data.response.result) {
+          _this.goneWrong = null;
+          _this.filtered = response.data.response.data;
+        } else {
+          _this.goneWrong = response.data.response.data;
+        }
       });
     },
     getFacilities: function getFacilities() {
       var _this2 = this;
 
       axios.get('/api/facilities').then(function (response) {
-        console.log(response.data);
+        //console.log(response.data)
         _this2.facilities = response.data.facilities;
       });
+    },
+    //Completamento automatico
+    autocomplete: function autocomplete() {
+      var _this3 = this;
+
+      if (this.search.length >= 4) {
+        if (this.search.length % 2 == 0) {
+          axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
+            params: {
+              key: "xdILL9buPelMDApZRbT8UuWPiflkPnAG",
+              typeahead: true,
+              limit: 3
+            }
+          }).then(function (response) {
+            //console.log(response.data.results);
+            // Array con solo i nomi e le province
+            _this3.getCityNames(response.data.results); // console.log('Risultati trovati: ' + city);
+            // console.log('Risultati per: ' + cityNames)
+
+          })["catch"](function (error) {
+            console.log(error);
+          });
+        }
+      }
+    },
+    getCityNames: function getCityNames(array) {
+      var length = array.length;
+      this.autocompleteList = [];
+
+      for (var i = 0; i < length; i++) {
+        this.autocompleteList.push(array[i].address.municipality + ', ' + array[i].address.countrySecondarySubdivision);
+      }
+    },
+    completer: function completer(index) {
+      this.search = this.autocompleteList[index];
     }
   },
   mounted: function mounted() {
     this.getFacilities();
+  },
+  created: function created() {
+    this.search = this.query;
   }
 });
 
@@ -2220,12 +2274,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home',
   data: function data() {
     return {
       search: '',
-      filtered: [] //apiKey: process.env.MIX_TOM_TOM_KEY,
+      filtered: [],
+      autocompleteList: [] //apiKey: process.env.MIX_TOM_TOM_KEY,
       //apartments : null,
       //poiList: [],
       //geometryList: [],
@@ -2234,18 +2293,56 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     getSearch: function getSearch() {
+      this.$router.push({
+        name: "advancedsearch",
+        params: {
+          query: this.search
+        }
+      }); // axios.get('/api/apartments/search',{
+      //     params: {
+      //         location: this.search
+      //     }
+      // }).then((response) => {
+      //     console.log(response.data)
+      //     this.poiList = response.data.poiList
+      //     this.geometryList = response.data.geometryList
+      //     this.filtered = response.data.filtered
+      // });
+    },
+    //Completamento automatico
+    autocomplete: function autocomplete() {
       var _this = this;
 
-      axios.get('/api/apartments/search', {
-        params: {
-          location: this.search
+      if (this.search.length >= 4) {
+        if (this.search.length % 2 == 0) {
+          axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
+            params: {
+              key: "xdILL9buPelMDApZRbT8UuWPiflkPnAG",
+              typeahead: true,
+              limit: 3
+            }
+          }).then(function (response) {
+            console.log(response.data.results); // Array con solo i nomi e le province
+
+            _this.getCityNames(response.data.results); // console.log('Risultati trovati: ' + city);
+            // console.log('Risultati per: ' + cityNames)
+
+          })["catch"](function (error) {
+            console.log(error);
+          });
         }
-      }).then(function (response) {
-        console.log(response.data);
-        _this.poiList = response.data.poiList;
-        _this.geometryList = response.data.geometryList;
-        _this.filtered = response.data.filtered;
-      });
+      }
+    },
+    getCityNames: function getCityNames(array) {
+      var length = array.length;
+      this.autocompleteList = [];
+
+      for (var i = 0; i < length; i++) {
+        this.autocompleteList.push(array[i].address.municipality + ', ' + array[i].address.countrySecondarySubdivision);
+      }
+    },
+    completer: function completer(index) {
+      this.search = this.autocompleteList[index];
     } // geoCoding() {
     //     axios.get(`https://api.tomtom.com/search/2/geocode/${this.search}.json`, {
     //         params: {
@@ -2408,7 +2505,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-1f42fb90] {\n  font-family: \"Rubik\", sans-serif;\n}\nheader[data-v-1f42fb90] {\n  height: 90px;\n  align-items: center;\n  background-color: #fff !important;\n}\na.nav-link[data-v-1f42fb90] {\n  color: #000 !important;\n}\na.nav-link[data-v-1f42fb90]:hover {\n  color: #FCEF03 !important;\n}\nimg[data-v-1f42fb90] {\n  width: 150px;\n}\nimg[data-v-1f42fb90]:hover {\n  filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-1f42fb90] {\n  font-family: \"Rubik\", sans-serif;\n}\nheader[data-v-1f42fb90] {\n  height: 90px;\n  align-items: center;\n  margin-top: 20px;\n  background-color: #fff !important;\n}\na.nav-link[data-v-1f42fb90] {\n  color: #000 !important;\n}\na.nav-link[data-v-1f42fb90]:hover {\n  color: #FCEF03 !important;\n}\nimg[data-v-1f42fb90] {\n  width: 150px;\n}\nimg[data-v-1f42fb90]:hover {\n  filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);\n}", ""]);
 
 // exports
 
@@ -2446,7 +2543,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "div[data-v-91ac6b5c] {\n  background-color: #fff;\n}", ""]);
+exports.push([module.i, ".bordo[data-v-91ac6b5c] {\n  background-color: #fff;\n  border: 10px solid Black;\n}", ""]);
 
 // exports
 
@@ -3998,159 +4095,218 @@ var render = function () {
     [
       _c("h1", [_vm._v("Ricerca")]),
       _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.search,
-            expression: "search",
-          },
-        ],
-        attrs: { type: "text", placeholder: "Es. Villa vista mare" },
-        domProps: { value: _vm.search },
-        on: {
-          keyup: function ($event) {
-            if (
-              !$event.type.indexOf("key") &&
-              _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-            ) {
-              return null
-            }
-            return _vm.getFilteredSearch.apply(null, arguments)
-          },
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.search = $event.target.value
-          },
-        },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "stanze" } }, [_vm._v("Numero di stanze")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.rooms,
-            expression: "rooms",
-          },
-        ],
-        attrs: { type: "number", id: "stanze", placeholder: "Es. 3" },
-        domProps: { value: _vm.rooms },
-        on: {
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.rooms = $event.target.value
-          },
-        },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { bel: "", for: "letti" } }, [
-        _vm._v("Numero di letti"),
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.beds,
-            expression: "beds",
-          },
-        ],
-        attrs: { type: "number", id: "letti", placeholder: "Es. 2" },
-        domProps: { value: _vm.beds },
-        on: {
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.beds = $event.target.value
-          },
-        },
-      }),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "raggio" } }, [_vm._v("Raggio in Km.")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.distance,
-            expression: "distance",
-          },
-        ],
-        attrs: { type: "number", id: "raggio", placeholder: "Es. 20" },
-        domProps: { value: _vm.distance },
-        on: {
-          input: function ($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.distance = $event.target.value
-          },
-        },
-      }),
-      _vm._v(" "),
-      _vm._l(_vm.facilities, function (facility) {
-        return _c("div", { key: facility.id }, [
+      _c(
+        "form",
+        [
           _c("input", {
             directives: [
               {
                 name: "model",
                 rawName: "v-model",
-                value: _vm.selectedFacilities,
-                expression: "selectedFacilities",
+                value: _vm.search,
+                expression: "search",
               },
             ],
-            attrs: { type: "checkbox", name: facility.name, id: facility.id },
-            domProps: {
-              value: facility.id,
-              checked: Array.isArray(_vm.selectedFacilities)
-                ? _vm._i(_vm.selectedFacilities, facility.id) > -1
-                : _vm.selectedFacilities,
+            attrs: {
+              type: "text",
+              placeholder: "Search title..",
+              required: "",
             },
+            domProps: { value: _vm.search },
             on: {
-              change: function ($event) {
-                var $$a = _vm.selectedFacilities,
-                  $$el = $event.target,
-                  $$c = $$el.checked ? true : false
-                if (Array.isArray($$a)) {
-                  var $$v = facility.id,
-                    $$i = _vm._i($$a, $$v)
-                  if ($$el.checked) {
-                    $$i < 0 && (_vm.selectedFacilities = $$a.concat([$$v]))
-                  } else {
-                    $$i > -1 &&
-                      (_vm.selectedFacilities = $$a
-                        .slice(0, $$i)
-                        .concat($$a.slice($$i + 1)))
-                  }
-                } else {
-                  _vm.selectedFacilities = $$c
+              keyup: _vm.autocomplete,
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
                 }
+                _vm.search = $event.target.value
               },
             },
           }),
           _vm._v(" "),
-          _c("label", { attrs: { for: facility.name } }, [
-            _vm._v(_vm._s(facility.name)),
+          _c(
+            "ul",
+            _vm._l(_vm.autocompleteList, function (hint, index) {
+              return _c(
+                "li",
+                {
+                  key: index,
+                  on: {
+                    click: function ($event) {
+                      return _vm.completer(index)
+                    },
+                  },
+                },
+                [_vm._v(_vm._s(hint))]
+              )
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.rooms,
+                expression: "rooms",
+              },
+            ],
+            attrs: {
+              type: "number",
+              id: "stanze",
+              required: "",
+              min: "1",
+              max: "255",
+            },
+            domProps: { value: _vm.rooms },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.rooms = $event.target.value
+              },
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "stanze" } }, [
+            _vm._v("Numero di stanze"),
           ]),
-        ])
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.beds,
+                expression: "beds",
+              },
+            ],
+            attrs: {
+              type: "number",
+              id: "letti",
+              required: "",
+              min: "1",
+              max: "255",
+            },
+            domProps: { value: _vm.beds },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.beds = $event.target.value
+              },
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "letti" } }, [_vm._v("Numero di letti")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.distance,
+                expression: "distance",
+              },
+            ],
+            attrs: { type: "number", id: "raggio", required: "", min: "20" },
+            domProps: { value: _vm.distance },
+            on: {
+              input: function ($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.distance = $event.target.value
+              },
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "raggio" } }, [_vm._v("Raggio")]),
+          _vm._v(" "),
+          _vm._l(_vm.facilities, function (facility) {
+            return _c("div", { key: facility.id }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.selectedFacilities,
+                    expression: "selectedFacilities",
+                  },
+                ],
+                attrs: {
+                  type: "checkbox",
+                  name: facility.name,
+                  id: facility.id,
+                },
+                domProps: {
+                  value: facility.id,
+                  checked: Array.isArray(_vm.selectedFacilities)
+                    ? _vm._i(_vm.selectedFacilities, facility.id) > -1
+                    : _vm.selectedFacilities,
+                },
+                on: {
+                  change: function ($event) {
+                    var $$a = _vm.selectedFacilities,
+                      $$el = $event.target,
+                      $$c = $$el.checked ? true : false
+                    if (Array.isArray($$a)) {
+                      var $$v = facility.id,
+                        $$i = _vm._i($$a, $$v)
+                      if ($$el.checked) {
+                        $$i < 0 && (_vm.selectedFacilities = $$a.concat([$$v]))
+                      } else {
+                        $$i > -1 &&
+                          (_vm.selectedFacilities = $$a
+                            .slice(0, $$i)
+                            .concat($$a.slice($$i + 1)))
+                      }
+                    } else {
+                      _vm.selectedFacilities = $$c
+                    }
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: facility.name } }, [
+                _vm._v(_vm._s(facility.name)),
+              ]),
+            ])
+          }),
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary",
+          on: { click: _vm.getFilteredSearch },
+        },
+        [_vm._v("Cerca")]
+      ),
+      _vm._v(" "),
+      _vm._l(_vm.filtered, function (apartment) {
+        return _c(
+          "div",
+          { key: apartment.id },
+          [
+            _c(
+              "router-link",
+              { attrs: { to: "/apartments/" + apartment.slug } },
+              [_c("h1", [_vm._v(_vm._s(apartment.title))])]
+            ),
+          ],
+          1
+        )
       }),
       _vm._v(" "),
-      _vm._l(_vm.filtered, function (item, index) {
-        return _c("div", { key: index }, [
-          _vm._v("\n    " + _vm._s(item.title) + "\n  "),
-        ])
-      }),
+      _vm.goneWrong
+        ? _c("p", [_vm._v(" " + _vm._s(_vm.goneWrong) + " ")])
+        : _vm._e(),
     ],
     2
   )
@@ -4229,15 +4385,7 @@ var render = function () {
       attrs: { type: "text", placeholder: "Search title.." },
       domProps: { value: _vm.search },
       on: {
-        keyup: function ($event) {
-          if (
-            !$event.type.indexOf("key") &&
-            _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-          ) {
-            return null
-          }
-          return _vm.getSearch.apply(null, arguments)
-        },
+        keyup: _vm.autocomplete,
         input: function ($event) {
           if ($event.target.composing) {
             return
@@ -4246,6 +4394,31 @@ var render = function () {
         },
       },
     }),
+    _vm._v(" "),
+    _c(
+      "button",
+      { staticClass: "btn btn-primary", on: { click: _vm.getSearch } },
+      [_vm._v("cerca!")]
+    ),
+    _vm._v(" "),
+    _c(
+      "ul",
+      _vm._l(_vm.autocompleteList, function (hint, index) {
+        return _c(
+          "li",
+          {
+            key: index,
+            on: {
+              click: function ($event) {
+                return _vm.completer(index)
+              },
+            },
+          },
+          [_vm._v(_vm._s(hint))]
+        )
+      }),
+      0
+    ),
     _vm._v(" "),
     _c("div", [_c("h2", [_vm._v("Trovati")]), _vm._v(_vm._s(_vm.filtered))]),
   ])
@@ -4309,6 +4482,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "bordo" },
     [_c("Header"), _vm._v(" "), _c("Main"), _vm._v(" "), _c("Footer")],
     1
   )
@@ -20370,7 +20544,8 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   }, {
     path: '/advancedsearch',
     name: 'advancedsearch',
-    component: _pages_AdvancedSearch__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: _pages_AdvancedSearch__WEBPACK_IMPORTED_MODULE_3__["default"],
+    props: true
   }, {
     path: '/apartments/:slug',
     name: 'apartment',
