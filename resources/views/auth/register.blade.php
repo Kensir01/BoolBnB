@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container">
-    <div class= justify-content-center">
-        <div class="col-md-8">
+    <div class= "row justify-content-center">
+        <div class="col-md-6">
             <div class="card card_register">
                 <div class="card-header_register align-self-center">{{ __('Registrati') }}</div>
 
@@ -16,7 +16,7 @@
                             <label for="name" class=" col-form-label text-md-center container_register">{{ __('nome') }}</label>
                             
                             <div class="form_register_esterno">
-                                <input id="name" type="text" class="form-control_register form_rubik" name="name" value="{{ old('name') }}" autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control_register form_rubik" name="name" value="{{ old('name') }}" autocomplete="name" autofocus placeholder="Marco">
 
                                 {{-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -31,7 +31,7 @@
                             <label for="surname" class="col-form-label text-md-center container_register">{{ __('cognome') }}</label>
 
                             <div class="form_register_esterno">
-                                <input id="surname" type="text" class="form-control_register form_rubik " name="surname" value="{{ old('surname') }}" autocomplete="surname" autofocus>
+                                <input id="surname" type="text" class="form-control_register form_rubik " name="surname" value="{{ old('surname') }}" autocomplete="surname" autofocus placeholder="Rossi">
 
                                 {{-- @error('surname')
                                     <span class="invalid-feedback" role="alert">
@@ -61,7 +61,7 @@
                             <label for="email" class="col-form-label text-md-center container_register">{{ __('indirizzo Email *') }}</label>
 
                             <div class="form_register_esterno">
-                                <input id="email" type="email" class="form-control_register form_rubik @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control_register form_rubik @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="marcorossi@something.com">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -76,7 +76,7 @@
                             <label for="password" class="col-form-label text-md-center container_register">{{ __('password *') }}</label>
 
                             <div class="form_register_esterno">
-                                <input id="password" type="password" class="form-control_register form_rubik @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control_register form_rubik @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="*********">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -91,7 +91,7 @@
                             <label for="password-confirm" class="col-form-label text-md-center container_register">{{ __('conferma password *') }}</label>
 
                             <div class="form_register_esterno">
-                                <input id="password-confirm" type="password" class="form-control_register form_rubik" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="form-control_register form_rubik" name="password_confirmation" required autocomplete="new-password" placeholder="*********">
                             </div>
                         </div>
 
