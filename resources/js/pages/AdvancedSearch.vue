@@ -21,6 +21,7 @@
             <div v-for="facility in facilities" :key="facility.id">
               <input type="checkbox" :name="facility.name" :id="facility.id" :value="facility.id" v-model="selectedFacilities"> 
               <label :for="facility.name" >{{facility.name}}</label>
+              <!-- <img :src="'http://127.0.0.1:8000/storage/' + facility.icon_normal" alt=""> -->
             </div>
     </form>
             <button class="btn btn-primary" @click="getFilteredSearch">Cerca</button>

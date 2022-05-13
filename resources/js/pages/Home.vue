@@ -31,7 +31,7 @@ export default {
                 params: {
                     query: this.search
                 }
-                });
+            });
             // axios.get('/api/apartments/search',{
             //     params: {
             //         location: this.search
