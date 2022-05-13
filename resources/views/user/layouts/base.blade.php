@@ -19,14 +19,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/prove_dem.css') }}" rel="stylesheet">
     <!-- collegamento con file js - genitore -->
     @yield('script')
 
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'BoolBnB') }}
@@ -39,7 +39,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <!-- inserisci link menu -->
-                        <a class="nav-link" href="{{route('user.home')}}">Dashboard</a>
+                        {{-- <a class="nav-link" href="{{route('user.home')}}">Dashboard</a> --}}
                         <a class="nav-link" href="{{route('user.apartments.index')}}">Lista Appartamenti</a>
                        
                     </ul>
