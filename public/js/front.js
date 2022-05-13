@@ -2106,6 +2106,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'AdvancedSearch',
   data: function data() {
@@ -2162,7 +2163,7 @@ __webpack_require__.r(__webpack_exports__);
         if (this.search.length % 2 == 0) {
           axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
             params: {
-              key: "7kWYJDQnwA2ciqPMSwAUBU9nsoFLjVCc",
+              key: "xdILL9buPelMDApZRbT8UuWPiflkPnAG",
               typeahead: true,
               limit: 3
             }
@@ -2347,7 +2348,7 @@ __webpack_require__.r(__webpack_exports__);
         if (this.search.length % 2 == 0) {
           axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
             params: {
-              key: "7kWYJDQnwA2ciqPMSwAUBU9nsoFLjVCc",
+              key: "xdILL9buPelMDApZRbT8UuWPiflkPnAG",
               typeahead: true,
               limit: 3
             }
@@ -20734,7 +20735,7 @@ module.exports = "/images/Risorsa34.svg?5d69c4273579ecd47bbf36efa930668c";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Utente\BoolBnB\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\kensi\Vsc\progetto finale\BoolBnB\BoolBnB\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
