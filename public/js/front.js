@@ -2104,6 +2104,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'AdvancedSearch',
   data: function data() {
@@ -20552,9 +20553,9 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
     component: _pages_Apartment__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {
     // prendi qualsiasi cosa ci sia
-    path: '/:pathMatch(.)',
+    path: '/:pathMatch(.*)*',
     // path: '/*', 
-    name: 'not-found',
+    name: 'notFound',
     component: _pages_NotFound__WEBPACK_IMPORTED_MODULE_5__["default"]
   }]
 });

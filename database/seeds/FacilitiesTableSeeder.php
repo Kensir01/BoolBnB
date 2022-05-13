@@ -12,10 +12,14 @@ class FacilitiesTableSeeder extends Seeder
      */
     public function run()
     {
-        $facilities = ['WiFi', 'Posto macchina', 'Piscina', 'Sauna', 'Vista mare', 'Cucina', 'Animali domestici consentiti', 'Lavatrice', 'Riscaldamento', 'Carta igienica'];
+        $facilities = ['WiFi', 'Parcheggio', 'Piscina', 'Sauna', 'Vista mare', 'Cucina', 'Animali ammessi', 'Lavatrice', 'Riscaldamento', 'Carta igienica'];
         foreach($facilities as $facility) {
             $newFacility = new Facility();
             $newFacility->name = $facility;
+            $str = strtolower($facility);
+            $str = str_replace(' ', '_', $str);
+            $newFacility->icon_normal = 'icons/normal/' . $str . '.svg';
+            $newFacility->icon_highlight = 'icons/yellow/' . $str . '_y.svg';
             $newFacility->save();
         }
         
