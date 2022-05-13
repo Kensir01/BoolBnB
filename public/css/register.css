@@ -1,0 +1,139 @@
+@import "../fonts/ruddy_black/stylesheet.css";
+@import "../fonts/ruddy_bold/stylesheet.css";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+
+div {
+    font-family: 'ruddybold';
+    color: black;
+}
+
+.card_register {
+    border: black 10px solid;
+    border-radius: 0;
+    padding: 2rem 4rem;
+}
+.card_register h1 {
+    font-size: 3rem;
+}
+
+.card-header_register {
+    background-color: white;
+    border-bottom: none;
+    font-size: 30px;
+    font-family: 'ruddybold';
+}
+
+
+.form-control_register {
+    border: 5px solid black;
+    border-radius: 0;
+    width: 104%;
+}
+
+.form-control_register:focus {
+    box-shadow: none;
+    border: 3px solid black;
+    resize: none;
+    outline: none;
+}
+
+.form-control_register:focus,
+.form-control_register:active {
+    border: 5px solid #F7E828;
+}
+
+
+.container_register {
+    /* background-color: blue; */
+    display: flex;
+    font-size: 1rem;
+}
+
+.form_register_esterno {
+    margin: auto;
+}
+
+.form_rubik {
+    font-family: 'Rubik';
+}
+
+
+
+.rettangolo {
+    position:absolute;
+    top: 0;
+    left: -100px;
+}
+
+.rettangolo_piccolo_1 {
+    position: absolute;
+    top: 67px;
+    left: -77px;       
+    width: 150px;
+    height: 150px;
+    background-color: #F7E828;
+    border-left: black 10px solid;
+    border-right: black 10px solid;
+    border-top: black 10px solid;
+}
+
+.rettangolo_piccolo_2 {
+    position: absolute;
+    top: 200px;
+    left: -75px;       
+    width: 150px;
+    height: 25px;
+    transform: rotate(8deg);
+    background-color: #F7E828;
+}
+
+.rettangolo_piccolo_3 {
+    position: absolute;
+    top: 208px;
+    left: 73px;       
+    width: 3px;
+    height: 29px;
+    background-color: white;
+}
+
+.bordo_piccolo_1 {
+    width: 21px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    top: 217px;
+    left: -77px;
+}
+
+.bordo_piccolo_2 {
+    width: 150px;
+    height: 10px;
+    background-color: black;
+    transform: rotate(8deg);
+    position: absolute;
+    top: 223px;
+    left: -77px;
+}
+
+.bordo_piccolo_3 {
+    width: 10px;
+    height: 22px;
+    background-color: black;
+    position: absolute;
+    top: 217px;
+    left: 63px;
+}
+
+
+.rettangolo_grande_1 {
+    position: absolute;
+    bottom: -55px;
+    right: -150px;       
+    width: 150px;
+    height: 480px;
+    background-color: #F7E828;
+    border: black 10px solid;
+    transform: rotate(1deg);
+
+}

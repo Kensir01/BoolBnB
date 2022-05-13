@@ -1,12 +1,40 @@
 <template>
-    <div>
-        <h1>Benvenuto in BoolBnB!</h1>
-        <input type="text" v-model="search" placeholder="Search title.." @keyup="autocomplete"/>
-        <button class="btn btn-primary" @click="getSearch" >cerca!</button>
-        <ul>
-          <li v-for="(hint,index) in autocompleteList" :key="index" @click="completer(index)">{{hint}}</li>
-        </ul>
-        <div><h2>Trovati</h2>{{filtered}}</div>
+    <div class="container">
+        
+        <div class="yellow-jumbo">
+            <div class="search-bar">
+                <div class="prova">
+                    <input class="search-input" type="text" v-model="search" placeholder="Dove vuoi andare?" @keyup="autocomplete"/>
+                    <div class="autocomplete-bar" v-if="autocompleteList">
+                        <ul>
+                            <li v-for="(hint,index) in autocompleteList" :key="index" @click="completer(index)">{{hint}}</li>
+                        </ul>
+                    </div>
+                
+                
+                    <a @click="getSearch" >
+                        <img class="img-search" src="http://127.0.0.1:8000/storage/icons/normal/search.svg" alt="Search icon">
+                    </a>
+                </div>
+                    
+            </div>
+            
+            <div class="jumbo container">
+                <div class="row">
+                    <div class="col-12 col-md-6 jb-text-container">
+                        <h1 class="jumbo-text">Un'avventura ti aspetta con BoolBnB!</h1>
+                    </div>
+                    <div class="col-12 col-md-6 jb-img-container">
+                        <img class="img-jumbo" src="../../../storage/app/public/elements/baffi.svg" alt="Image Jumbo">
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        
+        
+        
+         <!--<div><h2>Trovati</h2>{{filtered}}</div> -->
     </div>
 </template>
 
@@ -31,7 +59,7 @@ export default {
                 params: {
                     query: this.search
                 }
-                });
+            });
             // axios.get('/api/apartments/search',{
             //     params: {
             //         location: this.search
@@ -160,30 +188,104 @@ export default {
 
 <style scoped lang='scss'>
 
-    @import "../../../public/fonts/ruddy_black/stylesheet.css";
+    @import "../../sass/partials/_colors.scss";
+    @import "../../sass/partials/_font.scss";
+    @import "../../sass/partials/_common.scss";
 
     h1 {
         font-family: 'ruddyblack';
     }
+
+    .search-bar {
+        width: 40%;
+        border: 4px solid $lines;
+        margin: 0 auto;
+        position: absolute;
+        z-index: 1000;
+        top: -10%;
+        transform: translateX(-50%);
+        left: 50%;
+        background: $background;
+    }
     
     input {
-        padding: 4px 12px;
+        width: 100%;
+        padding: 10px 20px 10px 12px;
+        border: none;
         color: rgba(0,0,0,.70);
-        border: 1px solid rgba(0,0,0,.12);
         transition: .15s all ease-in-out;
-        background: white;
+        background: $background;
         &:focus {
             outline: none;
-            transform: scale(1.05);
             & + label  {
             font-size: 10px;
             transform: translateY(-24px) translateX(-12px);
             }
         }
         &::-webkit-input-placeholder {
-            font-size: 12px;
-            color: rgba(0,0,0,.50);
+            font-family: 'ruddyblack';
+            font-size: 15px;
+            color: $lines;
             font-weight: 100;
         }
+    }
+
+    .search-bar a {
+        cursor: pointer;
+    }
+
+    .img-search{
+        width: 30px;
+        right: 20px;
+        top: 5px;
+        position: absolute;
+    }
+
+    .prova {
+        position: relative;
+        
+    }
+
+    .autocomplete-bar ul {
+        list-style-type: none;
+        padding: 0 20px 0 12px;
+    }
+
+    .autocomplete-bar ul li:hover {
+        background-color: $details;
+    }
+
+    .autocomplete-bar ul:first-child {
+        margin-top: 20px;
+    }
+    
+    .autocomplete-bar {
+        font-family: 'rubik';
+        background-color: $background;
+        border: 4px solid $lines;
+        position: absolute;
+        top: 20px;
+        right: -4px;
+        left: -4px;
+        z-index: -2;
+    }
+
+    .yellow-jumbo {
+        border: 4px solid $lines;
+        width: 80%;
+        height: 350px;
+        margin: auto;
+        background-color: $details;
+        position: relative;
+    }
+
+    .jumbo-text {
+        font-size: 50px;
+        margin-top: 30%;
+    }
+
+    .img-jumbo {
+        width: 500px;
+        margin-top: 30%;
     }
 </style>

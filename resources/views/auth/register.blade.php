@@ -1,118 +1,135 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+<div class="container d-flex justify-content-center pt-5">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+    <div class= "card_register justify-content-center">
+        <div class="col">
+            <h1>Registrati</h1>
 
-                        {{-- nome --}}
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+            <div class="card-body">
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" autocomplete="name" autofocus>
+                    {{-- nome --}}
+                    <div class="form-group">
+                        <label for="name" class=" col-form-label text-md-left container_register">{{ __('nome') }}</label>
+                        
+                        <div class="form_register_esterno">
+                            <input id="name" type="text" class="form-control_register form_rubik" name="name" value="{{ old('name') }}" autocomplete="name" autofocus placeholder="Marco">
 
-                                {{-- @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror --}}
-                            </div>
+                            {{-- @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror --}}
                         </div>
+                    </div>
 
-                        {{-- cognome --}}
-                        <div class="form-group row">
-                            <label for="surname" class="col-md-4 col-form-label text-md-right">{{ __('Surname') }}</label>
+                    {{-- cognome --}}
+                    <div class="form-group">
+                        <label for="surname" class="col-form-label text-md-center container_register">{{ __('cognome') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="surname" type="text" class="form-control " name="surname" value="{{ old('surname') }}" autocomplete="surname" autofocus>
+                        <div class="form_register_esterno">
+                            <input id="surname" type="text" class="form-control_register form_rubik " name="surname" value="{{ old('surname') }}" autocomplete="surname" autofocus placeholder="Rossi">
 
-                                {{-- @error('surname')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror --}}
-                            </div>
+                            {{-- @error('surname')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror --}}
                         </div>
+                    </div>
 
-                        {{-- email --}}
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address *') }}</label>
+                    {{-- data nascita --}}
+                    <div class="form-group">
+                        <label for="date_of_birth" class="col-form-label text-md-center container_register">{{ __('data di nascita') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                        <div class="form_register_esterno">
+                            <input id="date_of_birth" type="date" class="form-control_register form_rubik" name="date_of_birth" value="{{ old('date_of_birth') }}" autocomplete="date_of_birth" autofocus>
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                            {{-- @error('date_of_birth')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror --}}
                         </div>
+                    </div>
 
-                        {{-- password --}}
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password *') }}</label>
+                    {{-- email --}}
+                    <div class="form-group">
+                        <label for="email" class="col-form-label text-md-center container_register">{{ __('indirizzo Email *') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                        <div class="form_register_esterno">
+                            <input id="email" type="email" class="form-control_register form_rubik @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="marcorossi@something.com">
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
+                    </div>
 
-                        {{-- password confirm --}}
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password *') }}</label>
+                    {{-- password --}}
+                    <div class="form-group">
+                        <label for="password" class="col-form-label text-md-center container_register">{{ __('password *') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
+                        <div class="form_register_esterno">
+                            <input id="password" type="password" class="form-control_register form_rubik @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="*********">
+
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
+                    </div>
 
-                         {{-- data nascita --}}
-                         <div class="form-group row">
-                            <label for="date_of_birth" class="col-md-4 col-form-label text-md-right">{{ __('Date of birth') }}</label>
+                    {{-- password confirm --}}
+                    <div class="form-group">
+                        <label for="password-confirm" class="col-form-label text-md-center container_register">{{ __('conferma password *') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="date_of_birth" type="date" class="form-control" name="date_of_birth" value="{{ old('date_of_birth') }}" autocomplete="date_of_birth" autofocus>
-
-                                {{-- @error('date_of_birth')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror --}}
-                            </div>
+                        <div class="form_register_esterno">
+                            <input id="password-confirm" type="password" class="form-control_register form_rubik" name="password_confirmation" required autocomplete="new-password" placeholder="*********">
                         </div>
+                    </div>
 
-                        <div class="text-center my-2">
-                          
-                                <h6>I campi con * sono campi obbligatori</h6>
-                           
-                        </div>
-                       
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
+                    <div class="text-center my-2">
+                        
+                            <h6>I campi con * sono campi obbligatori</h6>
+                        
+                    </div>
+                    
+
+                    <div class="form-group mb-0 row">
+                        <div class="col-sm"></div>
+                        <div class="col-sm-auto align-items-center">
+                            <button type="submit" class="button">
+                                {{ __('Registrati') }}
+                            </button>
                         </div>
-                    </form>
-                </div>
+                        <div class="col-sm"></div>
+                    </div>
+                    
+
+                    <div class="rettangolo">
+                        <div class="rettangolo_piccolo_2"></div>
+                        <div class="rettangolo_piccolo_1"></div>
+                        <div class="rettangolo_piccolo_3"></div>    
+                        <div class="bordo_piccolo_1"></div>
+                        <div class="bordo_piccolo_2"></div>
+                        <div class="bordo_piccolo_3"></div>
+                    </div>
+
+                    <div class="rettangolo_grande_1"></div>
+
+                </form>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+
