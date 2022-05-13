@@ -7,12 +7,12 @@ div {
     font-family: 'ruddyblack';
 }
 
-.card_dem {
+.card_register {
     width: 80%;
     border: black 5px solid;
 }
 
-.card-header {
+.card-header_register {
     background-color: white;
     border-bottom: none;
     font-size: 30px;
@@ -20,12 +20,12 @@ div {
 }
 
 
-.form-control {
+.form-control_register {
     border: 3px solid black;
     border-radius: 0;
 }
 
-.form-control:focus {
+.form-control_register:focus {
     box-shadow: none;
     border: 3px solid black;
     resize: none;
@@ -33,13 +33,13 @@ div {
 }
 
 
-.culetto {
+.container_register {
     /* background-color: blue; */
     margin-left: 131px;
     display: flex;
 }
 
-.prove_form {
+.form_register_esterno {
     width: 50%;
     margin: auto;
 }

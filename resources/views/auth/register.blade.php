@@ -4,8 +4,8 @@
 <div class="container">
     <div class= justify-content-center">
         <div class="col-md-8">
-            <div class="card card_dem">
-                <div class="card-header align-self-center">{{ __('Registrati') }}</div>
+            <div class="card card_register">
+                <div class="card-header_register align-self-center">{{ __('Registrati') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -13,10 +13,10 @@
 
                         {{-- nome --}}
                         <div class="form-group">
-                            <label for="name" class=" col-form-label text-md-center culetto">{{ __('nome') }}</label>
+                            <label for="name" class=" col-form-label text-md-center container_register">{{ __('nome') }}</label>
                             
-                            <div class="prove_form">
-                                <input id="name" type="text" class="form-control form_rubik" name="name" value="{{ old('name') }}" autocomplete="name" autofocus>
+                            <div class="form_register_esterno">
+                                <input id="name" type="text" class="form-control_register form_rubik" name="name" value="{{ old('name') }}" autocomplete="name" autofocus>
 
                                 {{-- @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -28,10 +28,10 @@
 
                         {{-- cognome --}}
                         <div class="form-group">
-                            <label for="surname" class="col-form-label text-md-center culetto">{{ __('cognome') }}</label>
+                            <label for="surname" class="col-form-label text-md-center container_register">{{ __('cognome') }}</label>
 
-                            <div class="prove_form">
-                                <input id="surname" type="text" class="form-control form_rubik " name="surname" value="{{ old('surname') }}" autocomplete="surname" autofocus>
+                            <div class="form_register_esterno">
+                                <input id="surname" type="text" class="form-control_register form_rubik " name="surname" value="{{ old('surname') }}" autocomplete="surname" autofocus>
 
                                 {{-- @error('surname')
                                     <span class="invalid-feedback" role="alert">
@@ -43,10 +43,10 @@
 
                         {{-- data nascita --}}
                         <div class="form-group">
-                            <label for="date_of_birth" class="col-form-label text-md-center culetto">{{ __('data di nascita') }}</label>
+                            <label for="date_of_birth" class="col-form-label text-md-center container_register">{{ __('data di nascita') }}</label>
 
-                            <div class="prove_form">
-                                <input id="date_of_birth" type="date" class="form-control form_rubik" name="date_of_birth" value="{{ old('date_of_birth') }}" autocomplete="date_of_birth" autofocus>
+                            <div class="form_register_esterno">
+                                <input id="date_of_birth" type="date" class="form-control_register form_rubik" name="date_of_birth" value="{{ old('date_of_birth') }}" autocomplete="date_of_birth" autofocus>
 
                                 {{-- @error('date_of_birth')
                                     <span class="invalid-feedback" role="alert">
@@ -58,10 +58,10 @@
 
                         {{-- email --}}
                         <div class="form-group">
-                            <label for="email" class="col-form-label text-md-center culetto">{{ __('indirizzo Email *') }}</label>
+                            <label for="email" class="col-form-label text-md-center container_register">{{ __('indirizzo Email *') }}</label>
 
-                            <div class="prove_form">
-                                <input id="email" type="email" class="form-control form_rubik @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                            <div class="form_register_esterno">
+                                <input id="email" type="email" class="form-control_register form_rubik @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -73,10 +73,10 @@
 
                         {{-- password --}}
                         <div class="form-group">
-                            <label for="password" class="col-form-label text-md-center culetto">{{ __('password *') }}</label>
+                            <label for="password" class="col-form-label text-md-center container_register">{{ __('password *') }}</label>
 
-                            <div class="prove_form">
-                                <input id="password" type="password" class="form-control form_rubik @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                            <div class="form_register_esterno">
+                                <input id="password" type="password" class="form-control_register form_rubik @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -88,10 +88,10 @@
 
                         {{-- password confirm --}}
                         <div class="form-group">
-                            <label for="password-confirm" class="col-form-label text-md-center culetto">{{ __('conferma password *') }}</label>
+                            <label for="password-confirm" class="col-form-label text-md-center container_register">{{ __('conferma password *') }}</label>
 
-                            <div class="prove_form">
-                                <input id="password-confirm" type="password" class="form-control form_rubik" name="password_confirmation" required autocomplete="new-password">
+                            <div class="form_register_esterno">
+                                <input id="password-confirm" type="password" class="form-control_register form_rubik" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
