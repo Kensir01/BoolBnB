@@ -2460,12 +2460,13 @@ exports.push([module.i, "div[data-v-91ac6b5c] {\n  background-color: #fff;\n}", 
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, "/* @font-face {\n    font-family: 'ruddyblack';\n    src: url('./ruddy-black-webfont.woff2') format('woff2'),\n         url('./ruddy-black-webfont.woff') format('woff');\n    font-weight: normal;\n    font-style: normal;\n\n} */", ""]);
+exports.push([module.i, "@font-face {\r\n    font-family: 'ruddyblack';\r\n    src: url(" + escape(__webpack_require__(/*! ./ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format('woff2'),\r\n         url(" + escape(__webpack_require__(/*! ./ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format('woff');\r\n    font-weight: normal;\r\n    font-style: normal;\r\n\r\n}", ""]);
 
 // exports
 
@@ -20491,7 +20492,7 @@ module.exports = "/images/Risorsa34.svg?5d69c4273579ecd47bbf36efa930668c";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\kensi\Vsc\progetto finale\BoolBnB\BoolBnB\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
