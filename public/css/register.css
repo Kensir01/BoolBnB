@@ -5,11 +5,16 @@
 
 div {
     font-family: 'ruddybold';
+    color: black;
 }
 
 .card_register {
-    width: 80%;
-    border: black 5px solid;
+    border: black 10px solid;
+    border-radius: 0;
+    padding: 2rem 4rem;
+}
+.card_register h1 {
+    font-size: 3rem;
 }
 
 .card-header_register {
@@ -21,7 +26,7 @@ div {
 
 
 .form-control_register {
-    border: 3px solid black;
+    border: 5px solid black;
     border-radius: 0;
     width: 104%;
 }
@@ -41,12 +46,11 @@ div {
 
 .container_register {
     /* background-color: blue; */
-    margin-left: 131px;
     display: flex;
+    font-size: 1rem;
 }
 
 .form_register_esterno {
-    width: 50%;
     margin: auto;
 }
 
@@ -56,6 +60,12 @@ div {
 
 
 
+.rettangolo {
+    position:absolute;
+    top: 0;
+    left: -100px;
+}
+
 .rettangolo_piccolo_1 {
     position: absolute;
     top: 67px;
@@ -63,9 +73,9 @@ div {
     width: 150px;
     height: 150px;
     background-color: #F7E828;
-    border-left: black 5px solid;
-    border-right: black 5px solid;
-    border-top: black 5px solid;
+    border-left: black 10px solid;
+    border-right: black 10px solid;
+    border-top: black 10px solid;
 }
 
 .rettangolo_piccolo_2 {
@@ -97,33 +107,33 @@ div {
 }
 
 .bordo_piccolo_2 {
-    width: 131px;
-    height: 5px;
+    width: 150px;
+    height: 10px;
     background-color: black;
     transform: rotate(8deg);
     position: absolute;
-    top: 226px;
-    left: -58px;
+    top: 223px;
+    left: -77px;
 }
 
 .bordo_piccolo_3 {
-    width: 5px;
+    width: 10px;
     height: 22px;
     background-color: black;
     position: absolute;
     top: 217px;
-    left: 68px;
+    left: 63px;
 }
 
 
 .rettangolo_grande_1 {
     position: absolute;
     bottom: -55px;
-    right: -100px;       
+    right: -150px;       
     width: 150px;
     height: 480px;
     background-color: #F7E828;
-    border: black 5px solid;
+    border: black 10px solid;
     transform: rotate(1deg);
 
 }
