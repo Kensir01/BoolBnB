@@ -23,6 +23,7 @@ div {
 .form-control_register {
     border: 3px solid black;
     border-radius: 0;
+    width: 104%;
 }
 
 .form-control_register:focus {
@@ -30,6 +31,11 @@ div {
     border: 3px solid black;
     resize: none;
     outline: none;
+}
+
+.form-control_register:focus,
+.form-control_register:active {
+    border: 5px solid #F7E828;
 }
 
 
@@ -46,15 +52,6 @@ div {
 
 .form_rubik {
     font-family: 'Rubik';
-}
-
-.button {
-    background-color: white;
-}
-
-.button:hover {
-    transform: translate(-5px, -5px);
-    box-shadow: 5px 5px;
 }
 
 
