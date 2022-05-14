@@ -202,7 +202,7 @@ export default {
         margin: 0 auto;
         position: absolute;
         z-index: 1000;
-        top: -10%;
+        top: -30px;
         transform: translateX(-50%);
         left: 50%;
         background: $background;

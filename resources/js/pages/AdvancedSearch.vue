@@ -1,4 +1,5 @@
 <template>
+<div class="fullpage">
   <div class="container">
     <div class="yellow-jumbo">
       <form>
@@ -45,8 +46,8 @@
 
               <div class="info">
                 <div class="label">{{facility.name}}</div>
-                <img :src="'http://127.0.0.1:8000/storage/' + facility.icon_normal" :alt="facility.name" class="img-icon">
               </div>
+                <img :src="'http://127.0.0.1:8000/storage/' + facility.icon_normal" :alt="facility.name" class="img-icon">
 
             </div>
           </div>
@@ -59,18 +60,24 @@
 
     
 
-        <div v-for="apartment in filtered" :key="apartment.id">
-          <router-link :to="'/apartments/' + apartment.slug"><h1>{{apartment.title}}</h1></router-link>
-        </div>
-
-        <p v-if="goneWrong"> {{goneWrong}} </p>
-
   </div>
+
+  <ApartmentSearchResult class="fullpage"/>
+  <div v-for="apartment in filtered" :key="apartment.id">
+    <router-link :to="'/apartments/' + apartment.slug"><h1>{{apartment.title}}</h1></router-link>
+  </div>
+
+  <p v-if="goneWrong"> {{goneWrong}} </p>
+</div>
 </template>
 
 <script>
+import ApartmentSearchResult from '../components/ApartmentSearchResult';
 export default {
     name: 'AdvancedSearch',
+    components: {
+      'ApartmentSearchResult' : ApartmentSearchResult
+    },
     data() {
       return {
         search: '',
@@ -179,13 +186,17 @@ export default {
         font-family: 'ruddyblack';
     }
 
+  .container {
+    margin-bottom: 4rem;
+  }
+
   .search-bar {
       width: 40%;
       border: 4px solid $lines;
       margin: 0 auto;
       position: absolute;
       z-index: 1000;
-      top: -10%;
+      top: -30px;
       transform: translateX(-50%);
       left: 50%;
       background: $background;
@@ -289,8 +300,8 @@ export default {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-
       .single-facility {
+        width: 40%;
         padding: 5px;
         display: flex;
         position: relative;
@@ -315,21 +326,22 @@ export default {
         }
 
         .info {
+          width: 100%;
           height: 40px;
           margin-left: 5px;
           border: 4px solid $lines;
           background-color: $background;
           font-size: 1.25rem;
           
-          .img-icon {
-            width: 30px;
-            max-height: 40px;
-          }
-
           .label {
             font-family: 'ruddybold';
           }
         }
+          img {
+            width: 30px;
+            max-height: 40px;
+            margin-left: 5px;
+          }
       }
     }
   }
