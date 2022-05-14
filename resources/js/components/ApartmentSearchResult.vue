@@ -2,23 +2,23 @@
     <div class="apartment">
         <div class="half">
             <div class="top">
-                01
+                {{index}}
             </div>
             <div class="bottom">
                 <div class="left">
                     <div class="top-part">
 
-                        <h1>La casina più bella</h1>
-                        <div>Roma, Italia</div>
+                        <h1>{{title}}</h1>
+                        <div>{{address}}</div>
                     </div>
                     <div class="bottom-part">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum ullam quisquam perspiciatis laborum!</p>
-                        <a href="" class="button">Guarda</a>
+                        <p>{{description}}</p>
+                        <router-link :to="'/apartments/' + slug" class="button">Guarda</router-link>
 
                     </div>
                 </div>
                 <div class="right">
-                    <img src="http://127.0.0.1:8000/storage/stock_bnb_images/Risorsa1.svg" alt="">
+                    <img :src="'http://127.0.0.1:8000/storage/' + image">
                 </div>
             </div>
         </div>
@@ -33,10 +33,11 @@
 export default {
     name: 'ApartmentSearchResult',
     props: {
+        'index' : Number,
         'image' : String,
         'title' : String,
         'description' : String,
-        'page' : String,
+        'slug' : String,
         'address' : String,
         'lat' : Number,
         'lon' : Number

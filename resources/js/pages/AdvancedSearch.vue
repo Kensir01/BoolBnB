@@ -62,10 +62,7 @@
 
   </div>
 
-  <ApartmentSearchResult class="fullpage"/>
-  <div v-for="apartment in filtered" :key="apartment.id">
-    <router-link :to="'/apartments/' + apartment.slug"><h1>{{apartment.title}}</h1></router-link>
-  </div>
+  <ApartmentSearchResult class="fullpage" v-for="(apartment,index) in filtered" :key="apartment.id" :index="index" :image='apartment.image' :title='apartment.title' :description='apartment.description' :slug='apartment.slug' :address='apartment.address' :lat="apartment.latitude" :lon="apartment.longitude"/>
 
   <p v-if="goneWrong"> {{goneWrong}} </p>
 </div>
