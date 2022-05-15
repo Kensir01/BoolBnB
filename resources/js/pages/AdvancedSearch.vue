@@ -47,7 +47,6 @@
               <div class="info">
                 <div class="label">{{facility.name}}</div>
               </div>
-                <img :src="'http://127.0.0.1:8000/storage/' + facility.icon_normal" :alt="facility.name" class="img-icon">
 
             </div>
           </div>
@@ -62,7 +61,7 @@
 
   </div>
 
-  <ApartmentSearchResult class="fullpage" v-for="(apartment,index) in filtered" :key="apartment.id" :index="index" :image='apartment.image' :title='apartment.title' :description='apartment.description' :slug='apartment.slug' :address='apartment.address' :lat="apartment.latitude" :lon="apartment.longitude"/>
+  <ApartmentSearchResult class="fullpage" v-for="(apartment,index) in filtered" :key="apartment.id" :index="index+1" :image='apartment.image' :title='apartment.title' :description='apartment.description' :slug='apartment.slug' :address='apartment.address' :lat="apartment.latitude" :lon="apartment.longitude"/>
 
   <p v-if="goneWrong"> {{goneWrong}} </p>
 </div>
@@ -297,8 +296,9 @@ export default {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+
       .single-facility {
-        width: 40%;
+        margin: 0.5rem 1rem;
         padding: 5px;
         display: flex;
         position: relative;
@@ -323,6 +323,7 @@ export default {
         }
 
         .info {
+          padding: 0 1rem;
           width: 100%;
           height: 40px;
           margin-left: 5px;
