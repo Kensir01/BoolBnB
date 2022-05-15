@@ -1,69 +1,68 @@
 <template>
 <div class="fullpage">
-  <div class="container">
-    <div class="yellow-jumbo">
-      <form>
-        <div class="search-bar">
-          <div class="prova">
+    <div class="container">
+      <div class="yellow-jumbo">
+        <form>
+          <div class="search-bar">
+            <div class="prova">
 
-            <input class="search-input" type="text" v-model="search" placeholder="Dove vuoi andare?" @keyup="autocomplete" required/>
-            <div class="autocomplete-bar" v-if="autocompleteList">
-              <ul>
-                <li v-for="(hint,index) in autocompleteList" :key="index" @click="completer(index)">{{hint}}</li>
-              </ul>
+              <input class="search-input" type="text" v-model="search" placeholder="Dove vuoi andare?" @keyup="autocomplete" required/>
+              <div class="autocomplete-bar" v-if="autocompleteList">
+                <ul>
+                  <li v-for="(hint,index) in autocompleteList" :key="index" @click="completer(index)">{{hint}}</li>
+                </ul>
+              </div>
+                  
+                  
+              <a @click="getFilteredSearch" >
+                <img class="img-search" src="http://127.0.0.1:8000/storage/icons/normal/search.svg" alt="Search icon">
+              </a>
             </div>
-                
-                
-            <a @click="getFilteredSearch" >
-              <img class="img-search" src="http://127.0.0.1:8000/storage/icons/normal/search.svg" alt="Search icon">
-            </a>
+                      
           </div>
-                    
-        </div>
-            
-        <div class="jumbo container">
+              
+          <div class="jumbo container">
 
-          <div class="inputs">
-            <div class="single-input">
-              <input type="number" id="distance" v-model="distance">
-              <div class="label">Raggio</div>
-            </div>
-            <div class="single-input">
-              <input type="number" id="rooms"  v-model="rooms">
-              <div class="label">Stanze</div>
-            </div>
-
-            <div class="single-input">
-              <input type="number" id="beds"  v-model="beds">
-              <div class="label">Letti</div>
-            </div>
-          </div>
-
-          <div class="facility-box">
-            <div v-for="facility in facilities" :key="facility.id" class="single-facility">
-
-              <input type="checkbox" :name="facility.name" :id="facility.id" :value="facility.id" v-model="selectedFacilities">
-
-              <div class="info">
-                <div class="label">{{facility.name}}</div>
+            <div class="inputs">
+              <div class="single-input">
+                <input type="number" id="distance" v-model="distance">
+                <div class="label">Raggio</div>
+              </div>
+              <div class="single-input">
+                <input type="number" id="rooms"  v-model="rooms">
+                <div class="label">Stanze</div>
               </div>
 
+              <div class="single-input">
+                <input type="number" id="beds"  v-model="beds">
+                <div class="label">Letti</div>
+              </div>
             </div>
+
+            <div class="facility-box">
+              <div v-for="facility in facilities" :key="facility.id" class="single-facility">
+
+                <input type="checkbox" :name="facility.name" :id="facility.id" :value="facility.id" v-model="selectedFacilities">
+
+                <div class="info">
+                  <div class="label">{{facility.name}}</div>
+                </div>
+
+              </div>
+            </div>
+
+            
           </div>
+        </form>
+      </div>
 
-          
-        </div>
-      </form>
+
+      
+
     </div>
+      <ApartmentSearchResult class="fullpage" v-for="(apartment,index) in filtered" :key="apartment.id" :index="index+1" :image='apartment.image' :title='apartment.title' :description='apartment.description' :slug='apartment.slug' :address='apartment.address' :lat="apartment.latitude" :lon="apartment.longitude"/>
 
-
-    
-
-  </div>
-
-  <ApartmentSearchResult class="fullpage" v-for="(apartment,index) in filtered" :key="apartment.id" :index="index+1" :image='apartment.image' :title='apartment.title' :description='apartment.description' :slug='apartment.slug' :address='apartment.address' :lat="apartment.latitude" :lon="apartment.longitude"/>
-
-  <p v-if="goneWrong"> {{goneWrong}} </p>
+    <p v-if="goneWrong" class="noResults"> {{goneWrong}} </p>
 </div>
 </template>
 
@@ -102,12 +101,15 @@ export default {
                     facilities: this.selectedFacilities,
                 }
             }).then((response) => {
-                console.log(response.data.response)
-                console.log(response.data.response.result)
+                console.log(response.data.response.data)
 
                 if(response.data.response.result) {
                   this.goneWrong = null
                   this.filtered = response.data.response.data
+
+                  if (response.data.response.data.length == 0) {
+                    this.goneWrong = 'Nessun Risultato'
+                  }
                   } else {
                   this.goneWrong = response.data.response.data
                 }
@@ -161,13 +163,25 @@ export default {
         completer(index) {
           this.search = this.autocompleteList[index]
           this.autocompleteList = [];
+        },
+        firstSearch() {
+          if(this.query != null) {
+            this.selectedFacilities= [];
+            this.rooms = 1;
+            this.beds = 1;
+            this.distance = 20;
+            this.search = this.query;
+            this.getFilteredSearch()
+          }
+
         }
     },
     mounted() {
       this.getFacilities()
+
     },
-    created() {
-      this.search = this.query
+    activated() {
+      this.firstSearch()
     }
 }
 </script>
@@ -181,6 +195,12 @@ export default {
   h1 {
         font-family: 'ruddyblack';
     }
+
+  .noResults {
+    text-align: center;
+    font-family: 'ruddybold';
+    font-size: 2rem;
+  }
 
   .container {
     margin-bottom: 4rem;
