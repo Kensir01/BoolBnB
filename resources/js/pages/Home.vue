@@ -77,10 +77,11 @@
                         <img class="experience due" src="../../../storage/app/public/elements/esperienze_2.svg">
                     </div>
                 </div>
-                   
-               
             </div>
-            
+        </div>
+
+        <div class="storia_logo">
+            <img src="../../../storage/app/public/elements/home.svg" alt="">
         </div>
 
 
@@ -428,8 +429,13 @@ export default {
     margin-top: 22px;
     }
 
-    .esperienze {
+    .esperienze, .storia_logo {
         margin: 200px auto;
+    }
+
+    .storia_logo:hover {
+        filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);
+        transition: 0.7s;
     }
 
 
