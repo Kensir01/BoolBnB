@@ -5,6 +5,7 @@
 body {
     border: 10px solid black;
     min-height: 100vh;
+    background-color: white;
 }
 
 div {
@@ -81,6 +82,20 @@ hr {
 
 .bordo_logout {
     border: 2px solid black;
+    border-radius: 0;
+}
+
+.dash_utente_top {
+    border: 5px solid black;  
+    border-bottom: none; 
+    background-color: white;
+    border-radius: 0px !important;
+}
+
+.dash_utente_bot {
+    border: 5px solid black;  
+    border-top: none; 
+    border-radius: 0 !important;
 }
 
 
