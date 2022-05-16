@@ -1,0 +1,33 @@
+.col_dex_1 {
+    width: 500px;
+    height: 232px;
+    border: 5px solid black;
+    margin-left: 32px;
+    padding: 5px;
+    overflow-wrap: break-word;
+}
+
+.col_dex_2 {
+    width: 500px;
+    height: 232px;
+    border: 5px solid black;
+    margin-left: 32px;
+    margin-top: 7px;
+    padding: 5px;
+    overflow-wrap: break-word;
+}
+
+.button_show_blade {
+    margin-top: 7px;
+    margin-left: -28px;
+}
+
+.badge {
+    color: #000;
+    background-color: #F7E828;
+    padding: 0.5rem;
+    border-radius: 0px;
+    margin-top: 20px;
+    margin-right: 2px;
+}
+

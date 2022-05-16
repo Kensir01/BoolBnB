@@ -8,31 +8,59 @@
 
             <h1>Visualizza appartamento</h1>
 
-            <div class="debug1">
-                <img class="dimensione" src="{{ asset(Storage::url($apartment->image))}}" alt="{{$apartment->title}}">
+            <div class="row my-5">
+
+                <div class="col-5">
+                    <div class="debug1">
+                        <img class="dimensione" src="{{ asset(Storage::url($apartment->image))}}" alt="{{$apartment->title}}">
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="col_dex_1 row ">
+                                <div class="col-6">
+                                    <div><strong>Titolo: </strong>{{$apartment->title}}</div>
+                                    <div><strong>Numero Stanze: </strong>{{$apartment->rooms_number}}</div>
+                                    <div><strong>Numero Bagni: </strong>{{$apartment->bathrooms_number}}</div>
+                                    <div><strong>Numero Letti: </strong>{{$apartment->beds_number}}</div>
+                                    <div><strong>Metri Quadri: </strong>{{$apartment->square_meters}}</div>
+                                    <div><strong>Visibilità: </strong>{{$apartment->visibility? 'Visibile': 'Nascosto'}}</div>
+                                    <div><strong>Città: </strong>{{$apartment->city}}</div>
+                                    <div><strong>Via: </strong>{{$apartment->address}}</div>
+                                    <div><strong>CAP: </strong>{{$apartment->zip_code}}</div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        @foreach ($apartment->facilities as $facility)
+                                            <span class="badge badge-primary">{{$facility->name}}</span>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-12">
+                            <div class="col_dex_2">
+                                <div><strong>Descrizione: </strong>{{$apartment->description}}</div>
+                            </div>
+                        </div>                
+                    </div>
+                </div>
+
             </div>
-            
-            <div><strong>Titolo: </strong>{{$apartment->title}}</div>
-            <div><strong>Slug: </strong>{{$apartment->slug}}</div>
-            <div><strong>Numero Stanze: </strong>{{$apartment->rooms_number}}</div>
-            <div><strong>Numero Bagni: </strong>{{$apartment->bathrooms_number}}</div>
-            <div><strong>Numero Letti: </strong>{{$apartment->beds_number}}</div>
-            <div><strong>Metri Quadri: </strong>{{$apartment->square_meters}}</div>
-            <div><strong>Latitudine: </strong>{{$apartment->latitude}}</div>
+
+            {{-- <div><strong>Latitudine: </strong>{{$apartment->latitude}}</div>
             <div><strong>Longitudine: </strong>{{$apartment->longitude}}</div>
-            <div><strong>Visibilità: </strong>{{$apartment->visibility? 'Visibile': 'Nascosto'}}</div>
-            <div><strong>Città: </strong>{{$apartment->city}}</div>
-            <div><strong>Via: </strong>{{$apartment->address}}</div>
-            <div><strong>CAP: </strong>{{$apartment->zip_code}}</div>
-            <div><strong>Descrizione: </strong>{{$apartment->description}}</div>
-
-            <div>
-                @foreach ($apartment->facilities as $facility)
-                    <span class="badge badge-primary">{{$facility->name}}</span>
-                @endforeach
+            <div><strong>Slug: </strong>{{$apartment->slug}}</div> --}}
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-2 align-self-center">
+                    <a href="{{url()->previous()}}" class="button button_show_blade">Torna indietro</a>
+                </div>
+                <div class="col-4"></div>
             </div>
-
-            <a href="{{url()->previous()}}" class="btn btn-primary mt-4">Torna indietro</a>
 
         </div>
     </div>

@@ -60,7 +60,7 @@
       
 
     </div>
-      <ApartmentSearchResult class="fullpage" v-for="(apartment,index) in filtered" :key="apartment.id" :index="index+1" :image='apartment.image' :title='apartment.title' :description='apartment.description' :slug='apartment.slug' :address='apartment.address' :lat="apartment.latitude" :lon="apartment.longitude"/>
+      <ApartmentSearchResult class="fullpage" v-for="(apartment,index) in filtered" :key="apartment.id" :index="index+1" :image='apartment.image' :title='apartment.title' :description='apartment.description' :slug='apartment.slug' :address='apartment.address' :lat="apartment.latitude" :lon="apartment.longitude" :id="apartment.id"/>
 
     <p v-if="goneWrong" class="noResults"> {{goneWrong}} </p>
 </div>
