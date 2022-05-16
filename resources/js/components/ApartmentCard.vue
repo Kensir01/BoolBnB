@@ -3,7 +3,7 @@
         <div class="left">
             <div class="top">
                 <a @click="$router.go(-1)"><div class="circle">×</div></a>
-                close 
+                chiudi 
             </div>
             <div class="bottom">
 
@@ -32,7 +32,7 @@
         <div class="chat" @click="toggleForm">
             <img src="http://127.0.0.1:8000/storage/icons/normal/mex_white.svg" alt="Invia messaggio">
         </div>
-
+        
         <div class="overlay" v-if="form">
 
             <div class="messageForm">
@@ -40,18 +40,23 @@
                 <div class="holes"></div>
                 <div class="dashed"></div>
 
+                
                 <div class="inputs">
-                    <div class="email">
-                        <span class="label">Da: </span>
-                        <input type="email" placeholder="Inserisci email">
-                    </div>
+                    <form @submit.prevent="sendMessage">
+                        <div class="email">
+                            <span class="label">Da: </span>
+                            <input type="email" placeholder="Inserisci email" v-model="email" required>
+                        </div>
 
-                    <div class="message">
-                        <div class="label">Scrivi qualcosa all'host</div>
-                        <textarea name="" id="" rows="10" cols="50" placeholder="Il tuo messaggio">
+                        <div class="message">
+                            <div class="label">Scrivi qualcosa all'host</div>
+                            <textarea name="" id="" rows="9" placeholder="Il tuo messaggio" v-model="content" required> </textarea>
+                        </div>
 
-                        </textarea>
-                    </div>
+                        <button type="submit" class="button">
+                                INVIA <img src="http://127.0.0.1:8000/storage/icons/normal/send.svg" alt="Invia">
+                        </button>
+                    </form>
                 </div>
             </div>
 
@@ -65,6 +70,9 @@ export default {
     data() {
         return {
             form : false,
+            email: '',
+            content: '',
+            sent : false,
         }
     },
     props: {
@@ -74,14 +82,35 @@ export default {
         'address' : String,
         'facilities' : Array,
         'description' : String,
+        'id' : Number
     },
     methods: {
         toggleForm() {
             this.form = !this.form;
             if(this.form) {
-
+                this.email = this.$userEmail;
             }
+        },
+        sendMessage() {
+            axios.post('/api/messages',{
+                    'email': this.email,
+                    'content': this.content,
+                    'apartment_id': this.id,
+                })
+                .then((response) => {
+                    console.log(response.data)
+                    if(!response.data.success) {
+                        this.errors = response.data.errors;
+                    } else {
+                        this.email = '';
+                        this.content = '';
+                        this.toggleForm();
+                    }
+                });
         }
+    },
+    mounted() {
+        this.email = this.$userEmail;
     }
 }
 </script>
@@ -113,10 +142,26 @@ export default {
                 width: 25vw;
                 height: 60vh;
                 min-width: 300px;
-                min-height: 400px;
+                min-height: 500px;
                 background-color: $background;
                 border: 5px solid $lines;
                 position: relative;
+
+                .button {
+                    position: absolute;
+                    bottom: -20px;
+                    right: -30px;
+                    height: 60px;
+                    font-family: 'ruddybold';
+                    font-size: 1rem;
+                    padding-left: 1rem;
+
+                    img{
+                        object-fit: cover;
+                        height: 100%;
+                    }
+
+                }
 
                 .inputs {
                     padding: 1rem;
@@ -131,6 +176,8 @@ export default {
 
                         input {
                             border:none;
+                            width: 90%;
+                            min-width: 200px;
                             border-bottom: 2px solid $lines;
 
                             &:focus {
@@ -148,6 +195,8 @@ export default {
                             font-weight: 700;
                         }
                         textarea {
+                            min-width: 250px;
+                            width: 100%;
                             resize: none;
                             line-height: 4ch;
                             background-image: linear-gradient(transparent, transparent calc(4ch - 2px), $lines 0px);
