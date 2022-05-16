@@ -85,8 +85,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="image">Immagine attuale</label>
-                    <img src="{{ asset(Storage::url($apartment->image))}}" alt="{{$apartment->title}}" id="image" required min="1">
+                    <div>
+                        <label for="image">Immagine attuale</label>
+                    </div>
+
+                    <div class="debug1">
+                        <img class="dimensione" src="{{ asset(Storage::url($apartment->image))}}" alt="{{$apartment->title}}" id="image" required min="1">
+                    </div>
 
                 </div>
         

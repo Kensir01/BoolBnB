@@ -8,7 +8,7 @@
                 <div class="row justify-content-between p-4">
                     <div class="col-4"></div>
                     <div class="col-2">
-                        <button class="button" href="{{route('user.apartments.create')}}">Aggiungi appartamento</button>
+                        <a class="button" href="{{route('user.apartments.create')}}">Aggiungi appartamento</a>
                     </div>
                 </div>
             
@@ -35,7 +35,7 @@
                         @foreach ($apartments as $apartment)
             
                             <tr>
-                                <td><img src="{{ asset(Storage::url($apartment->image))}}" alt="{{$apartment->title}}"></td>
+                                <td><img src="{{ asset(Storage::url($apartment->image))}}" alt="{{$apartment->title}}" class="dimensione"></td>
                                 <td><span class="titolo_prova">{{$apartment->title}}</span>
                                     <hr> 
                                     <span class="descrizione_prova">{{$apartment->description}}</span>
@@ -52,8 +52,8 @@
                                 <td>{{$apartment->zip_code}}</td> --}}
                                 <td class="align-middle">
                                     <div class="d-flex justify-content-around align-items-center">
-                                        <a href="{{route('user.apartments.show', $apartment->slug)}}"><img src="http://127.0.0.1:8000/storage/icons/normal/view.svg" alt="mostra" class="svg_dash"></a>
-                                        <a href="{{route('user.apartments.edit', $apartment->slug)}}"><img src="http://127.0.0.1:8000/storage/icons/normal/edit.svg" alt="mostra" class="svg_dash"></a>
+                                        <a href="{{route('user.apartments.show', $apartment->slug)}}"><img src="http://127.0.0.1:8000/storage/icons/normal/vedi.svg" alt="mostra" class="svg_dash"></a>
+                                        <a href="{{route('user.apartments.edit', $apartment->slug)}}"><img src="http://127.0.0.1:8000/storage/icons/normal/modifica.svg" alt="mostra" class="svg_dash"></a>
     
                                         <form method="POST" action="{{route('user.apartments.destroy', $apartment->id)}}">
     
@@ -61,7 +61,7 @@
                                             @method('DELETE')
                   
                                                 {{-- chiedere conferma della cancellazione, prima di eliminare l’elemento --}}
-                                                <a type="submit" onclick="return confirm('Sei sicuro?')"><img src="http://127.0.0.1:8000/storage/icons/normal/delete.svg" alt="mostra" class="svg_dash"></a>
+                                                <a type="submit" onclick="return confirm('Sei sicuro?')"><img src="http://127.0.0.1:8000/storage/icons/normal/cancella.svg" alt="mostra" class="svg_dash"></a>
                                         </form>
     
                                     </div>
