@@ -1,5 +1,6 @@
 window.Vue = require('vue');
 window.axios = require('axios');
+Vue.prototype.$userEmail = document.querySelector("meta[name='user-email']").getAttribute('content');
 
 import Vue from 'vue';
 import VueCarousel from 'vue-carousel';

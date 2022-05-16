@@ -19,7 +19,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/prove_dem.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/edit_general.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/show_blade.css') }}" rel="stylesheet">
     <link href="{{ asset('css/delete.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <!-- collegamento con file js - genitore -->

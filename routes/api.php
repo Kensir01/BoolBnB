@@ -26,3 +26,5 @@ Route::get('/apartments/filteredsearch', 'Api\ApartmentController@filteredSearch
 Route::get('/facilities', 'Api\FacilityController@index');
 // /api/apartments/* -> show
 Route::get('/apartments/{slug}', 'Api\ApartmentController@show');
+
+Route::post('/messages', 'Api\MessageController@store');
