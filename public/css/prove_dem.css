@@ -83,6 +83,12 @@ hr {
     border: 2px solid black;
 }
 
+
+.login-form {
+    width: 646px;
+    margin: auto;
+}
+
 .form_img {
     height: 45px;
 }
