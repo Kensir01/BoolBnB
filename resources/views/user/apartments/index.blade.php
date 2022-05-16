@@ -61,7 +61,33 @@
                                             @method('DELETE')
                   
                                                 {{-- chiedere conferma della cancellazione, prima di eliminare l’elemento --}}
-                                                <a type="submit" onclick="return confirm('Sei sicuro?')"><img src="http://127.0.0.1:8000/storage/icons/normal/cancella.svg" alt="mostra" class="svg_dash"></a>
+                                                {{-- <a type="submit" onclick="return confirm('Sei sicuro?')"><img src="http://127.0.0.1:8000/storage/icons/normal/cancella.svg" alt="mostra" class="svg_dash"></a> --}}
+                                                <a type="submit" onclick="document.getElementById('btnDelete').style.display='block'"><img src="http://127.0.0.1:8000/storage/icons/normal/cancella.svg" alt="mostra" class="svg_dash"></a>
+
+                                                
+                                                {{-- <button onclick="document.getElementById('id01').style.display='block'"><img src="http://127.0.0.1:8000/storage/icons/normal/cancella.svg" alt="mostra" class="svg_dash"></button> --}}
+
+                                                <div id="btnDelete" class="modal">
+                                                <span onclick="document.getElementById('btnDelete').style.display='none'" class="close" title="Close Modal">×</span>
+                                                <form class="modal-content">
+                                                    <div class="containerDeletebtn">
+                                                        <h1>Cancella Appartamento</h1>
+                                                        <p>Sei sicuro di voler eliminare questo appartamento?</p>
+                                                        
+                                                            
+                                                            <img src="http://127.0.0.1:8000/storage/elements/bust-53.svg" class="imageDelete" alt="omino">
+                                                   
+
+                                                        <div class="clearfix centro">
+                                                            <button type="button" onclick="document.getElementById('btnDelete').style.display='none'" class="annulla">Annulla</button>
+                                                            <button type="submit" onclick="document.getElementById('btnDelete').style.display='none'" class="cancella" >Cancella</button>
+                                                        </div>
+
+                                                    </div>
+                                                </form>
+                                                </div>
+
+
                                         </form>
     
                                     </div>
@@ -75,5 +101,18 @@
             </div>
         </div>
     </div>
-  
+
+    
+    <script>
+        // Get the modal
+        var modal = document.getElementById('btnDelete');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
+
 @endsection
