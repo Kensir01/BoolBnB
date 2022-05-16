@@ -41,21 +41,21 @@
                 <div class="dashed"></div>
 
                 <div class="inputs">
-                    <div class="email">
-                        <span class="label">Da: </span>
-                        <input type="email" placeholder="Inserisci email" v-model="userEmail">
-                    </div>
+                    <form @submit.prevent="sendMessage">
+                        <div class="email">
+                            <span class="label">Da: </span>
+                            <input type="email" placeholder="Inserisci email" v-model="email" required>
+                        </div>
 
-                    <div class="message">
-                        <div class="label">Scrivi qualcosa all'host</div>
-                        <textarea name="" id="" rows="9" placeholder="Il tuo messaggio">
+                        <div class="message">
+                            <div class="label">Scrivi qualcosa all'host</div>
+                            <textarea name="" id="" rows="9" placeholder="Il tuo messaggio" v-model="message" required> </textarea>
+                        </div>
 
-                        </textarea>
-                    </div>
-
-                    <button type="submit" class="button">
-                        INVIA <img src="http://127.0.0.1:8000/storage/icons/normal/send.svg" alt="Invia">
-                    </button>
+                        <button type="submit" class="button">
+                            INVIA <img src="http://127.0.0.1:8000/storage/icons/normal/send.svg" alt="Invia">
+                        </button>
+                    </form>
                 </div>
             </div>
 
@@ -69,7 +69,8 @@ export default {
     data() {
         return {
             form : false,
-            userEmail: this.$userEmail
+            email: '',
+            message: ''
         }
     },
     props: {
@@ -79,6 +80,7 @@ export default {
         'address' : String,
         'facilities' : Array,
         'description' : String,
+        'id' : Number
     },
     methods: {
         toggleForm() {
@@ -86,7 +88,23 @@ export default {
             if(this.form) {
 
             }
+        },
+        sendMessage() {
+            axios.post('/api/messages',{
+                    'email': this.email,
+                    'content': this.message,
+                    'apartment_id': this.id,
+                })
+                .then((response) => {
+                    console.log(response.data);
+                })
+                .catch(error => {
+                console.log(error.response)
+                });
         }
+    },
+    mounted() {
+        this.email = this.$userEmail;
     }
 }
 </script>
