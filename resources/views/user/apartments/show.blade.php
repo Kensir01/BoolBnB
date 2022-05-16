@@ -8,7 +8,10 @@
 
             <h1>Visualizza appartamento</h1>
 
-            <img src="{{ asset(Storage::url($apartment->image))}}" alt="{{$apartment->title}}">
+            <div class="debug1">
+                <img class="dimensione" src="{{ asset(Storage::url($apartment->image))}}" alt="{{$apartment->title}}">
+            </div>
+            
             <div><strong>Titolo: </strong>{{$apartment->title}}</div>
             <div><strong>Slug: </strong>{{$apartment->slug}}</div>
             <div><strong>Numero Stanze: </strong>{{$apartment->rooms_number}}</div>

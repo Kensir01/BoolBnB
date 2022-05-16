@@ -57,7 +57,7 @@ class ApartmentController extends Controller
                 'beds_number' => 'required|numeric|max:255|min:1',
                 'square_meters' => 'required|numeric|max:32766|min:1',
                 // formati accettati nel caricamento del file
-                'image' => 'required|max:2048|mimes:jpeg,jpg,png',
+                'image' => 'required|max:2048|mimes:jpeg,jpg,png,svg',
                 'city' => 'required|max:50|min:2',
                 'address' => 'required|max:50|min:2',
                 'zip_code' => 'required|max:15|min:3',
@@ -170,7 +170,7 @@ class ApartmentController extends Controller
                 'bathrooms_number' => 'required|numeric|max:255|min:1',
                 'beds_number' => 'required|numeric|max:255|min:1',
                 'square_meters' => 'required|numeric|max:32766|min:1',
-                'image' => 'max:2048|mimes:jpeg,jpg,png',
+                'image' => 'max:2048|mimes:jpeg,jpg,png,svg',
                 'city' => 'required|max:50|min:2',
                 'address' => 'required|max:50|min:2',
                 'zip_code' => 'required|max:15|min:3',
