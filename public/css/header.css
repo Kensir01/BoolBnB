@@ -1,0 +1,22 @@
+.ms_header {
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-color: #fff !important;
+}
+
+.img-logo {
+    width: 150px;
+}
+
+.img-logo:hover {
+    filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);
+}
+
+.ms_link {
+    color: black !important;
+}
+
+.ms_link:hover {
+    color: #F7E828 !important;
+}
