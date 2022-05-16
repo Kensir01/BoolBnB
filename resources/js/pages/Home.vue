@@ -59,6 +59,35 @@
             </div>
             
         </div>
+
+
+
+         <div class="esperienze">
+            <div class="text">
+                <h3>Scopri le esperienze con BoolBnB</h3>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <img class="experience" src="../../../storage/app/public/elements/esperienza_1.svg">
+                    </div>
+
+                    <div class="col-6">
+                        <img class="experience due" src="../../../storage/app/public/elements/esperienze_2.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="storia_logo">
+            <img src="../../../storage/app/public/elements/home.svg" alt="">
+        </div>
+
+
+
+
+       
         
         
          <!--<div><h2>Trovati</h2>{{filtered}}</div> -->
@@ -319,8 +348,10 @@ export default {
     }
 
     .img-jumbo {
-        width: 500px;
-        margin-top: 30%;
+        max-width: 400px;
+        position: relative;
+        top: 5vw;
+        right: -5vw;
     }
 
     //Carosello Appartamenti
@@ -331,7 +362,7 @@ export default {
     }
 
     .carousel {
-        margin: 300px auto;
+        margin: 200px auto;
     }
 
     .car-text {
@@ -341,5 +372,73 @@ export default {
     .paginationColor {
         color: $details !important;
     }
+
+
+    @media screen and (max-width: 1440px) {
+        .img-jumbo {
+        top: 9vw;
+        right: -10vw;
+    }   
+    }
+
+    @media screen and (max-width: 1024px) {
+        .img-jumbo {
+        top: 17vw;
+        right: -10vw;
+    } 
+
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .jumbo-text {
+            font-size: 40px;
+        }
+        
+        .img-jumbo {
+        top: 22vw;
+        right: 0vw;
+        width: 310px;
+        } 
+        
+
+    }
+
+     @media screen and (max-width: 425px) {
+        .jumbo-text {
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        .img-jumbo {
+        top: 2vw;
+        right: 0;
+        width:  300px;
+        } 
+
+        .img-search {
+            width: 20px;
+            top: 10px;
+            right: 11px;
+        }
+
+    }
+
+    
+    img.experience.due {
+    margin-top: 22px;
+    }
+
+    .esperienze, .storia_logo {
+        margin: 200px auto;
+    }
+
+    .storia_logo:hover {
+        filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);
+        transition: 0.7s;
+    }
+
+
+   
 
 </style>

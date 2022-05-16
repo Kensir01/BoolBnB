@@ -2466,6 +2466,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home',
@@ -2779,7 +2807,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-b3c5cf30] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-b3c5cf30] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-b3c5cf30] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-b3c5cf30]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-b3c5cf30]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\nh1[data-v-b3c5cf30], h3[data-v-b3c5cf30] {\n  font-family: \"ruddyblack\";\n}\n.search-bar[data-v-b3c5cf30] {\n  min-width: 50%;\n  border: 4px solid #000;\n  margin: 0 auto;\n  position: absolute;\n  z-index: 1000;\n  top: -30px;\n  transform: translateX(-50%);\n  left: 50%;\n  background: #fff;\n}\ninput[data-v-b3c5cf30] {\n  min-width: 100%;\n  padding: 10px 20px 10px 12px;\n  border: none;\n  color: rgba(0, 0, 0, 0.7);\n  transition: 0.15s all ease-in-out;\n  background: #fff;\n}\ninput[data-v-b3c5cf30]:focus {\n  outline: none;\n}\ninput:focus + label[data-v-b3c5cf30] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-b3c5cf30]::-webkit-input-placeholder {\n  font-family: \"ruddyblack\";\n  font-size: 15px;\n  color: #000;\n  font-weight: 100;\n}\n.search-bar a[data-v-b3c5cf30] {\n  cursor: pointer;\n}\n.img-search[data-v-b3c5cf30] {\n  width: 30px;\n  right: 20px;\n  top: 5px;\n  position: absolute;\n}\n.prova[data-v-b3c5cf30] {\n  position: relative;\n}\n.autocomplete-bar ul[data-v-b3c5cf30] {\n  list-style-type: none;\n  padding: 0 20px 0 12px;\n}\n.autocomplete-bar ul li[data-v-b3c5cf30]:hover {\n  background-color: #FCEF03;\n  cursor: pointer;\n}\n.autocomplete-bar ul[data-v-b3c5cf30]:first-child {\n  margin-top: 20px;\n}\n.autocomplete-bar[data-v-b3c5cf30] {\n  font-family: \"rubik\";\n  background-color: #fff;\n  border: 4px solid #000;\n  position: absolute;\n  top: 20px;\n  right: -4px;\n  left: -4px;\n  z-index: -2;\n}\n.yellow-jumbo[data-v-b3c5cf30] {\n  border: 4px solid #000;\n  width: 80%;\n  height: 350px;\n  margin: auto;\n  background-color: #FCEF03;\n  position: relative;\n}\n.jumbo-text[data-v-b3c5cf30] {\n  font-size: 50px;\n  margin-top: 30%;\n}\n.img-jumbo[data-v-b3c5cf30] {\n  width: 500px;\n  margin-top: 30%;\n}\n.mySlides[data-v-b3c5cf30] {\n  width: 100%;\n  padding-right: 20px;\n}\n.carousel[data-v-b3c5cf30] {\n  margin: 300px auto;\n}\n.car-text[data-v-b3c5cf30] {\n  margin-bottom: 20px;\n}\n.paginationColor[data-v-b3c5cf30] {\n  color: #FCEF03 !important;\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-b3c5cf30] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-b3c5cf30] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-b3c5cf30] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-b3c5cf30]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-b3c5cf30]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\nh1[data-v-b3c5cf30], h3[data-v-b3c5cf30] {\n  font-family: \"ruddyblack\";\n}\n.search-bar[data-v-b3c5cf30] {\n  min-width: 50%;\n  border: 4px solid #000;\n  margin: 0 auto;\n  position: absolute;\n  z-index: 1000;\n  top: -30px;\n  transform: translateX(-50%);\n  left: 50%;\n  background: #fff;\n}\ninput[data-v-b3c5cf30] {\n  min-width: 100%;\n  padding: 10px 20px 10px 12px;\n  border: none;\n  color: rgba(0, 0, 0, 0.7);\n  transition: 0.15s all ease-in-out;\n  background: #fff;\n}\ninput[data-v-b3c5cf30]:focus {\n  outline: none;\n}\ninput:focus + label[data-v-b3c5cf30] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-b3c5cf30]::-webkit-input-placeholder {\n  font-family: \"ruddyblack\";\n  font-size: 15px;\n  color: #000;\n  font-weight: 100;\n}\n.search-bar a[data-v-b3c5cf30] {\n  cursor: pointer;\n}\n.img-search[data-v-b3c5cf30] {\n  width: 30px;\n  right: 20px;\n  top: 5px;\n  position: absolute;\n}\n.prova[data-v-b3c5cf30] {\n  position: relative;\n}\n.autocomplete-bar ul[data-v-b3c5cf30] {\n  list-style-type: none;\n  padding: 0 20px 0 12px;\n}\n.autocomplete-bar ul li[data-v-b3c5cf30]:hover {\n  background-color: #FCEF03;\n  cursor: pointer;\n}\n.autocomplete-bar ul[data-v-b3c5cf30]:first-child {\n  margin-top: 20px;\n}\n.autocomplete-bar[data-v-b3c5cf30] {\n  font-family: \"rubik\";\n  background-color: #fff;\n  border: 4px solid #000;\n  position: absolute;\n  top: 20px;\n  right: -4px;\n  left: -4px;\n  z-index: -2;\n}\n.yellow-jumbo[data-v-b3c5cf30] {\n  border: 4px solid #000;\n  width: 80%;\n  height: 350px;\n  margin: auto;\n  background-color: #FCEF03;\n  position: relative;\n}\n.jumbo-text[data-v-b3c5cf30] {\n  font-size: 50px;\n  margin-top: 30%;\n}\n.img-jumbo[data-v-b3c5cf30] {\n  max-width: 400px;\n  position: relative;\n  top: 5vw;\n  right: -5vw;\n}\n.mySlides[data-v-b3c5cf30] {\n  width: 100%;\n  padding-right: 20px;\n}\n.carousel[data-v-b3c5cf30] {\n  margin: 200px auto;\n}\n.car-text[data-v-b3c5cf30] {\n  margin-bottom: 20px;\n}\n.paginationColor[data-v-b3c5cf30] {\n  color: #FCEF03 !important;\n}\n@media screen and (max-width: 1440px) {\n.img-jumbo[data-v-b3c5cf30] {\n    top: 9vw;\n    right: -10vw;\n}\n}\n@media screen and (max-width: 1024px) {\n.img-jumbo[data-v-b3c5cf30] {\n    top: 17vw;\n    right: -10vw;\n}\n}\n@media screen and (max-width: 768px) {\n.jumbo-text[data-v-b3c5cf30] {\n    font-size: 40px;\n}\n.img-jumbo[data-v-b3c5cf30] {\n    top: 22vw;\n    right: 0vw;\n    width: 310px;\n}\n}\n@media screen and (max-width: 425px) {\n.jumbo-text[data-v-b3c5cf30] {\n    font-size: 30px;\n    text-align: center;\n}\n.img-jumbo[data-v-b3c5cf30] {\n    top: 2vw;\n    right: 0;\n    width: 300px;\n}\n.img-search[data-v-b3c5cf30] {\n    width: 20px;\n    top: 10px;\n    right: 11px;\n}\n}\nimg.experience.due[data-v-b3c5cf30] {\n  margin-top: 22px;\n}\n.esperienze[data-v-b3c5cf30] {\n  margin: 200px auto;\n}", ""]);
 
 // exports
 
@@ -5058,6 +5086,8 @@ var render = function () {
         1
       ),
     ]),
+    _vm._v(" "),
+    _vm._m(2),
   ])
 }
 var staticRenderFns = [
@@ -5091,6 +5121,38 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "car-text" }, [
       _c("h3", [_vm._v("Appartamenti in primo piano")]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "esperienze" }, [
+      _c("div", { staticClass: "text" }, [
+        _c("h3", [_vm._v("Scopri le esperienze con BoolBnB")]),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-6" }, [
+            _c("img", {
+              staticClass: "experience",
+              attrs: {
+                src: __webpack_require__(/*! ../../../storage/app/public/elements/esperienza_1.svg */ "./storage/app/public/elements/esperienza_1.svg"),
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-6" }, [
+            _c("img", {
+              staticClass: "experience due",
+              attrs: {
+                src: __webpack_require__(/*! ../../../storage/app/public/elements/esperienze_2.svg */ "./storage/app/public/elements/esperienze_2.svg"),
+              },
+            }),
+          ]),
+        ]),
+      ]),
     ])
   },
 ]
@@ -21503,6 +21565,28 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports) {
 
 module.exports = "/images/baffi.svg?5b775cd377ec924cb76618f1c36bba4f";
+
+/***/ }),
+
+/***/ "./storage/app/public/elements/esperienza_1.svg":
+/*!******************************************************!*\
+  !*** ./storage/app/public/elements/esperienza_1.svg ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/esperienza_1.svg?a8dafbd2f1086c4244bd60531b3bcb0f";
+
+/***/ }),
+
+/***/ "./storage/app/public/elements/esperienze_2.svg":
+/*!******************************************************!*\
+  !*** ./storage/app/public/elements/esperienze_2.svg ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/esperienze_2.svg?1ba11d3f20bc32e4013cc75b34d9dff1";
 
 /***/ }),
 
