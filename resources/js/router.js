@@ -20,7 +20,10 @@ const router = new VueRouter({
             path: '/advancedsearch',
             name: 'advancedsearch',
             component: AdvancedSearch,
-            props: true
+            props: true,
+            meta: {
+                KeepAlive: true
+              }
         }, 
         {
             path: '/apartments/:slug',

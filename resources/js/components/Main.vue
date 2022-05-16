@@ -1,6 +1,8 @@
 <template>
   <div class="contenitore_debug">
-      <router-view />
+    <keep-alive include="AdvancedSearch, Home" max="5">
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 

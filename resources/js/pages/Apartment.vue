@@ -1,14 +1,6 @@
 <template>
-  <div class="container mt-5">
-      
-      <div class="row">
-        <div class="col-6">
-            
-            <ApartmentCard :title='apartment.title' :image='apartment.image'/>
-
-        </div>
-      </div>
-
+    <div >
+        <ApartmentCard :title='apartment.title' :image='apartment.image' :address="apartment.address" :facilities="apartment.facilities" :description="apartment.description"/>
     </div>
 </template>
 

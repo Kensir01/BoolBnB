@@ -1,8 +1,31 @@
+@import "../../sass/partials/_colors.scss";
+
+
 a {
     font-family: 'Rubik', sans-serif;
 }
 
 h1 {
-    font-family: 'ruddyblack';
+    font-family: 'ruddybold';
 }
 
+.button {
+    color: $lines;
+    background-color: white;
+    transition: 0.1s;
+    padding: 0.25rem;
+    display: inline-block;
+    border: 2px solid $lines;
+    
+    &:hover {
+        text-decoration: none;
+        transform: translate(-5px, -5px);
+        box-shadow: 5px 5px;
+    }
+    
+    &:active {
+        box-shadow: none;
+        background-color: #F7E828;
+        transform: translate(0, 0);
+    }
+}

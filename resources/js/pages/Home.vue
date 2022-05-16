@@ -235,7 +235,7 @@ export default {
         margin: 0 auto;
         position: absolute;
         z-index: 1000;
-        top: -10%;
+        top: -30px;
         transform: translateX(-50%);
         left: 50%;
         background: $background;
@@ -286,6 +286,7 @@ export default {
 
     .autocomplete-bar ul li:hover {
         background-color: $details;
+        cursor: pointer;
     }
 
     .autocomplete-bar ul:first-child {
