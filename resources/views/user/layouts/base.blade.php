@@ -20,6 +20,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/prove_dem.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/delete.css') }}" rel="stylesheet">
     <!-- collegamento con file js - genitore -->
     @yield('script')
 

@@ -1,0 +1,122 @@
+         /* btn annulla cancella */
+        button {
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 50%;
+        }
+       
+        .annulla, .cancella {
+          float: left;
+          max-width: 200px;
+          width: 50%;
+        }
+
+        .centro {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .annulla {
+          background-color: #fff;
+          color: black;
+        }
+
+        .annulla:hover {
+            color: #F7E828;
+        }
+        
+        .cancella {
+          background-color: black;
+        }
+
+        .cancella:hover {
+            color: #F7E828;
+          }
+        
+        .containerDeletebtn {
+          width: 50%;
+          height: 50%;
+          padding: 16px;
+          /* margin: 0 auto; */
+          width: 100%;
+        }
+        
+        /* Contenitore modale */
+        .modal {
+          display: none; 
+          position: fixed; 
+          z-index: 1; 
+          left: 25%;
+          top: 25%;
+          width: 50%; 
+          height: 30%; 
+          overflow: visible;
+          background-color: #F7E828;
+          border: 10px solid black;
+          padding-top: 50px;
+          text-align: center;
+        }
+        
+        .containerDeletebtn h1 {
+           text-align: center;
+           width: 100%;
+        }
+
+        .containerDeletebtn p {
+            text-align: center;
+            width: 100%;
+        }
+
+        img.imageDelete{
+           height: 60%;
+          
+           position: absolute;
+           bottom: -50px;
+           left: -100px;
+           z-index: 999; 
+        }
+        
+       /* chiudi */
+        .close {
+          position: absolute;
+          right: 35px;
+          top: 15px;
+          font-size: 40px;
+          font-weight: bold;
+          color: #fff;
+          opacity: 1;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: black;
+          cursor: pointer;
+          opacity: 1;
+        }
+        
+
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+        @media screen and (max-width: 600px) {
+            .containerDeletebtn h1 {
+                font-size: 22px;
+            }
+
+            .containerDeletebtn p {
+                font-size: 12px;
+            }
+
+            .annulla, .cancella {
+                width: 50%;
+               
+              }
+
+        }
+        
