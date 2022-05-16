@@ -2288,7 +2288,7 @@ __webpack_require__.r(__webpack_exports__);
         if (this.search.length % 2 == 0) {
           axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
             params: {
-              key: "dKIdA4c5OhnbGF5avb5kToCh3jNOptyA",
+              key: "xdILL9buPelMDApZRbT8UuWPiflkPnAG",
               typeahead: true,
               limit: 3
             }
@@ -2510,7 +2510,7 @@ __webpack_require__.r(__webpack_exports__);
         if (this.search.length % 2 == 0) {
           axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
             params: {
-              key: "dKIdA4c5OhnbGF5avb5kToCh3jNOptyA",
+              key: "xdILL9buPelMDApZRbT8UuWPiflkPnAG",
               typeahead: true,
               limit: 3
             }
@@ -21579,7 +21579,7 @@ module.exports = "/images/Risorsa5.svg?ea9e0f780400b6f3a2d858efe70c800b";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\kensi\Vsc\progetto finale\BoolBnB\BoolBnB\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
