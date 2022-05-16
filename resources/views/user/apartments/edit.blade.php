@@ -24,7 +24,7 @@
                 </div>
             @endif
 
-            <form method="POST" action="{{route('user.apartments.update', $apartment->id)}}" enctype="multipart/form-data">
+            <form method="POST" action="{{route('user.apartments.update', $apartment->id)}}" enctype="multipart/form-data" class="login-form">
             
                 @csrf
                 @method('PUT')
@@ -75,13 +75,13 @@
             
             
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="Inserisci una descrizione" id="description" style="height: 100px" name="description"  required min="10">{{old('description', $apartment->description)}}</textarea>
                     <label for="description">Descrizione</label>
+                    <textarea class="form-control form_description" placeholder="Inserisci una descrizione" id="description" style="height: 100px" name="description"  required min="10">{{old('description', $apartment->description)}}</textarea>
                 </div>
 
-                <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="visibility" name="visibility" value="1" {{old('visibility', $apartment->visibility)? 'checked': ''}}>
-                    <label class="custom-control-label" for="visibility">Visibilità</label>
+                <div class="mt-3">
+                    <input type="checkbox" class="" id="visibility" name="visibility" value="1" {{old('visibility', $apartment->visibility)? 'checked': ''}}>
+                    <label class="" for="visibility">Visibilità</label>
                 </div>
 
                 <div class="form-group">
@@ -97,26 +97,34 @@
         
                 <div class="form-group">
                     <label for="image">Inserisci immagini</label>
-                    <input type="file" class="form-control" id="image" name="image">
+                    <div class="prova_sfoglia">
+                        <img src="http://127.0.0.1:8000/storage/elements/prova_3.svg" alt="Sfoglia :3" class="sfoglia_svg">
+                        <input type="file" class="form-control form_img ffc1" id="image" name="image">
+                        {{-- <input type="file" class="form-control form_img ffc2" id="image" name="image"> --}}
+                    </div>
                 </div>
 
                 @foreach ($facilities as $facility)
                     
                     @if ($errors->any())
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" name="facilities[]" class="custom-control-input" id="facility_{{$facility->id}}" value="{{$facility->id}}" {{in_array($facility->id, old('facilities', []))?'checked':''}}>
-                            <label class="custom-control-label" for="facility_{{$facility->id}}">{{$facility->name}}</label>
+                        <div>
+                            <div class="prova_check">
+                                <input type="checkbox" name="facilities[]" class="" id="facility_{{$facility->id}}" value="{{$facility->id}}" {{in_array($facility->id, old('facilities', []))?'checked':''}}>
+                                <label class="" for="facility_{{$facility->id}}">{{$facility->name}}</label>    
+                            </div>
                         </div>
                     @else
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" name="facilities[]" class="custom-control-input" id="facility_{{$facility->id}}" value="{{$facility->id}}" {{$apartment->facilities->contains($facility->id)?'checked':''}}>
-                            <label class="custom-control-label" for="facility_{{$facility->id}}">{{$facility->name}}</label>
+                        <div class="prova_check">
+                            <div>
+                                <input type="checkbox" name="facilities[]" class="" id="facility_{{$facility->id}}" value="{{$facility->id}}" {{$apartment->facilities->contains($facility->id)?'checked':''}}>
+                                <label class="" for="facility_{{$facility->id}}">{{$facility->name}}</label>
+                            </div>    
                         </div>
                     @endif
 
                 @endforeach                
 
-                <button type="submit" class="btn btn-primary">Salva</button>
+                <button type="submit" class="button mt-2">Salva</button>
             
             </form>
 
