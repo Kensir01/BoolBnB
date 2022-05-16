@@ -2,7 +2,7 @@
     <div class="apartment">
         <div class="left">
             <div class="top">
-                <a @click="$router.go(-1)"><div class="circle">X</div></a>
+                <a @click="$router.go(-1)"><div class="circle">×</div></a>
                 close 
             </div>
             <div class="bottom">
@@ -29,12 +29,44 @@
             <img :src="image" :alt="title">
         </div>
 
+        <div class="chat" @click="toggleForm">
+            <img src="http://127.0.0.1:8000/storage/icons/normal/mex_white.svg" alt="Invia messaggio">
+        </div>
+
+        <div class="overlay" v-if="form">
+
+            <div class="messageForm">
+                <div class="exit" @click="toggleForm">×</div>
+                <div class="holes"></div>
+                <div class="dashed"></div>
+
+                <div class="inputs">
+                    <div class="email">
+                        <span class="label">Da: </span>
+                        <input type="email" placeholder="Inserisci email">
+                    </div>
+
+                    <div class="message">
+                        <div class="label">Scrivi qualcosa all'host</div>
+                        <textarea name="" id="" rows="10" cols="50" placeholder="Il tuo messaggio">
+
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </template>
 
 <script>
 export default {
     name: 'ApartmentCard',
+    data() {
+        return {
+            form : false,
+        }
+    },
     props: {
 
         'title': String,
@@ -43,6 +75,14 @@ export default {
         'facilities' : Array,
         'description' : String,
     },
+    methods: {
+        toggleForm() {
+            this.form = !this.form;
+            if(this.form) {
+
+            }
+        }
+    }
 }
 </script>
 
@@ -57,6 +97,132 @@ export default {
         border-top: 10px solid $lines;
         border-bottom: 10px solid $lines;
         display: flex;
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .messageForm {
+                box-shadow: 10px 10px $lines;
+                width: 25vw;
+                height: 60vh;
+                min-width: 300px;
+                min-height: 400px;
+                background-color: $background;
+                border: 5px solid $lines;
+                position: relative;
+
+                .inputs {
+                    padding: 1rem;
+
+                    .email {
+                        font-family: 'Rubik';
+                        margin-bottom: 1rem;
+                        .label {
+                            font-size: 1rem;
+                            font-weight: 700;
+                        }
+
+                        input {
+                            border:none;
+                            border-bottom: 2px solid $lines;
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                    }
+
+                    .message {
+                        min-height: 200px;
+                        min-width: 200px;
+
+                        .label {
+                            font-size: 1rem;
+                            font-weight: 700;
+                        }
+                        textarea {
+                            resize: none;
+                            line-height: 4ch;
+                            background-image: linear-gradient(transparent, transparent calc(4ch - 2px), $lines 0px);
+                            background-size: 100% 4ch;
+                            border: none;
+
+                            &:focus {
+                                outline: none;
+                            }
+
+                        }
+                    }
+                }
+
+                .holes {
+                    width: 100%;
+                    height: 10%;
+                    border-bottom: 30px dotted $lines;
+
+                }
+
+                .dashed {
+                    width: 100%;
+                    height: 14px;
+                    border-bottom: 4px dashed $lines
+
+                }
+
+                .exit {
+                    position: absolute;
+                    top: -70px;
+                    right: -10px;
+                    background-color: $background;
+                    width: 50px;
+                    height: 50px;
+                    border: 4px solid $lines;
+                    border-radius: 50%;
+                    font-family: 'ruddybold';
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    font-size: 2rem;
+
+                    &:hover {
+                        background-color: $details;
+                    }
+                }
+            }
+        }
+
+        .chat {
+            position: absolute;
+            bottom: 1rem;
+            right: 2rem;
+            width: 100px;
+            height: 100px;
+            border: 5px solid $lines;
+            background-color: $background;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 200ms;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $details;
+                transform: scale(1.1);
+            }
+
+            img {
+                width: 60px;
+            }
+        }
 
         .right {
             width: 40%;
