@@ -1,29 +1,64 @@
-/* 
-    @import "../fonts/ruddy_black/stylesheet.css";
+@import "../fonts/ruddy_black/stylesheet.css";
+@import "../fonts/ruddy_bold/stylesheet.css";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
-    div {
-        font-family: 'ruddyblack';
-    }
+body {
+    border: 10px solid black;
+    min-height: 100vh;
+}
 
-    .card {
-        width: 50%;
-    }
+div {
+    font-family: 'ruddybold';
+    color: black;
+}
 
-    .card-header {
-        background-color: white;
-        border-bottom: none;
-        font-size: 30px;
-    }
+.debug1 {
+    width: 500px;
+    height: 50px;
+    background-color: #F7E828;
+}
+
+table, thead, th, td {
+    border: black 5px solid;
+
+}
+
+hr {
+    height: 1px;
+    background-color: transparent;
+    border: none;
+}
+
+.provetta{
+    width: 100%;
+}
+
+.titolo_prova{
+    font-size: 25px;
+}
+
+.descrizione_prova {
+    font-family: 'rubik';
+}
+
+.svg_dash {
+    width: 50px;
+}
 
 
-    .form-control {
-        border: 3px solid black;
-        border-radius: 0;
-    }
+.button {
+    background-color: white;
+    transition: 0.1s;
 
-    .form-control:focus {
-        box-shadow: none;
-        border: 3px solid black;
-        resize: none;
-        outline: none;
-    } */
+}
+
+.button:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px;
+}
+
+.button:active {
+    box-shadow: none;
+    background-color: #F7E828;
+    transform: translate(0, 0);
+}
