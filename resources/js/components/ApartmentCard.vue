@@ -32,7 +32,7 @@
         <div class="chat" @click="toggleForm">
             <img src="http://127.0.0.1:8000/storage/icons/normal/mex_white.svg" alt="Invia messaggio">
         </div>
-
+        
         <div class="overlay" v-if="form">
 
             <div class="messageForm">
@@ -40,6 +40,7 @@
                 <div class="holes"></div>
                 <div class="dashed"></div>
 
+                
                 <div class="inputs">
                     <form @submit.prevent="sendMessage">
                         <div class="email">
@@ -49,11 +50,11 @@
 
                         <div class="message">
                             <div class="label">Scrivi qualcosa all'host</div>
-                            <textarea name="" id="" rows="9" placeholder="Il tuo messaggio" v-model="message" required> </textarea>
+                            <textarea name="" id="" rows="9" placeholder="Il tuo messaggio" v-model="content" required> </textarea>
                         </div>
 
                         <button type="submit" class="button">
-                            INVIA <img src="http://127.0.0.1:8000/storage/icons/normal/send.svg" alt="Invia">
+                                INVIA <img src="http://127.0.0.1:8000/storage/icons/normal/send.svg" alt="Invia">
                         </button>
                     </form>
                 </div>
@@ -70,7 +71,8 @@ export default {
         return {
             form : false,
             email: '',
-            message: ''
+            content: '',
+            sent : false,
         }
     },
     props: {
@@ -86,20 +88,24 @@ export default {
         toggleForm() {
             this.form = !this.form;
             if(this.form) {
-
+                this.email = this.$userEmail;
             }
         },
         sendMessage() {
             axios.post('/api/messages',{
                     'email': this.email,
-                    'content': this.message,
+                    'content': this.content,
                     'apartment_id': this.id,
                 })
                 .then((response) => {
-                    console.log(response.data);
-                })
-                .catch(error => {
-                console.log(error.response)
+                    console.log(response.data)
+                    if(!response.data.success) {
+                        this.errors = response.data.errors;
+                    } else {
+                        this.email = '';
+                        this.content = '';
+                        this.toggleForm();
+                    }
                 });
         }
     },
