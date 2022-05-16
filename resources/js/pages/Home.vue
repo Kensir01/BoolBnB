@@ -244,6 +244,7 @@ export default {
     },
     mounted() {
         // this.getAllApartments();
+        console.log('user email is: ' + this.$userEmail);
     }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
     <div >
-        <ApartmentCard :title='apartment.title' :image='apartment.image' :address="apartment.address" :facilities="apartment.facilities" :description="apartment.description"/>
+        <ApartmentCard :title='apartment.title' :image='apartment.image' :address="apartment.address" :facilities="apartment.facilities" :description="apartment.description" :id="apartment.id"/>
     </div>
 </template>
 
