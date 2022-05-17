@@ -1942,14 +1942,95 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'ApartmentCard',
+  data: function data() {
+    return {
+      form: false,
+      email: '',
+      content: '',
+      sent: false
+    };
+  },
   props: {
     'title': String,
     'image': String,
     'address': String,
     'facilities': Array,
-    'description': String
+    'description': String,
+    'id': Number
+  },
+  methods: {
+    toggleForm: function toggleForm() {
+      this.form = !this.form;
+
+      if (this.form) {
+        this.email = this.$userEmail;
+      }
+    },
+    sendMessage: function sendMessage() {
+      var _this = this;
+
+      axios.post('/api/messages', {
+        'email': this.email,
+        'content': this.content,
+        'apartment_id': this.id
+      }).then(function (response) {
+        console.log(response.data);
+
+        if (!response.data.success) {
+          _this.errors = response.data.errors;
+        } else {
+          _this.email = '';
+          _this.content = '';
+
+          _this.toggleForm();
+        }
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.email = this.$userEmail;
   }
 });
 
@@ -1964,6 +2045,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
 //
 //
 //
@@ -2494,6 +2578,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home',
@@ -2631,7 +2716,9 @@ __webpack_require__.r(__webpack_exports__);
     // }
 
   },
-  mounted: function mounted() {// this.getAllApartments();
+  mounted: function mounted() {
+    // this.getAllApartments();
+    console.log('user email is: ' + this.$userEmail);
   }
 });
 
@@ -2707,7 +2794,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-13e9f807] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-13e9f807] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-13e9f807] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-13e9f807]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-13e9f807]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\n.apartment[data-v-13e9f807] {\n  border-top: 10px solid #000;\n  border-bottom: 10px solid #000;\n  display: flex;\n}\n.apartment .right[data-v-13e9f807] {\n  width: 40%;\n  overflow: hidden;\n}\n.apartment .right img[data-v-13e9f807] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 100%;\n  width: 100%;\n  -o-object-position: 50% 50%;\n     object-position: 50% 50%;\n}\n.apartment .left[data-v-13e9f807] {\n  width: 60%;\n  border-right: 10px solid #000;\n  flex: 1;\n}\n.apartment .left .top[data-v-13e9f807] {\n  padding: 1rem 2rem;\n  border-bottom: 10px solid #000;\n  display: flex;\n  align-items: center;\n  font-family: \"ruddybold\";\n  font-size: 2rem;\n}\n.apartment .left .top .circle[data-v-13e9f807] {\n  border: 4px solid #000;\n  border-radius: 50%;\n  font-family: \"ruddybold\";\n  font-size: 2rem;\n  cursor: pointer;\n  width: 50px;\n  height: 50px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-right: 2rem;\n}\n.apartment .left .top .circle[data-v-13e9f807]:hover {\n  color: #FCEF03;\n  border: 4px solid #FCEF03;\n}\n.apartment .left .bottom[data-v-13e9f807] {\n  padding: 4rem 2rem 2rem 2rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  height: calc(100% - 6rem);\n}\n.apartment .left .bottom .title h1[data-v-13e9f807] {\n  max-width: 60%;\n}\n.apartment .left .bottom .title p[data-v-13e9f807] {\n  font-size: 1.5rem;\n  font-family: \"rubik\";\n}\n.apartment .left .bottom .otherInfo .facilities[data-v-13e9f807] {\n  display: flex;\n}\n.apartment .left .bottom .otherInfo .facilities .singleFacility[data-v-13e9f807] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  width: 55px;\n  font-family: \"ruddybold\";\n  margin-right: 1rem;\n}\n.apartment .left .bottom .otherInfo .facilities .singleFacility img[data-v-13e9f807] {\n  -o-object-fit: contain;\n     object-fit: contain;\n  width: 100%;\n  margin-bottom: 0.5rem;\n}\n.apartment .left .bottom .otherInfo .description[data-v-13e9f807] {\n  font-size: 1.75rem;\n  font-family: \"rubik\";\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-13e9f807] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-13e9f807] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-13e9f807] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-13e9f807]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-13e9f807]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\n.apartment[data-v-13e9f807] {\n  border: 10px solid #000;\n  display: flex;\n}\n.apartment .overlay[data-v-13e9f807] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  left: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.apartment .overlay .messageForm[data-v-13e9f807] {\n  box-shadow: 10px 10px #000;\n  width: 25vw;\n  height: 60vh;\n  min-width: 300px;\n  min-height: 500px;\n  background-color: #fff;\n  border: 5px solid #000;\n  position: relative;\n}\n.apartment .overlay .messageForm .button[data-v-13e9f807] {\n  position: absolute;\n  bottom: -20px;\n  right: -30px;\n  height: 60px;\n  font-family: \"ruddybold\";\n  font-size: 1rem;\n  padding-left: 1rem;\n}\n.apartment .overlay .messageForm .button img[data-v-13e9f807] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 100%;\n}\n.apartment .overlay .messageForm .inputs[data-v-13e9f807] {\n  padding: 1rem;\n}\n.apartment .overlay .messageForm .inputs .email[data-v-13e9f807] {\n  font-family: \"Rubik\";\n  margin-bottom: 1rem;\n}\n.apartment .overlay .messageForm .inputs .email .label[data-v-13e9f807] {\n  font-size: 1rem;\n  font-weight: 700;\n}\n.apartment .overlay .messageForm .inputs .email input[data-v-13e9f807] {\n  border: none;\n  width: 90%;\n  min-width: 200px;\n  border-bottom: 2px solid #000;\n}\n.apartment .overlay .messageForm .inputs .email input[data-v-13e9f807]:focus {\n  outline: none;\n}\n.apartment .overlay .messageForm .inputs .message[data-v-13e9f807] {\n  min-height: 200px;\n  min-width: 200px;\n}\n.apartment .overlay .messageForm .inputs .message .label[data-v-13e9f807] {\n  font-size: 1rem;\n  font-weight: 700;\n}\n.apartment .overlay .messageForm .inputs .message textarea[data-v-13e9f807] {\n  min-width: 250px;\n  width: 100%;\n  resize: none;\n  line-height: 4ch;\n  background-image: linear-gradient(transparent, transparent calc(4ch - 2px), #000 0px);\n  background-size: 100% 4ch;\n  border: none;\n}\n.apartment .overlay .messageForm .inputs .message textarea[data-v-13e9f807]:focus {\n  outline: none;\n}\n.apartment .overlay .messageForm .holes[data-v-13e9f807] {\n  width: 100%;\n  height: 10%;\n  border-bottom: 30px dotted #000;\n}\n.apartment .overlay .messageForm .dashed[data-v-13e9f807] {\n  width: 100%;\n  height: 14px;\n  border-bottom: 4px dashed #000;\n}\n.apartment .overlay .messageForm .exit[data-v-13e9f807] {\n  position: absolute;\n  top: -70px;\n  right: -10px;\n  background-color: #fff;\n  width: 50px;\n  height: 50px;\n  border: 4px solid #000;\n  border-radius: 50%;\n  font-family: \"ruddybold\";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer;\n  font-size: 2rem;\n}\n.apartment .overlay .messageForm .exit[data-v-13e9f807]:hover {\n  background-color: #FCEF03;\n}\n.apartment .right[data-v-13e9f807] {\n  width: 40%;\n  overflow: hidden;\n  position: relative;\n}\n.apartment .right .chat[data-v-13e9f807] {\n  position: absolute;\n  bottom: 1rem;\n  right: 2rem;\n  width: 100px;\n  height: 100px;\n  border: 5px solid #000;\n  background-color: #fff;\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: 200ms;\n}\n.apartment .right .chat[data-v-13e9f807]:hover {\n  cursor: pointer;\n  background-color: #FCEF03;\n  transform: scale(1.1);\n}\n.apartment .right .chat img[data-v-13e9f807] {\n  width: 70%;\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.apartment .right img[data-v-13e9f807] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 100%;\n  width: 100%;\n  -o-object-position: 50% 50%;\n     object-position: 50% 50%;\n}\n.apartment .left[data-v-13e9f807] {\n  width: 60%;\n  border-right: 10px solid #000;\n  flex: 1;\n}\n.apartment .left .top[data-v-13e9f807] {\n  padding: 1rem 2rem;\n  border-bottom: 10px solid #000;\n  display: flex;\n  align-items: center;\n  font-family: \"ruddybold\";\n  font-size: 2rem;\n}\n.apartment .left .top .circle[data-v-13e9f807] {\n  border: 4px solid #000;\n  border-radius: 50%;\n  font-family: \"ruddybold\";\n  font-size: 2rem;\n  cursor: pointer;\n  width: 50px;\n  height: 50px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-right: 2rem;\n}\n.apartment .left .top .circle[data-v-13e9f807]:hover {\n  color: #FCEF03;\n  border: 4px solid #FCEF03;\n}\n.apartment .left .bottom[data-v-13e9f807] {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  height: calc(100% - 6rem);\n}\n.apartment .left .bottom .title h1[data-v-13e9f807] {\n  max-width: 60%;\n}\n.apartment .left .bottom .title p[data-v-13e9f807] {\n  font-size: 1.5rem;\n  font-family: \"rubik\";\n}\n.apartment .left .bottom .otherInfo .facilities[data-v-13e9f807] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.apartment .left .bottom .otherInfo .facilities .singleFacility[data-v-13e9f807] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  width: 25px;\n  font-family: \"ruddybold\";\n  margin-right: 5rem;\n}\n.apartment .left .bottom .otherInfo .facilities .singleFacility h3[data-v-13e9f807] {\n  font-size: 0.75rem;\n}\n.apartment .left .bottom .otherInfo .facilities .singleFacility img[data-v-13e9f807] {\n  -o-object-fit: contain;\n     object-fit: contain;\n  width: 100%;\n  margin-bottom: 0.5rem;\n}\n.apartment .left .bottom .otherInfo .description_text[data-v-13e9f807] {\n  font-size: 1.75rem;\n  font-family: \"rubik\";\n  width: 300px;\n  overflow-wrap: break-word;\n}", ""]);
 
 // exports
 
@@ -2807,7 +2894,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-b3c5cf30] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-b3c5cf30] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-b3c5cf30] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-b3c5cf30]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-b3c5cf30]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\nh1[data-v-b3c5cf30], h3[data-v-b3c5cf30] {\n  font-family: \"ruddyblack\";\n}\n.search-bar[data-v-b3c5cf30] {\n  min-width: 50%;\n  border: 4px solid #000;\n  margin: 0 auto;\n  position: absolute;\n  z-index: 1000;\n  top: -30px;\n  transform: translateX(-50%);\n  left: 50%;\n  background: #fff;\n}\ninput[data-v-b3c5cf30] {\n  min-width: 100%;\n  padding: 10px 20px 10px 12px;\n  border: none;\n  color: rgba(0, 0, 0, 0.7);\n  transition: 0.15s all ease-in-out;\n  background: #fff;\n}\ninput[data-v-b3c5cf30]:focus {\n  outline: none;\n}\ninput:focus + label[data-v-b3c5cf30] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-b3c5cf30]::-webkit-input-placeholder {\n  font-family: \"ruddyblack\";\n  font-size: 15px;\n  color: #000;\n  font-weight: 100;\n}\n.search-bar a[data-v-b3c5cf30] {\n  cursor: pointer;\n}\n.img-search[data-v-b3c5cf30] {\n  width: 30px;\n  right: 20px;\n  top: 5px;\n  position: absolute;\n}\n.prova[data-v-b3c5cf30] {\n  position: relative;\n}\n.autocomplete-bar ul[data-v-b3c5cf30] {\n  list-style-type: none;\n  padding: 0 20px 0 12px;\n}\n.autocomplete-bar ul li[data-v-b3c5cf30]:hover {\n  background-color: #FCEF03;\n  cursor: pointer;\n}\n.autocomplete-bar ul[data-v-b3c5cf30]:first-child {\n  margin-top: 20px;\n}\n.autocomplete-bar[data-v-b3c5cf30] {\n  font-family: \"rubik\";\n  background-color: #fff;\n  border: 4px solid #000;\n  position: absolute;\n  top: 20px;\n  right: -4px;\n  left: -4px;\n  z-index: -2;\n}\n.yellow-jumbo[data-v-b3c5cf30] {\n  border: 4px solid #000;\n  width: 80%;\n  height: 350px;\n  margin: auto;\n  background-color: #FCEF03;\n  position: relative;\n}\n.jumbo-text[data-v-b3c5cf30] {\n  font-size: 50px;\n  margin-top: 30%;\n}\n.img-jumbo[data-v-b3c5cf30] {\n  max-width: 400px;\n  position: relative;\n  top: 5vw;\n  right: -5vw;\n}\n.mySlides[data-v-b3c5cf30] {\n  width: 100%;\n  padding-right: 20px;\n}\n.carousel[data-v-b3c5cf30] {\n  margin: 200px auto;\n}\n.car-text[data-v-b3c5cf30] {\n  margin-bottom: 20px;\n}\n.paginationColor[data-v-b3c5cf30] {\n  color: #FCEF03 !important;\n}\n@media screen and (max-width: 1440px) {\n.img-jumbo[data-v-b3c5cf30] {\n    top: 9vw;\n    right: -10vw;\n}\n}\n@media screen and (max-width: 1024px) {\n.img-jumbo[data-v-b3c5cf30] {\n    top: 17vw;\n    right: -10vw;\n}\n}\n@media screen and (max-width: 768px) {\n.jumbo-text[data-v-b3c5cf30] {\n    font-size: 40px;\n}\n.img-jumbo[data-v-b3c5cf30] {\n    top: 22vw;\n    right: 0vw;\n    width: 310px;\n}\n}\n@media screen and (max-width: 425px) {\n.jumbo-text[data-v-b3c5cf30] {\n    font-size: 30px;\n    text-align: center;\n}\n.img-jumbo[data-v-b3c5cf30] {\n    top: 2vw;\n    right: 0;\n    width: 300px;\n}\n.img-search[data-v-b3c5cf30] {\n    width: 20px;\n    top: 10px;\n    right: 11px;\n}\n}\nimg.experience.due[data-v-b3c5cf30] {\n  margin-top: 22px;\n}\n.esperienze[data-v-b3c5cf30] {\n  margin: 200px auto;\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-b3c5cf30] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-b3c5cf30] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-b3c5cf30] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-b3c5cf30]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-b3c5cf30]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\nh1[data-v-b3c5cf30], h3[data-v-b3c5cf30] {\n  font-family: \"ruddyblack\";\n}\n.search-bar[data-v-b3c5cf30] {\n  min-width: 50%;\n  border: 4px solid #000;\n  margin: 0 auto;\n  position: absolute;\n  z-index: 1000;\n  top: -30px;\n  transform: translateX(-50%);\n  left: 50%;\n  background: #fff;\n}\ninput[data-v-b3c5cf30] {\n  min-width: 100%;\n  padding: 10px 20px 10px 12px;\n  border: none;\n  color: rgba(0, 0, 0, 0.7);\n  transition: 0.15s all ease-in-out;\n  background: #fff;\n}\ninput[data-v-b3c5cf30]:focus {\n  outline: none;\n}\ninput:focus + label[data-v-b3c5cf30] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-b3c5cf30]::-webkit-input-placeholder {\n  font-family: \"ruddyblack\";\n  font-size: 15px;\n  color: #000;\n  font-weight: 100;\n}\n.search-bar a[data-v-b3c5cf30] {\n  cursor: pointer;\n}\n.img-search[data-v-b3c5cf30] {\n  width: 30px;\n  right: 20px;\n  top: 5px;\n  position: absolute;\n}\n.prova[data-v-b3c5cf30] {\n  position: relative;\n}\n.autocomplete-bar ul[data-v-b3c5cf30] {\n  list-style-type: none;\n  padding: 0 20px 0 12px;\n}\n.autocomplete-bar ul li[data-v-b3c5cf30]:hover {\n  background-color: #FCEF03;\n  cursor: pointer;\n}\n.autocomplete-bar ul[data-v-b3c5cf30]:first-child {\n  margin-top: 20px;\n}\n.autocomplete-bar[data-v-b3c5cf30] {\n  font-family: \"rubik\";\n  background-color: #fff;\n  border: 4px solid #000;\n  position: absolute;\n  top: 20px;\n  right: -4px;\n  left: -4px;\n  z-index: -2;\n}\n.yellow-jumbo[data-v-b3c5cf30] {\n  border: 4px solid #000;\n  width: 80%;\n  height: 350px;\n  margin: auto;\n  background-color: #FCEF03;\n  position: relative;\n}\n.jumbo-text[data-v-b3c5cf30] {\n  font-size: 50px;\n  margin-top: 30%;\n}\n.img-jumbo[data-v-b3c5cf30] {\n  max-width: 400px;\n  position: relative;\n  top: 5vw;\n  right: -5vw;\n}\n.mySlides[data-v-b3c5cf30] {\n  width: 100%;\n  padding-right: 20px;\n}\n.carousel[data-v-b3c5cf30] {\n  margin: 200px auto;\n}\n.car-text[data-v-b3c5cf30] {\n  margin-bottom: 20px;\n}\n.paginationColor[data-v-b3c5cf30] {\n  color: #FCEF03 !important;\n}\n@media screen and (max-width: 1440px) {\n.img-jumbo[data-v-b3c5cf30] {\n    top: 9vw;\n    right: -10vw;\n}\n}\n@media screen and (max-width: 1024px) {\n.img-jumbo[data-v-b3c5cf30] {\n    top: 17vw;\n    right: -10vw;\n}\n}\n@media screen and (max-width: 768px) {\n.jumbo-text[data-v-b3c5cf30] {\n    font-size: 40px;\n}\n.img-jumbo[data-v-b3c5cf30] {\n    top: 22vw;\n    right: 0vw;\n    width: 310px;\n}\n}\n@media screen and (max-width: 425px) {\n.jumbo-text[data-v-b3c5cf30] {\n    font-size: 30px;\n    text-align: center;\n}\n.img-jumbo[data-v-b3c5cf30] {\n    top: 2vw;\n    right: 0;\n    width: 300px;\n}\n.img-search[data-v-b3c5cf30] {\n    width: 20px;\n    top: 10px;\n    right: 11px;\n}\n}\nimg.experience.due[data-v-b3c5cf30] {\n  margin-top: 22px;\n}\n.esperienze[data-v-b3c5cf30], .storia_logo[data-v-b3c5cf30] {\n  margin: 200px auto;\n}\n.storia_logo[data-v-b3c5cf30]:hover {\n  filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);\n  transition: 0.7s;\n}", ""]);
 
 // exports
 
@@ -4264,67 +4351,189 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "apartment" }, [
-    _c("div", { staticClass: "left" }, [
-      _c("div", { staticClass: "top" }, [
-        _c(
-          "a",
-          {
-            on: {
-              click: function ($event) {
-                return _vm.$router.go(-1)
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "apartment" }, [
+      _c("div", { staticClass: "left" }, [
+        _c("div", { staticClass: "top" }, [
+          _c(
+            "a",
+            {
+              on: {
+                click: function ($event) {
+                  return _vm.$router.go(-1)
+                },
               },
             },
-          },
-          [_c("div", { staticClass: "circle" }, [_vm._v("X")])]
-        ),
-        _vm._v("\n            close \n        "),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "bottom" }, [
-        _c("div", { staticClass: "title" }, [
-          _c("h1", [_vm._v(_vm._s(_vm.title))]),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(_vm.address))]),
+            [_c("div", { staticClass: "circle" }, [_vm._v("×")])]
+          ),
+          _vm._v("\n            chiudi \n        "),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "otherInfo" }, [
-          _c(
-            "div",
-            { staticClass: "facilities" },
-            _vm._l(_vm.facilities, function (facility) {
-              return _c(
-                "div",
-                { key: facility.id, staticClass: "singleFacility" },
-                [
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "http://127.0.0.1:8000/storage/" + facility.icon_normal,
-                      alt: facility.name,
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("h3", [_vm._v(_vm._s(facility.name))]),
-                ]
-              )
-            }),
-            0
-          ),
+        _c("div", { staticClass: "bottom" }, [
+          _c("div", { staticClass: "title" }, [
+            _c("h1", [_vm._v(_vm._s(_vm.title))]),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.address))]),
+          ]),
           _vm._v(" "),
-          _c("p", { staticClass: "description" }, [
-            _vm._v(_vm._s(_vm.description)),
+          _c("div", { staticClass: "otherInfo" }, [
+            _c("p", { staticClass: "description_text" }, [
+              _vm._v(_vm._s(_vm.description)),
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "facilities" },
+              _vm._l(_vm.facilities, function (facility) {
+                return _c(
+                  "div",
+                  { key: facility.id, staticClass: "singleFacility" },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "http://127.0.0.1:8000/storage/" +
+                          facility.icon_normal,
+                        alt: facility.name,
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("h3", [_vm._v(_vm._s(facility.name))]),
+                  ]
+                )
+              }),
+              0
+            ),
           ]),
         ]),
       ]),
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "right" }, [
-      _c("img", { attrs: { src: _vm.image, alt: _vm.title } }),
+      _vm._v(" "),
+      _c("div", { staticClass: "right" }, [
+        _c("img", { attrs: { src: _vm.image, alt: _vm.title } }),
+        _vm._v(" "),
+        _c("div", { staticClass: "chat", on: { click: _vm.toggleForm } }, [
+          _c("img", {
+            attrs: {
+              src: "http://127.0.0.1:8000/storage/icons/normal/mex_white.svg",
+              alt: "Invia messaggio",
+            },
+          }),
+        ]),
+      ]),
+      _vm._v(" "),
+      _vm.form
+        ? _c("div", { staticClass: "overlay" }, [
+            _c("div", { staticClass: "messageForm" }, [
+              _c(
+                "div",
+                { staticClass: "exit", on: { click: _vm.toggleForm } },
+                [_vm._v("×")]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "holes" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "dashed" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "inputs" }, [
+                _c(
+                  "form",
+                  {
+                    on: {
+                      submit: function ($event) {
+                        $event.preventDefault()
+                        return _vm.sendMessage.apply(null, arguments)
+                      },
+                    },
+                  },
+                  [
+                    _c("div", { staticClass: "email" }, [
+                      _c("span", { staticClass: "label" }, [_vm._v("Da: ")]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.email,
+                            expression: "email",
+                          },
+                        ],
+                        attrs: {
+                          type: "email",
+                          placeholder: "Inserisci email",
+                          required: "",
+                        },
+                        domProps: { value: _vm.email },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.email = $event.target.value
+                          },
+                        },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "message" }, [
+                      _c("div", { staticClass: "label" }, [
+                        _vm._v("Scrivi qualcosa all'host"),
+                      ]),
+                      _vm._v(" "),
+                      _c("textarea", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.content,
+                            expression: "content",
+                          },
+                        ],
+                        attrs: {
+                          name: "",
+                          id: "",
+                          rows: "9",
+                          placeholder: "Il tuo messaggio",
+                          required: "",
+                        },
+                        domProps: { value: _vm.content },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.content = $event.target.value
+                          },
+                        },
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(0),
+                  ]
+                ),
+              ]),
+            ]),
+          ])
+        : _vm._e(),
     ]),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("button", { staticClass: "button", attrs: { type: "submit" } }, [
+      _vm._v("\n                            INVIA "),
+      _c("img", {
+        attrs: {
+          src: "http://127.0.0.1:8000/storage/icons/normal/send.svg",
+          alt: "Invia",
+        },
+      }),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -4346,48 +4555,50 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "apartment" }, [
-    _c("div", { staticClass: "half" }, [
-      _c("div", { staticClass: "top" }, [
-        _vm._v("\n            " + _vm._s(_vm.index) + "\n        "),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "bottom" }, [
-        _c("div", { staticClass: "left" }, [
-          _c("div", { staticClass: "top-part" }, [
-            _c("h1", [_vm._v(_vm._s(_vm.title))]),
-            _vm._v(" "),
-            _c("div", [_vm._v(_vm._s(_vm.address))]),
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "bottom-part" },
-            [
-              _c("p", [_vm._v(_vm._s(_vm.description))]),
-              _vm._v(" "),
-              _c(
-                "router-link",
-                {
-                  staticClass: "button",
-                  attrs: { to: "/apartments/" + _vm.slug },
-                },
-                [_vm._v("Guarda")]
-              ),
-            ],
-            1
-          ),
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "apartment" }, [
+      _c("div", { staticClass: "half" }, [
+        _c("div", { staticClass: "top" }, [
+          _vm._v("\n            " + _vm._s(_vm.index) + "\n        "),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "right" }, [
-          _c("img", {
-            attrs: { src: "http://127.0.0.1:8000/storage/" + _vm.image },
-          }),
+        _c("div", { staticClass: "bottom" }, [
+          _c("div", { staticClass: "left" }, [
+            _c("div", { staticClass: "top-part" }, [
+              _c("h1", [_vm._v(_vm._s(_vm.title))]),
+              _vm._v(" "),
+              _c("div", [_vm._v(_vm._s(_vm.address))]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "bottom-part" },
+              [
+                _c("p", [_vm._v(_vm._s(_vm.description))]),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "button",
+                    attrs: { to: "/apartments/" + _vm.slug },
+                  },
+                  [_vm._v("Guarda")]
+                ),
+              ],
+              1
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "right" }, [
+            _c("img", {
+              attrs: { src: "http://127.0.0.1:8000/storage/" + _vm.image },
+            }),
+          ]),
         ]),
       ]),
+      _vm._v(" "),
+      _vm._m(0),
     ]),
-    _vm._v(" "),
-    _vm._m(0),
   ])
 }
 var staticRenderFns = [
@@ -4886,6 +5097,7 @@ var render = function () {
             address: apartment.address,
             lat: apartment.latitude,
             lon: apartment.longitude,
+            id: apartment.id,
           },
         })
       }),
@@ -4931,6 +5143,7 @@ var render = function () {
           address: _vm.apartment.address,
           facilities: _vm.apartment.facilities,
           description: _vm.apartment.description,
+          id: _vm.apartment.id,
         },
       }),
     ],
@@ -5088,6 +5301,8 @@ var render = function () {
     ]),
     _vm._v(" "),
     _vm._m(2),
+    _vm._v(" "),
+    _vm._m(3),
   ])
 }
 var staticRenderFns = [
@@ -5153,6 +5368,19 @@ var staticRenderFns = [
           ]),
         ]),
       ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "storia_logo" }, [
+      _c("img", {
+        attrs: {
+          src: __webpack_require__(/*! ../../../storage/app/public/elements/home.svg */ "./storage/app/public/elements/home.svg"),
+          alt: "",
+        },
+      }),
     ])
   },
 ]
@@ -21071,6 +21299,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./router */ "./resources/js/router.js");
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.prototype.$userEmail = document.querySelector("meta[name='user-email']").getAttribute('content');
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_carousel__WEBPACK_IMPORTED_MODULE_1___default.a);
@@ -21575,7 +21804,7 @@ module.exports = "/images/baffi.svg?5b775cd377ec924cb76618f1c36bba4f";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/esperienza_1.svg?a8dafbd2f1086c4244bd60531b3bcb0f";
+module.exports = "/images/esperienza_1.svg?02921727af72d05d4ea94a6daec20119";
 
 /***/ }),
 
@@ -21586,7 +21815,18 @@ module.exports = "/images/esperienza_1.svg?a8dafbd2f1086c4244bd60531b3bcb0f";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/esperienze_2.svg?1ba11d3f20bc32e4013cc75b34d9dff1";
+module.exports = "/images/esperienze_2.svg?232b62e377a1c13faf541579b5cda302";
+
+/***/ }),
+
+/***/ "./storage/app/public/elements/home.svg":
+/*!**********************************************!*\
+  !*** ./storage/app/public/elements/home.svg ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/home.svg?31c434dd3867de89e0ecc399dc81dde0";
 
 /***/ }),
 
