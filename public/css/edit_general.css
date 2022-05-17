@@ -15,8 +15,6 @@ div {
 
 .debug1 {
     width: 500px;
-    /* height: 50px; */
-    background-color: #F7E828;
 }
 
 /* dimensione immagine */
@@ -47,6 +45,11 @@ hr {
 
 .descrizione_prova {
     font-family: 'rubik';
+}
+
+td {
+    max-width: 500px;
+    overflow-wrap: break-word;
 }
 
 .svg_dash {
@@ -118,9 +121,10 @@ hr {
     border: 5px solid #F7E828 !important;
 }
 
-.prova_check {
+.create_edit_check {
     position: relative;
 }
+
 
 input[type="checkbox"] {
     appearance: none;
@@ -151,19 +155,12 @@ input[type="file"].ffc1 {
     background-color: transparent;
 }
 
-
-.ffc2 {
-    position: absolute;
-    top: 0px;
-    left: 0;
-}
-
-.prova_sfoglia {
+.sfoglia_edit {
     height: 54px; 
     position: relative;
 }
 
-.sfoglia_svg {
+.sfoglia_svg_edit {
     width: 67px;
     position: absolute;
     top: 10px;
@@ -171,5 +168,6 @@ input[type="file"].ffc1 {
     z-index: 2;
     pointer-events: none;
 }
+
 
 

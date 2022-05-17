@@ -27,7 +27,15 @@
     background-color: #F7E828;
     padding: 0.5rem;
     border-radius: 0px;
-    margin-top: 20px;
+    margin-top: 6px;
     margin-right: 2px;
+    font-size: 85%;
 }
 
+.prove_margin {
+    margin-top: -3px;
+}
+
+.prove_address {
+    line-height: 1.1;
+}

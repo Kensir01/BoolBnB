@@ -21,15 +21,15 @@
                         <div class="col-12">
                             <div class="col_dex_1 row ">
                                 <div class="col-6">
-                                    <div><strong>Titolo: </strong>{{$apartment->title}}</div>
-                                    <div><strong>Numero Stanze: </strong>{{$apartment->rooms_number}}</div>
-                                    <div><strong>Numero Bagni: </strong>{{$apartment->bathrooms_number}}</div>
-                                    <div><strong>Numero Letti: </strong>{{$apartment->beds_number}}</div>
-                                    <div><strong>Metri Quadri: </strong>{{$apartment->square_meters}}</div>
-                                    <div><strong>Visibilità: </strong>{{$apartment->visibility? 'Visibile': 'Nascosto'}}</div>
-                                    <div><strong>Città: </strong>{{$apartment->city}}</div>
-                                    <div><strong>Via: </strong>{{$apartment->address}}</div>
-                                    <div><strong>CAP: </strong>{{$apartment->zip_code}}</div>
+                                    <div class="prove_margin"><strong>Titolo: </strong>{{$apartment->title}}</div>
+                                    <div class="prove_margin"><strong>Numero Stanze: </strong>{{$apartment->rooms_number}}</div>
+                                    <div class="prove_margin"><strong>Numero Bagni: </strong>{{$apartment->bathrooms_number}}</div>
+                                    <div class="prove_margin"><strong>Numero Letti: </strong>{{$apartment->beds_number}}</div>
+                                    <div class="prove_margin"><strong>Metri Quadri: </strong>{{$apartment->square_meters}}</div>
+                                    <div class="prove_margin"><strong>Visibilità: </strong>{{$apartment->visibility? 'Visibile': 'Nascosto'}}</div>
+                                    <div class="prove_margin"><strong>Città: </strong>{{$apartment->city}}</div>
+                                    <div class="prove_margin prove_address"><strong>Via: </strong>{{$apartment->address}}</div>
+                                    <div class="prove_margin"><strong>CAP: </strong>{{$apartment->zip_code}}</div>
                                 </div>
                                 <div class="col-6">
                                     <div>
