@@ -184,6 +184,21 @@ class ApartmentController extends Controller
 
         $data = $request->all();
 
+        if(isset($data['city']) || isset($data['address']) || isset($data['zip_code'])) {
+
+            $response = Http::withoutVerifying()->get('https://api.tomtom.com/search/2/geocode/' . $data['address'] . ' ' . $data['zip_code'] . ' ' . $data['city'] . ' ' . '.json', [
+                'key' => config('services.tomtom.key'),
+                'limit' => '1'
+            ]);
+    
+            $coordinates = $response->json();
+            // dd($coordinates);
+            $data['latitude'] = $coordinates['results'][0]['position']['lat'];
+            $data['longitude'] = $coordinates['results'][0]['position']['lon'];
+            // dd($response);
+            // Log::info($response);
+        }
+
         if(isset($data['image'])) {
             Storage::delete($apartment['image']);
             $img_path = Storage::put('bnb_images', $data['image']);
