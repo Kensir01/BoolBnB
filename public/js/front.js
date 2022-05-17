@@ -2074,11 +2074,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'ApartmentSearchResult',
   props: {
@@ -2309,6 +2304,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'AdvancedSearch',
@@ -2372,7 +2368,7 @@ __webpack_require__.r(__webpack_exports__);
         if (this.search.length % 2 == 0) {
           axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
             params: {
-              key: "dKIdA4c5OhnbGF5avb5kToCh3jNOptyA",
+              key: "7kWYJDQnwA2ciqPMSwAUBU9nsoFLjVCc",
               typeahead: true,
               limit: 3
             }
@@ -2623,7 +2619,7 @@ __webpack_require__.r(__webpack_exports__);
         if (this.search.length % 2 == 0) {
           axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
             params: {
-              key: "dKIdA4c5OhnbGF5avb5kToCh3jNOptyA",
+              key: "7kWYJDQnwA2ciqPMSwAUBU9nsoFLjVCc",
               typeahead: true,
               limit: 3
             }
@@ -2649,6 +2645,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     completer: function completer(index) {
       this.search = this.autocompleteList[index];
+      this.getSearch();
     } // geoCoding() {
     //     axios.get(`https://api.tomtom.com/search/2/geocode/${this.search}.json`, {
     //         params: {
@@ -2814,7 +2811,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-b8a71148] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-b8a71148] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-b8a71148] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-b8a71148]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-b8a71148]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\n.apartment[data-v-b8a71148] {\n  color: #000;\n  height: 450px;\n  min-width: 100%;\n  display: flex;\n}\n.apartment .half[data-v-b8a71148] {\n  width: 50%;\n  border: solid #000;\n  border-width: 4px 0 4px 0;\n}\n.apartment .half.right[data-v-b8a71148] {\n  border-left: 4px solid #000;\n}\n.apartment .half .top[data-v-b8a71148] {\n  font-family: \"ruddybold\";\n  font-size: 1.5rem;\n  padding: 0 1.5rem;\n  height: 40px;\n  background-color: #FCEF03;\n  border-bottom: 4px solid #000;\n}\n.apartment .half .bottom[data-v-b8a71148] {\n  display: flex;\n  padding-top: 1.5rem;\n  font-family: \"rubik\";\n}\n.apartment .half .bottom .left[data-v-b8a71148] {\n  width: 50%;\n  padding-left: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.apartment .half .bottom .left .top-part h1[data-v-b8a71148] {\n  font-family: \"ruddybold\";\n  width: 200px;\n}\n.apartment .half .bottom .left .bottom-part p[data-v-b8a71148] {\n  margin-top: 2rem;\n}\n.apartment .half .bottom .right[data-v-b8a71148] {\n  width: 50%;\n  display: flex;\n  justify-content: center;\n}\n.apartment .half .bottom .right img[data-v-b8a71148] {\n  width: 80%;\n  max-height: 350px;\n  margin: auto;\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-b8a71148] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-b8a71148] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-b8a71148] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-b8a71148]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-b8a71148]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\n.apartment[data-v-b8a71148] {\n  color: #000;\n  min-height: 450px;\n  min-width: 100%;\n  display: flex;\n  margin: 1rem 0;\n}\n.apartment .half[data-v-b8a71148] {\n  width: 100%;\n  border: solid #000;\n  border-width: 4px 4px 4px 4px;\n  padding-bottom: 1rem;\n}\n.apartment .half .top[data-v-b8a71148] {\n  font-family: \"ruddybold\";\n  font-size: 1.5rem;\n  padding: 0 1.5rem;\n  height: 40px;\n  background-color: #FCEF03;\n  border-bottom: 4px solid #000;\n}\n.apartment .half .bottom[data-v-b8a71148] {\n  display: flex;\n  padding-top: 1.5rem;\n  font-family: \"rubik\";\n}\n.apartment .half .bottom .left[data-v-b8a71148] {\n  width: 50%;\n  padding-left: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.apartment .half .bottom .left .top-part h1[data-v-b8a71148] {\n  font-family: \"ruddybold\";\n  width: 200px;\n}\n.apartment .half .bottom .left .bottom-part p[data-v-b8a71148] {\n  margin-top: 2rem;\n}\n.apartment .half .bottom .right[data-v-b8a71148] {\n  width: 50%;\n  display: flex;\n  justify-content: center;\n}\n.apartment .half .bottom .right .preview[data-v-b8a71148] {\n  width: 80%;\n  max-height: 350px;\n  margin: auto;\n}\n.apartment .half .bottom .right .preview img[data-v-b8a71148] {\n  -o-object-fit: contain;\n     object-fit: contain;\n  width: 100%;\n  height: 100%;\n  max-height: 350px;\n}", ""]);
 
 // exports
 
@@ -2834,7 +2831,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-61a7c374] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-61a7c374] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-61a7c374] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-61a7c374]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-61a7c374]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\nfooter[data-v-61a7c374] {\n  height: 200px;\n  margin: 50px 0px;\n}\nh5[data-v-61a7c374] {\n  font-family: \"ruddyblack\";\n}\nli a[data-v-61a7c374] {\n  color: #000;\n}\nli a[data-v-61a7c374]:hover {\n  color: #FCEF03;\n}\n.border-top[data-v-61a7c374] {\n  border-top: 5px solid #000 !important;\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-61a7c374] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-61a7c374] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-61a7c374] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-61a7c374]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-61a7c374]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\nfooter[data-v-61a7c374] {\n  margin: 50px 0px;\n}\nh5[data-v-61a7c374] {\n  font-family: \"ruddyblack\";\n}\nli a[data-v-61a7c374] {\n  color: #000;\n}\nli a[data-v-61a7c374]:hover {\n  color: #FCEF03;\n}\n.border-top[data-v-61a7c374] {\n  border-top: 5px solid #000 !important;\n}", ""]);
 
 // exports
 
@@ -2874,7 +2871,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-0312e533] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-0312e533] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-0312e533] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-0312e533]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-0312e533]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\nh1[data-v-0312e533] {\n  font-family: \"ruddyblack\";\n}\n.noResults[data-v-0312e533] {\n  text-align: center;\n  font-family: \"ruddybold\";\n  font-size: 2rem;\n}\n.container[data-v-0312e533] {\n  margin-bottom: 4rem;\n}\n.search-bar[data-v-0312e533] {\n  width: 40%;\n  border: 4px solid #000;\n  margin: 0 auto;\n  position: absolute;\n  z-index: 1000;\n  top: -30px;\n  transform: translateX(-50%);\n  left: 50%;\n  background: #fff;\n}\ninput[data-v-0312e533] {\n  width: 100%;\n  padding: 10px 20px 10px 12px;\n  border: none;\n  color: rgba(0, 0, 0, 0.7);\n  transition: 0.15s all ease-in-out;\n  background: #fff;\n}\ninput[data-v-0312e533]:focus {\n  outline: none;\n}\ninput:focus + label[data-v-0312e533] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-0312e533]::-webkit-input-placeholder {\n  font-family: \"ruddyblack\";\n  font-size: 15px;\n  color: #000;\n  font-weight: 100;\n}\n.search-bar a[data-v-0312e533] {\n  cursor: pointer;\n}\n.img-search[data-v-0312e533] {\n  width: 30px;\n  right: 20px;\n  top: 5px;\n  position: absolute;\n}\n.prova[data-v-0312e533] {\n  position: relative;\n}\n.autocomplete-bar ul[data-v-0312e533] {\n  list-style-type: none;\n  padding: 0 20px 0 12px;\n}\n.autocomplete-bar ul li[data-v-0312e533]:hover {\n  background-color: #FCEF03;\n  cursor: pointer;\n}\n.autocomplete-bar ul[data-v-0312e533]:first-child {\n  margin-top: 20px;\n}\n.autocomplete-bar[data-v-0312e533] {\n  font-family: \"rubik\";\n  background-color: #fff;\n  border: 4px solid #000;\n  position: absolute;\n  top: 20px;\n  right: -4px;\n  left: -4px;\n  z-index: -2;\n}\n.yellow-jumbo[data-v-0312e533] {\n  padding: 2rem 1rem;\n  border: 4px solid #000;\n  width: 80%;\n  min-height: 350px;\n  margin: auto;\n  background-color: #FCEF03;\n  position: relative;\n}\n.jumbo .inputs[data-v-0312e533] {\n  padding-top: 3rem;\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 3rem;\n}\n.jumbo .inputs .single-input[data-v-0312e533] {\n  width: 30%;\n}\n.jumbo .inputs .single-input input[data-v-0312e533] {\n  border: 4px solid #000;\n}\n.jumbo .inputs .single-input .label[data-v-0312e533] {\n  font-size: 1.25rem;\n  font-family: \"ruddybold\";\n}\n.jumbo .facility-box[data-v-0312e533] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n}\n.jumbo .facility-box .single-facility[data-v-0312e533] {\n  margin: 0.5rem 1rem;\n  padding: 5px;\n  display: flex;\n  position: relative;\n}\n.jumbo .facility-box .single-facility input[type=checkbox][data-v-0312e533] {\n  -moz-appearance: none;\n       appearance: none;\n  -webkit-appearance: none;\n  height: 40px;\n  width: 40px;\n  background-color: #fff;\n  border: 4px solid #000;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.jumbo .facility-box .single-facility input[type=checkbox][data-v-0312e533]:hover {\n  background-color: #000;\n}\n.jumbo .facility-box .single-facility input[type=checkbox][data-v-0312e533]:checked {\n  background-color: #000;\n}\n.jumbo .facility-box .single-facility .info[data-v-0312e533] {\n  padding: 0 1rem;\n  width: 100%;\n  height: 40px;\n  margin-left: 5px;\n  border: 4px solid #000;\n  background-color: #fff;\n  font-size: 1.25rem;\n}\n.jumbo .facility-box .single-facility .info .label[data-v-0312e533] {\n  font-family: \"ruddybold\";\n}\n.jumbo .facility-box .single-facility img[data-v-0312e533] {\n  width: 30px;\n  max-height: 40px;\n  margin-left: 5px;\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-0312e533] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-0312e533] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-0312e533] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-0312e533]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-0312e533]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\nh1[data-v-0312e533] {\n  font-family: \"ruddyblack\";\n}\n.noResults[data-v-0312e533] {\n  text-align: center;\n  font-family: \"ruddybold\";\n  font-size: 2rem;\n}\n.container[data-v-0312e533] {\n  margin-bottom: 4rem;\n}\n.search-bar[data-v-0312e533] {\n  width: 40%;\n  border: 4px solid #000;\n  margin: 0 auto;\n  position: absolute;\n  z-index: 1000;\n  top: -30px;\n  transform: translateX(-50%);\n  left: 50%;\n  background: #fff;\n}\ninput[data-v-0312e533] {\n  width: 100%;\n  padding: 10px 20px 10px 12px;\n  border: none;\n  color: rgba(0, 0, 0, 0.7);\n  transition: 0.15s all ease-in-out;\n  background: #fff;\n}\ninput[data-v-0312e533]:focus {\n  outline: none;\n}\ninput:focus + label[data-v-0312e533] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-0312e533]::-webkit-input-placeholder {\n  font-family: \"ruddyblack\";\n  font-size: 15px;\n  color: #000;\n  font-weight: 100;\n}\n.search-bar a[data-v-0312e533] {\n  cursor: pointer;\n}\n.img-search[data-v-0312e533] {\n  width: 30px;\n  right: 20px;\n  top: 5px;\n  position: absolute;\n}\n.prova[data-v-0312e533] {\n  position: relative;\n}\n.autocomplete-bar ul[data-v-0312e533] {\n  list-style-type: none;\n  padding: 0 20px 0 12px;\n}\n.autocomplete-bar ul li[data-v-0312e533]:hover {\n  background-color: #FCEF03;\n  cursor: pointer;\n}\n.autocomplete-bar ul[data-v-0312e533]:first-child {\n  margin-top: 20px;\n}\n.autocomplete-bar[data-v-0312e533] {\n  font-family: \"rubik\";\n  background-color: #fff;\n  border: 4px solid #000;\n  position: absolute;\n  top: 20px;\n  right: -4px;\n  left: -4px;\n  z-index: -2;\n}\n.yellow-jumbo[data-v-0312e533] {\n  padding: 2rem 1rem;\n  border: 4px solid #000;\n  width: 80%;\n  min-height: 350px;\n  margin: auto;\n  background-color: #FCEF03;\n  position: relative;\n}\n.jumbo .inputs[data-v-0312e533] {\n  padding-top: 3rem;\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 3rem;\n}\n.jumbo .inputs .single-input[data-v-0312e533] {\n  width: 30%;\n}\n.jumbo .inputs .single-input input[data-v-0312e533] {\n  border: 4px solid #000;\n}\n.jumbo .inputs .single-input .label[data-v-0312e533] {\n  font-size: 1.25rem;\n  font-family: \"ruddybold\";\n}\n.jumbo .facility-box[data-v-0312e533] {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n}\n.jumbo .facility-box .single-facility[data-v-0312e533] {\n  margin: 0.5rem 1rem;\n  padding: 5px;\n  display: flex;\n  position: relative;\n}\n.jumbo .facility-box .single-facility input[type=checkbox][data-v-0312e533] {\n  -moz-appearance: none;\n       appearance: none;\n  -webkit-appearance: none;\n  height: 40px;\n  width: 40px;\n  background-color: #fff;\n  border: 4px solid #000;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.jumbo .facility-box .single-facility input[type=checkbox][data-v-0312e533]:hover {\n  background-color: #000;\n}\n.jumbo .facility-box .single-facility input[type=checkbox][data-v-0312e533]:checked {\n  background-color: #000;\n}\n.jumbo .facility-box .single-facility .info[data-v-0312e533] {\n  padding: 0 1rem;\n  width: 100%;\n  height: 40px;\n  margin-left: 5px;\n  border: 4px solid #000;\n  background-color: #fff;\n  font-size: 1.25rem;\n}\n.jumbo .facility-box .single-facility .info .label[data-v-0312e533] {\n  font-family: \"ruddybold\";\n}\n.jumbo .facility-box .single-facility img[data-v-0312e533] {\n  width: 30px;\n  max-height: 40px;\n  margin-left: 5px;\n}\n.results[data-v-0312e533] {\n  display: flex;\n  flex-wrap: wrap;\n  flex-direction: column;\n}", ""]);
 
 // exports
 
@@ -2894,7 +2891,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-b3c5cf30] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-b3c5cf30] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-b3c5cf30] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-b3c5cf30]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-b3c5cf30]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\nh1[data-v-b3c5cf30], h3[data-v-b3c5cf30] {\n  font-family: \"ruddyblack\";\n}\n.search-bar[data-v-b3c5cf30] {\n  min-width: 50%;\n  border: 4px solid #000;\n  margin: 0 auto;\n  position: absolute;\n  z-index: 1000;\n  top: -30px;\n  transform: translateX(-50%);\n  left: 50%;\n  background: #fff;\n}\ninput[data-v-b3c5cf30] {\n  min-width: 100%;\n  padding: 10px 20px 10px 12px;\n  border: none;\n  color: rgba(0, 0, 0, 0.7);\n  transition: 0.15s all ease-in-out;\n  background: #fff;\n}\ninput[data-v-b3c5cf30]:focus {\n  outline: none;\n}\ninput:focus + label[data-v-b3c5cf30] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-b3c5cf30]::-webkit-input-placeholder {\n  font-family: \"ruddyblack\";\n  font-size: 15px;\n  color: #000;\n  font-weight: 100;\n}\n.search-bar a[data-v-b3c5cf30] {\n  cursor: pointer;\n}\n.img-search[data-v-b3c5cf30] {\n  width: 30px;\n  right: 20px;\n  top: 5px;\n  position: absolute;\n}\n.prova[data-v-b3c5cf30] {\n  position: relative;\n}\n.autocomplete-bar ul[data-v-b3c5cf30] {\n  list-style-type: none;\n  padding: 0 20px 0 12px;\n}\n.autocomplete-bar ul li[data-v-b3c5cf30]:hover {\n  background-color: #FCEF03;\n  cursor: pointer;\n}\n.autocomplete-bar ul[data-v-b3c5cf30]:first-child {\n  margin-top: 20px;\n}\n.autocomplete-bar[data-v-b3c5cf30] {\n  font-family: \"rubik\";\n  background-color: #fff;\n  border: 4px solid #000;\n  position: absolute;\n  top: 20px;\n  right: -4px;\n  left: -4px;\n  z-index: -2;\n}\n.yellow-jumbo[data-v-b3c5cf30] {\n  border: 4px solid #000;\n  width: 80%;\n  height: 350px;\n  margin: auto;\n  background-color: #FCEF03;\n  position: relative;\n}\n.jumbo-text[data-v-b3c5cf30] {\n  font-size: 50px;\n  margin-top: 30%;\n}\n.img-jumbo[data-v-b3c5cf30] {\n  max-width: 400px;\n  position: relative;\n  top: 5vw;\n  right: -5vw;\n}\n.mySlides[data-v-b3c5cf30] {\n  width: 100%;\n  padding-right: 20px;\n}\n.carousel[data-v-b3c5cf30] {\n  margin: 200px auto;\n}\n.car-text[data-v-b3c5cf30] {\n  margin-bottom: 20px;\n}\n.paginationColor[data-v-b3c5cf30] {\n  color: #FCEF03 !important;\n}\n@media screen and (max-width: 1440px) {\n.img-jumbo[data-v-b3c5cf30] {\n    top: 9vw;\n    right: -10vw;\n}\n}\n@media screen and (max-width: 1024px) {\n.img-jumbo[data-v-b3c5cf30] {\n    top: 17vw;\n    right: -10vw;\n}\n}\n@media screen and (max-width: 768px) {\n.jumbo-text[data-v-b3c5cf30] {\n    font-size: 40px;\n}\n.img-jumbo[data-v-b3c5cf30] {\n    top: 22vw;\n    right: 0vw;\n    width: 310px;\n}\n}\n@media screen and (max-width: 425px) {\n.jumbo-text[data-v-b3c5cf30] {\n    font-size: 30px;\n    text-align: center;\n}\n.img-jumbo[data-v-b3c5cf30] {\n    top: 2vw;\n    right: 0;\n    width: 300px;\n}\n.img-search[data-v-b3c5cf30] {\n    width: 20px;\n    top: 10px;\n    right: 11px;\n}\n}\nimg.experience.due[data-v-b3c5cf30] {\n  margin-top: 22px;\n}\n.esperienze[data-v-b3c5cf30], .storia_logo[data-v-b3c5cf30] {\n  margin: 200px auto;\n}\n.storia_logo[data-v-b3c5cf30] {\n  transition: 1s;\n}\n.storia_logo[data-v-b3c5cf30]:hover {\n  filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-b3c5cf30] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-b3c5cf30] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-b3c5cf30] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-b3c5cf30]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-b3c5cf30]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\nh1[data-v-b3c5cf30], h3[data-v-b3c5cf30] {\n  font-family: \"ruddyblack\";\n}\n.search-bar[data-v-b3c5cf30] {\n  min-width: 50%;\n  border: 4px solid #000;\n  margin: 0 auto;\n  position: absolute;\n  z-index: 1000;\n  top: -30px;\n  transform: translateX(-50%);\n  left: 50%;\n  background: #fff;\n}\ninput[data-v-b3c5cf30] {\n  min-width: 100%;\n  padding: 10px 20px 10px 12px;\n  border: none;\n  color: rgba(0, 0, 0, 0.7);\n  transition: 0.15s all ease-in-out;\n  background: #fff;\n}\ninput[data-v-b3c5cf30]:focus {\n  outline: none;\n}\ninput:focus + label[data-v-b3c5cf30] {\n  font-size: 10px;\n  transform: translateY(-24px) translateX(-12px);\n}\ninput[data-v-b3c5cf30]::-webkit-input-placeholder {\n  font-family: \"ruddyblack\";\n  font-size: 15px;\n  color: #000;\n  font-weight: 100;\n}\n.search-bar a[data-v-b3c5cf30] {\n  cursor: pointer;\n}\n.img-search[data-v-b3c5cf30] {\n  width: 30px;\n  right: 20px;\n  top: 5px;\n  position: absolute;\n}\n.prova[data-v-b3c5cf30] {\n  position: relative;\n}\n.autocomplete-bar ul[data-v-b3c5cf30] {\n  list-style-type: none;\n  padding: 0 20px 0 12px;\n}\n.autocomplete-bar ul li[data-v-b3c5cf30]:hover {\n  background-color: #FCEF03;\n  cursor: pointer;\n}\n.autocomplete-bar ul[data-v-b3c5cf30]:first-child {\n  margin-top: 20px;\n}\n.autocomplete-bar[data-v-b3c5cf30] {\n  font-family: \"rubik\";\n  background-color: #fff;\n  border: 4px solid #000;\n  position: absolute;\n  top: 20px;\n  right: -4px;\n  left: -4px;\n  z-index: -2;\n}\n.yellow-jumbo[data-v-b3c5cf30] {\n  border: 4px solid #000;\n  width: 80%;\n  height: 350px;\n  margin: auto;\n  background-color: #FCEF03;\n  position: relative;\n}\n.jumbo-text[data-v-b3c5cf30] {\n  font-size: 50px;\n  margin-top: 30%;\n}\n.img-jumbo[data-v-b3c5cf30] {\n  max-width: 400px;\n  position: relative;\n  top: 5vw;\n  right: -5vw;\n}\n.mySlides[data-v-b3c5cf30] {\n  width: 100%;\n  padding-right: 20px;\n}\n.carousel[data-v-b3c5cf30] {\n  margin: 200px auto;\n}\n.car-text[data-v-b3c5cf30] {\n  margin-bottom: 20px;\n}\n.paginationColor[data-v-b3c5cf30] {\n  color: #FCEF03 !important;\n}\n@media screen and (max-width: 1440px) {\n.img-jumbo[data-v-b3c5cf30] {\n    top: 9vw;\n    right: -10vw;\n}\n}\n@media screen and (max-width: 1024px) {\n.img-jumbo[data-v-b3c5cf30] {\n    top: 17vw;\n    right: -10vw;\n}\n.jumbo-text[data-v-b3c5cf30] {\n    font-size: 40px;\n}\n}\n@media screen and (max-width: 768px) {\n.jumbo-text[data-v-b3c5cf30] {\n    font-size: 40px;\n}\n.img-jumbo[data-v-b3c5cf30] {\n    top: -8vw;\n    right: -24vw;\n    width: 310px;\n}\n}\n@media screen and (max-width: 425px) {\n.jumbo-text[data-v-b3c5cf30] {\n    font-size: 30px;\n    text-align: center;\n}\n.img-jumbo[data-v-b3c5cf30] {\n    top: 2vw;\n    right: 0;\n    width: 300px;\n}\n.img-search[data-v-b3c5cf30] {\n    width: 20px;\n    top: 10px;\n    right: 11px;\n}\n}\nimg.experience.due[data-v-b3c5cf30] {\n  margin-top: 22px;\n}\n.esperienze[data-v-b3c5cf30], .storia_logo[data-v-b3c5cf30] {\n  margin: 200px auto;\n}\n.storia_logo[data-v-b3c5cf30] {\n  transition: 1s;\n}\n.storia_logo[data-v-b3c5cf30]:hover {\n  filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);\n}", ""]);
 
 // exports
 
@@ -4555,64 +4552,51 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "apartment" }, [
-      _c("div", { staticClass: "half" }, [
-        _c("div", { staticClass: "top" }, [
-          _vm._v("\n            " + _vm._s(_vm.index) + "\n        "),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "bottom" }, [
-          _c("div", { staticClass: "left" }, [
-            _c("div", { staticClass: "top-part" }, [
-              _c("h1", [_vm._v(_vm._s(_vm.title))]),
-              _vm._v(" "),
-              _c("div", [_vm._v(_vm._s(_vm.address))]),
-            ]),
+  return _c("div", { staticClass: "apartment" }, [
+    _c("div", { staticClass: "half" }, [
+      _c("div", { staticClass: "top" }, [
+        _vm._v("\n            " + _vm._s(_vm.index) + "\n        "),
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "bottom" }, [
+        _c("div", { staticClass: "left" }, [
+          _c("div", { staticClass: "top-part" }, [
+            _c("h1", [_vm._v(_vm._s(_vm.title))]),
             _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "bottom-part" },
-              [
-                _c("p", [_vm._v(_vm._s(_vm.description))]),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "button",
-                    attrs: { to: "/apartments/" + _vm.slug },
-                  },
-                  [_vm._v("Guarda")]
-                ),
-              ],
-              1
-            ),
+            _c("div", [_vm._v(_vm._s(_vm.address))]),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "right" }, [
+          _c(
+            "div",
+            { staticClass: "bottom-part" },
+            [
+              _c("p", [_vm._v(_vm._s(_vm.description))]),
+              _vm._v(" "),
+              _c(
+                "router-link",
+                {
+                  staticClass: "button",
+                  attrs: { to: "/apartments/" + _vm.slug },
+                },
+                [_vm._v("Guarda")]
+              ),
+            ],
+            1
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "right" }, [
+          _c("div", { staticClass: "preview" }, [
             _c("img", {
               attrs: { src: "http://127.0.0.1:8000/storage/" + _vm.image },
             }),
           ]),
         ]),
       ]),
-      _vm._v(" "),
-      _vm._m(0),
     ]),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "half right" }, [
-      _c("div", { staticClass: "top" }),
-      _vm._v(" "),
-      _c("div", { staticClass: "bottom" }),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -4772,45 +4756,52 @@ var render = function () {
             ]
           ),
           _vm._v(" "),
-          _vm._m(0),
+          _c("ul", { staticClass: "navbar navbar-nav ms-auto" }, [
+            _vm.$userEmail == ""
+              ? _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    { staticClass: "nav-link", attrs: { href: "/login" } },
+                    [_vm._v("Accedi")]
+                  ),
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.$userEmail == ""
+              ? _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    { staticClass: "nav-link", attrs: { href: "/register" } },
+                    [_vm._v("Registrati")]
+                  ),
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _c("li", { staticClass: "nav-item" }, [
+              _vm.$userEmail != ""
+                ? _c(
+                    "a",
+                    { staticClass: "nav-link", attrs: { href: "/user" } },
+                    [
+                      _c("img", {
+                        staticClass: "img-user",
+                        attrs: {
+                          src: "http://127.0.0.1:8000/storage/icons/normal/user.svg",
+                          alt: "User logo",
+                        },
+                      }),
+                    ]
+                  )
+                : _vm._e(),
+            ]),
+          ]),
         ],
         1
       ),
     ]),
   ])
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "navbar navbar-nav ms-auto" }, [
-      _c("li", { staticClass: "nav-item" }, [
-        _c("a", { staticClass: "nav-link", attrs: { href: "/login" } }, [
-          _vm._v("Accedi"),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("li", { staticClass: "nav-item" }, [
-        _c("a", { staticClass: "nav-link", attrs: { href: "/register" } }, [
-          _vm._v("Registrati"),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("li", { staticClass: "nav-item" }, [
-        _c("a", { staticClass: "nav-link", attrs: { href: "/user" } }, [
-          _c("img", {
-            staticClass: "img-user",
-            attrs: {
-              src: "http://127.0.0.1:8000/storage/icons/normal/user.svg",
-              alt: "User logo",
-            },
-          }),
-        ]),
-      ]),
-    ])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -4868,226 +4859,223 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "fullpage" },
-    [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "yellow-jumbo" }, [
-          _c("form", [
-            _c("div", { staticClass: "search-bar" }, [
-              _c("div", { staticClass: "prova" }, [
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.search,
-                      expression: "search",
-                    },
-                  ],
-                  staticClass: "search-input",
-                  attrs: {
-                    type: "text",
-                    placeholder: "Dove vuoi andare?",
-                    required: "",
-                  },
-                  domProps: { value: _vm.search },
-                  on: {
-                    keyup: _vm.autocomplete,
-                    input: function ($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.search = $event.target.value
-                    },
-                  },
-                }),
-                _vm._v(" "),
-                _vm.autocompleteList
-                  ? _c("div", { staticClass: "autocomplete-bar" }, [
-                      _c(
-                        "ul",
-                        _vm._l(_vm.autocompleteList, function (hint, index) {
-                          return _c(
-                            "li",
-                            {
-                              key: index,
-                              on: {
-                                click: function ($event) {
-                                  return _vm.completer(index)
-                                },
-                              },
-                            },
-                            [_vm._v(_vm._s(hint))]
-                          )
-                        }),
-                        0
-                      ),
-                    ])
-                  : _vm._e(),
-                _vm._v(" "),
-                _c("a", { on: { click: _vm.getFilteredSearch } }, [
-                  _c("img", {
-                    staticClass: "img-search",
-                    attrs: {
-                      src: "http://127.0.0.1:8000/storage/icons/normal/search.svg",
-                      alt: "Search icon",
-                    },
-                  }),
-                ]),
-              ]),
-            ]),
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "yellow-jumbo" }, [
+      _c("form", [
+        _c("div", { staticClass: "search-bar" }, [
+          _c("div", { staticClass: "prova" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.search,
+                  expression: "search",
+                },
+              ],
+              staticClass: "search-input",
+              attrs: {
+                type: "text",
+                placeholder: "Dove vuoi andare?",
+                required: "",
+              },
+              domProps: { value: _vm.search },
+              on: {
+                keyup: _vm.autocomplete,
+                input: function ($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.search = $event.target.value
+                },
+              },
+            }),
             _vm._v(" "),
-            _c("div", { staticClass: "jumbo container" }, [
-              _c("div", { staticClass: "inputs" }, [
-                _c("div", { staticClass: "single-input" }, [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.distance,
-                        expression: "distance",
-                      },
-                    ],
-                    attrs: { type: "number", id: "distance" },
-                    domProps: { value: _vm.distance },
-                    on: {
-                      input: function ($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.distance = $event.target.value
-                      },
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "label" }, [_vm._v("Raggio")]),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "single-input" }, [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.rooms,
-                        expression: "rooms",
-                      },
-                    ],
-                    attrs: { type: "number", id: "rooms" },
-                    domProps: { value: _vm.rooms },
-                    on: {
-                      input: function ($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.rooms = $event.target.value
-                      },
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "label" }, [_vm._v("Stanze")]),
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "single-input" }, [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.beds,
-                        expression: "beds",
-                      },
-                    ],
-                    attrs: { type: "number", id: "beds" },
-                    domProps: { value: _vm.beds },
-                    on: {
-                      input: function ($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.beds = $event.target.value
-                      },
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "label" }, [_vm._v("Letti")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "facility-box" },
-                _vm._l(_vm.facilities, function (facility) {
-                  return _c(
-                    "div",
-                    { key: facility.id, staticClass: "single-facility" },
-                    [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.selectedFacilities,
-                            expression: "selectedFacilities",
-                          },
-                        ],
-                        attrs: {
-                          type: "checkbox",
-                          name: facility.name,
-                          id: facility.id,
-                        },
-                        domProps: {
-                          value: facility.id,
-                          checked: Array.isArray(_vm.selectedFacilities)
-                            ? _vm._i(_vm.selectedFacilities, facility.id) > -1
-                            : _vm.selectedFacilities,
-                        },
-                        on: {
-                          change: function ($event) {
-                            var $$a = _vm.selectedFacilities,
-                              $$el = $event.target,
-                              $$c = $$el.checked ? true : false
-                            if (Array.isArray($$a)) {
-                              var $$v = facility.id,
-                                $$i = _vm._i($$a, $$v)
-                              if ($$el.checked) {
-                                $$i < 0 &&
-                                  (_vm.selectedFacilities = $$a.concat([$$v]))
-                              } else {
-                                $$i > -1 &&
-                                  (_vm.selectedFacilities = $$a
-                                    .slice(0, $$i)
-                                    .concat($$a.slice($$i + 1)))
-                              }
-                            } else {
-                              _vm.selectedFacilities = $$c
-                            }
+            _vm.autocompleteList
+              ? _c("div", { staticClass: "autocomplete-bar" }, [
+                  _c(
+                    "ul",
+                    _vm._l(_vm.autocompleteList, function (hint, index) {
+                      return _c(
+                        "li",
+                        {
+                          key: index,
+                          on: {
+                            click: function ($event) {
+                              return _vm.completer(index)
+                            },
                           },
                         },
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "info" }, [
-                        _c("div", { staticClass: "label" }, [
-                          _vm._v(_vm._s(facility.name)),
-                        ]),
-                      ]),
-                    ]
-                  )
-                }),
-                0
-              ),
+                        [_vm._v(_vm._s(hint))]
+                      )
+                    }),
+                    0
+                  ),
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _c("a", { on: { click: _vm.getFilteredSearch } }, [
+              _c("img", {
+                staticClass: "img-search",
+                attrs: {
+                  src: "http://127.0.0.1:8000/storage/icons/normal/search.svg",
+                  alt: "Search icon",
+                },
+              }),
             ]),
           ]),
         ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "jumbo container" }, [
+          _c("div", { staticClass: "inputs" }, [
+            _c("div", { staticClass: "single-input" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.distance,
+                    expression: "distance",
+                  },
+                ],
+                attrs: { type: "number", id: "distance" },
+                domProps: { value: _vm.distance },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.distance = $event.target.value
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "label" }, [_vm._v("Raggio")]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "single-input" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.rooms,
+                    expression: "rooms",
+                  },
+                ],
+                attrs: { type: "number", id: "rooms" },
+                domProps: { value: _vm.rooms },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.rooms = $event.target.value
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "label" }, [_vm._v("Stanze")]),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "single-input" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.beds,
+                    expression: "beds",
+                  },
+                ],
+                attrs: { type: "number", id: "beds" },
+                domProps: { value: _vm.beds },
+                on: {
+                  input: function ($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.beds = $event.target.value
+                  },
+                },
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "label" }, [_vm._v("Letti")]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "facility-box" },
+            _vm._l(_vm.facilities, function (facility) {
+              return _c(
+                "div",
+                { key: facility.id, staticClass: "single-facility" },
+                [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.selectedFacilities,
+                        expression: "selectedFacilities",
+                      },
+                    ],
+                    attrs: {
+                      type: "checkbox",
+                      name: facility.name,
+                      id: facility.id,
+                    },
+                    domProps: {
+                      value: facility.id,
+                      checked: Array.isArray(_vm.selectedFacilities)
+                        ? _vm._i(_vm.selectedFacilities, facility.id) > -1
+                        : _vm.selectedFacilities,
+                    },
+                    on: {
+                      change: function ($event) {
+                        var $$a = _vm.selectedFacilities,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = facility.id,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 &&
+                              (_vm.selectedFacilities = $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              (_vm.selectedFacilities = $$a
+                                .slice(0, $$i)
+                                .concat($$a.slice($$i + 1)))
+                          }
+                        } else {
+                          _vm.selectedFacilities = $$c
+                        }
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "info" }, [
+                    _c("div", { staticClass: "label" }, [
+                      _vm._v(_vm._s(facility.name)),
+                    ]),
+                  ]),
+                ]
+              )
+            }),
+            0
+          ),
+        ]),
       ]),
-      _vm._v(" "),
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "results" },
       _vm._l(_vm.filtered, function (apartment, index) {
         return _c("ApartmentSearchResult", {
           key: apartment.id,
-          staticClass: "fullpage",
           attrs: {
             index: index + 1,
             image: apartment.image,
@@ -5101,15 +5089,15 @@ var render = function () {
           },
         })
       }),
-      _vm._v(" "),
-      _vm.goneWrong
-        ? _c("p", { staticClass: "noResults" }, [
-            _vm._v(" " + _vm._s(_vm.goneWrong) + " "),
-          ])
-        : _vm._e(),
-    ],
-    2
-  )
+      1
+    ),
+    _vm._v(" "),
+    _vm.goneWrong
+      ? _c("p", { staticClass: "noResults" }, [
+          _vm._v(" " + _vm._s(_vm.goneWrong) + " "),
+        ])
+      : _vm._e(),
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -5189,7 +5177,18 @@ var render = function () {
             attrs: { type: "text", placeholder: "Dove vuoi andare?" },
             domProps: { value: _vm.search },
             on: {
-              keyup: _vm.autocomplete,
+              keyup: [
+                _vm.autocomplete,
+                function ($event) {
+                  if (
+                    !$event.type.indexOf("key") &&
+                    _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                  ) {
+                    return null
+                  }
+                  return _vm.getSearch.apply(null, arguments)
+                },
+              ],
               input: function ($event) {
                 if ($event.target.composing) {
                   return
@@ -5349,7 +5348,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-6" }, [
+          _c("div", { staticClass: "col-md-6 col-12" }, [
             _c("img", {
               staticClass: "experience",
               attrs: {
@@ -5358,7 +5357,7 @@ var staticRenderFns = [
             }),
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-6" }, [
+          _c("div", { staticClass: "col-md-6 col-12" }, [
             _c("img", {
               staticClass: "experience due",
               attrs: {
@@ -21903,7 +21902,7 @@ module.exports = "/images/Risorsa5.svg?ea9e0f780400b6f3a2d858efe70c800b";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Utente\BoolBnB\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })
