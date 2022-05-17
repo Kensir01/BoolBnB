@@ -1,11 +1,5 @@
 @extends('user.layouts.base')
 
-@push('head')
-<!-- Styles -->
-{{-- <link href="{{ asset('css/apartment.css') }}" rel="stylesheet"> --}}
-<!-- Scripts -->
-<script src="{{ asset('js/scripts/autocomplete.js')}}" defer></script>
-@endpush
 
 @section('content')
 
@@ -61,18 +55,19 @@
                 <div class="form-group">
                     <label for="city">Città</label>
                     <input type="text" class="form-control" id="city" name="city" value="{{old('city', $apartment->city)}}"  required min="2" max="50">
+                    <ul id="cityList" class="autocomplete"></ul>
                 </div>
             
+                <div class="form-group">
+                    <label for="address">Indirizzo</label>
+                    <input type="text" class="form-control" id="address" name="address" value="{{old('address', $apartment->address)}}" required min="2" max="50">
+                    <ul id="addressList" class="autocomplete"></ul>
+                </div>
+
                 <div class="form-group">
                     <label for="zip_code">CAP</label>
                     <input type="text" class="form-control" id="zip_code" name="zip_code" value="{{old('zip_code', $apartment->zip_code)}}" required min="3" max="15">
                 </div>
-
-                <div class="form-group">
-                    <label for="address">Indirizzo</label>
-                    <input type="text" class="form-control" id="address" name="address" value="{{old('address', $apartment->address)}}" required min="2" max="50">
-                </div>
-            
             
                 <div class="form-floating">
                     <label for="description">Descrizione</label>
@@ -134,3 +129,11 @@
 
 
 @endsection
+
+@section('script')
+{{-- collegato file css --}}
+<link href="{{ asset('css/autocomplete.css') }}" rel="stylesheet">
+<!-- Scripts -->
+{{-- <script src="{{assets('js/scripts/autocomplete.js')}}" defer></script> --}}
+<script type="text/javascript" src="{{ URL::asset ('js/autocomplete.js')}}" defer></script>
+@endsection 
