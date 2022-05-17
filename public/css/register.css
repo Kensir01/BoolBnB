@@ -5,6 +5,7 @@
 body {
     border: 10px solid black;
     min-height: 100vh;
+    background-color: #fff;
 }
 
 div {

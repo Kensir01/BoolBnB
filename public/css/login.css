@@ -2,6 +2,9 @@
 @import "../fonts/ruddy_bold/stylesheet.css";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
+body {
+    background-color: #fff;
+}
 
 div {
     font-family: 'ruddybold';
