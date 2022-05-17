@@ -11,4 +11,5 @@ class Facility extends Model
     public function apartments() {
         return $this->belongsToMany('App\Apartment');
     }
+
 }

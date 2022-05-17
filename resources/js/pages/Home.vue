@@ -4,7 +4,7 @@
         <div class="yellow-jumbo">
             <div class="search-bar">
                 <div class="prova">
-                    <input class="search-input" type="text" v-model="search" placeholder="Dove vuoi andare?" @keyup="autocomplete"/>
+                    <input class="search-input" type="text" v-model="search" placeholder="Dove vuoi andare?" @keyup="autocomplete" @keyup.enter="getSearch"/>
                     <div class="autocomplete-bar" v-if="autocompleteList">
                         <ul>
                             <li v-for="(hint,index) in autocompleteList" :key="index" @click="completer(index)">{{hint}}</li>
@@ -69,11 +69,11 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-6 col-12">
                         <img class="experience" src="../../../storage/app/public/elements/esperienza_1.svg">
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-md-6 col-12">
                         <img class="experience due" src="../../../storage/app/public/elements/esperienze_2.svg">
                     </div>
                 </div>
@@ -171,6 +171,7 @@ export default {
         },
         completer(index) {
           this.search = this.autocompleteList[index]
+          this.getSearch();
         }
 
         // geoCoding() {
@@ -387,6 +388,9 @@ export default {
         top: 17vw;
         right: -10vw;
     } 
+    .jumbo-text {
+            font-size: 40px;
+        }
 
     }
 
@@ -397,10 +401,12 @@ export default {
         }
         
         .img-jumbo {
-        top: 22vw;
-        right: 0vw;
-        width: 310px;
-        } 
+            top: -8vw;
+            right: -24vw;
+            width: 310px;
+        }
+
+
         
 
     }

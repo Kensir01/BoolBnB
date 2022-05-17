@@ -136,6 +136,7 @@ class ApartmentController extends Controller
                         'result' => false,
                         'data' => 'Nessun risultato'
                     ];
+
             return compact('response');
         }
         
@@ -193,9 +194,14 @@ class ApartmentController extends Controller
         foreach($apartments as $apartment) {
             $distance = self::getDistance($lat, $lon, $apartment->latitude, $apartment->longitude);
             if($distance <= $range) {
+                $apartment->distance = $distance;
                 array_push($filtered, $apartment);
             };
         }
+
+        usort($filtered, function($a, $b) {
+            return $a->distance > $b->distance ? 1 : -1;
+        });
 
         $response = [
             'result' => true,
