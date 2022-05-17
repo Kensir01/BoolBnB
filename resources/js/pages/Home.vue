@@ -4,7 +4,7 @@
         <div class="yellow-jumbo">
             <div class="search-bar">
                 <div class="prova">
-                    <input class="search-input" type="text" v-model="search" placeholder="Dove vuoi andare?" @keyup="autocomplete"/>
+                    <input class="search-input" type="text" v-model="search" placeholder="Dove vuoi andare?" @keyup="autocomplete" @keyup.enter="getSearch"/>
                     <div class="autocomplete-bar" v-if="autocompleteList">
                         <ul>
                             <li v-for="(hint,index) in autocompleteList" :key="index" @click="completer(index)">{{hint}}</li>
@@ -171,6 +171,7 @@ export default {
         },
         completer(index) {
           this.search = this.autocompleteList[index]
+          this.getSearch();
         }
 
         // geoCoding() {
