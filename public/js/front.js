@@ -1974,6 +1974,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'ApartmentCard',
   data: function data() {
@@ -2037,6 +2045,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
 //
 //
 //
@@ -2783,7 +2794,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-13e9f807] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-13e9f807] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-13e9f807] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-13e9f807]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-13e9f807]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\n.apartment[data-v-13e9f807] {\n  border-top: 10px solid #000;\n  border-bottom: 10px solid #000;\n  display: flex;\n}\n.apartment .overlay[data-v-13e9f807] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  left: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.apartment .overlay .messageForm[data-v-13e9f807] {\n  box-shadow: 10px 10px #000;\n  width: 25vw;\n  height: 60vh;\n  min-width: 300px;\n  min-height: 500px;\n  background-color: #fff;\n  border: 5px solid #000;\n  position: relative;\n}\n.apartment .overlay .messageForm .button[data-v-13e9f807] {\n  position: absolute;\n  bottom: -20px;\n  right: -30px;\n  height: 60px;\n  font-family: \"ruddybold\";\n  font-size: 1rem;\n  padding-left: 1rem;\n}\n.apartment .overlay .messageForm .button img[data-v-13e9f807] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 100%;\n}\n.apartment .overlay .messageForm .inputs[data-v-13e9f807] {\n  padding: 1rem;\n}\n.apartment .overlay .messageForm .inputs .email[data-v-13e9f807] {\n  font-family: \"Rubik\";\n  margin-bottom: 1rem;\n}\n.apartment .overlay .messageForm .inputs .email .label[data-v-13e9f807] {\n  font-size: 1rem;\n  font-weight: 700;\n}\n.apartment .overlay .messageForm .inputs .email input[data-v-13e9f807] {\n  border: none;\n  width: 90%;\n  min-width: 200px;\n  border-bottom: 2px solid #000;\n}\n.apartment .overlay .messageForm .inputs .email input[data-v-13e9f807]:focus {\n  outline: none;\n}\n.apartment .overlay .messageForm .inputs .message[data-v-13e9f807] {\n  min-height: 200px;\n  min-width: 200px;\n}\n.apartment .overlay .messageForm .inputs .message .label[data-v-13e9f807] {\n  font-size: 1rem;\n  font-weight: 700;\n}\n.apartment .overlay .messageForm .inputs .message textarea[data-v-13e9f807] {\n  min-width: 250px;\n  width: 100%;\n  resize: none;\n  line-height: 4ch;\n  background-image: linear-gradient(transparent, transparent calc(4ch - 2px), #000 0px);\n  background-size: 100% 4ch;\n  border: none;\n}\n.apartment .overlay .messageForm .inputs .message textarea[data-v-13e9f807]:focus {\n  outline: none;\n}\n.apartment .overlay .messageForm .holes[data-v-13e9f807] {\n  width: 100%;\n  height: 10%;\n  border-bottom: 30px dotted #000;\n}\n.apartment .overlay .messageForm .dashed[data-v-13e9f807] {\n  width: 100%;\n  height: 14px;\n  border-bottom: 4px dashed #000;\n}\n.apartment .overlay .messageForm .exit[data-v-13e9f807] {\n  position: absolute;\n  top: -70px;\n  right: -10px;\n  background-color: #fff;\n  width: 50px;\n  height: 50px;\n  border: 4px solid #000;\n  border-radius: 50%;\n  font-family: \"ruddybold\";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer;\n  font-size: 2rem;\n}\n.apartment .overlay .messageForm .exit[data-v-13e9f807]:hover {\n  background-color: #FCEF03;\n}\n.apartment .chat[data-v-13e9f807] {\n  position: absolute;\n  bottom: 1rem;\n  right: 2rem;\n  width: 100px;\n  height: 100px;\n  border: 5px solid #000;\n  background-color: #fff;\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: 200ms;\n}\n.apartment .chat[data-v-13e9f807]:hover {\n  cursor: pointer;\n  background-color: #FCEF03;\n  transform: scale(1.1);\n}\n.apartment .chat img[data-v-13e9f807] {\n  width: 60px;\n}\n.apartment .right[data-v-13e9f807] {\n  width: 40%;\n  overflow: hidden;\n}\n.apartment .right img[data-v-13e9f807] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 100%;\n  width: 100%;\n  -o-object-position: 50% 50%;\n     object-position: 50% 50%;\n}\n.apartment .left[data-v-13e9f807] {\n  width: 60%;\n  border-right: 10px solid #000;\n  flex: 1;\n}\n.apartment .left .top[data-v-13e9f807] {\n  padding: 1rem 2rem;\n  border-bottom: 10px solid #000;\n  display: flex;\n  align-items: center;\n  font-family: \"ruddybold\";\n  font-size: 2rem;\n}\n.apartment .left .top .circle[data-v-13e9f807] {\n  border: 4px solid #000;\n  border-radius: 50%;\n  font-family: \"ruddybold\";\n  font-size: 2rem;\n  cursor: pointer;\n  width: 50px;\n  height: 50px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-right: 2rem;\n}\n.apartment .left .top .circle[data-v-13e9f807]:hover {\n  color: #FCEF03;\n  border: 4px solid #FCEF03;\n}\n.apartment .left .bottom[data-v-13e9f807] {\n  padding: 4rem 2rem 2rem 2rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  height: calc(100% - 6rem);\n}\n.apartment .left .bottom .title h1[data-v-13e9f807] {\n  max-width: 60%;\n}\n.apartment .left .bottom .title p[data-v-13e9f807] {\n  font-size: 1.5rem;\n  font-family: \"rubik\";\n}\n.apartment .left .bottom .otherInfo .facilities[data-v-13e9f807] {\n  display: flex;\n}\n.apartment .left .bottom .otherInfo .facilities .singleFacility[data-v-13e9f807] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  width: 55px;\n  font-family: \"ruddybold\";\n  margin-right: 1rem;\n}\n.apartment .left .bottom .otherInfo .facilities .singleFacility img[data-v-13e9f807] {\n  -o-object-fit: contain;\n     object-fit: contain;\n  width: 100%;\n  margin-bottom: 0.5rem;\n}\n.apartment .left .bottom .otherInfo .description[data-v-13e9f807] {\n  font-size: 1.75rem;\n  font-family: \"rubik\";\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-13e9f807] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-13e9f807] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-13e9f807] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-13e9f807]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-13e9f807]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\n.apartment[data-v-13e9f807] {\n  border: 10px solid #000;\n  display: flex;\n}\n.apartment .overlay[data-v-13e9f807] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  left: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.apartment .overlay .messageForm[data-v-13e9f807] {\n  box-shadow: 10px 10px #000;\n  width: 25vw;\n  height: 60vh;\n  min-width: 300px;\n  min-height: 500px;\n  background-color: #fff;\n  border: 5px solid #000;\n  position: relative;\n}\n.apartment .overlay .messageForm .button[data-v-13e9f807] {\n  position: absolute;\n  bottom: -20px;\n  right: -30px;\n  height: 60px;\n  font-family: \"ruddybold\";\n  font-size: 1rem;\n  padding-left: 1rem;\n}\n.apartment .overlay .messageForm .button img[data-v-13e9f807] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 100%;\n}\n.apartment .overlay .messageForm .inputs[data-v-13e9f807] {\n  padding: 1rem;\n}\n.apartment .overlay .messageForm .inputs .email[data-v-13e9f807] {\n  font-family: \"Rubik\";\n  margin-bottom: 1rem;\n}\n.apartment .overlay .messageForm .inputs .email .label[data-v-13e9f807] {\n  font-size: 1rem;\n  font-weight: 700;\n}\n.apartment .overlay .messageForm .inputs .email input[data-v-13e9f807] {\n  border: none;\n  width: 90%;\n  min-width: 200px;\n  border-bottom: 2px solid #000;\n}\n.apartment .overlay .messageForm .inputs .email input[data-v-13e9f807]:focus {\n  outline: none;\n}\n.apartment .overlay .messageForm .inputs .message[data-v-13e9f807] {\n  min-height: 200px;\n  min-width: 200px;\n}\n.apartment .overlay .messageForm .inputs .message .label[data-v-13e9f807] {\n  font-size: 1rem;\n  font-weight: 700;\n}\n.apartment .overlay .messageForm .inputs .message textarea[data-v-13e9f807] {\n  min-width: 250px;\n  width: 100%;\n  resize: none;\n  line-height: 4ch;\n  background-image: linear-gradient(transparent, transparent calc(4ch - 2px), #000 0px);\n  background-size: 100% 4ch;\n  border: none;\n}\n.apartment .overlay .messageForm .inputs .message textarea[data-v-13e9f807]:focus {\n  outline: none;\n}\n.apartment .overlay .messageForm .holes[data-v-13e9f807] {\n  width: 100%;\n  height: 10%;\n  border-bottom: 30px dotted #000;\n}\n.apartment .overlay .messageForm .dashed[data-v-13e9f807] {\n  width: 100%;\n  height: 14px;\n  border-bottom: 4px dashed #000;\n}\n.apartment .overlay .messageForm .exit[data-v-13e9f807] {\n  position: absolute;\n  top: -70px;\n  right: -10px;\n  background-color: #fff;\n  width: 50px;\n  height: 50px;\n  border: 4px solid #000;\n  border-radius: 50%;\n  font-family: \"ruddybold\";\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer;\n  font-size: 2rem;\n}\n.apartment .overlay .messageForm .exit[data-v-13e9f807]:hover {\n  background-color: #FCEF03;\n}\n.apartment .right[data-v-13e9f807] {\n  width: 40%;\n  overflow: hidden;\n  position: relative;\n}\n.apartment .right .chat[data-v-13e9f807] {\n  position: absolute;\n  bottom: 1rem;\n  right: 2rem;\n  width: 100px;\n  height: 100px;\n  border: 5px solid #000;\n  background-color: #fff;\n  border-radius: 50%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  transition: 200ms;\n}\n.apartment .right .chat[data-v-13e9f807]:hover {\n  cursor: pointer;\n  background-color: #FCEF03;\n  transform: scale(1.1);\n}\n.apartment .right .chat img[data-v-13e9f807] {\n  width: 70%;\n  -o-object-fit: contain;\n     object-fit: contain;\n}\n.apartment .right img[data-v-13e9f807] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 100%;\n  width: 100%;\n  -o-object-position: 50% 50%;\n     object-position: 50% 50%;\n}\n.apartment .left[data-v-13e9f807] {\n  width: 60%;\n  border-right: 10px solid #000;\n  flex: 1;\n}\n.apartment .left .top[data-v-13e9f807] {\n  padding: 1rem 2rem;\n  border-bottom: 10px solid #000;\n  display: flex;\n  align-items: center;\n  font-family: \"ruddybold\";\n  font-size: 2rem;\n}\n.apartment .left .top .circle[data-v-13e9f807] {\n  border: 4px solid #000;\n  border-radius: 50%;\n  font-family: \"ruddybold\";\n  font-size: 2rem;\n  cursor: pointer;\n  width: 50px;\n  height: 50px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-right: 2rem;\n}\n.apartment .left .top .circle[data-v-13e9f807]:hover {\n  color: #FCEF03;\n  border: 4px solid #FCEF03;\n}\n.apartment .left .bottom[data-v-13e9f807] {\n  padding: 2rem;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  height: calc(100% - 6rem);\n}\n.apartment .left .bottom .title h1[data-v-13e9f807] {\n  max-width: 60%;\n}\n.apartment .left .bottom .title p[data-v-13e9f807] {\n  font-size: 1.5rem;\n  font-family: \"rubik\";\n}\n.apartment .left .bottom .otherInfo .facilities[data-v-13e9f807] {\n  display: flex;\n  flex-wrap: wrap;\n}\n.apartment .left .bottom .otherInfo .facilities .singleFacility[data-v-13e9f807] {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  width: 25px;\n  font-family: \"ruddybold\";\n  margin-right: 5rem;\n}\n.apartment .left .bottom .otherInfo .facilities .singleFacility h3[data-v-13e9f807] {\n  font-size: 0.75rem;\n}\n.apartment .left .bottom .otherInfo .facilities .singleFacility img[data-v-13e9f807] {\n  -o-object-fit: contain;\n     object-fit: contain;\n  width: 100%;\n  margin-bottom: 0.5rem;\n}\n.apartment .left .bottom .otherInfo .description_text[data-v-13e9f807] {\n  font-size: 1.75rem;\n  font-family: \"rubik\";\n  width: 300px;\n  overflow-wrap: break-word;\n}", ""]);
 
 // exports
 
@@ -4340,166 +4351,171 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "apartment" }, [
-    _c("div", { staticClass: "left" }, [
-      _c("div", { staticClass: "top" }, [
-        _c(
-          "a",
-          {
-            on: {
-              click: function ($event) {
-                return _vm.$router.go(-1)
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "apartment" }, [
+      _c("div", { staticClass: "left" }, [
+        _c("div", { staticClass: "top" }, [
+          _c(
+            "a",
+            {
+              on: {
+                click: function ($event) {
+                  return _vm.$router.go(-1)
+                },
               },
             },
-          },
-          [_c("div", { staticClass: "circle" }, [_vm._v("×")])]
-        ),
-        _vm._v("\n            chiudi \n        "),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "bottom" }, [
-        _c("div", { staticClass: "title" }, [
-          _c("h1", [_vm._v(_vm._s(_vm.title))]),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(_vm.address))]),
+            [_c("div", { staticClass: "circle" }, [_vm._v("×")])]
+          ),
+          _vm._v("\n            chiudi \n        "),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "otherInfo" }, [
-          _c(
-            "div",
-            { staticClass: "facilities" },
-            _vm._l(_vm.facilities, function (facility) {
-              return _c(
-                "div",
-                { key: facility.id, staticClass: "singleFacility" },
-                [
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "http://127.0.0.1:8000/storage/" + facility.icon_normal,
-                      alt: facility.name,
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("h3", [_vm._v(_vm._s(facility.name))]),
-                ]
-              )
-            }),
-            0
-          ),
+        _c("div", { staticClass: "bottom" }, [
+          _c("div", { staticClass: "title" }, [
+            _c("h1", [_vm._v(_vm._s(_vm.title))]),
+            _vm._v(" "),
+            _c("p", [_vm._v(_vm._s(_vm.address))]),
+          ]),
           _vm._v(" "),
-          _c("p", { staticClass: "description" }, [
-            _vm._v(_vm._s(_vm.description)),
+          _c("div", { staticClass: "otherInfo" }, [
+            _c("p", { staticClass: "description_text" }, [
+              _vm._v(_vm._s(_vm.description)),
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "facilities" },
+              _vm._l(_vm.facilities, function (facility) {
+                return _c(
+                  "div",
+                  { key: facility.id, staticClass: "singleFacility" },
+                  [
+                    _c("img", {
+                      attrs: {
+                        src:
+                          "http://127.0.0.1:8000/storage/" +
+                          facility.icon_normal,
+                        alt: facility.name,
+                      },
+                    }),
+                    _vm._v(" "),
+                    _c("h3", [_vm._v(_vm._s(facility.name))]),
+                  ]
+                )
+              }),
+              0
+            ),
           ]),
         ]),
       ]),
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "right" }, [
-      _c("img", { attrs: { src: _vm.image, alt: _vm.title } }),
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "chat", on: { click: _vm.toggleForm } }, [
-      _c("img", {
-        attrs: {
-          src: "http://127.0.0.1:8000/storage/icons/normal/mex_white.svg",
-          alt: "Invia messaggio",
-        },
-      }),
-    ]),
-    _vm._v(" "),
-    _vm.form
-      ? _c("div", { staticClass: "overlay" }, [
-          _c("div", { staticClass: "messageForm" }, [
-            _c("div", { staticClass: "exit", on: { click: _vm.toggleForm } }, [
-              _vm._v("×"),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "holes" }),
-            _vm._v(" "),
-            _c("div", { staticClass: "dashed" }),
-            _vm._v(" "),
-            _c("div", { staticClass: "inputs" }, [
+      _vm._v(" "),
+      _c("div", { staticClass: "right" }, [
+        _c("img", { attrs: { src: _vm.image, alt: _vm.title } }),
+        _vm._v(" "),
+        _c("div", { staticClass: "chat", on: { click: _vm.toggleForm } }, [
+          _c("img", {
+            attrs: {
+              src: "http://127.0.0.1:8000/storage/icons/normal/mex_white.svg",
+              alt: "Invia messaggio",
+            },
+          }),
+        ]),
+      ]),
+      _vm._v(" "),
+      _vm.form
+        ? _c("div", { staticClass: "overlay" }, [
+            _c("div", { staticClass: "messageForm" }, [
               _c(
-                "form",
-                {
-                  on: {
-                    submit: function ($event) {
-                      $event.preventDefault()
-                      return _vm.sendMessage.apply(null, arguments)
+                "div",
+                { staticClass: "exit", on: { click: _vm.toggleForm } },
+                [_vm._v("×")]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "holes" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "dashed" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "inputs" }, [
+                _c(
+                  "form",
+                  {
+                    on: {
+                      submit: function ($event) {
+                        $event.preventDefault()
+                        return _vm.sendMessage.apply(null, arguments)
+                      },
                     },
                   },
-                },
-                [
-                  _c("div", { staticClass: "email" }, [
-                    _c("span", { staticClass: "label" }, [_vm._v("Da: ")]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.email,
-                          expression: "email",
+                  [
+                    _c("div", { staticClass: "email" }, [
+                      _c("span", { staticClass: "label" }, [_vm._v("Da: ")]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.email,
+                            expression: "email",
+                          },
+                        ],
+                        attrs: {
+                          type: "email",
+                          placeholder: "Inserisci email",
+                          required: "",
                         },
-                      ],
-                      attrs: {
-                        type: "email",
-                        placeholder: "Inserisci email",
-                        required: "",
-                      },
-                      domProps: { value: _vm.email },
-                      on: {
-                        input: function ($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.email = $event.target.value
+                        domProps: { value: _vm.email },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.email = $event.target.value
+                          },
                         },
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "message" }, [
-                    _c("div", { staticClass: "label" }, [
-                      _vm._v("Scrivi qualcosa all'host"),
+                      }),
                     ]),
                     _vm._v(" "),
-                    _c("textarea", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.content,
-                          expression: "content",
+                    _c("div", { staticClass: "message" }, [
+                      _c("div", { staticClass: "label" }, [
+                        _vm._v("Scrivi qualcosa all'host"),
+                      ]),
+                      _vm._v(" "),
+                      _c("textarea", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.content,
+                            expression: "content",
+                          },
+                        ],
+                        attrs: {
+                          name: "",
+                          id: "",
+                          rows: "9",
+                          placeholder: "Il tuo messaggio",
+                          required: "",
                         },
-                      ],
-                      attrs: {
-                        name: "",
-                        id: "",
-                        rows: "9",
-                        placeholder: "Il tuo messaggio",
-                        required: "",
-                      },
-                      domProps: { value: _vm.content },
-                      on: {
-                        input: function ($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.content = $event.target.value
+                        domProps: { value: _vm.content },
+                        on: {
+                          input: function ($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.content = $event.target.value
+                          },
                         },
-                      },
-                    }),
-                  ]),
-                  _vm._v(" "),
-                  _vm._m(0),
-                ]
-              ),
+                      }),
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(0),
+                  ]
+                ),
+              ]),
             ]),
-          ]),
-        ])
-      : _vm._e(),
+          ])
+        : _vm._e(),
+    ]),
   ])
 }
 var staticRenderFns = [
@@ -4539,48 +4555,50 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "apartment" }, [
-    _c("div", { staticClass: "half" }, [
-      _c("div", { staticClass: "top" }, [
-        _vm._v("\n            " + _vm._s(_vm.index) + "\n        "),
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "bottom" }, [
-        _c("div", { staticClass: "left" }, [
-          _c("div", { staticClass: "top-part" }, [
-            _c("h1", [_vm._v(_vm._s(_vm.title))]),
-            _vm._v(" "),
-            _c("div", [_vm._v(_vm._s(_vm.address))]),
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "bottom-part" },
-            [
-              _c("p", [_vm._v(_vm._s(_vm.description))]),
-              _vm._v(" "),
-              _c(
-                "router-link",
-                {
-                  staticClass: "button",
-                  attrs: { to: "/apartments/" + _vm.slug },
-                },
-                [_vm._v("Guarda")]
-              ),
-            ],
-            1
-          ),
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "apartment" }, [
+      _c("div", { staticClass: "half" }, [
+        _c("div", { staticClass: "top" }, [
+          _vm._v("\n            " + _vm._s(_vm.index) + "\n        "),
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "right" }, [
-          _c("img", {
-            attrs: { src: "http://127.0.0.1:8000/storage/" + _vm.image },
-          }),
+        _c("div", { staticClass: "bottom" }, [
+          _c("div", { staticClass: "left" }, [
+            _c("div", { staticClass: "top-part" }, [
+              _c("h1", [_vm._v(_vm._s(_vm.title))]),
+              _vm._v(" "),
+              _c("div", [_vm._v(_vm._s(_vm.address))]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "bottom-part" },
+              [
+                _c("p", [_vm._v(_vm._s(_vm.description))]),
+                _vm._v(" "),
+                _c(
+                  "router-link",
+                  {
+                    staticClass: "button",
+                    attrs: { to: "/apartments/" + _vm.slug },
+                  },
+                  [_vm._v("Guarda")]
+                ),
+              ],
+              1
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "right" }, [
+            _c("img", {
+              attrs: { src: "http://127.0.0.1:8000/storage/" + _vm.image },
+            }),
+          ]),
         ]),
       ]),
+      _vm._v(" "),
+      _vm._m(0),
     ]),
-    _vm._v(" "),
-    _vm._m(0),
   ])
 }
 var staticRenderFns = [

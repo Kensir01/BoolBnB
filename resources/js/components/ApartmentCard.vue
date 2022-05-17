@@ -1,5 +1,6 @@
 <template>
-    <div class="apartment">
+    <div class="container">
+         <div class="apartment">
         <div class="left">
             <div class="top">
                 <a @click="$router.go(-1)"><div class="circle">×</div></a>
@@ -13,6 +14,9 @@
                 </div>
 
                 <div class="otherInfo">
+
+                     <p class="description_text">{{description}}</p>
+
                     <div class="facilities">
                         <div class="singleFacility" v-for="facility in facilities" :key="facility.id">
                             <img :src="'http://127.0.0.1:8000/storage/' + facility.icon_normal" :alt="facility.name">
@@ -20,18 +24,20 @@
                         </div>
                     </div>
 
-                    <p class="description">{{description}}</p>
+                   
                 </div>
             </div>
         </div>
         <div class="right">
 
             <img :src="image" :alt="title">
+
+              <div class="chat" @click="toggleForm">
+                <img src="http://127.0.0.1:8000/storage/icons/normal/mex_white.svg" alt="Invia messaggio">
+             </div>
         </div>
 
-        <div class="chat" @click="toggleForm">
-            <img src="http://127.0.0.1:8000/storage/icons/normal/mex_white.svg" alt="Invia messaggio">
-        </div>
+      
         
         <div class="overlay" v-if="form">
 
@@ -62,6 +68,8 @@
 
         </div>
     </div>
+    </div>
+   
 </template>
 
 <script>
@@ -123,8 +131,7 @@ export default {
     @import "../../sass/partials/_common.scss";
 
     .apartment {
-        border-top: 10px solid $lines;
-        border-bottom: 10px solid $lines;
+        border: 10px solid $lines;
         display: flex;
 
         .overlay {
@@ -248,7 +255,14 @@ export default {
             }
         }
 
-        .chat {
+           
+
+        .right {
+            width: 40%;
+            overflow: hidden;
+            position: relative;
+
+            .chat {
             position: absolute;
             bottom: 1rem;
             right: 2rem;
@@ -262,20 +276,18 @@ export default {
             align-items: center;
             transition: 200ms;
 
-            &:hover {
-                cursor: pointer;
-                background-color: $details;
-                transform: scale(1.1);
+                &:hover {
+                    cursor: pointer;
+                    background-color: $details;
+                    transform: scale(1.1);
+                }
+
+                img {
+                    width: 70%;
+                    object-fit: contain;
+                }
             }
 
-            img {
-                width: 60px;
-            }
-        }
-
-        .right {
-            width: 40%;
-            overflow: hidden;
 
             img {
                 object-fit: cover;
@@ -319,7 +331,7 @@ export default {
             }
     
             .bottom {
-                padding: 4rem 2rem 2rem 2rem;
+                padding: 2rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -340,14 +352,19 @@ export default {
 
                     .facilities {
                         display: flex;
+                        flex-wrap: wrap;
 
                         .singleFacility {
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
-                            width: 55px;
+                            width: 25px;
                             font-family: 'ruddybold';
-                            margin-right: 1rem;
+                            margin-right: 5rem;
+
+                        h3 {
+                            font-size: 0.75rem;
+                        }
 
                             img {
                                 object-fit: contain;
@@ -357,9 +374,12 @@ export default {
                         }
                     }
 
-                    .description {
+                    .description_text {
                         font-size: 1.75rem;
                         font-family: 'rubik';
+                        width: 300px;
+                        overflow-wrap: break-word;
+
                     }
                 }
             }
