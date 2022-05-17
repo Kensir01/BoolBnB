@@ -54,7 +54,6 @@ export default {
   @import "../../sass/partials/_common.scss";
 
   footer {
-    height: 200px;
     margin: 50px 0px;
   }
 

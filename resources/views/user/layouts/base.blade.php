@@ -75,7 +75,7 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right bordo_logout" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item ms_link" href="{{ route('logout') }}"
+                                        <a class="dropdown-item ms_link" id="dropdownItem" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                                             {{ __('Esci') }}

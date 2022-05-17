@@ -15,9 +15,9 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col" class="debug1">immagine</th>
-                            <th scope="col" class="debug1">titolo</th>
-                            <th scope="col" class="debug1">opzioni</th>                            
+                            <th scope="col" class="debug1 yellow">immagine</th>
+                            <th scope="col" class="debug1 yellow">titolo</th>
+                            <th scope="col" class="debug1 yellow">opzioni</th>                            
                             {{-- <th scope="col">Descrizione</th> --}}
                             {{-- <th scope="col">Numero stanze</th>
                             <th scope="col">Numero bagni</th>
