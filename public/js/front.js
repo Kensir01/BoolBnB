@@ -2368,7 +2368,7 @@ __webpack_require__.r(__webpack_exports__);
         if (this.search.length % 2 == 0) {
           axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
             params: {
-              key: "7kWYJDQnwA2ciqPMSwAUBU9nsoFLjVCc",
+              key: "dKIdA4c5OhnbGF5avb5kToCh3jNOptyA",
               typeahead: true,
               limit: 3
             }
@@ -2619,7 +2619,7 @@ __webpack_require__.r(__webpack_exports__);
         if (this.search.length % 2 == 0) {
           axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
             params: {
-              key: "7kWYJDQnwA2ciqPMSwAUBU9nsoFLjVCc",
+              key: "dKIdA4c5OhnbGF5avb5kToCh3jNOptyA",
               typeahead: true,
               limit: 3
             }
@@ -2851,7 +2851,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);", ""]);
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-1f42fb90] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-1f42fb90] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-1f42fb90] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-1f42fb90]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-1f42fb90]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\nheader[data-v-1f42fb90] {\n  height: 90px;\n  align-items: center;\n  margin-top: 20px;\n  margin-bottom: 50px;\n  background-color: #fff !important;\n}\na.nav-link[data-v-1f42fb90] {\n  color: #000 !important;\n}\na.nav-link[data-v-1f42fb90]:hover {\n  color: #FCEF03 !important;\n}\n.img-logo[data-v-1f42fb90] {\n  width: 150px;\n}\n.img-logo[data-v-1f42fb90]:hover {\n  filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);\n}\n.img-user[data-v-1f42fb90] {\n  width: 15px;\n}\n.img-user[data-v-1f42fb90]:hover {\n  filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);\n}\nul[data-v-1f42fb90] {\n  padding: 0 !important;\n}", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"ruddyblack\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff2 */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_black/ruddy-black-webfont.woff */ "./public/fonts/ruddy_black/ruddy-black-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"ruddybold\";\n  src: url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff2 */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff2")) + ") format(\"woff2\"), url(" + escape(__webpack_require__(/*! ../../../public/fonts/ruddy_bold/ruddy-bold-webfont.woff */ "./public/fonts/ruddy_bold/ruddy-bold-webfont.woff")) + ") format(\"woff\");\n  font-weight: normal;\n  font-style: normal;\n}\na[data-v-1f42fb90] {\n  font-family: \"Rubik\", sans-serif;\n}\nh1[data-v-1f42fb90] {\n  font-family: \"ruddybold\";\n}\n.button[data-v-1f42fb90] {\n  color: #000;\n  background-color: white;\n  transition: 0.1s;\n  padding: 0.25rem;\n  display: inline-block;\n  border: 2px solid #000;\n}\n.button[data-v-1f42fb90]:hover {\n  text-decoration: none;\n  transform: translate(-5px, -5px);\n  box-shadow: 5px 5px;\n}\n.button[data-v-1f42fb90]:active {\n  box-shadow: none;\n  background-color: #F7E828;\n  transform: translate(0, 0);\n}\nheader[data-v-1f42fb90] {\n  height: 90px;\n  align-items: center;\n  margin-top: 20px;\n  margin-bottom: 50px;\n  background-color: #fff !important;\n}\na.nav-link[data-v-1f42fb90] {\n  color: #000 !important;\n  font-family: \"ruddybold\" !important;\n}\na.nav-link[data-v-1f42fb90]:hover {\n  color: #FCEF03 !important;\n}\n.img-logo[data-v-1f42fb90] {\n  width: 150px;\n}\n.img-logo[data-v-1f42fb90]:hover {\n  filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);\n}\n.img-user[data-v-1f42fb90] {\n  width: 15px;\n}\n.img-user[data-v-1f42fb90]:hover {\n  filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);\n}\nul[data-v-1f42fb90] {\n  padding: 0 !important;\n}", ""]);
 
 // exports
 
@@ -21902,7 +21902,7 @@ module.exports = "/images/Risorsa5.svg?ea9e0f780400b6f3a2d858efe70c800b";
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Utente\BoolBnB\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! /Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/resources/js/front.js */"./resources/js/front.js");
 
 
 /***/ })

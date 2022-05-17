@@ -61,6 +61,7 @@ export default {
 
     a.nav-link {
         color: $lines !important;
+        font-family: 'ruddybold'!important;
         &:hover {
              color: $details !important;
         }
