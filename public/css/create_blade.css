@@ -1,0 +1,33 @@
+
+.sfoglia_create {
+    height: 54px; 
+    position: relative;
+}
+
+input[type="file"].ffc2 {
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.sfoglia_svg_create {
+    width: 67px;
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.description_create {
+    border: solid black 5px;
+    border-radius: 0;
+}
+
+.description_create:focus,
+.description_create:active {
+    border: 5px solid #F7E828 !important;
+}

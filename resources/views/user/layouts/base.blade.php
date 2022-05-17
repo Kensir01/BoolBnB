@@ -24,6 +24,7 @@
     <link href="{{ asset('css/show_blade.css') }}" rel="stylesheet">
     <link href="{{ asset('css/delete.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/create_blade.css') }}" rel="stylesheet">
     <!-- collegamento con file js - genitore -->
     @yield('script')
 
@@ -73,7 +74,7 @@
                                         {{ Auth::user()->name }}
                                     </a>
 
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-menu dropdown-menu-right bordo_logout" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item ms_link" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">

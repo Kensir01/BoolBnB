@@ -97,10 +97,9 @@
         
                 <div class="form-group">
                     <label for="image">Inserisci immagini</label>
-                    <div class="prova_sfoglia">
-                        <img src="http://127.0.0.1:8000/storage/elements/prova_3.svg" alt="Sfoglia :3" class="sfoglia_svg">
+                    <div class="sfoglia_edit">
+                        <img src="http://127.0.0.1:8000/storage/elements/prova_3.svg" alt="Sfoglia :3" class="sfoglia_svg_edit">
                         <input type="file" class="form-control form_img ffc1" id="image" name="image">
-                        {{-- <input type="file" class="form-control form_img ffc2" id="image" name="image"> --}}
                     </div>
                 </div>
 
@@ -108,13 +107,13 @@
                     
                     @if ($errors->any())
                         <div>
-                            <div class="prova_check">
+                            <div class="create_edit_check">
                                 <input type="checkbox" name="facilities[]" class="" id="facility_{{$facility->id}}" value="{{$facility->id}}" {{in_array($facility->id, old('facilities', []))?'checked':''}}>
                                 <label class="" for="facility_{{$facility->id}}">{{$facility->name}}</label>    
                             </div>
                         </div>
                     @else
-                        <div class="prova_check">
+                        <div class="create_edit_check">
                             <div>
                                 <input type="checkbox" name="facilities[]" class="" id="facility_{{$facility->id}}" value="{{$facility->id}}" {{$apartment->facilities->contains($facility->id)?'checked':''}}>
                                 <label class="" for="facility_{{$facility->id}}">{{$facility->name}}</label>

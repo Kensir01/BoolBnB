@@ -437,9 +437,6 @@ export default {
     .storia_logo:hover {
         filter: invert(73%) sepia(58%) saturate(545%) hue-rotate(12deg) brightness(110%) contrast(103%);
         transition: 0.7s;
-    }
-
-
-   
+    } 
 
 </style>
