@@ -1,5 +1,4 @@
 <template>
-    <div class="container">
         <div class="apartment">
         <div class="half">
             <div class="top">
@@ -15,19 +14,15 @@
                     <div class="bottom-part">
                         <p>{{description}}</p>
                         <router-link :to="'/apartments/' + slug" class="button">Guarda</router-link>
-
                     </div>
                 </div>
                 <div class="right">
-                    <img :src="'http://127.0.0.1:8000/storage/' + image">
+                    <div class="preview">
+                        <img :src="'http://127.0.0.1:8000/storage/' + image">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="half right">
-            <div class="top"></div>
-            <div class="bottom"></div>
-        </div>
-    </div>
     </div>
     
 </template>
@@ -57,18 +52,17 @@ export default {
 
     .apartment {
         color: $lines;
-        height: 450px;
+        min-height: 450px;
         min-width: 100%;
         display: flex;
+        margin: 1rem 0;
 
         .half {
-            width: 50%;
+            width: 100%;
             border: solid $lines;
-            border-width: 4px 0 4px 0;
+            border-width: 4px 4px 4px 4px;
+            padding-bottom: 1rem;
 
-            &.right {
-                border-left: 4px solid $lines;
-            }
             .top {
                 font-family: 'ruddybold';
                 font-size: 1.5rem;
@@ -111,10 +105,17 @@ export default {
                     display: flex;
                     justify-content: center;
 
-                    img {
+                    .preview {
                         width: 80%;
                         max-height: 350px;
                         margin: auto;
+
+                        img {
+                            object-fit: contain;
+                            width: 100%;
+                            height: 100%;
+                            max-height: 350px;
+                        };
                     }
                 }
             }
