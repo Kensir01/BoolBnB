@@ -1,5 +1,6 @@
 <template>
-    <div class="apartment">
+    <div class="container">
+        <div class="apartment">
         <div class="half">
             <div class="top">
                 {{index}}
@@ -27,6 +28,8 @@
             <div class="bottom"></div>
         </div>
     </div>
+    </div>
+    
 </template>
 
 <script>
