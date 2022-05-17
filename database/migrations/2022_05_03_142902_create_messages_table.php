@@ -19,9 +19,9 @@ class CreateMessagesTable extends Migration
             $table->string('email');
             $table->text('content');
 
-            $table->unsignedBigInteger('apartment_id');
+            $table->unsignedBigInteger('apartment_id')->nullable();
             
-            $table->foreign('apartment_id')->references('id')->on('apartments');
+            $table->foreign('apartment_id')->references('id')->on('apartments')->onDelete('set null');
 
             $table->timestamps();
         });
@@ -34,6 +34,11 @@ class CreateMessagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('messages');
+        Schema::dropIfExists('messages', function(Blueprint $table) {
+            $table->dropForeign('apartments_message_id_foreign');
+
+            $table->dropColumn('messsage_id');
+        });
+       
     }
 }
