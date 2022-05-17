@@ -133,9 +133,11 @@ class ApartmentController extends Controller
      */
     public function show($slug)
     {
-        $apartment = Apartment::where('slug', '=', $slug)->first();
+
+        $apartment = Apartment::with('messages')->where('slug', '=', $slug)->first();
         $this->authorize('view', $apartment);
         return view('user.apartments.show', compact('apartment'));
+
     }
 
     /**

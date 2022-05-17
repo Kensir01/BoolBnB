@@ -64,6 +64,17 @@
 
         </div>
     </div>
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            @foreach ($apartment->messages as $message)
+                <div class="message">
+                    <div class="from">{{$message->email}}</div>
+                    <div class="content">{{$message->content}}</div>
+                </div>
+            @endforeach
+
+        </div>
+    </div>
 </div>
 
 @endsection
