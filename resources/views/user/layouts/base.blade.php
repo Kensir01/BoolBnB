@@ -49,7 +49,6 @@
                             <!-- inserisci link menu -->
                             
                                 <a class="nav-link ms_link" href="{{route('user.apartments.index')}}">Appartamenti</a>
-                                <a class="nav-link ms_link" href="#">Messaggi</a>
                             
                             {{-- <a class="nav-link" href="{{route('user.home')}}">Dashboard</a> --}}
                             
