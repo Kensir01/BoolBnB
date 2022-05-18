@@ -6,6 +6,11 @@
             <div class="col-md-12">
 
                 <div class="row justify-content-between p-4">
+                    <div class="col-2">
+                        <a onclick="document.getElementById('showMessage').style.display='block'" class="messageButton">
+                            <img src="http://127.0.0.1:8000/storage/icons/normal/mex_white.svg" alt="mostra">
+                        </a>
+                    </div>
                     <div class="col-4"></div>
                     <div class="col-2">
                         <a class="button" href="{{route('user.apartments.create')}}">Aggiungi appartamento</a>
@@ -60,14 +65,14 @@
                                             @csrf
                                             @method('DELETE')
                   
-                                                {{-- chiedere conferma della cancellazione, prima di eliminare l’elemento --}}
-                                                {{-- <a type="submit" onclick="return confirm('Sei sicuro?')"><img src="http://127.0.0.1:8000/storage/icons/normal/cancella.svg" alt="mostra" class="svg_dash"></a> --}}
-                                                <a type="submit" onclick="document.getElementById('btnDelete').style.display='block'"><img src="http://127.0.0.1:8000/storage/icons/normal/cancella.svg" alt="mostra" class="svg_dash"></a>
+                                            {{-- chiedere conferma della cancellazione, prima di eliminare l’elemento --}}
+                                            {{-- <a type="submit" onclick="return confirm('Sei sicuro?')"><img src="http://127.0.0.1:8000/storage/icons/normal/cancella.svg" alt="mostra" class="svg_dash"></a> --}}
+                                            <a type="submit" onclick="document.getElementById('btnDelete').style.display='block'"><img src="http://127.0.0.1:8000/storage/icons/normal/cancella.svg" alt="mostra" class="svg_dash"></a>
 
-                                                
-                                                {{-- <button onclick="document.getElementById('id01').style.display='block'"><img src="http://127.0.0.1:8000/storage/icons/normal/cancella.svg" alt="mostra" class="svg_dash"></button> --}}
+                                            
+                                            {{-- <button onclick="document.getElementById('id01').style.display='block'"><img src="http://127.0.0.1:8000/storage/icons/normal/cancella.svg" alt="mostra" class="svg_dash"></button> --}}
 
-                                                <div id="btnDelete" class="modal">
+                                            <div id="btnDelete" class="modal">
                                                 <span onclick="document.getElementById('btnDelete').style.display='none'" class="close" title="Close Modal">×</span>
                                                 <form class="modal-content">
                                                     <div class="containerDeletebtn">
@@ -76,7 +81,7 @@
                                                         
                                                             
                                                             <img src="http://127.0.0.1:8000/storage/elements/bust-53.svg" class="imageDelete" alt="omino">
-                                                   
+                                                
 
                                                         <div class="clearfix centro">
                                                             <button type="button" onclick="document.getElementById('btnDelete').style.display='none'" class="annulla">Annulla</button>
@@ -85,11 +90,42 @@
 
                                                     </div>
                                                 </form>
+                                            </div>
+                                        </form>
+
+                                        <div id="showMessage" class="modal messages">
+                                            <span onclick="document.getElementById('showMessage').style.display='none'" class="exit" title="Close Modal">×</span>
+                                            <div class="holes"></div>
+                                            <div class="dashed"></div>
+
+                                                <div class="messagesBox">
+                                                    @foreach ($apartments as $apartment)
+                                                        @if (count($apartment->messages) != 0)
+                                                        
+                                                            <div class="singleApartmentMessages">
+                                                                <div class="text-left pl-2 mb-2">
+                                                                    <h3 class="title"><a href="{{route('user.apartments.show', $apartment->slug)}}">{{$apartment->title}}</a></h3>
+                                                                </div>
+                                                                @foreach ($apartment->messages as $message)
+                                                                    <div class="singleMessage">
+                                                                        <div class="info pl-2">
+                                                                            <div>{{$message->email}}</div>
+                                                                            <div class="timeStamp">{{$message->created_at}}</div>
+                                                                        </div>
+                                                                        <div class="contentMessage">
+                                                                            {{$message->content}}
+                                                                        </div>
+                                                                    </div>
+
+                                                                @endforeach
+                                                            </div>
+                                                        @endif
+
+                                                    @endforeach
                                                 </div>
 
+                                        </div>
 
-                                        </form>
-    
                                     </div>
                                 </td>
                             </tr>

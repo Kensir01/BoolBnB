@@ -54,15 +54,27 @@
             {{-- <div><strong>Latitudine: </strong>{{$apartment->latitude}}</div>
             <div><strong>Longitudine: </strong>{{$apartment->longitude}}</div>
             <div><strong>Slug: </strong>{{$apartment->slug}}</div> --}}
-            <div class="row">
-                <div class="col-5"></div>
-                <div class="col-2 align-self-center">
-                    <a href="{{url()->previous()}}" class="button button_show_blade">Torna indietro</a>
-                </div>
-                <div class="col-4"></div>
-            </div>
 
         </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <h1 class="my-4">Messaggi</h1>
+            @foreach ($apartment->messages as $message)
+                <div class="message">
+                    <div class="from">{{$message->email}}</div>
+                    <div class="content">{{$message->content}}</div>
+                </div>
+            @endforeach
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="col-2 align-self-center">
+            <a href="{{url()->previous()}}" class="button button_show_blade">Torna indietro</a>
+        </div>
+        <div class="col-4"></div>
     </div>
 </div>
 
