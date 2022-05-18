@@ -169,6 +169,7 @@ class ApartmentsTableSeeder extends Seeder
                 'user_id' => 1,
             ],
         ];
+        
         foreach($apartments as $apartment){
             $newApartment=new Apartment();
             $newApartment->fill($apartment);
@@ -177,5 +178,4 @@ class ApartmentsTableSeeder extends Seeder
         }
     }
 }
-
-
+ 
