@@ -2368,7 +2368,7 @@ __webpack_require__.r(__webpack_exports__);
         if (this.search.length % 2 == 0) {
           axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
             params: {
-              key: "dKIdA4c5OhnbGF5avb5kToCh3jNOptyA",
+              key: "7kWYJDQnwA2ciqPMSwAUBU9nsoFLjVCc",
               typeahead: true,
               limit: 3
             }
@@ -2619,7 +2619,7 @@ __webpack_require__.r(__webpack_exports__);
         if (this.search.length % 2 == 0) {
           axios.get("https://api.tomtom.com/search/2/search/".concat(this.search, ".json"), {
             params: {
-              key: "dKIdA4c5OhnbGF5avb5kToCh3jNOptyA",
+              key: "7kWYJDQnwA2ciqPMSwAUBU9nsoFLjVCc",
               typeahead: true,
               limit: 3
             }
@@ -5251,7 +5251,7 @@ var render = function () {
                 _c("img", {
                   staticClass: "mySlides",
                   attrs: {
-                    src: __webpack_require__(/*! ../../../storage/app/public/stock_bnb_images/Risorsa1.svg */ "./storage/app/public/stock_bnb_images/Risorsa1.svg"),
+                    src: __webpack_require__(/*! ../../../storage/app/public/stock_bnb_images/1.jpg */ "./storage/app/public/stock_bnb_images/1.jpg"),
                   },
                 }),
               ]),
@@ -5260,7 +5260,7 @@ var render = function () {
                 _c("img", {
                   staticClass: "mySlides",
                   attrs: {
-                    src: __webpack_require__(/*! ../../../storage/app/public/stock_bnb_images/Risorsa2.svg */ "./storage/app/public/stock_bnb_images/Risorsa2.svg"),
+                    src: __webpack_require__(/*! ../../../storage/app/public/stock_bnb_images/2.jpg */ "./storage/app/public/stock_bnb_images/2.jpg"),
                   },
                 }),
               ]),
@@ -5269,7 +5269,7 @@ var render = function () {
                 _c("img", {
                   staticClass: "mySlides",
                   attrs: {
-                    src: __webpack_require__(/*! ../../../storage/app/public/stock_bnb_images/Risorsa3.svg */ "./storage/app/public/stock_bnb_images/Risorsa3.svg"),
+                    src: __webpack_require__(/*! ../../../storage/app/public/stock_bnb_images/3.jpg */ "./storage/app/public/stock_bnb_images/3.jpg"),
                   },
                 }),
               ]),
@@ -5278,7 +5278,7 @@ var render = function () {
                 _c("img", {
                   staticClass: "mySlides",
                   attrs: {
-                    src: __webpack_require__(/*! ../../../storage/app/public/stock_bnb_images/Risorsa4.svg */ "./storage/app/public/stock_bnb_images/Risorsa4.svg"),
+                    src: __webpack_require__(/*! ../../../storage/app/public/stock_bnb_images/4.jpg */ "./storage/app/public/stock_bnb_images/4.jpg"),
                   },
                 }),
               ]),
@@ -5287,7 +5287,7 @@ var render = function () {
                 _c("img", {
                   staticClass: "mySlides",
                   attrs: {
-                    src: __webpack_require__(/*! ../../../storage/app/public/stock_bnb_images/Risorsa5.svg */ "./storage/app/public/stock_bnb_images/Risorsa5.svg"),
+                    src: __webpack_require__(/*! ../../../storage/app/public/stock_bnb_images/5.jpg */ "./storage/app/public/stock_bnb_images/5.jpg"),
                   },
                 }),
               ]),
@@ -21840,58 +21840,58 @@ module.exports = "/images/Risorsa34.svg?5d69c4273579ecd47bbf36efa930668c";
 
 /***/ }),
 
-/***/ "./storage/app/public/stock_bnb_images/Risorsa1.svg":
-/*!**********************************************************!*\
-  !*** ./storage/app/public/stock_bnb_images/Risorsa1.svg ***!
-  \**********************************************************/
+/***/ "./storage/app/public/stock_bnb_images/1.jpg":
+/*!***************************************************!*\
+  !*** ./storage/app/public/stock_bnb_images/1.jpg ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/img-loader/index.js):\nError: ENOENT: no such file or directory, open '/Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/storage/app/public/stock_bnb_images/Risorsa1.svg'");
+module.exports = "/images/1.jpg?3e5d917b8ff590b155087d2b1e2b5325";
 
 /***/ }),
 
-/***/ "./storage/app/public/stock_bnb_images/Risorsa2.svg":
-/*!**********************************************************!*\
-  !*** ./storage/app/public/stock_bnb_images/Risorsa2.svg ***!
-  \**********************************************************/
+/***/ "./storage/app/public/stock_bnb_images/2.jpg":
+/*!***************************************************!*\
+  !*** ./storage/app/public/stock_bnb_images/2.jpg ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/img-loader/index.js):\nError: ENOENT: no such file or directory, open '/Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/storage/app/public/stock_bnb_images/Risorsa2.svg'");
+module.exports = "/images/2.jpg?695dfb723d10034ee9d69f78a13d024e";
 
 /***/ }),
 
-/***/ "./storage/app/public/stock_bnb_images/Risorsa3.svg":
-/*!**********************************************************!*\
-  !*** ./storage/app/public/stock_bnb_images/Risorsa3.svg ***!
-  \**********************************************************/
+/***/ "./storage/app/public/stock_bnb_images/3.jpg":
+/*!***************************************************!*\
+  !*** ./storage/app/public/stock_bnb_images/3.jpg ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/img-loader/index.js):\nError: ENOENT: no such file or directory, open '/Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/storage/app/public/stock_bnb_images/Risorsa3.svg'");
+module.exports = "/images/3.jpg?4503fb8d1687b628a103e3905f5b5744";
 
 /***/ }),
 
-/***/ "./storage/app/public/stock_bnb_images/Risorsa4.svg":
-/*!**********************************************************!*\
-  !*** ./storage/app/public/stock_bnb_images/Risorsa4.svg ***!
-  \**********************************************************/
+/***/ "./storage/app/public/stock_bnb_images/4.jpg":
+/*!***************************************************!*\
+  !*** ./storage/app/public/stock_bnb_images/4.jpg ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/img-loader/index.js):\nError: ENOENT: no such file or directory, open '/Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/storage/app/public/stock_bnb_images/Risorsa4.svg'");
+module.exports = "/images/4.jpg?93c5b3d3bfd431d7925057180f243842";
 
 /***/ }),
 
-/***/ "./storage/app/public/stock_bnb_images/Risorsa5.svg":
-/*!**********************************************************!*\
-  !*** ./storage/app/public/stock_bnb_images/Risorsa5.svg ***!
-  \**********************************************************/
+/***/ "./storage/app/public/stock_bnb_images/5.jpg":
+/*!***************************************************!*\
+  !*** ./storage/app/public/stock_bnb_images/5.jpg ***!
+  \***************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/img-loader/index.js):\nError: ENOENT: no such file or directory, open '/Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/storage/app/public/stock_bnb_images/Risorsa5.svg'");
+module.exports = "/images/5.jpg?4315447a039fa30cf5b8a08b99857896";
 
 /***/ }),
 
@@ -21902,7 +21902,7 @@ throw new Error("Module build failed (from ./node_modules/img-loader/index.js):\
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/resources/js/front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Utente\BoolBnB\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

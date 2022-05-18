@@ -39,3 +39,20 @@
 .prove_address {
     line-height: 1.1;
 }
+
+.message {
+    border: 4px solid black;
+    display: flex;
+    margin: 1rem 0;
+}
+
+.from {
+    background-color: #F7E828;
+    padding: 1rem;
+    border-right: 4px solid black;
+}
+
+.content {
+    padding: 1rem;
+}
+

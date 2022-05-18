@@ -64,7 +64,7 @@ class ApartmentsTableSeeder extends Seeder
                 'latitude' => 45.43861,
                 'longitude' => 9.17826,
                 'slug' => 'appartamento-via-meda',
-                'user_id' => 1,
+                'user_id' => $faker->numberBetween(1, 10),
             ],
             [
                 'title' => "Il Naviglio dietro l'angolo",
@@ -81,7 +81,7 @@ class ApartmentsTableSeeder extends Seeder
                 'latitude' => 45.45342,
                 'longitude' => 9.17489,
                 'slug' => 'il-naviglio-dietro-langolo',
-                'user_id' => 1,
+                'user_id' => $faker->numberBetween(1, 10),
             ],
             [
                 'title' => 'La Bela Madunina',
@@ -98,7 +98,7 @@ class ApartmentsTableSeeder extends Seeder
                 'latitude' => 45.46488,
                 'longitude' => 9.18959,
                 'slug' => 'la-bela-madunina',
-                'user_id' => 1,
+                'user_id' => $faker->numberBetween(1, 10),
             ],
             [
                 'title' => 'La casa dello scultore',
@@ -115,7 +115,7 @@ class ApartmentsTableSeeder extends Seeder
                 'latitude' => 41.90296,
                 'longitude' => 12.47599,
                 'slug' => 'la-casa-dello-scultore',
-                'user_id' => 1,
+                'user_id' => $faker->numberBetween(1, 10),
             ],
             [
                 'title' => 'Casa in Trevi',
@@ -132,7 +132,7 @@ class ApartmentsTableSeeder extends Seeder
                 'latitude' => 41.90041,
                 'longitude' => 12.48373,
                 'slug' => 'casa-in-trevi',
-                'user_id' => 1,
+                'user_id' => $faker->numberBetween(1, 10),
             ],
             [
                 'title' => 'Appartamento a Roma',
@@ -149,7 +149,7 @@ class ApartmentsTableSeeder extends Seeder
                 'latitude' => 41.9059015,
                 'longitude' => 12.477944,
                 'slug' => 'appartamento-a-roma',
-                'user_id' => 1,
+                'user_id' => $faker->numberBetween(1, 10),
             ],
             [
                 'title' => 'Interno 7 Appartamento Gioioso',
@@ -166,7 +166,7 @@ class ApartmentsTableSeeder extends Seeder
                 'latitude' => 45.3875192,
                 'longitude' => 11.8974231,
                 'slug' => 'interno-7-appartamento-gioioso',
-                'user_id' => 1,
+                'user_id' => $faker->numberBetween(1, 10),
             ],
         ];
         
