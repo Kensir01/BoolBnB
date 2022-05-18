@@ -21847,7 +21847,7 @@ module.exports = "/images/Risorsa34.svg?5d69c4273579ecd47bbf36efa930668c";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/Risorsa1.svg?b5a473908a0946d255bb9d5eee0d8543";
+throw new Error("Module build failed (from ./node_modules/img-loader/index.js):\nError: ENOENT: no such file or directory, open '/Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/storage/app/public/stock_bnb_images/Risorsa1.svg'");
 
 /***/ }),
 
@@ -21858,7 +21858,7 @@ module.exports = "/images/Risorsa1.svg?b5a473908a0946d255bb9d5eee0d8543";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/Risorsa2.svg?57a95ac92c7468361266151816002a13";
+throw new Error("Module build failed (from ./node_modules/img-loader/index.js):\nError: ENOENT: no such file or directory, open '/Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/storage/app/public/stock_bnb_images/Risorsa2.svg'");
 
 /***/ }),
 
@@ -21869,7 +21869,7 @@ module.exports = "/images/Risorsa2.svg?57a95ac92c7468361266151816002a13";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/Risorsa3.svg?f52271a9324a74c0ae83b95a6923fd36";
+throw new Error("Module build failed (from ./node_modules/img-loader/index.js):\nError: ENOENT: no such file or directory, open '/Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/storage/app/public/stock_bnb_images/Risorsa3.svg'");
 
 /***/ }),
 
@@ -21880,7 +21880,7 @@ module.exports = "/images/Risorsa3.svg?f52271a9324a74c0ae83b95a6923fd36";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/Risorsa4.svg?830744eeedf3e16ac70ea799c3718c65";
+throw new Error("Module build failed (from ./node_modules/img-loader/index.js):\nError: ENOENT: no such file or directory, open '/Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/storage/app/public/stock_bnb_images/Risorsa4.svg'");
 
 /***/ }),
 
@@ -21891,7 +21891,7 @@ module.exports = "/images/Risorsa4.svg?830744eeedf3e16ac70ea799c3718c65";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/Risorsa5.svg?ea9e0f780400b6f3a2d858efe70c800b";
+throw new Error("Module build failed (from ./node_modules/img-loader/index.js):\nError: ENOENT: no such file or directory, open '/Users/alicecolombari/Desktop/BOOLBNB/BoolBnB/storage/app/public/stock_bnb_images/Risorsa5.svg'");
 
 /***/ }),
 
