@@ -25,6 +25,7 @@
     <link href="{{ asset('css/delete.css') }}" rel="stylesheet">
     <link href="{{ asset('css/header.css') }}" rel="stylesheet">
     <link href="{{ asset('css/create_blade.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/messageIndex.css') }}" rel="stylesheet">
     <!-- collegamento con file js - genitore -->
     @yield('script')
 
