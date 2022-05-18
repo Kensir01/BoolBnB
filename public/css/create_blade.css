@@ -5,6 +5,7 @@
 }
 
 input[type="file"].ffc2 {
+    padding-left: 1.35rem;
     opacity: 1;
     position: absolute;
     top: 0px;
@@ -14,10 +15,12 @@ input[type="file"].ffc2 {
 }
 
 .sfoglia_svg_create {
+    transform: scale(1.6);
+    border: 2px solid black;
     width: 67px;
     position: absolute;
-    top: 10px;
-    left: 14px;
+    top: 8px;
+    left: 16px;
     z-index: 2;
     pointer-events: none;
 }

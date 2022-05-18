@@ -6,26 +6,23 @@
       <div class="col-12 col-md-4">
         <h5>INFORMAZIONI</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Newsroom</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Opportunità di lavoro</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Scopri le nuove funzionalità</a></li>
+          <li class="nav-item mb-2"><router-link to="/funzionalita" class="nav-link p-0">Scopri le nuove funzionalità</router-link></li>
+          <li class="nav-item mb-2"><router-link to="/chisiamo" class="nav-link p-0">Chi siamo</router-link></li>
         </ul>
       </div>
 
       <div class="col-12 col-md-4">
         <h5>COMMUNITY</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Argomenti di discussione</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Tagging e messaggistica diretta</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Esperienza locale</a></li>
+          <li class="nav-item mb-2"><router-link to="/messaggistica" class="nav-link p-0">Tagging e messaggistica diretta</router-link></li>
+          <li class="nav-item mb-2"><router-link to="/advancedsearch" class="nav-link p-0">Cerca un appartamento</router-link></li>
         </ul>
       </div>
 
       <div class="col-12 col-md-4">
         <h5>OSPITA</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Prova a ospitare</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Vai al forum della community</a></li>
+          <li class="nav-item mb-2"><a href="/user/apartments/create" class="nav-link p-0">Prova a ospitare</a></li>
         </ul>
       </div>
 

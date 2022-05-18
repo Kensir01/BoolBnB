@@ -40,21 +40,12 @@
 
             <div class="car-content">
                 <carousel paginationColor="#FCEF03">
-                    <slide>
-                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/1.jpg">
+                    <slide v-for="(apartment,index) in carosello" :key="index">
+                        <router-link :to="'/apartments/' + apartment.slug"><img :src="apartment['image']" class="mySlides"></router-link>
+                        
+
                     </slide>
-                    <slide>
-                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/8.jpg">
-                    </slide>
-                    <slide>
-                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/3.jpg">
-                    </slide>
-                    <slide>
-                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/4.jpg">
-                    </slide>
-                    <slide>
-                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/5.jpg">
-                    </slide>
+                    
                 </carousel>
             </div>
             
@@ -106,7 +97,8 @@ export default {
         return {
             search: '',
             filtered: [],
-            autocompleteList: []
+            autocompleteList: [],
+            carosello: [],
             
             //apiKey: process.env.MIX_TOM_TOM_KEY,
             //apartments : null,
@@ -115,6 +107,16 @@ export default {
         }
     },
     methods: {
+        getAllApartments() {
+            axios.get("/api/apartments", {
+            })
+            .then((response) => {
+                console.log(response.data)
+                for(let i=0; i<4; i++) {
+                    this.carosello.push(response.data.data[i]);
+                }
+            });
+        },
         getSearch() {
             this.$router.push({
                 name: "advancedsearch",
@@ -246,6 +248,7 @@ export default {
     mounted() {
         // this.getAllApartments();
         console.log('user email is: ' + this.$userEmail);
+        this.getAllApartments();
     }
 }
 </script>

@@ -147,6 +147,7 @@ input[type='checkbox']:checked{
 
 
 input[type="file"].ffc1 {
+    padding-left: 1.35rem;
     opacity: 1;
     position: absolute;
     top: 0px;
@@ -162,8 +163,10 @@ input[type="file"].ffc1 {
 
 .sfoglia_svg_edit {
     width: 67px;
+    transform: scale(1.6);
+    border: 2px solid black;
     position: absolute;
-    top: 10px;
+    top: 8px;
     left: 16px;
     z-index: 2;
     pointer-events: none;
