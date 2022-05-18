@@ -18,7 +18,9 @@
                 </div>
                 <div class="right">
                     <div class="preview">
+
                         <img :src="'http://127.0.0.1:8000/storage/' + image">
+
                     </div>
                 </div>
             </div>
@@ -55,7 +57,7 @@ export default {
         min-height: 450px;
         min-width: 100%;
         display: flex;
-        margin: 1rem 0;
+        margin: 2rem 0;
 
         .half {
             width: 100%;
@@ -104,6 +106,7 @@ export default {
                     width: 50%;
                     display: flex;
                     justify-content: center;
+                    
 
                     .preview {
                         width: 80%;
@@ -116,6 +119,8 @@ export default {
                             height: 100%;
                             max-height: 350px;
                         };
+                    
+                            
                     }
                 }
             }
