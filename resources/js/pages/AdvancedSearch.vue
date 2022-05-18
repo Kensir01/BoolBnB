@@ -287,7 +287,7 @@ export default {
     border: 4px solid $lines;
     width: 80%;
     min-height: 350px;
-    margin: auto;
+    margin: 0px auto 40px auto;
     background-color: $details;
     position: relative;
   }
