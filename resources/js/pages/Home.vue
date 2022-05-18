@@ -41,19 +41,19 @@
             <div class="car-content">
                 <carousel paginationColor="#FCEF03">
                     <slide>
-                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/Risorsa1.svg">
+                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/1.jpg">
                     </slide>
                     <slide>
-                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/Risorsa2.svg">
+                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/2.jpg">
                     </slide>
                     <slide>
-                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/Risorsa3.svg">
+                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/3.jpg">
                     </slide>
                     <slide>
-                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/Risorsa4.svg">
+                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/4.jpg">
                     </slide>
                     <slide>
-                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/Risorsa5.svg">
+                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/5.jpg">
                     </slide>
                 </carousel>
             </div>
