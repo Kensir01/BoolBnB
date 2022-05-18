@@ -26,7 +26,7 @@ export default {
                     if(!response.data.success) {
                         this.$router.push({name: 'notFound'});
                     } else {
-                        console.log(response.data.data);
+                        //console.log(response.data.data);
                         this.apartment = response.data.data;
                     }
                 });
@@ -34,6 +34,9 @@ export default {
     },
     created() {
         this.getSingleApartment();
+    },
+    mounted() {
+        window.scrollTo(0, 0)
     }
 }
 </script>

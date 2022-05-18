@@ -48,11 +48,7 @@
                         <!-- Left Side Of Navbar -->
                         <ul class="nav navbar-nav m-auto">
                             <!-- inserisci link menu -->
-                            
-                                <a class="nav-link ms_link" href="{{route('user.apartments.index')}}">Appartamenti</a>
-                            
                             {{-- <a class="nav-link" href="{{route('user.home')}}">Dashboard</a> --}}
-                            
 
                         </ul>
 

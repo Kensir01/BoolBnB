@@ -17,7 +17,7 @@
                     <a class="nav-link" href="/register">Registrati</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/user" v-if="$userEmail != ''">
+                    <a class="nav-link" href="/user/apartments" v-if="$userEmail != ''">
                         <img class="img-user" src="http://127.0.0.1:8000/storage/icons/normal/user.svg" alt="User logo">
                     </a>
                 </li>

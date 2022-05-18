@@ -180,8 +180,10 @@ export default {
     mounted() {
       this.getFacilities()
 
+
     },
     activated() {
+      window.scrollTo(0, 0)
       this.firstSearch()
     }
 }

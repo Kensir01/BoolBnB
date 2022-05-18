@@ -6,6 +6,9 @@ Vue.use(VueRouter);
 import Home from './pages/Home';
 import AdvancedSearch from './pages/AdvancedSearch';
 import Apartment from './pages/Apartment';
+import ChiSiamo from './pages/ChiSiamo';
+import Messaggistica from './pages/Messaggistica';
+import Funzionalita from './pages/Funzionalita';
 import NotFound from './pages/NotFound';
 
 const router = new VueRouter({
@@ -29,6 +32,21 @@ const router = new VueRouter({
             path: '/apartments/:slug',
             name: 'apartment',
             component: Apartment
+        },
+        {
+            path: '/chisiamo',
+            name: 'chiSiamo',
+            component: ChiSiamo
+        },
+        {
+            path: '/messaggistica',
+            name: 'messaggistica',
+            component: Messaggistica
+        },
+        {
+            path: '/funzionalita',
+            name: 'funzionalita',
+            component: Funzionalita
         },
         {
             // prendi qualsiasi cosa ci sia
