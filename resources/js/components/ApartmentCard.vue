@@ -375,7 +375,7 @@ export default {
                     }
 
                     .description_text {
-                        font-size: 1.75rem;
+                        font-size: 14px;
                         font-family: 'rubik';
                         width: 300px;
                         overflow-wrap: break-word;

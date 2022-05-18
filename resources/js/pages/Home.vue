@@ -44,7 +44,7 @@
                         <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/1.jpg">
                     </slide>
                     <slide>
-                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/2.jpg">
+                        <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/8.jpg">
                     </slide>
                     <slide>
                         <img class="mySlides" src="../../../storage/app/public/stock_bnb_images/3.jpg">
