@@ -28,7 +28,7 @@ Route::middleware('auth')
         ->name('home');
 
        Route::resource('apartments', 'ApartmentController');
-       // Route::resource('/categories', 'CategoryController');
+       Route::resource('/messages', 'MessageController');
        // Route::resource('/tags', 'TagController');
     });
 

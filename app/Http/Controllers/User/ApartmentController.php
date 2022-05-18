@@ -23,7 +23,7 @@ class ApartmentController extends Controller
      */
     public function index()
     {
-        $apartments = Apartment::where('user_id', Auth::id())->get();
+        $apartments = Apartment::with('messages')->where('user_id', Auth::id())->get();
 
         return view('user.apartments.index', compact('apartments'));
     }
@@ -133,9 +133,11 @@ class ApartmentController extends Controller
      */
     public function show($slug)
     {
-        $apartment = Apartment::where('slug', '=', $slug)->first();
+
+        $apartment = Apartment::with('messages')->where('slug', '=', $slug)->first();
         $this->authorize('view', $apartment);
         return view('user.apartments.show', compact('apartment'));
+
     }
 
     /**
