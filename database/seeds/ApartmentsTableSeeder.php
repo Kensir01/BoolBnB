@@ -14,13 +14,13 @@ class ApartmentsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
 
         //Prende tutti i file dalla cartella /storage/stock_bnb_images
          $stockImages = Storage::files('stock_bnb_images');
         // Conta quanti file sono
-         $imagesLength = count($stockImages);
+        //$imagesLength = count($stockImages);
 
         // for ($i=0; $i<40; $i++) {
         //     $newApartment = new Apartment();
@@ -57,7 +57,7 @@ class ApartmentsTableSeeder extends Seeder
                 'beds_number' => 1,
                 'bathrooms_number' => 1,
                 'square_meters' => 201,
-                'image' => 'cover',
+               
                 'city' => 'Milano',
                 'zip_code' => '20141',
                 'address' => 'Via Giuseppe Meda, 52',
@@ -74,7 +74,7 @@ class ApartmentsTableSeeder extends Seeder
                 'beds_number' => 2,
                 'bathrooms_number' => 1,
                 'square_meters' => 60,
-                'image' => 'cover',
+                
                 'city' => 'Milano',
                 'zip_code' => '20144',
                 'address' => 'Viale Gorizia, 22',
@@ -91,7 +91,7 @@ class ApartmentsTableSeeder extends Seeder
                 'beds_number' => 1,
                 'bathrooms_number' => 1,
                 'square_meters' => 90,
-                'image' => 'cover',
+                
                 'city' => 'Milano',
                 'zip_code' => '20121',
                 'address' => 'Piazza del duomo 21',
@@ -108,7 +108,7 @@ class ApartmentsTableSeeder extends Seeder
                 'beds_number' => 3,
                 'bathrooms_number' => 2,
                 'square_meters' => 201,
-                'image' => 'cover',
+                
                 'city' => 'Roma',
                 'zip_code' => '00186',
                 'address' => 'Via del clementino 91',
@@ -125,7 +125,7 @@ class ApartmentsTableSeeder extends Seeder
                 'beds_number' => 3,
                 'bathrooms_number' => 2,
                 'square_meters' => 201,
-                'image' => 'cover',
+               
                 'city' => 'Roma',
                 'zip_code' => '00187',
                 'address' => 'Via di San Vincenzo 30',
@@ -142,7 +142,7 @@ class ApartmentsTableSeeder extends Seeder
                 'beds_number' => 3,
                 'bathrooms_number' => 2,
                 'square_meters' => 201,
-                'image' => 'cover',
+                
                 'city' => 'Roma',
                 'zip_code' => '00187',
                 'address' => 'Largo dei Lombardi 23',
@@ -159,7 +159,7 @@ class ApartmentsTableSeeder extends Seeder
                 'beds_number' => 4,
                 'bathrooms_number' => 2,
                 'square_meters' => 100,
-                'image' => 'cover',
+                
                 'city' => 'Padova',
                 'zip_code' => '35127',
                 'address' => 'Via Antonio Riccoboni, 6',
@@ -170,11 +170,14 @@ class ApartmentsTableSeeder extends Seeder
             ],
         ];
         
+        $imageIndex = 0;
+
         foreach($apartments as $apartment){
             $newApartment=new Apartment();
+            $newApartment->image = $stockImages[$imageIndex];
             $newApartment->fill($apartment);
             $newApartment->save();
-
+            $imageIndex += 1;
         }
     }
 }
