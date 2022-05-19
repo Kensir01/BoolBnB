@@ -73,6 +73,9 @@
 <script>
 export default {
     name: 'chisiamo',
+    mounted() {
+      window.scrollTo(0, 0)
+    }
 }
 </script>
 

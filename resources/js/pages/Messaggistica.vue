@@ -2,6 +2,9 @@
     <div class="container">
         <div class="jumbo">
             <h1>La nostra messaggistica diretta!</h1>
+            <img src="http://127.0.0.1:8000/storage/elements/LayingDoodle.svg" alt="" class="img-extra">
+            <img src="http://127.0.0.1:8000/storage/elements/SelfieDoodle.svg" alt="" class="img-extra-sx">
+
         </div>
 
         <div class="card-container">
@@ -27,7 +30,10 @@
 
 <script>
 export default {
-
+    name:'Messaggistica',
+    mounted() {
+      window.scrollTo(0, 0)
+    }
 }
 </script>
 
@@ -46,9 +52,30 @@ export default {
         justify-content: center;
         align-items: center;
         margin: auto;
+        position: relative;
 
         h1 {
             text-align: center;
+        }
+
+        .img-extra {
+            max-width: 400px;
+            width: 60%;
+            transform: translate(50%, 50%);
+            z-index: 1;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+         .img-extra-sx {
+            max-width: 400px;
+            width: 60%;
+            transform: translate(-50%, 50%);
+            z-index: 1;
+            position: absolute;
+            bottom: 60px;
+            left: 0;
         }
     }
 
@@ -60,7 +87,7 @@ export default {
         .card {
 
             .card-body {
-                border: 0 5px 5px 5px;
+                border-width: 0 5px 5px 5px;
                 border-style: solid;
                 border-color: $lines;
 
