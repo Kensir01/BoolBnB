@@ -15,11 +15,13 @@ All'interno della pagina principale puoi  **cercare appartamenti** in una città
 Se possiedi un appartamento che non utilizzi, inseriscilo all'interno del nostro database e tramite BoolBnB potrai affittarlo e gestirlo tramite l'**area amministrativa**, uno spazio per i tuoi appartamenti: per crearne dei nuovi, modificarli o se necessario eliminarli. 
 Grazie al servizio di **messaggistica** interno di BoolBnB, puoi contattare il proprietario dell' appartamento che ti piace per chiedere informazioni aggiuntive o **visualizzare** i messaggi ricevuti.
 
-<div href="https://imgur.com/yb6kscp"><img src="https://i.imgur.com/yb6kscp.jpg" title="source: imgur.com" /></div>
+
+<div href="https://imgur.com/5YvwHj6"><img src="https://i.imgur.com/5YvwHj6.png" title="source: imgur.com" /></div>
+
 
 <br>
 
-<div align="center" href="https://imgur.com/TMNeL4v"><img width="400" src="https://i.imgur.com/TMNeL4v.png" title="source: imgur.com" /></div>
+<div align="center" href="https://imgur.com/mXCmypL"><img width="400" src="https://i.imgur.com/TMNeL4v.png" title="source: imgur.com" /></div>
 
 ##  BoolBnB su diversi dispositivi
 
@@ -32,7 +34,9 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 <a href="https://imgur.com/s9stxwl"><img src="https://i.imgur.com/s9stxwl.jpg" title="source: imgur.com" /></a>
   <br>
  <div align="center" href="https://imgur.com/NbtRPNN">
- <img width="400"  src="https://i.imgur.com/NbtRPNN.png" title="source: imgur.com" /></div>
+ <img src="https://i.imgur.com/mXCmypL.png" title="source: imgur.com" /></div>
+
+
   
   ## Installazione 
 1. Clona la repository da GitHub 
