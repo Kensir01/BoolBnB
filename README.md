@@ -73,21 +73,15 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
     <td><b style="font-size:30px">Angela</b></td>
  </tr>
  <tr>
-    <td>A</td>
-    <td>B</td>
+    <td><img src="https://i.imgur.com/omfijaQ.png" width="200"></td>
+    <td><img src="https://i.imgur.com/OgcPAGJ.png" width="200"></td>
  </tr>
 </table>
-
-
-|   |   |
-|---|---|
-|__Bold Key__| Value1 |
-| Normal Key | Value2 |
 
 ### Alice
 
 <p >
-<img src="https://i.imgur.com/omfijaQ.png" width="200" align="left"></img>
+<img src="https://i.imgur.com/omfijaQ.png" width="200" align="left">
     - GitHub
     - LinkedIn
 </p>
