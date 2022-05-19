@@ -74,12 +74,12 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 
 ### Alice
 
-<p float="left">
+<p align="left">
 <img src="https://i.imgur.com/omfijaQ.png" width="200" ></img>
     - GitHub
     - LinkedIn
 </p>
-<p float="right">
+<p align="right">
 
 ### Angela
 
