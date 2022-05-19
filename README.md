@@ -72,23 +72,23 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 |Alice|Angela|
 |:----|-----:|
 |<img src="https://i.imgur.com/omfijaQ.png" width="200">|<img src="https://i.imgur.com/ycgoxwC.png" width="200">|
-|[GitHub](https://github.com/AliceColombari)|GitHub|
-|LinkedIn|LinkedIn|
+|[GitHub](https://github.com/AliceColombari)|[GitHub](https://github.com/AngelaDeP)|
+|[LinkedIn](https://www.linkedin.com/in/alice-colombari-00084b19a/)|[LinkedIn](https://www.linkedin.com/in/angela-de-pasquale-948730117/)|
 
 <br>
 
 |Paolo|Marco|
 |:----|-----:|
 |<img src="https://i.imgur.com/o4HNDGt.png" width="200">|<img src="https://i.imgur.com/H4GxUYf.png" width="200">|
-|GitHub|GitHub|
-|LinkedIn|LinkedIn|
+|[GitHub](https://github.com/ImPaoloEliaX0)|[GitHub](https://github.com/MarcoSandri)|
+|[LinkedIn](https://www.linkedin.com/in/paolo-elia-9aba511b3/)|[LinkedIn](https://www.linkedin.com/in/marco-sandri/)|
 
 <br>
 
 |Demetrio|
 |:------:|
 |<img src="https://i.imgur.com/AXeg2Fq.png" width="200">|
-|GitHub|
-|LinkedIn|
+|[GitHub](https://github.com/Kensir01)|
+|[LinkedIn](https://www.linkedin.com/in/turchettademetrio/)|
 
 </div>
