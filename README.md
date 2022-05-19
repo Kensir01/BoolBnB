@@ -62,7 +62,15 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 <br><br>
 
 <div align="center" href="https://imgur.com/aQQXQIB"><img width="400" src="https://i.imgur.com/aQQXQIB.png" title="source: imgur.com" /></div>
-<div align="center"> <img src="https://img.shields.io/github/languages/count/MarcoSandri/BoolBnB"> </div>
+<br>
+<div align="center"> 
+    <img src="https://img.shields.io/github/languages/count/MarcoSandri/BoolBnB">
+    <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white">
+    <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+    <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
+
+</div>
 
 ### Alice
 
