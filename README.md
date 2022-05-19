@@ -37,8 +37,8 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
   ## Installazione 
   1. Clona la repository da GitHub 
   2. Inizializza la repository installando i pacchetti e configurandola con le tue impostazioni: 
-	- `composer install` 
-	- `npm install` 
+    - `composer install` 
+    - `npm install` 
 	- `cp .env.example .env` 
 	- `php artisan key:generate` 
 3. Collega il tuo database e lancia le [migrations](database/migrations) e i [seeder](database/seeds): 
