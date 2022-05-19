@@ -45,13 +45,13 @@
                         <li><a href="https://github.com/MarcoSandri">GitHub<span class="hand">&#9756;</span></a></li>
                     </ul></div>
                 <div class="col-3 image alt">
-                    <img src="http://127.0.0.1:8000/storage/elements/alice.svg" alt="">
+                    <img src="http://127.0.0.1:8000/storage/elements/marco.svg" alt="">
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-3 image">
-                    <img src="http://127.0.0.1:8000/storage/elements/alice.svg" alt="">
+                    <img src="http://127.0.0.1:8000/storage/elements/demetrio.svg" alt="" class="svg_dem">
                 </div>
                 <div class="col-3 info">
                     <h2>Demetrio</h2>
@@ -80,6 +80,54 @@ export default {
     @import "../../sass/partials/_colors.scss";
     @import "../../sass/partials/_font.scss";
     @import "../../sass/partials/_common.scss";
+
+    .svg_dem{
+        width: 90%;
+
+        &:hover {
+            animation: rainbow 2.5s linear;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    @keyframes rainbow{
+		100%,0%{
+			background-color: rgb(255,0,0);
+		}
+		8%{
+			background-color: rgb(255,127,0);
+		}
+		16%{
+			background-color: rgb(255,255,0);
+		}
+		25%{
+			background-color: rgb(127,255,0);
+		}
+		33%{
+			background-color: rgb(0,255,0);
+		}
+		41%{
+			background-color: rgb(0,255,127);
+		}
+		50%{
+			background-color: rgb(0,255,255);
+		}
+		58%{
+			background-color: rgb(0,127,255);
+		}
+		66%{
+			background-color: rgb(0,0,255);
+		}
+		75%{
+			background-color: rgb(127,0,255);
+		}
+		83%{
+			background-color: rgb(255,0,255);
+		}
+		91%{
+			background-color: rgb(255,0,127);
+		}
+    }
 
     .container {
 
