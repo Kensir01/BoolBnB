@@ -63,19 +63,32 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 
 <div align="center" href="https://imgur.com/aQQXQIB"><img width="400" src="https://i.imgur.com/aQQXQIB.png" title="source: imgur.com" /></div>
 
+### Alice
 
 <img src="https://i.imgur.com/omfijaQ.png" width="200"></img>
     - GitHub
     - LinkedIn
+
+### Angela
+
 <img src="https://i.imgur.com/OgcPAGJ.png" width="200"></img>
     - GitHub
     - LinkedIn
+
+### Paolo
+
 <img src="https://i.imgur.com/o4HNDGt.png" width="200"></img>
     - GitHub
     - LinkedIn
+
+### Marco
+
 <img src="https://i.imgur.com/hTdQUtM.png" width="200"></img>
     - GitHub
     - LinkedIn
+
+### Demetrio
+
 <img src="https://i.imgur.com/AXeg2Fq.png" width="200"></img>
     - GitHub
     - LinkedIn
