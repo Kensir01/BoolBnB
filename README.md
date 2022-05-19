@@ -83,18 +83,18 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 
 ### Paolo
 
-<img src="https://i.imgur.com/o4HNDGt.png" width="200"></img>
+<img src="https://i.imgur.com/o4HNDGt.png" width="200" align="left"></img>
     - GitHub
     - LinkedIn
 
 ### Marco
 
-<img src="https://i.imgur.com/hTdQUtM.png" width="200"></img>
+<img src="https://i.imgur.com/hTdQUtM.png" width="200"align="right"></img>
     - GitHub
     - LinkedIn
 
 ### Demetrio
 
-<img src="https://i.imgur.com/AXeg2Fq.png" width="200"></img>
+<img src="https://i.imgur.com/AXeg2Fq.png" width="200" align="left"></img>
     - GitHub
     - LinkedIn
