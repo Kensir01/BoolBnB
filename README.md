@@ -65,6 +65,19 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 
 </div>
 
+
+
+<table border="0">
+ <tr>
+    <td><b style="font-size:30px">Alice</b></td>
+    <td><b style="font-size:30px">Angela</b></td>
+ </tr>
+ <tr>
+    <td>A</td>
+    <td>B</td>
+ </tr>
+</table>
+
 ### Alice
 
 <p >
