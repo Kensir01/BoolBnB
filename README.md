@@ -44,3 +44,11 @@ DatabaseSeeder.php oppure php artisan db:seed --class=NomeDelSeeder)
 3. git rebase upstream/master oppure git merge upstream/master
 4. sincronizza modifiche con btn Sync Changes
 5. lancia da terminale php artisan migrate
+
+//test
+
+![This is an image](https://i.imgur.com/omfijaQ.png | width=100)
+![This is an image](https://i.imgur.com/OgcPAGJ.png | width=100)
+![This is an image](https://i.imgur.com/o4HNDGt.png | width=100)
+![This is an image](https://i.imgur.com/hTdQUtM.png | width=100)
+![This is an image](https://i.imgur.com/AXeg2Fq.png | width=100)
