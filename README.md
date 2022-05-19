@@ -18,7 +18,7 @@ Grazie al servizio di **messaggistica** interno di BoolBnB, puoi contattare il p
 
 <br>
 
-<div align="center" href="https://imgur.com/5YvwHj6"><img width="400" src="https://i.imgur.com/5YvwHj6.png" title="source: imgur.com" /></div>
+<div align="center" href="https://imgur.com/5YvwHj6"><img src="https://i.imgur.com/5YvwHj6.png" title="source: imgur.com" /></div>
 
 ##  BoolBnB su diversi dispositivi
 
