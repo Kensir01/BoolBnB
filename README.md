@@ -71,7 +71,7 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 
 |Alice|Angela|
 |:----|-----:|
-|<img src="https://i.imgur.com/omfijaQ.png" width="200">|<img src="https://i.imgur.com/OgcPAGJ.png" width="200">|
+|<img src="https://i.imgur.com/omfijaQ.png" width="200">|<img src="https://i.imgur.com/ycgoxwC.png" width="200">|
 |GitHub|GitHub|
 |LinkedIn|LinkedIn|
 
@@ -79,7 +79,7 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 
 |Paolo|Marco|
 |:----|-----:|
-|<img src="https://i.imgur.com/o4HNDGt.png" width="200">|<img src="https://i.imgur.com/hTdQUtM.png" width="200">|
+|<img src="https://i.imgur.com/o4HNDGt.png" width="200">|<img src="https://i.imgur.com/H4GxUYf.png" width="200">|
 |GitHub|GitHub|
 |LinkedIn|LinkedIn|
 
