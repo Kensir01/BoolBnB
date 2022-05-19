@@ -63,10 +63,9 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 
 <div align="center" href="https://imgur.com/aQQXQIB"><img width="400" src="https://i.imgur.com/aQQXQIB.png" title="source: imgur.com" /></div>
 
-//test
 
-![This is an image](https://i.imgur.com/omfijaQ.png=250x250)
-![This is an image](https://i.imgur.com/OgcPAGJ.png=250x250)
-![This is an image](https://i.imgur.com/o4HNDGt.png=250x250)
-![This is an image](https://i.imgur.com/hTdQUtM.png)
-![This is an image](https://i.imgur.com/AXeg2Fq.png)
+<img src="https://i.imgur.com/omfijaQ.png" width="200"></img>
+<img src="https://i.imgur.com/OgcPAGJ.png" width="200"></img>
+<img src="https://i.imgur.com/o4HNDGt.png" width="200"></img>
+<img src="https://i.imgur.com/hTdQUtM.png" width="200"></img>
+<img src="https://i.imgur.com/AXeg2Fq.png" width="200"></img>
