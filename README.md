@@ -78,6 +78,12 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
  </tr>
 </table>
 
+
+|   |   |
+|---|---|
+|__Bold Key__| Value1 |
+| Normal Key | Value2 |
+
 ### Alice
 
 <p >
