@@ -16,12 +16,9 @@ Se possiedi un appartamento che non utilizzi, inseriscilo all'interno del nostro
 Grazie al servizio di **messaggistica** interno di BoolBnB, puoi contattare il proprietario dell' appartamento che ti piace per chiedere informazioni aggiuntive o **visualizzare** i messaggi ricevuti.
 
 
-<div href="https://imgur.com/5YvwHj6"><img src="https://i.imgur.com/5YvwHj6.png" title="source: imgur.com" /></div>
-
-
 <br>
 
-<div align="center" href="https://imgur.com/mXCmypL"><img width="400" src="https://i.imgur.com/TMNeL4v.png" title="source: imgur.com" /></div>
+<div align="center" href="https://imgur.com/5YvwHj6"><img width="400" src="https://i.imgur.com/5YvwHj6.png" title="source: imgur.com" /></div>
 
 ##  BoolBnB su diversi dispositivi
 
