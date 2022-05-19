@@ -12,13 +12,6 @@
 
 All'interno della pagina principale puoi  **cercare appartamenti** in una città specifica, personalizza al meglio la ricerca in base alle tue esigenze attraverso i diversi **filtri** presenti come: la distanza dalla città selezionata, il numero di stanze e dei letti oppure i servizi di cui hai bisogno.
 
-## SINCRONIZZARE CON ALTRI BRANCH
-1. git remote add upstrem code_github_repo (da fare solo la prima volta)
-2. git fetch upstream
-3. git rebase upstream/master oppure git merge upstream/master
-4. sincronizza modifiche con btn Sync Changes
-5. lancia da terminale php artisan migrate
-
 Se possiedi un appartamento che non utilizzi, inseriscilo all'interno del nostro database e tramite BoolBnB potrai affittarlo e gestirlo tramite l'**area amministrativa**, uno spazio per i tuoi appartamenti: per crearne dei nuovi, modificarli o se necessario eliminarli. 
 Grazie al servizio di **messaggistica** interno di BoolBnB, puoi contattare il proprietario dell' appartamento che ti piace per chiedere informazioni aggiuntive o **visualizzare** i messaggi ricevuti.
 
