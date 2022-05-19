@@ -72,7 +72,7 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 |Alice|Angela|
 |:----|-----:|
 |<img src="https://i.imgur.com/omfijaQ.png" width="200">|<img src="https://i.imgur.com/ycgoxwC.png" width="200">|
-|GitHub|GitHub|
+|[GitHub](https://github.com/AliceColombari)|GitHub|
 |LinkedIn|LinkedIn|
 
 <br>
