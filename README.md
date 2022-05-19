@@ -70,11 +70,19 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 <table border="0" align="center">
  <tr>
     <td><b style="font-size:30px">Alice</b></td>
-    <td><b style="font-size:30px">Angela</b></td>
+    <td><b style="font-size:30px" align="right">Angela</b></td>
  </tr>
  <tr>
     <td><img src="https://i.imgur.com/omfijaQ.png" width="200"></td>
     <td><img src="https://i.imgur.com/OgcPAGJ.png" width="200"></td>
+ </tr>
+  <tr>
+    <td>GitHub</td>
+    <td>LinkedIn</td>
+ </tr>
+  <tr>
+    <td>GitHub</td>
+    <td>LinkedIn</td>
  </tr>
 </table>
 
