@@ -1,3 +1,5 @@
+
+
 .messageButton {
     display: flex;
     justify-content: center;
@@ -18,11 +20,19 @@
     width: 45px;
 }
 
-.modal.messages {
+.messages {
+    z-index: 999;
+    display: none;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
     background-color: white;
     border: 5px solid black;
     box-shadow: 10px 10px black;
     padding-top: 1rem;
+    min-width: 400px;
+    min-height: 200px;
     height: min-content;
     max-width: 90vh;
 }
