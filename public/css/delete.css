@@ -1,24 +1,38 @@
-         /* btn annulla cancella */
-        button {
-          color: white;
-          padding: 14px 20px;
-          margin: 8px 0;
-          border: none;
-          cursor: pointer;
-          width: 50%;
-        }
-       
-        .annulla, .cancella {
-          float: left;
-          max-width: 200px;
-          width: 50%;
-        }
+        .modal-content {
+          transform: translate(-50%, 50%);
+          position: absolute;
+          top: 50%;
+          left: 50%;
 
-        .centro {
-            display: flex;
-            justify-content: center;
+          border-radius: 0;
+          border: 5px solid black;
+          background-color: #F7E828;
+          height: 30vh;
+          width: 40vw;
+          display: flex;
+          justify-content: center;
+          align-items: center ;
         }
         
+        .imageDelete {
+          position: absolute;
+          width: 10vw;
+          max-width: 100px;
+          left: 0;
+          bottom: -20px;
+        }
+        
+        .modalButtons {
+          display: flex;
+          margin-top: 3rem;
+        }
+        
+        .annulla, .cancella {
+          float: left;
+          padding: 0.5rem 2rem;
+          max-width: 200px;
+          min-width: 100px;
+        }
         .annulla {
           background-color: #fff;
           color: black;
@@ -30,95 +44,12 @@
         
         .cancella {
           background-color: black;
+          color: white;
         }
 
         .cancella:hover {
             color: #F7E828;
           }
-        
-        .containerDeletebtn {
-          width: 50%;
-          height: 50%;
-          padding: 16px;
-          /* margin: 0 auto; */
-          width: 100%;
-        }
-        
-        /* Contenitore modale */
-        .modal {
-          display: none; 
-          position: fixed; 
-          z-index: 1; 
-          left: 25%;
-          top: 25%;
-          width: 50%; 
-          height: 30%; 
-          overflow: visible;
-          background-color: #F7E828;
-          border: 10px solid black;
-          padding-top: 50px;
-          text-align: center;
-        }
-        
-        .containerDeletebtn h1 {
-           text-align: center;
-           width: 100%;
-        }
-
-        .containerDeletebtn p {
-            text-align: center;
-            width: 100%;
-        }
-
-        img.imageDelete{
-           height: 60%;
-          
-           position: absolute;
-           bottom: -50px;
-           left: -100px;
-           z-index: 999; 
-        }
-        
-       /* chiudi */
-        .close {
-          position: absolute;
-          right: 35px;
-          top: 15px;
-          font-size: 40px;
-          font-weight: bold;
-          color: #fff;
-          opacity: 1;
-        }
-        
-        .close:hover,
-        .close:focus {
-          color: black;
-          cursor: pointer;
-          opacity: 1;
-        }
-        
-
-        .clearfix::after {
-          content: "";
-          clear: both;
-          display: table;
-        }
-
-        @media screen and (max-width: 600px) {
-            .containerDeletebtn h1 {
-                font-size: 22px;
-            }
-
-            .containerDeletebtn p {
-                font-size: 12px;
-            }
-
-            .annulla, .cancella {
-                width: 50%;
-               
-              }
-
-        }
 
 
       
