@@ -45,7 +45,7 @@
                         <li><a href="https://github.com/MarcoSandri">GitHub<span class="hand">&#9756;</span></a></li>
                     </ul></div>
                 <div class="col-3 image alt">
-                    <img src="http://127.0.0.1:8000/storage/elements/alice.svg" alt="">
+                    <img src="http://127.0.0.1:8000/storage/elements/marco.svg" alt="">
                 </div>
             </div>
 
