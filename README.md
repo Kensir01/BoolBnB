@@ -62,10 +62,11 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 <br><br>
 
 <div align="center" href="https://imgur.com/aQQXQIB"><img width="400" src="https://i.imgur.com/aQQXQIB.png" title="source: imgur.com" /></div>
+<div align="center"> <img src="https://img.shields.io/github/languages/count/MarcoSandri/BoolBnB"> </div>
 
 ### Alice
 
-<img src="https://i.imgur.com/omfijaQ.png" width="200"></img>
+<img src="https://i.imgur.com/omfijaQ.png" width="200" ></img>
     - GitHub
     - LinkedIn
 
