@@ -75,38 +75,20 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 |GitHub|GitHub|
 |LinkedIn|LinkedIn|
 
+<br>
+
+|Paolo|Marco|
+|:----|-----:|
+|<img src="https://i.imgur.com/o4HNDGt.png" width="200">|<img src="https://i.imgur.com/hTdQUtM.png" width="200">|
+|GitHub|GitHub|
+|LinkedIn|LinkedIn|
+
+<br>
+
+|Demetrio|
+|:------:|
+|<img src="https://i.imgur.com/AXeg2Fq.png" width="200">|
+|GitHub|
+|LinkedIn|
+
 </div>
-
-### Alice
-
-<p >
-<img src="https://i.imgur.com/omfijaQ.png" width="200" align="left">
-    - GitHub
-    - LinkedIn
-</p>
-<p >
-
-### Angela
-
-<img src="https://i.imgur.com/OgcPAGJ.png" width="200" align="right"></img>
-    - GitHub
-    - LinkedIn
-</p>
-
-### Paolo
-
-<img src="https://i.imgur.com/o4HNDGt.png" width="200" align="left"></img>
-    - GitHub
-    - LinkedIn
-
-### Marco
-
-<img src="https://i.imgur.com/hTdQUtM.png" width="200" align="right"></img>
-    - GitHub
-    - LinkedIn
-
-### Demetrio
-
-<img src="https://i.imgur.com/AXeg2Fq.png" width="200" align="left"></img>
-    - GitHub
-    - LinkedIn
