@@ -56,8 +56,8 @@
                 <div class="col-3 info">
                     <h2>Demetrio</h2>
                     <ul class="links">
-                        <li><a href="https://www.linkedin.com/in/turchettademetrio/"><span class="hand">&#9758;</span>LinkedIn</a></li>
-                        <li><a href="https://github.com/Kensir01"><span class="hand">&#9758;</span>GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/turchettademetrio/"><span class="hand manina_dem">&#9758;</span><span class="manina_dem">LinkedIn</span></a></li>
+                        <li><a href="https://github.com/Kensir01"><span class="hand manina_dem">&#9758;</span><span class="manina_dem">GitHub</span></a></li>
                     </ul>
                 </div>
 
@@ -83,14 +83,56 @@ export default {
 
     .svg_dem{
         width: 90%;
+        animation: rainbow-bg 2.5s linear;
+        animation-iteration-count: infinite;
+    }
 
-        &:hover {
-            animation: rainbow 2.5s linear;
-            animation-iteration-count: infinite;
-        }
+    .manina_dem{
+        animation: rainbow 2.5s linear;
+        animation-iteration-count: infinite;
     }
 
     @keyframes rainbow{
+		100%,0%{
+			color: rgb(255,0,0);
+		}
+		8%{
+			color: rgb(255,127,0);
+		}
+		16%{
+			color: rgb(255,255,0);
+		}
+		25%{
+			color: rgb(127,255,0);
+		}
+		33%{
+			color: rgb(0,255,0);
+		}
+		41%{
+			color: rgb(0,255,127);
+		}
+		50%{
+			color: rgb(0,255,255);
+		}
+		58%{
+			color: rgb(0,127,255);
+		}
+		66%{
+			color: rgb(0,0,255);
+		}
+		75%{
+			color: rgb(127,0,255);
+		}
+		83%{
+			color: rgb(255,0,255);
+		}
+		91%{
+			color: rgb(255,0,127);
+		}
+    }
+
+
+    @keyframes rainbow-bg{
 		100%,0%{
 			background-color: rgb(255,0,0);
 		}
