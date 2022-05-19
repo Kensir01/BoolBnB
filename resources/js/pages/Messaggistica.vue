@@ -65,17 +65,17 @@ export default {
             z-index: 1;
             position: absolute;
             bottom: 0;
-            right: 0;
+            right: 30px;
         }
 
          .img-extra-sx {
-            max-width: 400px;
+            max-width: 300px;
             width: 60%;
             transform: translate(-50%, 50%);
             z-index: 1;
             position: absolute;
-            bottom: 60px;
-            left: 0;
+            bottom: 150px;
+            left: 0px;
         }
     }
 

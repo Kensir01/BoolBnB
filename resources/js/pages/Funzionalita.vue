@@ -63,7 +63,8 @@ export default {
 
         h1 {
             text-align: center;
-            padding-left: 2rem;
+            padding-left: 4rem;
+            color: black;
         }
 
         .img-extra {
