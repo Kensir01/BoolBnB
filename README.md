@@ -65,8 +65,8 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 
 //test
 
-![This is an image](https://i.imgur.com/omfijaQ.png | width=100)
-![This is an image](https://i.imgur.com/OgcPAGJ.png | width=100)
-![This is an image](https://i.imgur.com/o4HNDGt.png | width=100)
-![This is an image](https://i.imgur.com/hTdQUtM.png | width=100)
-![This is an image](https://i.imgur.com/AXeg2Fq.png | width=100)
+![This is an image](https://i.imgur.com/omfijaQ.png=250x250)
+![This is an image](https://i.imgur.com/OgcPAGJ.png=250x250)
+![This is an image](https://i.imgur.com/o4HNDGt.png=250x250)
+![This is an image](https://i.imgur.com/hTdQUtM.png)
+![This is an image](https://i.imgur.com/AXeg2Fq.png)
