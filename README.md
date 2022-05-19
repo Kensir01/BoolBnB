@@ -67,7 +67,7 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 
 
 
-<center>
+<div align="center">
 
 |Alice|Angela|
 |:----|-----:|
@@ -75,7 +75,7 @@ la **navigazione fluida** e **dinamica** della Web Application è responsive, l'
 |GitHub|GitHub|
 |LinkedIn|LinkedIn|
 
-</center>
+</div>
 
 ### Alice
 
