@@ -3,6 +3,8 @@
 
         <div class="jumbo">
             <h1>Scopri le funzionalità di BoolBnB!</h1>
+            <img src="http://127.0.0.1:8000/storage/elements/MessyDoodle.svg" alt="" class="img-extra">
+
         </div>
 
         <div class="card-container">
@@ -34,7 +36,10 @@
 
 <script>
 export default {
-    name: 'funzionalita'
+    name: 'funzionalita',
+    mounted() {
+      window.scrollTo(0, 0)
+    }
 
 }
 </script>
@@ -54,9 +59,22 @@ export default {
         justify-content: center;
         align-items: center;
         margin: auto;
+        position: relative;
 
         h1 {
             text-align: center;
+            padding-left: 4rem;
+            color: black;
+        }
+
+        .img-extra {
+            max-width: 400px;
+            width: 60%;
+            transform: translate(-50%, 50%) rotate(-12deg);
+            z-index: 1;
+            position: absolute;
+            bottom: 50%;
+            left: -15px;
         }
     }
 
@@ -68,7 +86,7 @@ export default {
         .card {
 
             .card-body {
-                border: 0 5px 5px 5px;
+                border-width: 0 5px 5px 5px;
                 border-style: solid;
                 border-color: $lines;
 
