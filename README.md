@@ -6,7 +6,7 @@
 <br>
 <p align="center">BoolBnB è una web app che permette di trovare e gestire l’affitto di appartamenti. </p>
 
-<a href="https://imgur.com/NBH2wn6"><img src="https://i.imgur.com/NBH2wn6.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/K14oCCV"><img src="https://i.imgur.com/K14oCCV.jpg" title="source: imgur.com" /></a>
 
 ## La struttura della Web App BoolBnB
 
@@ -28,13 +28,31 @@ naviga tranquillamente sia su desktop che su mobile
 L'interfaccia grafica è stata studiata in riferimento al **target** e agli **obiettivi** di BoolBnB, 
 la **navigazione fluida** e **dinamica** della Web Application è responsive, l'utente naviga per un'esperienza uniforme sia su desktop che su mobile .
 
-<a href="https://imgur.com/s9stxwl"><img src="https://i.imgur.com/s9stxwl.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/uoBCc0y"><img src="https://i.imgur.com/uoBCc0y.jpg" title="source: imgur.com" /></a>
   <br>
  <div align="center" href="https://imgur.com/NbtRPNN">
  <img src="https://i.imgur.com/mXCmypL.png" title="source: imgur.com" /></div>
 
+## Ecco una rapida presentazione del nostro sito
+<div align="center">
+    <a href="https://imgur.com/nHk5yVX"><img src="https://imgur.com/nHk5yVX.jpg" title="source: imgur.com" /></a>
+</div>
 
+  <br>
   
+**Tramite i link nel Footer potrete raggiungere delle pagine create appositamente per aiutarvi nella navigazione.**
+
+  <br>
+
+<a href="https://imgur.com/RTawYrs"><img src="https://imgur.com/RTawYrs.jpg" title="source: imgur.com" /></a>
+
+<a href="https://imgur.com/fUx6Rwt"><img src="https://imgur.com/fUx6Rwt.jpg" title="source: imgur.com" /></a>
+
+<a href="https://imgur.com/g3YsWCO"><img src="https://imgur.com/g3YsWCO.jpg" title="source: imgur.com" /></a>
+
+<a href="https://imgur.com/R7j2dwv"><img src="https://imgur.com/R7j2dwv.jpg" title="source: imgur.com" /></a>
+
+  ### Mentre per chi volesse scaricare il nostro progetto...
   ## Installazione 
 1. Clona la repository da GitHub 
 2. Inizializza la repository installando i pacchetti e configurandola con le tue impostazioni:
